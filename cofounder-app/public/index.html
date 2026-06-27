@@ -253,10 +253,12 @@ function renderEmpty(){
     +'<p>Tell me the decision you\'re stuck on. I\'ll help you figure out what you\'re really deciding — and the one next step.</p>'
     +'<p class="hint">Type it, or tap the mic and talk.</p>'
     +'<div class="prompts">'
-    +'<button>Should I lower my price to get more customers?</button>'
-    +'<button>Is it too early to hire someone?</button>'
-    +'<button>I have an idea but I don\'t know if anyone wants it.</button>'
-    +'<button>This isn\'t really working. Do I quit or push on?</button>'
+    +'<button>How do I know if people actually want my idea?</button>'
+    +'<button>Everyone says they like it, but nobody\'s buying. Why?</button>'
+    +'<button>What should I charge — and am I underpricing?</button>'
+    +'<button>Should I raise money or bootstrap?</button>'
+    +'<button>I\'ve got too much to do — what actually matters this week?</button>'
+    +'<button>It\'s not working. Do I pivot, push, or walk away?</button>'
     +'</div></div>';
   thread.querySelectorAll(".prompts button").forEach(b=>b.onclick=()=>{ input.value=b.textContent; send(); });
 }
