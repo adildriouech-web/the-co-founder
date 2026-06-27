@@ -1,0 +1,13 @@
+{
+  "name": "the-co-founder",
+  "version": "0.1.0",
+  "description": "The Co-Founder — a calm, sharp decision partner for first-time founders (prototype).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "private": true
+}
