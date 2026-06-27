@@ -210,6 +210,7 @@ function bubble(role,content){
 }
 
 function attachFeedback(col, question, reply){
+  return; // thumbs feedback disabled
   if(col.querySelector(".fb")) return;
   const fb=document.createElement("div"); fb.className="fb";
   fb.innerHTML='<button data-r="up" aria-label="helpful" title="helpful">\u{1F44D}</button><button data-r="down" aria-label="not helpful" title="not helpful">\u{1F44E}</button><span class="thanks" style="display:none">thanks — noted</span>';
