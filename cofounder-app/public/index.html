@@ -300,13 +300,14 @@ function esc(s){ return s.replace(/[&<>]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;
 function fmt(s){ return esc(s).replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>"); }
 
 // split a reply into clean text + tappable options (OPTIONS: a | b | c on the last line)
-function parseOptions(text){
-const i=text.search(/\n?OPTIONS:/i);
-if(i<0) return {clean:text.trim(), options:[]};
-const clean=text.slice(0,i).trim();
-const after=text.slice(i).replace(/\n?OPTIONS:/i,"");
-const options=after.split("|").map(s=>s.trim()).filter(Boolean).slice(0,4);
-return {clean, options};
+function parseReply(text){
+let t=text, memory="";
+const mi=t.search(/\n?MEMORY:/i);          // hidden cross-session profile (never shown)
+if(mi>=0){ memory=t.slice(mi).replace(/\n?MEMORY:/i,"").trim(); t=t.slice(0,mi); }
+let options=[];
+const oi=t.search(/\n?OPTIONS:/i);          // tappable option chips
+if(oi>=0){ const after=t.slice(oi).replace(/\n?OPTIONS:/i,""); options=after.split("|").map(s=>s.trim()).filter(Boolean).slice(0,4); t=t.slice(0,oi); }
+return {clean:t.trim(), options, memory};
 }
 
 function bubble(role,content){
@@ -373,16 +374,29 @@ streaming=true; $("sendBtn").disabled=true;
 let acc="";
 try{
 let code=localStorage.getItem("cf_code")||"";
+const profile=localStorage.getItem("cf_profile")||"";
 const chatFetch=(cd)=>fetch("/api/chat",{
 method:"POST",headers:{"content-type":"application/json"},
-body:JSON.stringify({ messages:c.messages, consent:true, conversationId:currentId, code:cd })
+body:JSON.stringify({ messages:c.messages, consent:true, conversationId:currentId, code:cd, profile })
 });
-let resp=await chatFetch(code);
+// cold-start aware: the free host sleeps, so the first request after idle can fail — retry a couple times
+let resp=null;
+for(let attempt=0; attempt<3; attempt++){
+try{
+resp=await chatFetch(code);
 if(resp.status===401){
 const entered=(prompt("Enter the access code to use The Co-Founder:")||"").trim();
 if(entered){ code=entered; localStorage.setItem("cf_code",code); resp=await chatFetch(code); }
 }
-if(!resp.ok||!resp.body){ const e=await resp.json().catch(()=>({})); throw new Error(e.error||"Something went wrong."); }
+if(resp.status>=500||resp.status===502||resp.status===503){ throw new Error("warming"); }
+break;
+}catch(err){
+if(attempt>=2) throw err;
+b.innerHTML="Waking the Co-Founder up… one moment.";
+await new Promise(r=>setTimeout(r,3500));
+}
+}
+if(!resp||!resp.ok||!resp.body){ const e=resp?await resp.json().catch(()=>({})):{}; throw new Error(e.error||"Something went wrong."); }
 const reader=resp.body.getReader(), dec=new TextDecoder(); let buf="";
 while(true){
 const {done,value}=await reader.read(); if(done) break;
@@ -392,7 +406,7 @@ const line=buf.slice(0,i).trim(); buf=buf.slice(i+1);
 if(line.startsWith("data:")){
 const j=line.slice(5).trim(); if(!j||j==="[DONE]") continue;
 try{ const evt=JSON.parse(j);
-if(evt.type==="content_block_delta"&&evt.delta&&evt.delta.text){ acc+=evt.delta.text; b.innerHTML=fmt(parseOptions(acc).clean); scrollDown(); }
+if(evt.type==="content_block_delta"&&evt.delta&&evt.delta.text){ acc+=evt.delta.text; b.innerHTML=fmt(parseReply(acc).clean); scrollDown(); }
 }catch{}
 }
 }
@@ -401,8 +415,9 @@ if(!acc) acc="Sorry — I didn't catch that. Could you say it again?";
 }catch(err){
 acc="Hmm, I couldn't reach my thinking just now ("+err.message+"). Give it another try in a moment.";
 }
-const parsed=parseOptions(acc);
+const parsed=parseReply(acc);
 b.innerHTML=fmt(parsed.clean);
+if(parsed.memory){ localStorage.setItem("cf_profile", parsed.memory); }   // remember the founder across sessions
 c.messages.push({role:"assistant",content:parsed.clean}); c.updated=Date.now(); save(); renderList();
 renderChips(col, parsed.options);
 speak(parsed.clean);
