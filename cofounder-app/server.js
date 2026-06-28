@@ -126,12 +126,18 @@ async function handleChat(req, res) {
     .slice(-MAX_TURNS);
   if (!messages.length) { res.writeHead(400); return res.end("no messages"); }
 
+  // cross-session memory: the client keeps a compact founder profile and sends it back each turn
+  const profile = (typeof payload.profile === "string" ? payload.profile : "").trim().slice(0, 1200);
+  const systemPrompt = profile
+    ? SYSTEM_PROMPT + "\n\n# What you already know about this founder (from earlier — use it, build on it, don't re-ask what you already know):\n" + profile
+    : SYSTEM_PROMPT;
+
   let upstream;
   try {
     upstream = await fetch(API_URL, {
       method: "POST",
       headers: { "content-type": "application/json", "x-api-key": API_KEY, "anthropic-version": "2023-06-01" },
-      body: JSON.stringify({ model: MODEL, max_tokens: MAX_TOKENS, system: SYSTEM_PROMPT, messages, stream: true }),
+      body: JSON.stringify({ model: MODEL, max_tokens: MAX_TOKENS, system: systemPrompt, messages, stream: true }),
     });
   } catch (e) {
     res.writeHead(502, { "Content-Type": "application/json" });
