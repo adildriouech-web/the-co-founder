@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>The Co-Founder — Conversations</title>
+<style>
+  :root{ --bg:#0c0f0e; --panel:#131816; --line:#1e2622; --ink:#e8efe9; --mut:#8aa294; --acc:#39d98a; --user:#1d2a24; --ai:#15201b; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink); font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+  .wrap{ max-width:860px; margin:0 auto; padding:26px 16px 80px; }
+  h1{ font-size:20px; margin:0 0 2px; } .sub{ color:var(--mut); font-size:13px; margin-bottom:20px; }
+  .bar{ display:flex; gap:8px; align-items:center; margin:14px 0; flex-wrap:wrap; }
+  input,select{ background:var(--panel); border:1px solid var(--line); color:var(--ink); border-radius:10px; padding:10px 12px; font-size:14px; }
+  input#tok{ flex:1; min-width:180px; }
+  button{ background:var(--acc); color:#04130c; border:0; border-radius:10px; padding:10px 15px; font-weight:600; cursor:pointer; }
+  button.ghost{ background:transparent; color:var(--mut); border:1px solid var(--line); }
+  .err{ color:#ff8a8a; margin:8px 0; } .muted{ color:var(--mut); }
+  .conv{ background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:14px 14px 6px; margin:14px 0; }
+  .meta{ color:var(--mut); font-size:12px; margin-bottom:10px; display:flex; gap:12px; flex-wrap:wrap; }
+  .tag{ background:#0f1512; border:1px solid var(--line); border-radius:999px; padding:2px 9px; }
+  .msg{ margin:8px 0; padding:9px 12px; border-radius:12px; white-space:pre-wrap; word-wrap:break-word; }
+  .u{ background:var(--user); border:1px solid #28382f; }
+  .a{ background:var(--ai); border:1px solid #1d2a24; }
+  .role{ font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--mut); margin-bottom:3px; }
+  .count{ color:var(--mut); font-size:13px; margin:6px 0 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>The Co-Founder — Conversations</h1>
+  <div class="sub">Real tester transcripts (consented). First-party, nothing shared externally. Handle with care.</div>
+
+  <div class="bar" id="gate">
+    <input id="tok" type="password" placeholder="Stats token" autocomplete="off">
+    <select id="window">
+      <option value="">All time</option>
+      <option value="7">Last 7 days</option>
+      <option value="30">Last 30 days</option>
+    </select>
+    <select id="limit">
+      <option value="25">25</option>
+      <option value="50" selected>50</option>
+      <option value="100">100</option>
+    </select>
+    <button onclick="load()">View</button>
+  </div>
+  <div id="err" class="err"></div>
+  <div id="out"></div>
+  <div class="bar" id="footbar" style="display:none">
+    <button class="ghost" onclick="load()">Refresh</button>
+    <button class="ghost" onclick="signout()">Sign out</button>
+  </div>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+function tok(){ return sessionStorage.getItem("cf_stats_tok")||""; }
+function esc(s){ return (s==null?"":String(s)).replace(/[&<>]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[m])); }
+
+async function load(){
+  const t=($("tok").value||tok()).trim();
+  if(!t){ $("err").textContent="Enter the stats token."; return; }
+  $("err").textContent="Loading…";
+  const since=$("window").value, limit=$("limit").value;
+  let url="/api/conversations?limit="+encodeURIComponent(limit);
+  if(since) url+="&sinceDays="+encodeURIComponent(since);
+  try{
+    const r=await fetch(url,{headers:{"x-stats-token":t}});
+    if(r.status===401){ $("err").textContent="Wrong token."; return; }
+    if(r.status===503){ $("err").textContent="Disabled on server (STATS_TOKEN not set)."; return; }
+    if(!r.ok){ $("err").textContent="Error "+r.status; return; }
+    const data=await r.json();
+    sessionStorage.setItem("cf_stats_tok",t);
+    render(data); $("err").textContent="";
+  }catch(e){ $("err").textContent="Network error: "+e.message; }
+}
+
+function render(data){
+  $("gate").querySelectorAll("input,select").forEach(el=>el.style.display="none");
+  $("footbar").style.display="flex";
+  const convs=data.conversations||[];
+  let html='<div class="count">'+convs.length+' conversation turn'+(convs.length===1?'':'s')+' (newest first)</div>';
+  if(!convs.length) html+='<p class="muted">No conversations yet in this window.</p>';
+  for(const c of convs){
+    const when=c.ts?new Date(c.ts).toLocaleString():"—";
+    html+='<div class="conv"><div class="meta"><span>'+esc(when)+'</span>';
+    if(c.clientId) html+='<span class="tag">founder '+esc(String(c.clientId).slice(0,8))+'</span>';
+    if(c.conversationId) html+='<span class="tag">'+esc(String(c.conversationId).slice(0,12))+'</span>';
+    html+='</div>';
+    for(const m of (c.messages||[])){
+      const cls=m.role==="user"?"u":"a";
+      html+='<div class="msg '+cls+'"><div class="role">'+esc(m.role)+'</div>'+esc(m.content)+'</div>';
+    }
+    html+='</div>';
+  }
+  $("out").innerHTML=html;
+}
+
+function signout(){ sessionStorage.removeItem("cf_stats_tok"); location.reload(); }
+if(tok()){ $("tok").value=tok(); load(); }
+</script>
+</body>
+</html>
