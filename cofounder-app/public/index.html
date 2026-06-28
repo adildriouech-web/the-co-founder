@@ -277,6 +277,8 @@ const scroll=$("scroll"), thread=$("thread"), input=$("input");
 function load(){ try{chats=JSON.parse(localStorage.getItem(LS_CHATS))||{}}catch{chats={}} currentId=localStorage.getItem(LS_CUR)||null; }
 function save(){ localStorage.setItem(LS_CHATS,JSON.stringify(chats)); if(currentId)localStorage.setItem(LS_CUR,currentId); }
 function uid(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,7); }
+// stable anonymous founder id (analytics: counts returning founders without identifying them)
+function clientId(){ let c=localStorage.getItem("cf_client"); if(!c){ c=uid()+uid(); localStorage.setItem("cf_client",c); } return c; }
 
 function newChat(){ const id=uid(); chats[id]={id,title:L().newChatTitle,messages:[],updated:Date.now()}; currentId=id; save(); renderList(); renderThread(); closeDrawer(); input.focus(); }
 function selectChat(id){ currentId=id; save(); renderList(); renderThread(); closeDrawer(); }
@@ -377,7 +379,7 @@ let code=localStorage.getItem("cf_code")||"";
 const profile=localStorage.getItem("cf_profile")||"";
 const chatFetch=(cd)=>fetch("/api/chat",{
 method:"POST",headers:{"content-type":"application/json"},
-body:JSON.stringify({ messages:c.messages, consent:true, conversationId:currentId, code:cd, profile })
+body:JSON.stringify({ messages:c.messages, consent:true, conversationId:currentId, code:cd, profile, clientId:clientId() })
 });
 // cold-start aware: the free host sleeps, so the first request after idle can fail — retry a couple times
 let resp=null;
