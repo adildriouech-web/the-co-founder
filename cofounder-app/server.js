@@ -38,8 +38,27 @@ const MODEL = process.env.MODEL || "claude-sonnet-4-6";
 const API_URL = (process.env.ANTHROPIC_BASE_URL || "https://api.anthropic.com").replace(/\/+$/, "") + "/v1/messages";
 const MAX_TOKENS = parseInt(process.env.MAX_TOKENS || "700", 10);
 const MAX_TURNS = parseInt(process.env.MAX_HISTORY_TURNS || "24", 10); // cap history sent, to control cost
+const ACCESS_CODE = process.env.ACCESS_CODE || ""; // optional shared passcode; if set, /api/chat requires it
+const RATE_MAX = parseInt(process.env.RATE_MAX || "40", 10); // max chat requests per IP per window
+const RATE_WINDOW_MS = parseInt(process.env.RATE_WINDOW_MS || "600000", 10); // window length (default 10 min)
 const DATA_DIR = path.join(__dirname, "data");
 const PUBLIC_DIR = path.join(__dirname, "public");
+
+// ---- simple in-memory per-IP rate limiter (resets on restart; per instance) ----
+const hits = new Map(); // ip -> [timestamps]
+function clientIp(req) {
+  const xff = (req.headers["x-forwarded-for"] || "").split(",")[0].trim();
+  return xff || (req.socket && req.socket.remoteAddress) || "unknown";
+}
+function rateLimited(req) {
+  const ip = clientIp(req);
+  const now = Date.now();
+  const arr = (hits.get(ip) || []).filter((t) => now - t < RATE_WINDOW_MS);
+  arr.push(now);
+  hits.set(ip, arr);
+  if (hits.size > 5000) { for (const k of hits.keys()) { if (hits.size <= 5000) break; hits.delete(k); } } // bound memory
+  return arr.length > RATE_MAX;
+}
 
 if (!API_KEY) {
   console.warn("\n[warning] ANTHROPIC_API_KEY is not set. Copy .env.example to .env and add your key.\n");
@@ -90,8 +109,15 @@ function readBody(req) {
 // ---- the chat relay ----
 async function handleChat(req, res) {
   if (!API_KEY) { res.writeHead(500, { "Content-Type": "application/json" }); return res.end(JSON.stringify({ error: "Server is missing ANTHROPIC_API_KEY." })); }
+  if (rateLimited(req)) { res.writeHead(429, { "Content-Type": "application/json" }); return res.end(JSON.stringify({ error: "You're going a bit fast — give it a minute and try again." })); }
   let payload;
   try { payload = JSON.parse(await readBody(req)); } catch { res.writeHead(400); return res.end("bad json"); }
+
+  // optional shared passcode: only enforced if ACCESS_CODE is set on the server
+  if (ACCESS_CODE) {
+    const supplied = (req.headers["x-access-code"] || payload.code || "").toString();
+    if (supplied !== ACCESS_CODE) { res.writeHead(401, { "Content-Type": "application/json" }); return res.end(JSON.stringify({ error: "An access code is needed to use this.", needCode: true })); }
+  }
 
   const incoming = Array.isArray(payload.messages) ? payload.messages : [];
   const messages = incoming
