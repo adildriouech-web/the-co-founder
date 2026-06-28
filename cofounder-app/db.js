@@ -180,4 +180,29 @@ async function statsFromJsonl() {
   };
 }
 
-module.exports = { init, logConversation, logFeedback, getStats, get backend() { return backend; }, get ready() { return ready; } };
+// ---- read transcripts (for the in-browser viewer + weekly digest) ----
+async function getConversations({ limit = 50, sinceDays = null } = {}) {
+  limit = Math.max(1, Math.min(parseInt(limit, 10) || 50, 500));
+  if (backend === "neon") {
+    const rows = sinceDays
+      ? await sql`SELECT ts, conversation_id AS "conversationId", client_id AS "clientId", messages
+                  FROM conversations WHERE ts > now() - make_interval(days => ${parseInt(sinceDays, 10)})
+                  ORDER BY ts DESC LIMIT ${limit}`
+      : await sql`SELECT ts, conversation_id AS "conversationId", client_id AS "clientId", messages
+                  FROM conversations ORDER BY ts DESC LIMIT ${limit}`;
+    return rows.map((r) => ({ ts: r.ts, conversationId: r.conversationId, clientId: r.clientId,
+      messages: typeof r.messages === "string" ? safeParse(r.messages) : (r.messages || []) }));
+  }
+  // jsonl fallback
+  let rows = [];
+  try {
+    rows = fs.readFileSync(path.join(DATA_DIR, "conversations.jsonl"), "utf8")
+      .split("\n").filter(Boolean).map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
+  } catch { rows = []; }
+  if (sinceDays) { const cut = Date.now() - parseInt(sinceDays, 10) * 864e5; rows = rows.filter((r) => r.ts && Date.parse(r.ts) >= cut); }
+  rows.sort((a, b) => (a.ts < b.ts ? 1 : -1));
+  return rows.slice(0, limit).map((r) => ({ ts: r.ts, conversationId: r.conversationId || null, clientId: r.clientId || null, messages: r.messages || [] }));
+}
+function safeParse(s) { try { return JSON.parse(s); } catch { return []; } }
+
+module.exports = { init, logConversation, logFeedback, getStats, getConversations, get backend() { return backend; }, get ready() { return ready; } };

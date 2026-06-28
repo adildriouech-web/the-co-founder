@@ -196,10 +196,17 @@ async function handleFeedback(req, res) {
 }
 
 // ---- first-party analytics (token-protected) ----
+// token may come from the x-stats-token header (browser) or ?token= query (scheduled digest via simple GET)
+function statsAuth(req, res) {
+  if (!STATS_TOKEN) { res.writeHead(503, { "Content-Type": "application/json" }); res.end(JSON.stringify({ error: "Stats are disabled. Set STATS_TOKEN to enable." })); return false; }
+  const u = new URL(req.url, "http://x");
+  const supplied = (req.headers["x-stats-token"] || u.searchParams.get("token") || "").toString();
+  if (supplied !== STATS_TOKEN) { res.writeHead(401, { "Content-Type": "application/json" }); res.end(JSON.stringify({ error: "Unauthorized." })); return false; }
+  return true;
+}
+
 async function handleStats(req, res) {
-  if (!STATS_TOKEN) { res.writeHead(503, { "Content-Type": "application/json" }); return res.end(JSON.stringify({ error: "Stats are disabled. Set STATS_TOKEN to enable." })); }
-  const supplied = (req.headers["x-stats-token"] || "").toString();
-  if (supplied !== STATS_TOKEN) { res.writeHead(401, { "Content-Type": "application/json" }); return res.end(JSON.stringify({ error: "Unauthorized." })); }
+  if (!statsAuth(req, res)) return;
   try {
     const stats = await db.getStats();
     res.writeHead(200, { "Content-Type": "application/json", "Cache-Control": "no-store" });
@@ -210,10 +217,26 @@ async function handleStats(req, res) {
   }
 }
 
+async function handleConversations(req, res) {
+  if (!statsAuth(req, res)) return;
+  try {
+    const u = new URL(req.url, "http://x");
+    const limit = u.searchParams.get("limit") || 50;
+    const sinceDays = u.searchParams.get("sinceDays");
+    const rows = await db.getConversations({ limit, sinceDays });
+    res.writeHead(200, { "Content-Type": "application/json", "Cache-Control": "no-store" });
+    res.end(JSON.stringify({ count: rows.length, conversations: rows }));
+  } catch (e) {
+    res.writeHead(500, { "Content-Type": "application/json" });
+    res.end(JSON.stringify({ error: "Could not load conversations.", detail: e.message }));
+  }
+}
+
 const server = http.createServer((req, res) => {
   if (req.method === "POST" && req.url === "/api/chat") return handleChat(req, res);
   if (req.method === "POST" && req.url === "/api/feedback") return handleFeedback(req, res);
   if (req.method === "GET" && req.url.split("?")[0] === "/api/stats") return handleStats(req, res);
+  if (req.method === "GET" && req.url.split("?")[0] === "/api/conversations") return handleConversations(req, res);
   if (req.method === "GET" && req.url === "/healthz") { res.writeHead(200); return res.end("ok"); }
   if (req.method === "GET") return serveStatic(req, res);
   res.writeHead(405); res.end("method not allowed");
