@@ -68,7 +68,7 @@ if (!API_KEY) {
 // ---- logging now lives in db.js (Neon when DATABASE_URL is set, else data/*.jsonl) ----
 
 // ---- static file serving ----
-const MIME = { ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".css": "text/css; charset=utf-8", ".svg": "image/svg+xml", ".ico": "image/x-icon", ".json": "application/json" };
+const MIME = { ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".css": "text/css; charset=utf-8", ".svg": "image/svg+xml", ".ico": "image/x-icon", ".json": "application/json", ".webmanifest": "application/manifest+json; charset=utf-8", ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".txt": "text/plain; charset=utf-8" };
 function serveStatic(req, res) {
   let rel = decodeURIComponent(req.url.split("?")[0]);
   if (rel === "/") rel = "/index.html";
