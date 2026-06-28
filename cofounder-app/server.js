@@ -15,6 +15,7 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 const { SYSTEM_PROMPT } = require("./knowledge");
+const db = require("./db");
 
 // ---- tiny .env loader (so you don't need any packages) ----
 (function loadEnv() {
@@ -41,7 +42,7 @@ const MAX_TURNS = parseInt(process.env.MAX_HISTORY_TURNS || "24", 10); // cap hi
 const ACCESS_CODE = process.env.ACCESS_CODE || ""; // optional shared passcode; if set, /api/chat requires it
 const RATE_MAX = parseInt(process.env.RATE_MAX || "40", 10); // max chat requests per IP per window
 const RATE_WINDOW_MS = parseInt(process.env.RATE_WINDOW_MS || "600000", 10); // window length (default 10 min)
-const DATA_DIR = path.join(__dirname, "data");
+const STATS_TOKEN = process.env.STATS_TOKEN || ""; // protects GET /api/stats; if unset, stats endpoint is disabled
 const PUBLIC_DIR = path.join(__dirname, "public");
 
 // ---- simple in-memory per-IP rate limiter (resets on restart; per instance) ----
@@ -64,24 +65,7 @@ if (!API_KEY) {
   console.warn("\n[warning] ANTHROPIC_API_KEY is not set. Copy .env.example to .env and add your key.\n");
 }
 
-// ---- logging (swap these bodies for a database later) ----
-function logConversation(record) {
-  try {
-    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-    fs.appendFileSync(path.join(DATA_DIR, "conversations.jsonl"), JSON.stringify(record) + "\n");
-  } catch (e) {
-    console.error("[log] failed to write conversation:", e.message);
-  }
-}
-
-function logFeedback(record) {
-  try {
-    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-    fs.appendFileSync(path.join(DATA_DIR, "feedback.jsonl"), JSON.stringify(record) + "\n");
-  } catch (e) {
-    console.error("[log] failed to write feedback:", e.message);
-  }
-}
+// ---- logging now lives in db.js (Neon when DATABASE_URL is set, else data/*.jsonl) ----
 
 // ---- static file serving ----
 const MIME = { ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".css": "text/css; charset=utf-8", ".svg": "image/svg+xml", ".ico": "image/x-icon", ".json": "application/json" };
@@ -183,9 +167,10 @@ async function handleChat(req, res) {
   res.end();
 
   if (payload.consent === true) {
-    logConversation({
+    db.logConversation({
       ts: new Date().toISOString(),
       conversationId: typeof payload.conversationId === "string" ? payload.conversationId : null,
+      clientId: typeof payload.clientId === "string" ? payload.clientId.slice(0, 64) : null,
       model: MODEL,
       messages: messages.concat(assistantText ? [{ role: "assistant", content: assistantText }] : []),
     });
@@ -198,9 +183,10 @@ async function handleFeedback(req, res) {
   try { payload = JSON.parse(await readBody(req)); } catch { res.writeHead(400); return res.end("bad json"); }
   const rating = payload.rating === "up" || payload.rating === "down" ? payload.rating : null;
   if (!rating) { res.writeHead(400); return res.end("bad rating"); }
-  logFeedback({
+  db.logFeedback({
     ts: new Date().toISOString(),
     conversationId: typeof payload.conversationId === "string" ? payload.conversationId : null,
+    clientId: typeof payload.clientId === "string" ? payload.clientId.slice(0, 64) : null,
     rating,
     reply: typeof payload.reply === "string" ? payload.reply.slice(0, 8000) : null,
     question: typeof payload.question === "string" ? payload.question.slice(0, 8000) : null,
@@ -209,16 +195,36 @@ async function handleFeedback(req, res) {
   res.end(JSON.stringify({ ok: true }));
 }
 
+// ---- first-party analytics (token-protected) ----
+async function handleStats(req, res) {
+  if (!STATS_TOKEN) { res.writeHead(503, { "Content-Type": "application/json" }); return res.end(JSON.stringify({ error: "Stats are disabled. Set STATS_TOKEN to enable." })); }
+  const supplied = (req.headers["x-stats-token"] || "").toString();
+  if (supplied !== STATS_TOKEN) { res.writeHead(401, { "Content-Type": "application/json" }); return res.end(JSON.stringify({ error: "Unauthorized." })); }
+  try {
+    const stats = await db.getStats();
+    res.writeHead(200, { "Content-Type": "application/json", "Cache-Control": "no-store" });
+    res.end(JSON.stringify(stats));
+  } catch (e) {
+    res.writeHead(500, { "Content-Type": "application/json" });
+    res.end(JSON.stringify({ error: "Could not load stats.", detail: e.message }));
+  }
+}
+
 const server = http.createServer((req, res) => {
   if (req.method === "POST" && req.url === "/api/chat") return handleChat(req, res);
   if (req.method === "POST" && req.url === "/api/feedback") return handleFeedback(req, res);
+  if (req.method === "GET" && req.url.split("?")[0] === "/api/stats") return handleStats(req, res);
   if (req.method === "GET" && req.url === "/healthz") { res.writeHead(200); return res.end("ok"); }
   if (req.method === "GET") return serveStatic(req, res);
   res.writeHead(405); res.end("method not allowed");
 });
 
-server.listen(PORT, () => {
-  console.log("\n  The Co-Founder is running.");
-  console.log("  Open  http://localhost:" + PORT);
-  console.log("  Model: " + MODEL + "   Logging: consented conversations -> data/conversations.jsonl\n");
+db.init().finally(() => {
+  server.listen(PORT, () => {
+    console.log("\n  The Co-Founder is running.");
+    console.log("  Open  http://localhost:" + PORT);
+    console.log("  Model: " + MODEL);
+    if (STATS_TOKEN) console.log("  Analytics: GET /api/stats (token-protected), dashboard at /admin.html");
+    console.log("");
+  });
 });
