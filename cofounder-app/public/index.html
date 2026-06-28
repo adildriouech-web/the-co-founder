@@ -4,6 +4,15 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
 <title>The Co-Founder</title>
+<meta name="description" content="A calm, sharp partner for first-time founders — figure out the real decision you're facing and the one next step to take." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="The Co-Founder" />
+<meta property="og:description" content="A calm, sharp partner for first-time founders — figure out the real decision you're facing and the one next step to take." />
+<meta property="og:url" content="https://the-co-founder.onrender.com" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="The Co-Founder" />
+<meta name="twitter:description" content="A calm, sharp partner for first-time founders — figure out the real decision and the next step." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2310b981'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%2305231a'%3E%E2%97%91%3C/text%3E%3C/svg%3E" />
 <style>
 :root{
 --bg:#121419; --surface:#1c1f25; --surface-2:#22262e; --ink:#f3f5f7; --muted:#9aa3ad; --faint:#6b727c;
@@ -363,10 +372,16 @@ thread.appendChild(col.parentNode); scrollDown();
 streaming=true; $("sendBtn").disabled=true;
 let acc="";
 try{
-const resp=await fetch("/api/chat",{
+let code=localStorage.getItem("cf_code")||"";
+const chatFetch=(cd)=>fetch("/api/chat",{
 method:"POST",headers:{"content-type":"application/json"},
-body:JSON.stringify({ messages:c.messages, consent:true, conversationId:currentId })
+body:JSON.stringify({ messages:c.messages, consent:true, conversationId:currentId, code:cd })
 });
+let resp=await chatFetch(code);
+if(resp.status===401){
+const entered=(prompt("Enter the access code to use The Co-Founder:")||"").trim();
+if(entered){ code=entered; localStorage.setItem("cf_code",code); resp=await chatFetch(code); }
+}
 if(!resp.ok||!resp.body){ const e=await resp.json().catch(()=>({})); throw new Error(e.error||"Something went wrong."); }
 const reader=resp.body.getReader(), dec=new TextDecoder(); let buf="";
 while(true){
