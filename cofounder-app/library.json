@@ -41,97 +41,156 @@
   {
     "id": "lived-problem",
     "family": "Opportunity",
-    "title": "Build for a problem you've lived",
+    "title": "Build for a pain you've had",
     "stages": [
       0,
       1
     ],
     "reversibility": "two-way",
-    "evidence": "high",
+    "evidence": "medium",
+    "warn": false,
     "keywords": [
-      "idea",
-      "where to start",
-      "problem",
-      "passion",
-      "what to build",
-      "headache"
+      "this annoyed me so i built it",
+      "scratch my own itch",
+      "problem i deal with every day",
+      "i'm the customer",
+      "i wish this existed",
+      "tired of doing it manually",
+      "felt the pain myself",
+      "built it for me first",
+      "i hated my old tool",
+      "frustrated at my old job"
     ],
-    "summary": "Build for a headache you've personally had — you'll know the customer and the real pain. But still prove a few other people want it before building.",
-    "when_to_use": "At idea stage, choosing what to work on.",
-    "failure_modes": "Assuming your pain is everyone's; skipping outside validation because you 'know' the problem.",
-    "evidence_note": "High for founder-problem fit; medium that it predicts market size — your pain may be niche."
+    "summary": "Building for a problem you've personally lived gives you a head start on understanding it, but your own pain is one data point, not proof. Confirm other people feel it the same way before you build.",
+    "when_to_use": "Earliest idea stage, when you're choosing what to work on and you have a problem you experience directly and repeatedly.",
+    "how_to_run": [
+      "Write down the exact moment the problem bites and how often it happens to you",
+      "Find 5-10 people who are NOT your friends and clearly share that situation",
+      "Ask how they handle it today and what it costs them (time, money, frustration)",
+      "Listen for whether they've already cobbled together a workaround or paid for one",
+      "Only build once strangers describe the pain in roughly the words you would"
+    ],
+    "preconditions": "You genuinely live the problem on a recurring basis, not a problem you imagine others have.",
+    "failure_modes": "Assuming your pain is universal when you're an outlier. Falling in love with your own workflow and building a tool only you would tolerate. Skipping outside validation because 'I know this problem cold.' Confusing 'I'd use it' with 'I'd pay for it.' A niche of one is not a market.",
+    "evidence_note": "Common startup folklore ('scratch your own itch'); real logic (faster insight, built-in empathy) but no rigorous evidence founder-as-user predicts success, and clear survivorship bias. Grade medium because the validation discipline it's paired with is sound, not the raw heuristic.",
+    "regional_notes": "If you live in a different market than your target users, your lived experience may not transfer; validate locally.",
+    "examples": "A solo developer keeps losing track of unpaid freelance invoices and builds a tracker for herself. Before more code, she messages eight other freelancers in a community; six describe the same scramble and two already pay for a clunky tool. That overlap, not her annoyance, tells her to continue."
   },
   {
     "id": "counter-positioning",
     "family": "Opportunity",
-    "title": "Counter-positioning — win the corner the giant can't defend",
+    "title": "Win the corner they won't defend",
     "stages": [
       0,
       1,
-      2
+      5
     ],
     "reversibility": "two-way",
-    "evidence": "high",
+    "evidence": "medium",
+    "warn": false,
     "keywords": [
-      "competition",
-      "incumbent",
-      "competitor",
-      "differentiation",
-      "big player",
-      "compete",
-      "niche"
+      "the big player won't bother with this",
+      "too small for them to care",
+      "they'd lose money copying us",
+      "it would cannibalize their main product",
+      "incumbent can't go cheap",
+      "they make too much on the old way",
+      "the slice nobody serves",
+      "we attack from below",
+      "they're stuck defending their margins",
+      "start where they won't follow"
     ],
-    "summary": "Don't fight a strong incumbent head-on. Win a neglected corner where their existing business model makes them unwilling to follow you, then climb.",
-    "when_to_use": "When entering a market with a dominant player.",
-    "preconditions": "There's a position the incumbent would have to damage their core business to copy.",
-    "evidence_note": "High — repeatedly how challengers beat entrenched leaders; the key is the incumbent's *inability* (not unwillingness) to respond."
+    "summary": "Pick a position the dominant player could copy in theory but won't in practice, because matching you would hurt their existing money-maker. You grow in the gap their own model forces them to ignore, then expand upward.",
+    "when_to_use": "When a strong incumbent owns the market but their pricing, sales model, or core product creates a blind spot they're structurally unwilling to enter.",
+    "how_to_run": [
+      "Name the incumbent's main profit engine and what protecting it forces them to avoid",
+      "Find the segment or approach that engine makes them unwilling (not just slow) to serve",
+      "Confirm copying you would visibly damage their existing revenue, so they hesitate",
+      "Win that segment completely before they react",
+      "Plan the climb upward only once your base is defensible"
+    ],
+    "preconditions": "There is a clear incumbent with a profitable model that genuinely conflicts with serving your chosen segment. If they could match you with no downside, this does not apply.",
+    "failure_modes": "Mistaking 'they haven't noticed yet' for 'they can't afford to follow' — with no real conflict, they just copy you once you prove the market. Picking a corner so small nobody wants it. Assuming the incumbent is slow when a well-funded one may eat the loss to crush you. Staying stuck in the corner and never climbing.",
+    "evidence_note": "Termed 'Counter-Positioning' by Hamilton Helmer (7 Powers, 2016). Respected, coherent framework from observed cases, but canonical examples carry heavy hindsight/survivorship bias. Grade medium: the mechanism (incumbent's model creates unwillingness) is sound; 'do this and win' is not proven.",
+    "regional_notes": "",
+    "examples": "A founder notices the leading scheduling software charges per-seat enterprise pricing via a sales team, so it ignores one-person businesses. He builds a flat-rate self-serve tool for solo operators. The incumbent could add a cheap tier, but that would undercut the per-seat deals their sales org depends on, so they don't. He owns the solo segment for two years."
   },
   {
     "id": "leapfrog-infrastructure",
     "family": "Opportunity",
-    "title": "Leapfrog missing infrastructure",
+    "title": "Skip the step that never arrived",
     "stages": [
       0,
-      1,
-      2
+      1
     ],
     "reversibility": "two-way",
-    "evidence": "high",
+    "evidence": "medium",
+    "warn": false,
     "keywords": [
-      "emerging market",
-      "infrastructure",
-      "mobile",
-      "developing",
-      "region",
-      "leapfrog"
+      "they never had the old system here",
+      "everyone has a phone but no bank",
+      "no landlines straight to mobile",
+      "skip the desktop era",
+      "build for what people already carry",
+      "the old way never reached them",
+      "no legacy systems to fight",
+      "mobile is the only computer they own",
+      "start where the gap is",
+      "leapfrog the missing rails"
     ],
-    "summary": "Where old infrastructure never reached people, skip it — build on what they already have (e.g. mobile-first, cash-alternative rails).",
-    "regional_notes": "Especially powerful in markets that skipped desktop/credit-card eras; build for mobile money and intermittent connectivity, not Western defaults.",
-    "evidence_note": "High in emerging markets; the bet is on behavior that already exists, not behavior you must create."
+    "summary": "Where the old infrastructure (banks, landlines, fixed broadband, retail chains) never reached people, don't recreate it. Build on whatever they already have, usually a basic phone or mobile connection, and serve the need directly.",
+    "when_to_use": "When your target users live in a market or segment the established delivery method skipped entirely, leaving an open gap.",
+    "how_to_run": [
+      "Identify the legacy infrastructure your service normally rides on and confirm it's genuinely absent",
+      "Map what users DO already have and trust (a phone, mobile money, a messaging app)",
+      "Design the offer to need only that, not the missing layer",
+      "Test that users can complete the whole task on what they own, with their real connectivity",
+      "Watch for the missing infrastructure being an effect of a deeper barrier (regulation, trust, income), not just absence"
+    ],
+    "preconditions": "The old infrastructure is truly missing or weak for your users AND they have reliable access to the substitute you build on.",
+    "failure_modes": "Assuming 'no old system' means 'open opportunity' when the real reason is low ability/willingness to pay. Designing for smartphones when users have feature phones, or steady data when connectivity is patchy. Importing rich-market assumptions (always-on internet, cards, addresses). Underestimating the trust and behavior-change cost of being people's first-ever version of a service.",
+    "evidence_note": "Well-documented in development economics and emerging-market tech (mobile money). The phenomenon is real; the founder lesson ('skip the old layer and win') is more folklore, since many leapfrog attempts fail on affordability/trust. Grade medium: pattern evidenced, success recipe not.",
+    "regional_notes": "Most relevant in emerging markets and underserved rural/low-income segments. Substitute infrastructure varies sharply by region (mobile-money penetration, smartphone vs feature phone, dominant messaging app), so validate locally.",
+    "examples": "A founder helps small rural shopkeepers manage stock and credit. They have no computers and no bank relationship, but nearly all use a basic smartphone and a popular messaging app daily. Instead of accounting software assuming a PC and bank feed, she runs it through the messaging app they already open hourly."
   },
   {
     "id": "recurring-revenue",
     "family": "Opportunity",
-    "title": "Prefer recurring revenue",
+    "title": "Boring and monthly beats flashy and once",
     "stages": [
-      1,
-      2,
       3,
-      4
+      4,
+      5
     ],
     "reversibility": "two-way",
     "evidence": "medium",
+    "warn": false,
     "keywords": [
-      "business model",
-      "subscription",
-      "recurring",
-      "monetize",
-      "revenue model",
-      "pricing model"
+      "something people pay for every month",
+      "predictable income",
+      "i don't want to resell every time",
+      "subscription instead of one-off",
+      "they keep needing it",
+      "recurring need not a one-time buy",
+      "stop chasing new sales constantly",
+      "money that comes back each month",
+      "an ongoing service not a product sale",
+      "build something sticky"
     ],
-    "summary": "A boring thing people pay for monthly usually beats a flashy one-time purchase — predictable cash, compounding value.",
-    "failure_modes": "Forcing a subscription onto something used once or rarely; churn quietly eats you if the value isn't ongoing.",
-    "evidence_note": "Medium-high — strong for businesses with genuine ongoing value; not a fit for inherently one-off purchases."
+    "summary": "A product people pay for repeatedly because they keep needing it gives predictable income and lets value compound, where a one-time purchase forces you to find a brand-new buyer every sale. Often the 'boring' recurring need is the better business.",
+    "when_to_use": "When shaping your offer and pricing, especially choosing between a one-off sale and an ongoing relationship, or noticing your idea is a one-time purchase.",
+    "how_to_run": [
+      "Check whether the underlying need actually recurs (monthly/weekly) or is genuinely one-and-done",
+      "Shape the offer around the ongoing need so paying again is natural, not a forced rental",
+      "Price for the recurring value delivered, not a one-time transaction",
+      "Watch early renewal/retention as closely as new sales, because churn quietly kills recurring models",
+      "Don't bolt a subscription onto something people only need once"
+    ],
+    "preconditions": "There is a real, repeating need. Forcing recurring pricing onto a one-time need creates churn and resentment, not stability.",
+    "failure_modes": "Slapping a subscription on a one-time-need product so customers cancel after month one. Obsessing over new sign-ups while ignoring churn. Underpricing because 'it's just monthly.' Choosing recurring in a market where buyers prefer to own outright. Confusing 'recurring billing' with 'recurring value' — only the latter retains.",
+    "evidence_note": "Subscription economics are well-studied in SaaS finance and the predictability advantage is real and measurable. But 'boring recurring beats flashy one-time' is a heuristic, not a law; many transactional businesses are excellent and many subscriptions fail on churn. Grade medium.",
+    "regional_notes": "Willingness to subscribe varies by market/category; some regions strongly prefer one-time or prepaid, and recurring-charge infrastructure may be weak.",
+    "examples": "A founder can sell a one-time website setup for restaurants (new restaurant every sale) or offer ongoing menu updates, hosting, and reservations monthly. He picks the monthly service: less glamorous, but after a year he has steady income from the whole base instead of starting from zero — as long as he keeps them from canceling."
   },
   {
     "id": "jobs-to-be-done",
@@ -175,94 +234,159 @@
   {
     "id": "why-now",
     "family": "Opportunity",
-    "title": "Why now? — timing test",
+    "title": "What changed to make this possible now",
     "stages": [
       0,
       1
     ],
     "reversibility": "two-way",
     "evidence": "medium",
+    "warn": false,
     "keywords": [
-      "timing",
-      "why now",
-      "trend",
-      "market timing",
-      "too early",
-      "ready"
+      "why hasn't this been done already",
+      "what changed recently",
+      "this wasn't possible two years ago",
+      "the cost finally dropped",
+      "the law just changed",
+      "people only started doing this lately",
+      "the tech just got good enough",
+      "the timing feels right",
+      "is it too early for this",
+      "did i miss the window"
     ],
-    "summary": "What changed recently (tech, law, cost, behavior) that makes this possible or necessary now? No clear 'why now' usually means too early or too late.",
-    "evidence_note": "Medium — a strong 'why now' correlates with breakout timing, but it's clearer in hindsight than in advance."
+    "summary": "Ask what recently changed (a technology, a law, a price drop, a shift in behavior) that makes this idea workable now when it wasn't before. If you can't name a clear, recent change, the idea is probably too early or already too late.",
+    "when_to_use": "At idea stage and when pitching, to pressure-test timing and explain why the opportunity is open now.",
+    "how_to_run": [
+      "Ask: if this is a good idea, why doesn't it already exist or dominate?",
+      "Identify the specific recent change — tech capability, regulation, cost curve, or new habit — that unlocked it",
+      "Date the change: roughly when, and is the window opening or closing?",
+      "If you can't name a concrete change, treat that as a red flag",
+      "Sanity-check the change is real and durable, not a temporary blip"
+    ],
+    "preconditions": "",
+    "failure_modes": "Inventing a vague 'why now' to justify an idea you love. Mistaking a passing trend for a durable shift. Being genuinely too early — users aren't ready. Being too late — incumbents already captured it. Confusing a 'why now' for you with a 'why now' for the market.",
+    "evidence_note": "Standard VC diligence question and pitch slide. A useful framing discipline, but no evidence that articulating a 'why now' predicts success, and easy to write a convincing post-hoc story. Grade medium: respected as a thinking tool, unproven as a predictor.",
+    "regional_notes": "The enabling change (a regulation, a payment rail, a connectivity threshold) often arrives at different times in different regions, so a 'why now' true in one market may be too early or late in another.",
+    "examples": "A founder wants to turn spoken customer calls into structured notes. Asked why now, she points to a recent drop in cost and jump in accuracy of speech-to-text within the last year or two — the same product would have been too inaccurate and expensive a few years earlier. That datable change is her 'why now.'"
   },
   {
     "id": "founder-market-fit",
     "family": "Opportunity",
-    "title": "Founder-market fit / unfair advantage",
+    "title": "Your unfair, hard-to-copy edge",
     "stages": [
       0,
       1
     ],
-    "reversibility": "two-way",
-    "evidence": "medium",
+    "reversibility": "n-a",
+    "evidence": "low",
+    "warn": true,
     "keywords": [
-      "unfair advantage",
-      "why you",
-      "founder fit",
-      "moat",
-      "edge",
-      "advantage"
+      "what do i bring that others can't",
+      "my unfair advantage",
+      "why me for this",
+      "i have access nobody else has",
+      "i know this industry from the inside",
+      "i can reach these customers easily",
+      "what makes me hard to copy",
+      "is passion enough",
+      "do i have an edge here",
+      "why am i the right person"
     ],
-    "summary": "What do you uniquely know, have, or can reach that others can't easily copy? Be brutally honest — 'I'm passionate' is not an advantage.",
-    "failure_modes": "Mistaking enthusiasm or a generic skill for a real edge."
+    "summary": "Identify what you specifically know, have access to, or can reach that a smart competitor can't easily copy — insider knowledge, a built-in audience, rare skills, trust in a community. Being passionate or hardworking is not an advantage; everyone serious has those.",
+    "when_to_use": "When choosing among ideas, or honestly assessing whether you (versus anyone else) are well-placed to win this opportunity.",
+    "how_to_run": [
+      "List concrete assets: specialized knowledge, relationships, distribution/audience, rare skills, community trust",
+      "For each, ask 'could a capable stranger get this in a few months?' — if yes, it's not an edge",
+      "Match your real edges against what this opportunity actually rewards",
+      "Ruthlessly cut 'I'm passionate' and 'I work hard'",
+      "If you find no durable edge, build one first or pick a different opportunity"
+    ],
+    "preconditions": "You can be honest with yourself; this only works if you don't flatter yourself about advantages you don't have.",
+    "failure_modes": "Counting passion, grit, or generic intelligence as an advantage — they're table stakes. Inventing an edge to justify an idea you already want. Overrating an advantage that's easy to acquire. Underrating quiet but real edges (a community's trust). Believing an edge is permanent. A genuine edge raises odds but doesn't guarantee the opportunity is good.",
+    "evidence_note": "'Founder-market fit' popularized ~2012 as a companion to product-market fit. Intuitive and widely cited but largely conceptual; no rigorous evidence that measurable founder-market fit predicts outcomes, and fuzzy enough to define after the fact. Graded low and flagged because it invites self-flattering, survivorship-biased storytelling.",
+    "regional_notes": "Local knowledge, language, and on-the-ground relationships are often a real, hard-to-copy edge in a specific region; an edge strong in one market may be worthless in another.",
+    "examples": "A founder considering a tool for physiotherapy clinics realizes her edge isn't enthusiasm — it's three years as a clinic receptionist, knowing exactly how their billing breaks, and being trusted in a 2,000-member group of clinic owners. A generalist could copy features but not that knowledge or warm distribution. She drops the ideas where she has no such edge."
   },
   {
     "id": "beachhead",
     "family": "Opportunity",
-    "title": "Beachhead — dominate the smallest market first",
+    "title": "Dominate one tiny market completely",
+    "stages": [
+      1,
+      3,
+      5,
+      6
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "start narrow then expand",
+      "pick one type of customer first",
+      "win a small market completely",
+      "don't try to serve everyone",
+      "be the obvious choice for one group",
+      "land in a niche",
+      "too broad to start",
+      "who exactly is my first customer",
+      "go small to go big",
+      "own a corner before expanding"
+    ],
+    "summary": "Pick the smallest, most specific market you can win completely — one tight customer type with a shared, urgent need — and become the obvious choice there before expanding. Trying to serve everyone at once usually means winning no one.",
+    "when_to_use": "When defining your first target customer, especially if tempted to aim at a broad market or many segments at once.",
+    "how_to_run": [
+      "Narrow to one specific customer type who share the same urgent problem and talk to each other",
+      "Confirm it's small enough to dominate but real enough to sustain early traction",
+      "Make your product unmistakably the best choice for exactly that group",
+      "Win it deeply — high usage, referrals, repeatable sales — before widening",
+      "Plan expansion into adjacent segments from strength, not in parallel"
+    ],
+    "preconditions": "There's a definable, reachable segment with a shared urgent need you can plausibly serve better than anyone, and an adjacent path to expand later.",
+    "failure_modes": "Picking a beachhead so tiny it can never grow. Defining the segment too broadly so you can't dominate. Expanding before truly winning the first market, splitting focus. Choosing a segment that doesn't talk to itself, so word of mouth never compounds. Falling so in love with the niche you never expand. A beachhead is a starting point, not a ceiling.",
+    "evidence_note": "Rooted in Geoffrey Moore's Crossing the Chasm (1991); reinforced by later GTM frameworks. One of the most widely taught GTM ideas and coherent, but supporting cases are retrospective and survivorship-biased. Grade medium: strong as a focus discipline, not a guarantee.",
+    "regional_notes": "A beachhead can be geographic — winning one city or region completely before expanding — often practical for first-time founders with limited reach.",
+    "examples": "A founder building project-management software resists aiming at 'all small businesses' and targets only independent wedding planners — a group with a specific workflow who swap recommendations in online groups. Becoming the tool wedding planners assume everyone uses gets dense word of mouth, then she adapts for event planners more broadly."
+  },
+  {
+    "id": "pr-faq",
+    "family": "Product",
+    "title": "Write the launch announcement before you build",
     "stages": [
       0,
       1,
       2
     ],
     "reversibility": "two-way",
-    "evidence": "high",
-    "keywords": [
-      "niche",
-      "target market",
-      "beachhead",
-      "focus",
-      "segment",
-      "who is the customer",
-      "narrow"
-    ],
-    "summary": "Pick the smallest market you can dominate, not the biggest you can enter. Win it completely, then expand from strength.",
-    "preconditions": "The small segment is reachable and shares a sharp, common pain.",
-    "evidence_note": "High — repeatedly the path from zero to traction; broad launches usually dilute the message and the product."
-  },
-  {
-    "id": "pr-faq",
-    "family": "Product",
-    "title": "Write the launch blurb first (PR-FAQ)",
-    "stages": [
-      1,
-      2
-    ],
-    "reversibility": "two-way",
     "evidence": "medium",
+    "warn": false,
     "keywords": [
-      "product",
-      "spec",
-      "plan",
-      "prioritize",
-      "build",
-      "feature",
-      "what to build"
+      "write the press release first",
+      "is this idea even exciting",
+      "describe the product before building it",
+      "one-paragraph pitch",
+      "answer the hard questions upfront",
+      "would anyone care about this",
+      "plan before coding",
+      "kill bad ideas early",
+      "customer FAQ for my idea",
+      "does this sound boring on paper",
+      "force myself to be clear",
+      "what would I announce"
     ],
-    "summary": "Before building, write the one-paragraph launch announcement plus the hard customer FAQ. If it's boring or unconvincing on paper, don't build it.",
+    "summary": "Before building anything, write the short announcement you'd publish on launch day plus the uncomfortable questions a real customer would ask. If it reads as boring or you can't answer the hard questions, that's a cheap signal to stop or rethink.",
+    "when_to_use": "At the very start, when you have an idea but haven't committed engineering time. Best when you're tempted to build because the idea feels obvious, or when a team disagrees about what they're making.",
     "how_to_run": [
-      "Write the press-release paragraph as if launched",
-      "Write the FAQ a skeptical customer would ask",
-      "If you can't make it compelling in words, the product won't fix that"
-    ]
+      "Write a one-paragraph 'announcement' as if it shipped: who it's for, the single problem it kills, why they'd switch today. Plain customer language.",
+      "Write the FAQ a skeptical buyer would ask: cost, why trust you, the obvious cheaper alternative, what happens when it breaks.",
+      "Read it cold a day later. If the announcement is boring or the FAQ has answers you can't honestly give, it isn't ready.",
+      "Show it to 3-5 target customers and watch reaction to the paragraph, not your pitch. Indifference is the kill signal.",
+      "Only then scope the smallest build that delivers that paragraph."
+    ],
+    "preconditions": "You need a clear guess at who the customer is. If you can't name the customer, do customer discovery first.",
+    "failure_modes": "Writing it to sound impressive instead of honest so it always 'passes.' Treating it as a one-time gate instead of revising as you learn. Internal feature jargon hiding that the value is unclear. Polishing the doc for weeks while learning nothing from real people. Confusing a good paragraph with actual demand — it tests clarity, not whether anyone pays.",
+    "evidence_note": "Popularized by Amazon's internal product process; widely taught as a way to kill weak ideas cheaply. Medium: the logic (force clarity before spending) is sound and broadly endorsed, but evidence is practitioner testimony and survivorship-flavored retellings, not controlled studies. Improves clarity; does not prove demand.",
+    "regional_notes": "",
+    "examples": "A solo technical founder wants to build a scheduling tool for clinics. The launch paragraph reads identically to three free tools clinics already ignore, and the hard FAQ ('why switch?') has no good answer. They stop before coding, saving two months, and pivot toward the one thing clinics complained about: no-show reminders."
   },
   {
     "id": "concierge-mvp",
@@ -300,119 +424,207 @@
   {
     "id": "wizard-of-oz",
     "family": "Product",
-    "title": "Wizard-of-Oz — fake the automation to test demand",
+    "title": "Fake the automation, do it by hand",
     "stages": [
-      0,
       1,
       2
     ],
     "reversibility": "two-way",
     "evidence": "medium",
+    "warn": false,
     "keywords": [
-      "mvp",
-      "test",
-      "fake",
-      "automation",
-      "demand",
-      "prototype",
-      "validate"
+      "fake it before you build it",
+      "do it manually behind the scenes",
+      "test demand without building",
+      "pretend it's automated",
+      "manual back-end",
+      "see if people actually want it",
+      "cheap way to validate",
+      "run it by hand first",
+      "no code to start",
+      "simulate the product",
+      "does anyone use it",
+      "avoid building the whole system"
     ],
-    "summary": "Put a polished front-end on a manual back-end. Users think it's automated; you do it by hand to test demand before building the real engine.",
-    "failure_modes": "Scaling the illusion too long and burning yourself out; not measuring whether demand is real."
+    "summary": "Put up a polished front-end so users believe the product works automatically, while you quietly do the work by hand. It tests whether people actually want the thing before you build the expensive engine behind it.",
+    "when_to_use": "When the value is clear but the automation is expensive or risky to build, and you want real behavior (not opinions) before committing. Good for technical founders tempted to build the hard backend first.",
+    "how_to_run": [
+      "Build only the front-end the user touches: a form, a chat, a page that looks like a working product.",
+      "When a request comes in, fulfill it manually behind the scenes, fast enough that it feels automated.",
+      "Measure real actions: did they submit, return, pay, refer. Watch what they do, not what they say.",
+      "Track how often the manual work would need automating — this tells you what to build first and whether it's worth it.",
+      "Once demand is proven and the manual load hurts, automate the single most painful step, not the whole system."
+    ],
+    "preconditions": "You can do the work by hand at small scale, well enough that users don't feel cheated. Don't fake things that are dangerous, regulated, or where a hidden human creates a privacy/safety problem.",
+    "failure_modes": "Faking a step where a hidden human handling user data is unethical or illegal (health, finance, identity). Burning out doing manual work long after demand is proven. Reading 'they tolerated my manual service' as 'they'll love the automated one.' Tiny samples that feel like validation. Letting quality slip so the test measures your hustle, not the product.",
+    "evidence_note": "Well-established in UX and lean-startup practice; distinct from concierge testing (where the user knows a human is involved). Medium: strongly endorsed and useful, but public proof is selected success stories; it tests demand for a manual experience, which doesn't guarantee the automated version retains.",
+    "regional_notes": "",
+    "examples": "A founder thinks small online sellers want AI-written product descriptions. Instead of building the model pipeline, they put up a form 'paste your product, get a description in 1 hour' and write each by hand. Within two weeks ten sellers return repeatedly and two offer to pay — and most requests are one category, so that's where automation should start."
   },
   {
     "id": "minimum-lovable",
     "family": "Product",
-    "title": "Minimum lovable, not maximum feature list",
+    "title": "Ship something a few people love, not a list nobody wanted",
     "stages": [
-      1,
       2,
       3
     ],
     "reversibility": "two-way",
-    "evidence": "medium",
+    "evidence": "low",
+    "warn": false,
     "keywords": [
-      "mvp",
-      "features",
-      "scope",
-      "feature creep",
-      "ship",
-      "perfectionism",
-      "launch"
+      "smallest thing people love",
+      "don't build a huge feature list",
+      "make a few users happy first",
+      "stop adding features nobody asked for",
+      "do one thing really well",
+      "narrow but delightful",
+      "quality over checklist",
+      "first version that people rave about",
+      "focus on one strong use case",
+      "minimum but not embarrassing",
+      "what would make them tell a friend",
+      "cut scope ruthlessly"
     ],
-    "summary": "Ship the smallest thing a few people genuinely love, not the longest feature list nobody asked for. Depth of love for a narrow group beats broad indifference.",
-    "failure_modes": "Feature creep; delaying launch for 'just one more thing'; confusing more features with more value."
+    "summary": "Instead of shipping the longest feature list, ship the smallest product that a narrow group genuinely love and would miss if it vanished. Depth of love from a few beats shallow indifference from many.",
+    "when_to_use": "When defining your first real release and feeling pressure to match competitors feature-for-feature. Best when you can identify a specific narrow group whose problem you can fully solve.",
+    "how_to_run": [
+      "Pick one narrow user group and the single job they care about most. Say no to every other audience for now.",
+      "Define what 'they'd be upset if this disappeared' looks like — that bar, not feature count, is the target.",
+      "Build only what's needed to clear that bar, but finish those few things to a genuinely good standard.",
+      "Put it in front of that group and watch for unprompted enthusiasm and repeat use, not polite approval.",
+      "Expand only after a core of users clearly love it; widen audience or add features one at a time."
+    ],
+    "preconditions": "You know who the narrow group is and what 'love' means for them. If you don't yet know the customer or problem, do discovery first — this is a build approach, not a discovery one.",
+    "failure_modes": "Using 'lovable' as an excuse to over-polish and delay shipping. Confusing your own taste for what users love. Picking an audience so narrow it can never grow. Chasing delight on things users don't care about while ignoring a basic broken step. Mistaking early enthusiasm from friendly users for real market love.",
+    "evidence_note": "A popular reframing of 'MVP'; widely repeated but largely opinion and anecdote. Low: the underlying idea (intensity of preference from a focused segment matters) is reasonable, but little rigorous evidence that 'lovable' beats 'viable' as a rule, and 'love' is hard to measure. A useful framing, not a proven law.",
+    "regional_notes": "",
+    "examples": "A founder building a personal-finance app lists 20 features to match incumbents, then cuts to one: automatically flagging the three subscriptions you forgot you're paying for. They make that flow effortless and a little delightful, and a small group start telling friends specifically about it — a real wedge before adding anything else."
   },
   {
     "id": "go-and-see",
     "family": "Product",
-    "title": "Go and see for yourself",
+    "title": "Watch the real thing happen where it happens",
     "stages": [
       0,
       1,
       2,
-      3
+      3,
+      4
     ],
     "reversibility": "two-way",
-    "evidence": "high",
+    "evidence": "medium",
+    "warn": false,
     "keywords": [
-      "research",
-      "observe",
-      "customer",
-      "watch",
-      "field",
-      "reality"
+      "watch users in real life",
+      "don't trust the dashboard alone",
+      "go where the work happens",
+      "see it with your own eyes",
+      "sit with a customer",
+      "observe instead of asking",
+      "stop guessing from reports",
+      "shadow a real user",
+      "find out what really happens",
+      "leave the building",
+      "watch them actually use it",
+      "reports hide the truth"
     ],
-    "summary": "Don't trust reports and dashboards alone — watch the real thing happen where it happens. The gap between what people say and what they do is where the insight is.",
-    "regional_notes": "Critical when building for a context you don't live in; assumptions from afar are usually wrong."
+    "summary": "Don't rely only on dashboards, summaries, or what people tell you in meetings. Go to where the work or buying actually happens and watch it directly, because real behavior is usually different from the report.",
+    "when_to_use": "When a metric looks surprising, a feature isn't used as expected, support keeps getting the same complaint, or you're about to decide based on second-hand summaries. Especially valuable for technical founders who default to data over people.",
+    "how_to_run": [
+      "Identify the exact spot where the real action happens: a user doing the task, a customer deciding to buy, a support call, an onboarding.",
+      "Go there in person or watch live (screen-share, recording). Don't interrupt or coach.",
+      "Note the gap between the report/your assumption and what you saw — especially workarounds and friction nobody mentions.",
+      "Ask 'why' about the surprising moments, digging past the first explanation.",
+      "Bring the specific observation back into the decision; change what you build based on real behavior."
+    ],
+    "preconditions": "You need access to real users or the real workflow. If you can't observe directly, get the closest proxy (recordings, session replays) rather than relying purely on aggregate numbers.",
+    "failure_modes": "Watching once and over-generalizing from a single case. Letting your presence change behavior. Cherry-picking the observation that confirms what you believed. Replacing all quantitative data with anecdote. Observing politely and never asking the hard 'why.' Confusing 'I saw one user struggle' with 'this is the top priority' without checking frequency.",
+    "evidence_note": "Rooted in lean/operations practice (direct observation) and user-research methods that stress watching behavior over self-report. Medium: observation reliably surfaces problems surveys/dashboards miss (well supported in UX research); the weakness is sample size and observer bias, so it informs rather than proves.",
+    "regional_notes": "",
+    "examples": "A founder sees 60% of users drop off at setup and assumes the form is too long. Watching five real users, the form is fine — they abandon because an earlier email never arrives, so they're stuck waiting for a code. The dashboard blamed the form; watching revealed email delivery."
   },
   {
     "id": "hyperlocal",
     "family": "Product",
-    "title": "Build for how your people actually live",
+    "title": "Build for how your customers actually pay and behave",
     "stages": [
       1,
       2,
       3
     ],
     "reversibility": "two-way",
-    "evidence": "high",
+    "evidence": "medium",
+    "warn": false,
     "keywords": [
-      "local",
-      "region",
-      "market",
-      "adapt",
-      "culture",
-      "payments",
-      "logistics"
+      "don't copy silicon valley playbook",
+      "build for my actual market",
+      "they pay in cash",
+      "most users have no credit card",
+      "design for poor connectivity",
+      "local habits are different",
+      "what works there won't work here",
+      "cash on delivery matters",
+      "adapt to how people really buy",
+      "unbanked customers",
+      "mobile-first low bandwidth",
+      "the foreign template doesn't fit"
     ],
-    "summary": "Don't copy rich-country playbooks. Build for how your customers actually pay, move, and behave — payment methods, connectivity, trust norms, logistics.",
-    "regional_notes": "The default assumptions baked into Western SaaS/marketplace playbooks often break outside their home market."
+    "summary": "Don't import a playbook built for rich, high-trust, card-and-broadband markets. Design around how your actual customers pay, move, and behave, which may mean cash, mobile money, low bandwidth, and offline trust.",
+    "when_to_use": "When building in or for a market whose payment, connectivity, logistics, or trust conditions differ from where most startup advice originates. Especially when tempted to clone a successful foreign app step-for-step.",
+    "how_to_run": [
+      "List the assumptions baked into the playbook you're copying: cards, fast internet, reliable address/delivery, high baseline trust.",
+      "Check each against your real customers: how they actually pay, their connection, how goods reach them, whether they trust paying before receiving.",
+      "Redesign the friction points around reality: cash-on-delivery, mobile wallets, lightweight/offline flows, local-language trust signals.",
+      "Test the riskiest local assumption first (often payment or last-mile) with a small real run before scaling.",
+      "Build operations around the messy parts (returns, failed deliveries, collections) where imported models quietly break."
+    ],
+    "preconditions": "You need genuine local knowledge, ideally from living it or talking to many real customers, not assumptions about 'developing markets' in general. Conditions vary enormously even within one country.",
+    "failure_modes": "Treating a whole region as uniform. Under-pricing the operational cost of cash-on-delivery (high return rates, cash handling, fraud). Over-engineering for low-end conditions a segment has outgrown. Copying a 'localized' competitor without checking if their model makes money. Assuming low trust is permanent. Romanticizing local quirks instead of solving the underlying need.",
+    "evidence_note": "Supported by market research on emerging-market commerce: low card penetration, large unbanked populations, strong cash-on-delivery preference. Medium: the pattern is well-documented across regions; the limit is that conditions shift fast and vary locally, so specific tactics age and don't transfer cleanly.",
+    "regional_notes": "Most relevant in markets with low card penetration, large unbanked populations, unreliable addressing, or low baseline trust in prepayment — common across much of South Asia, Africa, Southeast Asia, and parts of Latin America. Even within one country, urban and rural realities differ.",
+    "examples": "A founder copies a card-first subscription-box model that thrives abroad. Locally almost no target customers hold credit cards and few trust paying before they see the goods. After near-zero signups, they switch to cash-on-delivery and a mobile wallet, and orders come — but they also must handle the high share of customers who refuse delivery at the door."
   },
   {
     "id": "trust-layer",
     "family": "Product",
-    "title": "Own the trust layer",
+    "title": "When fear of getting scammed is the real blocker, trust is the product",
     "stages": [
+      1,
       2,
-      3,
-      4,
-      5
+      3
     ],
-    "reversibility": "two-way",
+    "reversibility": "one-way",
     "evidence": "medium",
     "warn": true,
     "keywords": [
-      "trust",
-      "escrow",
-      "marketplace",
-      "scams",
-      "guarantee",
-      "safety"
+      "buyers are scared of getting scammed",
+      "nobody trusts the other side",
+      "hold the money until delivery",
+      "guarantee or refund",
+      "people won't pay a stranger",
+      "fear is blocking sales",
+      "quality worries stop the deal",
+      "make both sides feel safe",
+      "escrow the payment",
+      "protect the buyer",
+      "trust is the missing piece",
+      "they won't go first"
     ],
-    "summary": "If fear of scams or bad quality is what blocks buying, the missing trust IS the product — escrow, guarantees, verification. But it's capital- and operations-heavy.",
-    "preconditions": "Trust is genuinely the binding constraint, and you can fund the guarantee/operations.",
-    "warn_reason": "Building trust infrastructure (escrow, refunds, vetting) ties up cash and ops — only take it on if trust is the real blocker."
+    "summary": "If people want what you offer but won't transact because they fear scams or bad quality, the missing trust IS the product, not a feature you add later. Providing it (escrow, guarantees, protection) can unlock the market, but it's capital- and operations-heavy and hard to reverse.",
+    "when_to_use": "When you've confirmed real demand on both sides but deals stall because someone must 'go first' and fears being cheated. The core objection is 'how do I know I won't get scammed,' not price or awareness.",
+    "how_to_run": [
+      "Confirm trust is actually the blocker: talk to people who almost transacted and didn't.",
+      "Start with the lightest trust mechanism that could work — clear guarantees, verification, reviews, manual dispute handling — before heavy financial infrastructure.",
+      "If money must be held (escrow), understand the legal, regulatory, and capital obligations upfront; holding others' funds is heavily regulated.",
+      "Pilot on a small set of transactions you can personally guarantee or refund, and measure whether removing the fear unlocks deals.",
+      "Only scale the capital/ops-heavy machinery once you've proven trust is the bottleneck and solving it converts."
+    ],
+    "preconditions": "Validate two-sided demand first; a trust layer for a market that doesn't exist is just expensive infrastructure. Understand the legal/regulatory rules for handling money or guarantees in each market.",
+    "failure_modes": "Holding customer funds without licenses, capital, or compliance — can be illegal and hard to unwind. Underpricing guarantees and refunds; fraud/disputes can eat the business. Building escrow before proving anyone wanted the transaction. Assuming trust is the blocker when the real issue is price or weak demand. Trust mechanisms becoming a fraud target. Once you've promised protection you can't quietly remove it — why it's one-way.",
+    "evidence_note": "Marketplace and payment practitioners consistently cite trust (fear of non-payment or bad quality) as a core two-sided-marketplace blocker, with escrow/buyer protection as common solutions. Medium: mechanism well-attested and intuitive, but public evidence leans on vendor case studies, and the capital/regulatory burden means it works only when trust is genuinely the binding constraint.",
+    "regional_notes": "The bar for 'enough trust' varies by market. Where institutional trust is weak and prepayment uncommon, this layer can be the whole reason a marketplace works — but it collides with local financial regulation, which can require licenses to hold or move funds.",
+    "examples": "A founder runs a marketplace for custom furniture. Both sides are interested but deals die: buyers won't pay upfront for something they can't inspect, workshops won't start without a deposit. They pilot holding the buyer's payment and releasing on delivery, refunding personally on the first disputes. Orders close — but they learn legally holding customer money requires registration they hadn't set up, forcing a pause to get compliant."
   },
   {
     "id": "charge-day-one",
@@ -480,76 +692,173 @@
   {
     "id": "narrow-icp",
     "family": "Sales",
-    "title": "Narrow ICP first",
+    "title": "Sell to one specific buyer first",
     "stages": [
+      0,
+      1,
       2,
-      3,
-      4
+      3
     ],
     "reversibility": "two-way",
     "evidence": "medium",
+    "warn": false,
     "keywords": [
-      "target customer",
-      "icp",
-      "segment",
-      "positioning",
-      "who",
-      "messaging",
-      "everyone"
+      "who exactly is this for",
+      "everyone is my customer",
+      "narrow my audience",
+      "pick one type of buyer",
+      "who should I sell to first",
+      "my market is too broad",
+      "find my first customers",
+      "sharpen my pitch",
+      "beachhead market",
+      "first 10 customers",
+      "stop selling to everyone",
+      "define my ideal customer"
     ],
-    "summary": "Sell to one specific kind of person before 'everyone'. A sharp message to a narrow buyer beats a vague one to all.",
-    "failure_modes": "Targeting 'everyone'; a generic message that resonates with no one."
+    "summary": "Sell to one specific kind of person before 'everyone'; a sharp message to a narrow buyer beats a vague one to all.",
+    "when_to_use": "When you are pre-launch or in your first months, struggling to get attention, or when your pitch tries to appeal to too many people at once and lands with none.",
+    "how_to_run": [
+      "Write the single most specific person who has the problem most painfully today (role, situation, what they use now).",
+      "Rewrite your one-line pitch so it names that person's exact situation, not a general benefit.",
+      "Find 10-20 of exactly that person and talk to or sell to only them for a fixed period.",
+      "Track whether the sharper message gets more replies, calls, or sales than the broad one.",
+      "Only widen to adjacent buyers once this narrow group is buying and referring."
+    ],
+    "preconditions": "You can actually reach the narrow group (a findable channel, list, or community). Narrowing to a buyer you can't locate just makes you invisible.",
+    "failure_modes": "Picking a niche so tiny it can never grow. Confusing a narrow MESSAGE with a permanently narrow product. Choosing by who's easiest to reach rather than who hurts most. Narrowing on a demographic ('women 25-34') instead of a situation/problem. Switching niches every few weeks before any one has a fair test.",
+    "evidence_note": "Strong logical and practitioner support: focused messaging reliably lifts response rates and a concentrated first segment is standard early advice. Medium, not high, because most public 'proof' is survivorship-biased retellings and there are no clean controlled trials isolating narrowing as the cause. The mechanism (relevance raises conversion) is well-established in direct response.",
+    "regional_notes": "In smaller or non-English markets the reachable niche may be smaller, so balance 'narrow' against having enough buyers; a tight vertical can work better than a tight demographic.",
+    "examples": "A solo founder with a scheduling tool 'for any small business' gets ignored. They rewrite it as 'for independent physiotherapists who lose hours rebooking no-shows,' join two forums where those people gather, and get their first paying users within weeks."
   },
   {
     "id": "positioning",
     "family": "Sales",
-    "title": "Positioning is a decision, not a tagline",
+    "title": "How you frame it decides who buys",
     "stages": [
+      1,
       2,
       3,
-      4,
-      5
+      4
     ],
     "reversibility": "two-way",
     "evidence": "medium",
+    "warn": false,
     "keywords": [
-      "positioning",
-      "messaging",
-      "brand",
-      "framing",
-      "category",
-      "cheap",
-      "premium"
+      "how do I describe my product",
+      "what category am I in",
+      "how to frame my offer",
+      "what to compare myself to",
+      "why aren't people getting it",
+      "how to explain what we do",
+      "what makes us different",
+      "cheap vs premium framing",
+      "what do I call this",
+      "who is the competition in their mind",
+      "reposition my product",
+      "the pitch isn't landing"
     ],
-    "summary": "How you frame the product changes who buys. Calling a cheap product 'the cheapest' can repel the very buyers you built it for. Choose the frame deliberately.",
-    "examples": "The same product positioned as 'budget' vs 'simple and reliable' attracts very different customers."
+    "summary": "How you frame the product changes who buys and what they'll pay; the reference point you set ('the cheap one,' 'the X for Y') decides how people judge you.",
+    "when_to_use": "When prospects 'don't get it,' compare you to the wrong thing, or balk at price. When deciding what category to claim, what to compare against, or how to name the product.",
+    "how_to_run": [
+      "Write what customers currently think you are and what they compare you to (ask them, don't guess).",
+      "List the few attributes your best customers actually value, and pick the frame that makes those obviously matter.",
+      "Choose a reference point on purpose: the thing you want to be measured against sets price and quality expectations.",
+      "Test the new framing on fresh prospects and watch whether the 'what is this / why that price' friction drops.",
+      "Make website, pitch, and pricing page all tell the same single story."
+    ],
+    "preconditions": "You need real signal on how current customers describe and value the product. Positioning invented in a vacuum tends to be wishful.",
+    "failure_modes": "Calling yourself 'the cheapest' when buyers want reliability, repelling them and attracting churning bargain-hunters. Claiming a frame the product can't deliver. Positioning against a giant and inviting a comparison you lose. Changing the frame so often no reputation accumulates. Clever framing the buyer doesn't understand.",
+    "evidence_note": "Well-supported in marketing theory (reference points and category framing shift willingness-to-pay) and consistent with anchoring research. Medium because outcomes are context-dependent and most business 'case studies' are after-the-fact; framing helps but rarely rescues a weak product.",
+    "regional_notes": "Category language and status cues differ by market; a frame that signals 'premium' in one country can read as 'overpriced' or unfamiliar in another. Translate the meaning, not just the words.",
+    "examples": "A founder sells a simple invoicing tool as 'the cheapest invoicing app,' attracting price-sensitive users who cancel after a month. Reframing it as 'invoicing built for freelancers who hate accounting' draws people who value the simplicity and stay, at the same price."
   },
   {
     "id": "trust-substitution",
     "family": "Sales",
-    "title": "Trust-substitution — remove their risk",
+    "title": "Take the buyer's risk off the table",
     "stages": [
       2,
       3,
       4
     ],
     "reversibility": "two-way",
-    "evidence": "high",
+    "evidence": "medium",
+    "warn": false,
     "keywords": [
-      "risk",
-      "guarantee",
-      "trust",
-      "pay after",
-      "money back",
-      "objection"
+      "people hesitate to buy",
+      "reduce buyer risk",
+      "money-back guarantee",
+      "pay after delivery",
+      "free trial worth it",
+      "they don't trust us yet",
+      "lower the barrier to buy",
+      "no one knows our brand",
+      "how to close hesitant customers",
+      "remove the risk of buying",
+      "guarantee or refund",
+      "trial that proves value"
     ],
-    "summary": "If people fear buying, take the risk off them — pay-after-delivery, money-back, free trial with a real outcome. Lower the cost of saying yes.",
-    "preconditions": "You can absorb the downside of some non-payers/returns."
+    "summary": "If people fear buying from an unknown, move the risk onto yourself: pay-after-delivery, a real money-back guarantee, or a free trial that produces an actual outcome.",
+    "when_to_use": "When prospects show interest but stall at the moment of payment, especially when you're new, unknown, or selling something they can't easily evaluate up front.",
+    "how_to_run": [
+      "Identify the specific fear stopping the purchase (wasted money, won't work for me, hard to undo).",
+      "Pick the smallest risk-reversal that directly answers that fear, not a generic discount.",
+      "Make the guarantee concrete and easy to claim, and tie the trial to a real result the buyer can see.",
+      "Track conversion before and after, and track how many actually invoke the refund or churn after the trial.",
+      "Keep it only if extra sales outweigh refunds, abuse, and support cost."
+    ],
+    "preconditions": "Your product must reliably deliver the promised outcome, and you must be able to absorb refunds or non-payment without going under. Risk reversal on a product that doesn't work just accelerates losses.",
+    "failure_modes": "Money-back on a weak product, bleeding refunds. A 'free trial' too short or clunky to reach the 'aha,' converting no one. Attracting freebie-seekers who never intended to pay. Pay-after-delivery to customers who won't pay, creating collections nightmares. Hiding conditions in fine print, destroying the trust you wanted.",
+    "evidence_note": "Solid grounding in loss-aversion research and direct-response practice, where credible guarantees and outcome-based trials reliably lift conversion. Medium because the net effect depends on product quality and refund/abuse rates; the lever can backfire and there's no universal success rate.",
+    "regional_notes": "Refund and consumer-protection laws differ sharply by country (some mandate cooling-off/return rights), and norms around paying upfront vs on delivery vary; check what's legally required and culturally expected.",
+    "examples": "A founder selling a paid onboarding service finds prospects interested but nervous. They switch to 'you only pay if your team is fully set up in two weeks.' Sign-ups jump, almost everyone pays because the service genuinely delivers, and the few who don't cost little."
   },
   {
     "id": "waitlist-referral",
     "family": "Sales",
-    "title": "Waitlist + referral",
+    "title": "Make people line up and invite friends",
+    "stages": [
+      1,
+      2,
+      3
+    ],
+    "reversibility": "two-way",
+    "evidence": "low",
+    "warn": false,
+    "keywords": [
+      "should I build a waitlist",
+      "get people to invite friends",
+      "viral signups",
+      "build hype before launch",
+      "referral to skip the line",
+      "pre-launch email list",
+      "create demand before launching",
+      "invite to move up the list",
+      "early access list",
+      "will a waitlist work for me",
+      "share to unlock",
+      "grow signups for free"
+    ],
+    "summary": "Make people line up and invite friends to move up — but only when real demand already exists; the mechanic amplifies demand, it can't create it.",
+    "when_to_use": "When you have evidence people genuinely want the thing (unprompted sign-ups, organic sharing) and you want to organize that demand, stagger access, and lower acquisition cost. An amplifier, not a substitute for product-market fit.",
+    "how_to_run": [
+      "Confirm underlying pull first: are people asking for it, sharing it, or signing up without incentives?",
+      "Build a simple list with an honest reason to share (earlier access, a real perk).",
+      "Watch your real referral rate: how many new sign-ups each existing one brings; below ~1 it won't snowball.",
+      "Convert the list — track how many actually pay or use the product, not just the headline count.",
+      "Drop the mechanic if sign-ups are vanity (lots of emails, no conversions)."
+    ],
+    "preconditions": "Genuine pre-existing demand and a product worth waiting for. Without that, a referral loop just inflates a list of people who never convert.",
+    "failure_modes": "Chasing a big sign-up number that never becomes paying users. Assuming you'll go viral; sustained referral rates above 1 are rare. Paying for incentives that attract reward-hunters. Manufacturing artificial scarcity that annoys people. A long waitlist launched into too slowly, letting interest go cold.",
+    "evidence_note": "Graded LOW deliberately. Famous 'waitlist wins' are textbook survivorship bias; most referral waitlists fizzle. Reported pre-launch viral coefficients typically sit ~0.2-0.6 (below the >1 needed to self-sustain) per growth-tool vendors who profit from selling waitlist tools, so treat cautiously. The mechanic can lower CAC where demand already exists; it does not generate demand.",
+    "regional_notes": "Referral incentives intersect with promotion/lottery and data-protection rules in some jurisdictions (e.g. consent for emailing referred contacts); 'share to unlock' norms vary by platform and region.",
+    "examples": "A founder with a developer tool notices people already sharing their landing page in chat groups unprompted. They add 'invite two teammates to get access a week early,' organizing that existing enthusiasm into staggered low-cost sign-ups — and a healthy share convert because the demand was real first."
+  },
+  {
+    "id": "flat-fee-repricing",
+    "family": "Sales",
+    "title": "Beat a percentage fee with a flat one",
     "stages": [
       2,
       3,
@@ -557,157 +866,242 @@
     ],
     "reversibility": "two-way",
     "evidence": "medium",
+    "warn": false,
     "keywords": [
-      "waitlist",
-      "referral",
-      "launch",
-      "demand",
-      "viral",
-      "invite"
+      "competitor charges a percentage",
+      "switch to flat pricing",
+      "their fee punishes big customers",
+      "win on price for large accounts",
+      "percentage fee vs flat fee",
+      "low flat fee strategy",
+      "undercut the market leader",
+      "pricing for high-volume customers",
+      "should I charge a flat rate",
+      "my costs don't scale with customer size",
+      "predictable pricing",
+      "target the leader's biggest accounts"
     ],
-    "summary": "Make people line up and invite friends — but only if real demand already exists. A waitlist amplifies demand; it doesn't create it.",
-    "failure_modes": "Faking scarcity with no underlying demand; a big list that doesn't convert to payment."
-  },
-  {
-    "id": "flat-fee-repricing",
-    "family": "Sales",
-    "title": "Flat-fee repricing vs a % incumbent",
-    "stages": [
-      1,
-      2,
-      3,
-      4,
-      5
+    "summary": "If the leader's percentage fee punishes high-volume customers, charge a low flat fee and win those accounts — but only if your own costs don't scale with their volume.",
+    "when_to_use": "When an incumbent charges a percentage (of revenue, transactions, spend, headcount) and their biggest customers feel gouged because their bill grows without matching extra value.",
+    "how_to_run": [
+      "Find the customers for whom the incumbent's percentage fee is most painful (high volume, thin extra benefit).",
+      "Confirm your own cost to serve them stays roughly flat as volume grows; if your costs scale too, a flat fee bankrupts you.",
+      "Set a flat fee clearly below what those customers pay today, with margin built in at realistic volumes.",
+      "Aim your message at the pain ('stop paying more just because you grew') to the accounts that feel it most.",
+      "Watch whether you attract the high-volume accounts you wanted, not just tiny ones for whom flat is expensive."
     ],
-    "reversibility": "two-way",
-    "evidence": "high",
-    "keywords": [
-      "pricing",
-      "fee",
-      "commission",
-      "undercut",
-      "percentage",
-      "flat fee"
-    ],
-    "summary": "If the market leader's % fee punishes big customers, charge a low flat fee and win on volume — only if your costs are genuinely low enough to sustain it.",
-    "preconditions": "Your unit costs are low enough that flat pricing is profitable at volume."
+    "preconditions": "Your marginal cost to serve must stay near-flat as a customer's volume rises. You also need enough large accounts to make the volume play worthwhile.",
+    "failure_modes": "Discovering your costs DO scale (servers, payments, support), so big customers become loss-makers. Winning only small accounts for whom flat is a bad deal. Triggering the incumbent to add a flat tier. Setting the fee so low there's no margin at scale. Adverse selection where only the heaviest, costliest users switch.",
+    "evidence_note": "Grounded in standard pricing/cost-structure analysis: a flat fee wins high-volume buyers precisely when seller marginal cost is low and decoupled from buyer volume. Medium because success is contingent on your real cost curve and competitive response, and clean public evidence is scarce; the logic is sound but unforgiving if the cost assumption is wrong.",
+    "regional_notes": "In payments, marketplaces, and financial services, fee structures may be constrained by regulation or interchange rules; what you can charge and how you disclose it varies by jurisdiction.",
+    "examples": "A founder competes with a payments tool taking 2% of every transaction. Their own cost per customer is basically fixed hosting. They offer a flat monthly fee that's far cheaper for high-volume merchants, and deliberately court exactly those merchants — who overpay most under the percentage model."
   },
   {
     "id": "loss-leader",
     "family": "Sales",
-    "title": "Loss-leader land grab",
+    "title": "Free or below-cost to grab the market",
     "stages": [
       3,
       4,
-      5,
-      6
+      5
     ],
     "reversibility": "one-way",
-    "evidence": "medium",
+    "evidence": "low",
     "warn": true,
     "keywords": [
-      "free",
-      "subsidize",
-      "growth",
-      "land grab",
-      "burn",
-      "market share"
+      "give it away to grow",
+      "price below cost",
+      "subsidize to win the market",
+      "free to grab market share",
+      "loss leader strategy",
+      "burn money to grow fast",
+      "can I undercut everyone",
+      "land grab pricing",
+      "free now charge later",
+      "buy the market",
+      "grow first profit later",
+      "race to the bottom on price"
     ],
-    "summary": "Free or subsidized to grab the market only works with deep capital AND a proven way to monetize later. Otherwise it's just how you bleed out.",
-    "warn_reason": "Without deep funding and a proven monetization path, subsidizing demand burns cash with no route to profit."
+    "summary": "Going free or below-cost to grab a market only works with deep capital AND a proven, specific way to make money later; without both it's just burning cash.",
+    "when_to_use": "Rarely, and almost never for a first-time, capital-light founder. Only consider it with genuinely deep funding, a clear evidenced later-monetization mechanism, and strong reasons the market tips to a single winner. Default to NOT doing this.",
+    "how_to_run": [
+      "Be honest about funding: can you sustain losses for years, not months, without a forced shutdown?",
+      "Define exactly how you'll make money later and show evidence it converts, before subsidizing anything.",
+      "Confirm winners actually lock in here (network effects, switching costs); if customers leave when the subsidy ends, you've bought nothing.",
+      "Run a small subsidized test and measure whether subsidized users ever become profitable, with real numbers.",
+      "Set a kill-line in advance: the loss rate or runway point at which you stop, and honor it."
+    ],
+    "preconditions": "BOTH deep, patient capital AND a proven path to monetize the customers you acquire. Plus a credible reason the market consolidates to a winner. Missing any one turns this into terminal cash burn.",
+    "failure_modes": "Running out of money before monetization arrives. Acquiring users who only want the free thing and vanish when you charge. A deeper-pocketed competitor outlasting you. Customers anchoring on 'free' so you can never raise price. Margin recovery that never materializes. Mistaking subsidized growth for real demand.",
+    "evidence_note": "Graded LOW and flagged WARN. Subsidize-to-dominate is real in economics but the famous successes are extreme survivorship bias backed by capital almost no founder has; for everyone else it's a leading cause of death. Practitioner/economic sources agree it only pays when unit economics and a measured path to margin recovery are proven first — and competitors can simply match prices.",
+    "regional_notes": "Below-cost or predatory pricing is illegal in some jurisdictions (anti-dumping / predatory-pricing laws); sustained below-cost selling can draw regulatory or competitor legal action depending on market and size.",
+    "examples": "A solo founder with limited savings offers the product entirely free to 'win the market fast.' Thousands sign up, but when cash runs low and they introduce a price, almost everyone leaves — the free users were never going to pay, and a better-funded rival simply keeps its version free."
   },
   {
     "id": "stay-lean",
     "family": "Hiring",
-    "title": "Stay lean / hire builders, not managers",
+    "title": "Stay lean: hire builders, not managers, until there's a machine to manage",
     "stages": [
-      3,
-      4,
-      5
+      1,
+      2,
+      3
     ],
     "reversibility": "one-way",
     "evidence": "medium",
+    "warn": false,
     "keywords": [
-      "hire",
-      "hiring",
-      "team",
-      "manager",
-      "builder",
-      "headcount",
-      "when to hire"
+      "should I hire a manager",
+      "do I need a VP yet",
+      "first hire",
+      "too early to hire",
+      "hiring vs doing it myself",
+      "keep the team small",
+      "watch the burn rate",
+      "hire someone to build",
+      "premature management layer",
+      "lean team",
+      "when to add headcount",
+      "operator vs doer"
     ],
-    "summary": "Don't hire a fancy manager before there's a machine to manage. Hire builders to clear real bottlenecks, and watch your burn.",
-    "failure_modes": "Hiring senior managers to escape chaos; adding headcount before retention/economics are proven."
+    "summary": "Don't hire a fancy manager before there's a machine to manage; hire builders to clear real bottlenecks, and watch your burn.",
+    "when_to_use": "When tempted to bring on a senior 'leader' (head of X, VP, COO) early, or when you feel busy and assume the fix is more headcount.",
+    "how_to_run": [
+      "Write what work is actually undone now and who'd do it day one — if the honest answer is 'they'd manage people I don't have yet,' it's too early.",
+      "Prefer a hands-on builder over a coordinator until there's repeatable work and 3+ people to manage.",
+      "Translate the hire into burn: add fully-loaded cost to monthly spend and recompute runway before committing.",
+      "Set a concrete 90-day output; if you can't name one, it's a manager-in-disguise.",
+      "Revisit each few hires — the layer is worth it once you genuinely can't hold coordination in your own head."
+    ],
+    "preconditions": "You have some validated demand or product, so you know which builders move the needle. Pre-traction this often means hiring no one.",
+    "failure_modes": "Hiring a pedigreed exec who needs a team and process that don't exist, creating overhead not output. The manager builds reporting structure no one needs. Founder feels 'senior' progress while burn climbs and work still isn't done. The expensive hire leaves within a year — a costly one-way reversal.",
+    "evidence_note": "Widely repeated in startup-hiring guidance and supported by data that ~46% of newly hired executives fail within 18 months, often on fit (Leadership IQ). The 'lean until there's a machine' framing is sound operator practice but heuristic, not a controlled finding — medium.",
+    "regional_notes": "In grant/subsidy-heavy ecosystems, founders sometimes hire managers to 'look fundable'; resist optics-driven hires. Where senior talent only moves for a title, weigh that against the burn math.",
+    "examples": "A solo technical founder with a live product and a few paying customers almost hires a 'Head of Operations.' There are no operations to head — what's undone is shipping features and answering support. They hire a second engineer, ship faster, and revisit the ops role only once the team reaches five."
   },
   {
     "id": "hire-the-bottleneck",
     "family": "Hiring",
-    "title": "Hire the bottleneck, not the chore",
-    "stages": [
-      3,
-      4,
-      5
-    ],
-    "reversibility": "one-way",
-    "evidence": "medium",
-    "keywords": [
-      "hire",
-      "bottleneck",
-      "constraint",
-      "first hire",
-      "who to hire",
-      "delegate"
-    ],
-    "summary": "Hire to remove the constraint actually capping growth — not just the tasks you personally dislike doing.",
-    "how_to_run": [
-      "Name the one thing that, fixed, unlocks the most growth",
-      "Hire against that, not your to-do list"
-    ]
-  },
-  {
-    "id": "trial-before-hire",
-    "family": "Hiring",
-    "title": "Trial before one-way hires",
-    "stages": [
-      3,
-      4,
-      5,
-      6
-    ],
-    "reversibility": "one-way",
-    "evidence": "medium",
-    "keywords": [
-      "hire",
-      "senior hire",
-      "trial",
-      "contract",
-      "cofounder",
-      "leadership"
-    ],
-    "summary": "Senior and leadership hires are one-way doors. Do a paid contract or trial project before committing — you learn far more than from interviews.",
-    "preconditions": "There's real work to trial them on."
-  },
-  {
-    "id": "early-ownership-talent",
-    "family": "Hiring",
-    "title": "Hire people who owned hard problems young",
+    "title": "Hire to remove the real constraint, not the chores you dislike",
     "stages": [
       1,
       2,
       3,
-      4,
-      5
+      4
     ],
     "reversibility": "one-way",
     "evidence": "medium",
+    "warn": false,
     "keywords": [
-      "hire",
-      "talent",
-      "junior",
-      "ownership",
-      "potential"
+      "what role should I hire first",
+      "who do I hire next",
+      "I'm overwhelmed",
+      "I hate doing this task",
+      "what's slowing us down",
+      "biggest constraint on growth",
+      "am I the bottleneck",
+      "busy vs blocked",
+      "where am I stuck",
+      "what hire unblocks growth",
+      "delegate the annoying stuff",
+      "highest-leverage hire"
     ],
-    "summary": "Hire people who took real ownership of hard problems early; give juniors genuine responsibility. Drive and ownership beat polished résumés at this stage."
+    "summary": "Hire to remove the constraint actually capping growth, not just the tasks you personally dislike.",
+    "when_to_use": "When deciding which role to open next, or when swamped and assuming any hire helps.",
+    "how_to_run": [
+      "Name the one thing that, if it moved, would most increase growth or survival — that's the constraint.",
+      "Check: is high-value work not happening because you're stuck on low-value work? That's being the bottleneck, vs merely busy.",
+      "Quantify the cost of the constraint ('I lose ~$X/month because I can't handle more than Y') — make it a math decision.",
+      "Define the role around relieving that constraint; if it only offloads disliked tasks but the constraint stays, wrong hire.",
+      "After hiring, confirm the constraint actually moved — if not, you misdiagnosed it."
+    ],
+    "preconditions": "You can observe what's actually capping growth. Very early, the constraint is usually finding demand, not headcount.",
+    "failure_modes": "Hiring to escape disliked chores while the true constraint (you can't sell, the product's too slow) goes untouched. Offloading work that was never the bottleneck, so growth doesn't change but burn does. Mistaking 'busy' for 'blocked' and adding people to a process that needs simplifying. Constraint shifts after the hire and you keep optimizing the old one.",
+    "evidence_note": "Strongly aligned with theory-of-constraints reasoning and consistent first-hire advice that the trigger should be a measurable binding bottleneck, not feeling busy. Logically robust and well-supported in practice, but a diagnostic principle rather than an empirically validated rule — medium.",
+    "regional_notes": "",
+    "examples": "A founder dreads bookkeeping and almost hires a part-time finance person. But sales are flat because nobody follows up on inbound leads — that's the real constraint. They hire for sales follow-up instead; revenue rises, and bookkeeping (a chore, not a constraint) gets handled with a cheap tool later."
+  },
+  {
+    "id": "trial-before-hire",
+    "family": "Hiring",
+    "title": "Trial senior and leadership hires with paid work before committing",
+    "stages": [
+      2,
+      3,
+      4
+    ],
+    "reversibility": "one-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "should I hire this senior person",
+      "how to de-risk a big hire",
+      "contract to hire",
+      "paid trial period",
+      "test before full-time",
+      "how to vet a leadership hire",
+      "avoid a bad executive hire",
+      "trial project first",
+      "one-way door hire",
+      "firing is painful",
+      "are they actually good",
+      "reduce hiring risk"
+    ],
+    "summary": "Senior and leadership hires are hard-to-reverse, one-way doors; run a paid contract or trial project before committing full-time.",
+    "when_to_use": "Before any senior, expensive, or leadership hire — especially one you'd struggle to undo without real damage to morale, cash, or trust.",
+    "how_to_run": [
+      "Scope a real, paid piece of work (a contract, trial sprint, or defined project) that mirrors the actual job.",
+      "Agree in writing what 'good' looks like and that this is a mutual trial, not a guaranteed offer.",
+      "Watch how they work, communicate, and collaborate under real conditions — not just whether they finish.",
+      "Decide on observed evidence, not pedigree or interview charm; convert to full-time only if the trial clearly worked.",
+      "Keep it short and bounded so a 'no' is cheap and graceful for both sides."
+    ],
+    "preconditions": "There's real, fundable work to hand over and budget to pay for it; the candidate is willing and legally able to contract.",
+    "failure_modes": "Skipping the trial because the candidate 'interviewed brilliantly,' then managing a mis-hire for months. Making it unpaid or fake, which repels strong candidates and gives a false read. Trialing for likability instead of the job. Using it to extract cheap labor, poisoning trust. For genuinely senior leaders, no two-week sprint fully captures judgment over time.",
+    "evidence_note": "Failed senior hires are expensive — recruiter fees alone can be six figures, and total cost of a leadership mis-hire is widely estimated in the millions once stalled strategy and lost trust count. Paid trials and contract-to-hire are well-regarded de-risking tactics, though effectiveness isn't rigorously measured — medium.",
+    "regional_notes": "Many countries have strong notice/severance obligations, making the one-way door harder to reverse — strengthening the case for a trial. But local labor law may treat a paid trial as employment; check before structuring one. Candidates in stable jobs may be unable to take a contract trial, so adapt.",
+    "examples": "A founder wants a first head of engineering. Instead of a direct full-time offer, they pay for a two-week scoped project on a real roadmap item. The work is fine but the person ignores the small team and won't explain decisions — exactly the failure that would be catastrophic at this stage. They pass, spending two weeks and a small fee instead of a painful year."
+  },
+  {
+    "id": "early-ownership-talent",
+    "family": "Hiring",
+    "title": "Hire people who owned hard problems early; give juniors real responsibility",
+    "stages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "reversibility": "one-way",
+    "evidence": "low",
+    "warn": false,
+    "keywords": [
+      "how to spot good early hires",
+      "what to look for in a candidate",
+      "should I hire juniors",
+      "hungry vs experienced",
+      "ownership mindset",
+      "gave them real responsibility",
+      "hire for drive",
+      "underrated candidates",
+      "scrappy hires",
+      "self-starters",
+      "raw talent vs resume",
+      "who thrives at a startup"
+    ],
+    "summary": "Favor people who've owned hard problems end-to-end early in their lives or careers; give promising juniors real responsibility rather than busywork.",
+    "when_to_use": "When assessing early hires where you can't afford big salaries and pedigree is a weak signal anyway.",
+    "how_to_run": [
+      "Probe for moments they owned an ambiguous, hard problem to completion — a project, a side business, a team they carried — and what they did when it went wrong.",
+      "Weight demonstrated ownership and learning speed over title or brand.",
+      "When you hire a junior, hand them a real outcome they're accountable for, with clear scope and support.",
+      "Give responsibility in increasing chunks, watching whether they reach for more or wait to be told.",
+      "Cut losses quickly if someone consistently needs the problem solved for them."
+    ],
+    "preconditions": "You can supervise and support a junior so 'real responsibility' isn't abandonment; the stakes of any single mistake are survivable while they learn.",
+    "failure_modes": "Romanticizing 'hunger' and hiring underqualified people for roles that genuinely need experience. Confusing real ownership with self-promotion. Giving responsibility without support and calling it 'trust,' then blaming them. Over-indexing on a good origin story while ignoring whether they can do this job now. Survivorship bias in the celebrated scrappy-hire stories.",
+    "evidence_note": "Plausible, widely shared founder lore rather than a measured finding; 'early ownership predicts startup performance' has weak controlled evidence and is prone to survivorship bias. Useful as a tiebreaker and culture lens, not a reliable predictor — low, stated with caution.",
+    "regional_notes": "Signals of 'owning hard problems early' vary by background: running a small business out of necessity, supporting a family, or building without resources are strong ownership signals pedigree-screening misses. Don't mistake polish or access for ability across regions and class backgrounds.",
+    "examples": "A founder choosing between a credentialed big-company candidate and a junior who, with no budget, single-handedly built and ran a small community project through setbacks. For an early generalist role they take the junior with a real, scoped outcome and weekly support — while remembering that for a deep-specialist role, raw ownership alone wouldn't be enough."
   },
   {
     "id": "default-alive",
@@ -737,126 +1131,218 @@
       "See if the line crosses profitable before it crosses zero",
       "If default dead, change spend or growth now — not after another quarter"
     ],
-    "evidence_note": "High — a clarifying, widely-used lens; the danger is founders who avoid doing the math until it's too late."
+    "evidence_note": "High — a clarifying, widely-used lens; the danger is founders who avoid doing the math until it's too late.",
+    "failure_modes": "Avoiding the honest math until cash is nearly gone; assuming growth will accelerate to cover burn without evidence; treating a hoped-for raise as a plan rather than a possibility."
   },
   {
     "id": "know-your-number",
     "family": "Capital",
-    "title": "Know your number (runway + milestone)",
+    "title": "Always know your runway and the exact milestone the next money must buy",
     "stages": [
       1,
-      2,
-      3,
-      4,
-      5,
-      6
-    ],
-    "reversibility": "two-way",
-    "evidence": "high",
-    "keywords": [
-      "runway",
-      "cash",
-      "burn",
-      "milestone",
-      "budget",
-      "months left",
-      "fundraising"
-    ],
-    "summary": "Always know two numbers: months of runway left, and the exact milestone the next chunk of money is supposed to buy. Spend against milestones, not vibes.",
-    "failure_modes": "Not being able to state runway from memory; raising/spending without a milestone the money must hit."
-  },
-  {
-    "id": "bootstrapping",
-    "family": "Capital",
-    "title": "Bootstrapping — keep control, force profitability",
-    "stages": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6
-    ],
-    "reversibility": "two-way",
-    "evidence": "medium",
-    "keywords": [
-      "bootstrap",
-      "fundraising",
-      "raise",
-      "investors",
-      "control",
-      "self-funded",
-      "dilution"
-    ],
-    "summary": "Refusing outside money keeps control and forces you to find profit early — great, unless you're in a winner-take-all race a funded rival can win by spending.",
-    "preconditions": "Your market doesn't reward whoever scales fastest with capital.",
-    "evidence_note": "Medium — excellent for many durable businesses; risky in genuine land-grab markets with strong network effects."
-  },
-  {
-    "id": "raise-to-pour-fuel",
-    "family": "Capital",
-    "title": "Raise to pour fuel, not to survive",
-    "stages": [
       2,
       3,
       4,
       5
     ],
-    "reversibility": "one-way",
-    "evidence": "medium",
+    "reversibility": "two-way",
+    "evidence": "high",
+    "warn": false,
     "keywords": [
-      "fundraising",
-      "raise",
-      "investors",
-      "vc",
-      "when to raise",
-      "money fixes"
+      "how much runway do I have",
+      "months of cash left",
+      "when do I run out of money",
+      "what should I raise for",
+      "burn rate",
+      "when to start fundraising",
+      "how much to raise",
+      "what milestone matters",
+      "cash flow planning",
+      "am I going to make it",
+      "next round timing",
+      "default alive or dead"
     ],
-    "summary": "Money amplifies a working machine; it doesn't fix a broken one. Raising before something works just lets you burn faster and buys a harder next round.",
-    "failure_modes": "Raising to escape the hard work of finding product-market fit; treating a round as validation."
+    "summary": "Always know how many months of runway you have left and the exact milestone the next money must buy.",
+    "when_to_use": "Continuously, but especially before raising, before any big hire or spend, and at the start of each quarter.",
+    "how_to_run": [
+      "Compute runway: cash on hand divided by net monthly burn — recompute whenever burn changes.",
+      "Name the single milestone the next money must buy (the proof that unlocks the round after, or reaching profitability).",
+      "Work backward from that milestone to the cash and time it actually requires, plus a buffer for slippage.",
+      "If raising, start while you still have ~12+ months left — raising takes months and desperation kills leverage.",
+      "Track both numbers on one visible page, updated monthly, so a cash surprise never happens."
+    ],
+    "preconditions": "You can see your actual cash and burn (basic bookkeeping). If finances are opaque, fixing that visibility is step zero.",
+    "failure_modes": "Discovering you're nearly out of cash with no time to raise or cut, forcing a down round or shutdown. Raising against a vague 'grow the business' instead of a concrete milestone. Under-buffering and assuming the milestone arrives on schedule. Starting a raise at 3 months left, removing all leverage. Counting committed-but-unpaid cash as if banked.",
+    "evidence_note": "About as close to consensus as startup finance gets — know runway and tie raises to milestones, with common targets of 18-24+ months and starting to raise with 12+ months left (NYU, JPMorgan guidance, startups.com). High.",
+    "regional_notes": "Runway targets shift with the funding climate — looser markets tolerate thinner runway, tighter ones demand more. Outside the largest hubs, rounds take longer to close, so add margin. Currency volatility can silently shorten runway for teams spending in a different currency than they hold.",
+    "examples": "A founder has 9 months of cash and assumes they'll 'raise when they need to.' Since raising typically takes ~6 months, they'd be fundraising from near-desperation almost immediately. They instead define the milestone the next round must buy, cut a non-essential cost to stretch runway, and begin conversations early while they still have leverage."
+  },
+  {
+    "id": "bootstrapping",
+    "family": "Capital",
+    "title": "Bootstrapping keeps control and forces discipline — unless speed is the game",
+    "stages": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "should I raise or bootstrap",
+      "self-fund my startup",
+      "keep control of my company",
+      "avoid investors",
+      "do I even need funding",
+      "profitable from day one",
+      "grow without raising",
+      "winner take all market",
+      "funded competitor",
+      "race to scale",
+      "dilution vs control",
+      "fund it myself"
+    ],
+    "summary": "Refusing outside money keeps control and forces profitability — great in most markets, dangerous in a winner-take-all race where a funded rival can win first.",
+    "when_to_use": "When deciding whether to raise at all. To pressure-test whether your market rewards staying lean and self-funded, or whether it's a race where capital decides the winner.",
+    "how_to_run": [
+      "Ask what your growth logic actually requires — can you reach a real business on revenue, or does winning demand outspending rivals fast?",
+      "Judge the market structure: in winner-take-all markets with strong network effects or high acquisition costs, being out-capitalized is a structural disadvantage.",
+      "If the market rewards patience and margins, bootstrapping buys control, focus, and freedom from the raise treadmill.",
+      "If it's a land grab, be honest that a well-funded competitor moving first can foreclose the market regardless of how good you are.",
+      "Reassess as conditions change — bootstrapping now doesn't forbid raising later."
+    ],
+    "preconditions": "You have a path to revenue (or savings) that can sustain the business while it grows; you genuinely understand whether your market is winner-take-all.",
+    "failure_modes": "Bootstrapping on principle into a winner-take-all market and watching a funded rival capture it. Conversely, raising and burning fast in a market that never needed it, then dying when targets aren't met. Mistaking 'I survived bootstrapped' stories for proof it's safer (survivorship bias). Starving a genuinely capital-hungry opportunity into mediocrity.",
+    "evidence_note": "The control/discipline upside and the winner-take-all caveat are both well-argued and widely held. Critically, the 'bootstrapped startups win more' claim is challenged as survivorship bias collapsing different company populations. So the principle is sound but path-dependent, not universally superior — medium.",
+    "regional_notes": "Where venture capital is scarce, bootstrapping is often the only realistic option, making capital-efficient models valuable — but a foreign funded entrant can sometimes outspend a strong local team. Where grants/non-dilutive funding exist, they extend the bootstrapped path without giving up control.",
+    "examples": "A founder building niche software for a specialized profession debates raising. The market is fragmented, sticky, and not winner-take-all, so staying bootstrapped keeps control and reaches profitability on their terms. A different founder building a consumer marketplace — where one network usually dominates — concludes the opposite: a funded competitor could lock up the market first."
+  },
+  {
+    "id": "raise-to-pour-fuel",
+    "family": "Capital",
+    "title": "Money amplifies a working machine; it can't fix a broken one",
+    "stages": [
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "should I raise to fix growth",
+      "is now the right time to raise",
+      "will funding solve my problem",
+      "pour fuel on the fire",
+      "scale what's working",
+      "raising won't fix it",
+      "money to grow vs money to survive",
+      "do I have product-market fit yet",
+      "scale prematurely",
+      "is the machine working",
+      "raise to accelerate",
+      "throwing money at the problem"
+    ],
+    "summary": "Money amplifies a machine that already works; it doesn't fix one that's broken.",
+    "when_to_use": "When considering raising to solve a problem — slow growth, weak retention, unclear demand. To check whether you'd accelerate something proven or paper over something unproven.",
+    "how_to_run": [
+      "Identify what specifically isn't working and ask: is this 'not enough fuel' or 'the engine doesn't run'?",
+      "Look for a repeatable, working loop (customers find you, get value, stay or pay) — capital scales loops, it doesn't create them.",
+      "If the loop works, raising to pour fuel on it is exactly right.",
+      "If the loop is broken, fix the machine first with the cash you have; raising now just burns faster and buys a louder failure.",
+      "Pressure-test with unit economics: would 10x spend produce ~10x result, or just 10x the loss?"
+    ],
+    "preconditions": "You can tell whether your core loop works (usage, retention, or revenue data). Pre-evidence, assume the machine is unproven.",
+    "failure_modes": "Raising to 'fix' growth that's really a product/retention problem, then scaling the leak. Using fresh capital to mask absent demand, delaying the hard truth. Pouring fuel on a motion that only worked at tiny scale. Mistaking a temporary spike for a working machine. Over-hiring on the new cash before the loop is repeatable.",
+    "evidence_note": "Near-universal operating wisdom — scaling before product-market fit is one of the most cited causes of startup failure, and 'capital amplifies, doesn't create' is broadly endorsed. Robust and consistent enough to grade high, even as a principle rather than a single statistic.",
+    "regional_notes": "",
+    "examples": "A founder with flat usage believes a raise will fix it by funding marketing. But the few users who try it don't come back — a broken machine, not a fuel shortage. They hold off, fix retention with the cash they have, and only once people stick raise to pour fuel on a motion that now actually works."
   },
   {
     "id": "pspd-buffer",
     "family": "Capital",
-    "title": "Predictable, sustainable, profitable + a cash buffer",
+    "title": "Grow predictably, sustainably, profitably, de-risked — and keep about a year of cash",
     "stages": [
+      3,
       4,
       5,
       6
     ],
     "reversibility": "two-way",
     "evidence": "medium",
+    "warn": false,
     "keywords": [
-      "profit",
-      "sustainable",
-      "cash buffer",
-      "growth",
-      "discipline",
-      "reserve"
+      "how fast should I grow",
+      "sustainable growth",
+      "is growth at all costs smart",
+      "how much cash buffer",
+      "keep a year of cash",
+      "predictable revenue",
+      "de-risk the business",
+      "profitable growth",
+      "don't over-extend",
+      "grow without blowing up",
+      "safety margin",
+      "healthy growth rate"
     ],
-    "summary": "Grow in a predictable, sustainable, profitable, de-risked way and keep roughly a year of cash. Boring resilience beats fragile speed for most businesses.",
-    "regional_notes": "The default outside hot funding hubs; capital is scarcer, so durability is the edge."
+    "summary": "Grow in a way that's predictable, sustainable, profitable, and de-risked — and keep roughly a year of cash in reserve.",
+    "when_to_use": "When setting growth targets and deciding how aggressive to be, especially once you have real revenue. To resist 'growth at all costs' and set a cash-reserve floor.",
+    "how_to_run": [
+      "Aim for growth you can predict and repeat, not one-off spikes you can't explain.",
+      "Prefer growth that improves (or doesn't destroy) unit economics — growing while bleeding more per customer is fragile.",
+      "Actively de-risk: reduce dependence on a single customer, channel, or person as you grow.",
+      "Hold a cash buffer of roughly a year so a shock or missed quarter isn't existential.",
+      "If hitting all four at once isn't possible, treat that tension as a signal to slow down rather than gamble the company."
+    ],
+    "preconditions": "Enough revenue or capital that a ~1-year buffer is achievable; pre-revenue, the relevant principle is runway-and-milestone (know-your-number).",
+    "failure_modes": "Chasing headline growth that's unpredictable and unprofitable, then collapsing when it can't sustain. Running the buffer too thin chasing speed. Over-conservatism — hoarding cash while a genuine winner-take-all window closes. Concentration risk hidden under good top-line numbers. Treating the buffer as untouchable even for a clearly correct, time-sensitive bet.",
+    "evidence_note": "The discipline and a ~12-month buffer reflect mainstream prudent-growth and runway guidance (JPMorgan and CFO guides recommend 12-24+ months). Sensible and widely advised, but the four-part formulation and exact one-year figure are heuristics, not validated constants — medium.",
+    "regional_notes": "In tighter funding climates or markets where raising is slow, a larger buffer is prudent. Seasonal/lumpy revenue should size the buffer to the worst trough. Currency exposure can erode a buffer that looks adequate on paper.",
+    "examples": "A founder with growing revenue is pushed to spend the whole balance to triple next quarter. The spike wouldn't be repeatable, would worsen per-customer economics, and would drop reserves near zero. They instead set a year-of-cash floor, grow at a sustainable pace, and add a second sales channel so they're not betting everything on one."
   },
   {
     "id": "conviction-capital",
     "family": "Capital",
-    "title": "Gut-conviction big bet",
+    "title": "'Trust your gut and bet the company' is mostly luck retold as wisdom",
     "stages": [
-      1,
-      2
+      3,
+      4,
+      5
     ],
     "reversibility": "one-way",
     "evidence": "low",
     "warn": true,
     "keywords": [
-      "gut",
-      "conviction",
-      "big bet",
-      "instinct",
-      "all in"
+      "should I bet the company",
+      "trust my gut",
+      "go all in",
+      "all or nothing decision",
+      "conviction play",
+      "double down everything",
+      "is this the bold move",
+      "founders who bet it all",
+      "high conviction bet",
+      "ignore the doubters",
+      "swing for the fences",
+      "do or die decision"
     ],
-    "summary": "'Trust your gut and bet the company' is mostly luck retold as wisdom. Don't bet everything on conviction alone.",
-    "warn_reason": "Survivorship bias — we only hear the gut bets that worked. Prefer cheap tests over one irreversible swing."
+    "summary": "'Trust your gut and bet the entire company' is mostly survivorship bias — the winners get retold as visionary, the identical losers are forgotten.",
+    "when_to_use": "When you're being urged (by others or yourself) to make an irreversible, company-staking bet on conviction alone. Use it as a brake to force a check on whether this is judgment or a coin flip dressed up as destiny.",
+    "how_to_run": [
+      "Notice the stakes: if losing this bet ends the company, it's a one-way door deserving maximum scrutiny.",
+      "Separate the advice from the outcome — 'bet it all and it worked' tells you nothing without the unseen founders who bet it all and lost.",
+      "Ask what evidence beyond gut supports the bet; if the honest answer is 'just conviction,' treat it as a gamble.",
+      "Look for a version that captures most of the upside without staking the whole company (a staged or reversible bet).",
+      "If you still proceed, do it eyes-open as a calculated gamble you can articulate."
+    ],
+    "preconditions": "",
+    "failure_modes": "Staking the company on a hunch and losing everything with no second move. Mistaking confidence for information. Copying a celebrated 'all-in' story whose survival was luck. Ignoring reversible alternatives. Advisors who profit from your swing encouraging it. Over-applying the warning to talk yourself out of genuinely sound asymmetric bets — the point is to demand evidence, not to never bet.",
+    "evidence_note": "Graded low and flagged. The 'trust your gut, bet the company' genre is a textbook survivorship-bias artifact: identical bold bets that failed are unremembered, so surviving stories overstate the gut's wisdom. No sound evidence company-staking conviction bets beat chance.",
+    "regional_notes": "",
+    "examples": "A founder is urged to pour every remaining dollar into one unproven pivot because 'the greats all trusted their gut.' Stepping back, that story only survives for the ones who happened to be right. They fund a small reversible test of the pivot first, treating the all-or-nothing version as the gamble it is, not as wisdom."
   },
   {
     "id": "do-things-that-dont-scale",
@@ -906,36 +1392,134 @@
       "Pick one channel that fits where your buyers already are",
       "Push it until it reliably produces customers at sane cost",
       "Only then add a second channel"
-    ]
+    ],
+    "failure_modes": "Dabbling in five channels so none gets enough effort to prove out; declaring a channel dead before a fair test; scaling spend on a channel before the unit economics actually work."
   },
   {
     "id": "ignoring-distribution",
     "family": "Growth",
-    "title": "Distribution is half the product",
+    "title": "No plan to reach buyers",
     "stages": [
       1,
       2,
+      3,
+      4
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "nobody knows we exist",
+      "how do people find us",
+      "build it and they will come",
+      "no marketing plan",
+      "great product no users",
+      "how do we get customers",
+      "stuck at zero signups",
+      "relying on word of mouth only",
+      "where will demand come from",
+      "launch then crickets",
+      "getting traffic is the hard part",
+      "viral by accident"
+    ],
+    "summary": "A great product with no concrete plan to reach buyers loses to a worse product that's easy to find.",
+    "when_to_use": "When you're about to build or launch and your plan for getting customers is vague ('we'll do some marketing,' 'it'll spread on its own'), or when a finished product gets little traction and you can't name how your users arrived.",
+    "how_to_run": [
+      "Before building further, write the one or two specific channels where you'll reach the first 100 users, and why each is realistic for you.",
+      "For your top channel, estimate the rough cost or effort to acquire one customer end-to-end (your time included) vs what a customer is worth.",
+      "Run a small, cheap test on that channel now, before the product is polished, and measure whether strangers respond.",
+      "Treat distribution as a feature with its own build time: equal weight to the product, revisit monthly."
+    ],
+    "preconditions": "You have a clear idea of who the buyer is; a channel test is meaningless if you can't name the person you're reaching.",
+    "failure_modes": "Assuming the product will spread by itself and discovering post-launch that no channel was built. Counting friends and your network as proof of a channel that won't scale to strangers. Picking a channel popular in articles but where your buyers don't gather. Ignoring the full cost to acquire (your unpaid hours, tools). Spreading thin across five channels so none gets enough effort.",
+    "evidence_note": "Widely reported in startup post-mortems that poor distribution outranks bad product as a failure cause, and that founders underestimate true acquisition cost by omitting their own time. High on direction, though exact percentages vary and are soft.",
+    "regional_notes": "Viable channels differ sharply by region: the dominant search engine, app store, messaging app, or social platform your buyers use may not be what you assume. Some markets run distribution through a few gatekeeper platforms or super-apps.",
+    "examples": "A solo technical founder spends nine months building a polished scheduling tool, planning to 'post it online and let it grow.' At launch it gets 30 signups, all friends. Forced to name a real channel, she realizes her buyers (clinic managers) live in two niche professional forums; a week of helpful posting there brings more qualified signups than the whole launch."
+  },
+  {
+    "id": "organic-first",
+    "family": "Growth",
+    "title": "Grow from one clean product",
+    "stages": [
+      2,
+      3,
+      4
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "grow without raising money",
+      "fund growth from revenue",
+      "stay profitable and small",
+      "keep control of my company",
+      "one product done well",
+      "saying no to custom work",
+      "do we need investors yet",
+      "living off the business",
+      "slow steady growth",
+      "avoid the funding treadmill",
+      "build then reinvest profits",
+      "one-off client requests"
+    ],
+    "summary": "Build one clean product, grow from profits, say no to one-off custom requests.",
+    "when_to_use": "When deciding whether to raise outside money or grow on your own revenue, or when a paying customer asks for custom work that would pull the product in a new direction.",
+    "how_to_run": [
+      "Keep the product narrow: define the single core thing it does and reinvest early profits into making that better rather than adding adjacent features.",
+      "Set a rule for custom requests: take them only if many customers want the same thing (then it's a product feature) and decline true one-offs even when the money tempts.",
+      "Run lean enough that revenue covers costs, so growth pace is set by what customers pay, not a runway clock.",
+      "Revisit periodically whether you've hit a ceiling that genuinely requires outside capital, and raise deliberately if so."
+    ],
+    "preconditions": "You have, or can quickly reach, paying customers; organic growth needs revenue to reinvest, so it doesn't fit a long pre-revenue research phase.",
+    "failure_modes": "Saying yes to lucrative custom work and slowly becoming a consultancy disguised as a product company. Confusing 'no outside money' with 'no ambition' and under-investing while a funded competitor outruns you in a winner-take-most market. Starving the business of needed hires to stay 'lean,' causing burnout or quality collapse. Treating bootstrapping as identity rather than strategy.",
+    "evidence_note": "Self-funded firms show higher reported survival and earlier profitability in several datasets, but the comparison is heavily self-selecting and survival figures vary wildly between sources. Medium: sound for many businesses but not a universal win, and headline statistics are unreliable.",
+    "regional_notes": "In regions with thin venture markets, organic growth is often the only realistic path. Where capital is abundant and markets reward speed, pure bootstrapping can be a disadvantage in land-grab categories.",
+    "examples": "A two-person team launches a focused invoicing app. A large client offers a sizeable fee for a bespoke reporting module only they'd use. They decline the one-off and instead ship a smaller reporting feature several customers requested, funded by existing subscriptions; a year later the business profitably supports both founders with no outside money."
+  },
+  {
+    "id": "sequenced-entry",
+    "family": "Growth",
+    "title": "Win one market, then expand",
+    "stages": [
       3,
       4,
       5
     ],
     "reversibility": "two-way",
     "evidence": "high",
+    "warn": false,
     "keywords": [
-      "distribution",
-      "growth",
-      "reach",
-      "marketing",
-      "build it they will come",
-      "channel"
+      "where should we launch first",
+      "one market at a time",
+      "don't expand too fast",
+      "prove it here before there",
+      "which country first",
+      "beachhead market",
+      "roll out gradually",
+      "save the hard market for last",
+      "learn before we scale",
+      "expanding to new regions",
+      "too many markets at once",
+      "pick the easiest entry point"
     ],
-    "summary": "A great product with no concrete plan to reach buyers loses to a worse product that's easy to find. Decide distribution as deliberately as you decide the product.",
-    "failure_modes": "'Build it and they will come'; no named channel or reach plan."
+    "summary": "Don't launch everywhere at once; win one market, learn, expand, save the hardest for last.",
+    "when_to_use": "When choosing where to launch among several possible markets, segments, or regions, or when feeling pressure to expand to a second market before the first is clearly working.",
+    "how_to_run": [
+      "Pick one narrow market where you can plausibly become the obvious best choice, favoring one you can reach and serve well over the biggest.",
+      "Define 'won' concretely (repeatable sales, healthy margins, manageable support) and only expand once the first market hits it.",
+      "Order the remaining markets easiest to hardest and expand in sequence, carrying forward what you learned.",
+      "Deliberately save the largest or most defended market for last, when you're strongest."
+    ],
+    "preconditions": "The markets must be different enough that winning one teaches something transferable; if identical, sequencing buys less.",
+    "failure_modes": "Declaring the first market 'won' on vanity signs (signups, press) rather than repeatable paid sales, then expanding onto a weak base. Opening a second front to chase a competitor before the first pays. Sequencing so slowly a faster rival locks up adjacent markets. Choosing a glamorous hard market first and burning resources before learning the cheap lessons.",
+    "evidence_note": "Strongly supported: premature scaling (including into too many markets at once before product-market fit) is repeatedly identified as a top failure pattern (Startup Genome), and staged entry with payback thresholds is standard. High.",
+    "regional_notes": "Regional expansion adds language, payments, legal, and trust barriers that compound if taken in parallel; international returns can take years to mature, which is why stage-gating by evidence matters. The 'easiest first' market is often home or a culturally adjacent one.",
+    "examples": "A founder with a delivery-logistics app is tempted to launch in three cities at once. Instead she wins one mid-size city first, where she can personally fix problems, until orders repeat and unit economics turn positive. The hardened playbook and software let her open the next two cities far more cheaply, leaving the hyper-competitive capital city for last."
   },
   {
-    "id": "organic-first",
+    "id": "super-app-bundling",
     "family": "Growth",
-    "title": "Organic-first / focus",
+    "title": "Stack services on a daily habit",
     "stages": [
       4,
       5,
@@ -943,58 +1527,34 @@
     ],
     "reversibility": "two-way",
     "evidence": "medium",
-    "keywords": [
-      "organic",
-      "focus",
-      "profit",
-      "growth",
-      "say no",
-      "custom requests"
-    ],
-    "summary": "Build one clean product, grow from profits, and say no to one-off custom requests that fragment your focus.",
-    "failure_modes": "Saying yes to every custom ask until you're a consultancy with no product."
-  },
-  {
-    "id": "sequenced-entry",
-    "family": "Growth",
-    "title": "Sequenced market entry",
-    "stages": [
-      5,
-      6
-    ],
-    "reversibility": "two-way",
-    "evidence": "medium",
-    "keywords": [
-      "expansion",
-      "new market",
-      "scale",
-      "geography",
-      "rollout",
-      "international"
-    ],
-    "summary": "Don't launch everywhere at once. Win one market, learn, then expand — and save the hardest market for last.",
-    "failure_modes": "Spreading thin across markets before one is proven (see over-expansion)."
-  },
-  {
-    "id": "super-app-bundling",
-    "family": "Growth",
-    "title": "Bundle once you own a daily habit",
-    "stages": [
-      5,
-      6
-    ],
-    "reversibility": "one-way",
-    "evidence": "medium",
     "warn": true,
     "keywords": [
-      "bundle",
-      "super app",
-      "expand",
-      "platform",
-      "add services"
+      "add more services",
+      "bundle features together",
+      "become a one-stop shop",
+      "stack products on top",
+      "we have daily users now",
+      "cross-sell to our base",
+      "expand what we offer",
+      "build a platform",
+      "one app for everything",
+      "monetize our habit",
+      "add payments and more",
+      "layer on new lines"
     ],
-    "summary": "Once you own a daily habit you can stack services on it — but only after the first one truly works and pays. Bundling weak products doesn't create strength.",
-    "warn_reason": "Bundling before the core habit is durable spreads focus and capital across things that don't yet work."
+    "summary": "Once you own a daily habit you can stack services — only after the first truly works and pays.",
+    "when_to_use": "When you already own a frequent, sticky user habit and are considering adding adjacent services, or when tempted to bundle many offerings before the core is genuinely loved and profitable.",
+    "how_to_run": [
+      "Confirm the core is a real daily-or-near-daily habit with strong retention and that it pays for itself before adding anything.",
+      "Add one adjacent service the same users would naturally want in the same moment, and check it deepens engagement rather than clutters.",
+      "Keep the core experience clean: if a new service degrades the thing people show up for, it's not worth the bundle.",
+      "Expand the stack one service at a time, each earning its place on usage and economics."
+    ],
+    "preconditions": "You genuinely own the habit first: high retention and frequent use. Bundling onto a product people don't return to multiplies weakness.",
+    "failure_modes": "Bundling to mask a core that hasn't achieved retention or profitability. Adding services users don't associate with your app, so each needs its own expensive acquisition. Cluttering the core until the original habit weakens. Assuming the dominant-platform bundling you've seen elsewhere will work without the underlying daily lock-in those platforms had first.",
+    "evidence_note": "Observable in dominant consumer platforms, but survivorship-heavy: the visible successes had enormous, genuinely sticky cores first, and countless attempts to bundle without that core failed quietly. Medium and flagged: the sequence (habit first, then stack) matters far more than the bundling idea itself.",
+    "regional_notes": "Multi-service bundling is most established where a few apps became default daily utilities and payments, messaging, and commerce converged; much harder where users keep separate single-purpose apps and switching is easy.",
+    "examples": "A team builds a messaging tool a niche community opens many times a day with strong retention. Only after that habit is undeniable and covering costs do they add a simple payments feature for the exact moment users coordinate money in chat. It lifts engagement. They resist adding a marketplace and a booking tool simultaneously, adding one more service only once payments proves itself."
   },
   {
     "id": "reversibility",
@@ -1029,7 +1589,8 @@
       "Irreversible → run a quick premortem first",
       "Name the trap if they're over-thinking a cheap test or rushing a permanent choice"
     ],
-    "evidence_note": "High — a robust, widely-used decision lens; the value is in correctly classifying the door."
+    "evidence_note": "High — a robust, widely-used decision lens; the value is in correctly classifying the door.",
+    "failure_modes": "Agonizing over a cheap reversible test while rushing a one-way door; treating a genuinely irreversible move as reversible because deciding fast feels good; using buckets to avoid thinking rather than to speed it up."
   },
   {
     "id": "premortem",
@@ -1055,7 +1616,8 @@
       "commit"
     ],
     "summary": "Before an irreversible commitment, imagine it's a year later and it failed. Write the top 3 reasons. De-risk those cheaply before you commit.",
-    "when_to_use": "Before any one-way door: a co-founder, a big hire, a raise, a public pivot."
+    "when_to_use": "Before any one-way door: a co-founder, a big hire, a raise, a public pivot.",
+    "failure_modes": "Running it as a box-ticking ritual and ignoring the risks it surfaces; naming only comfortable risks; using it to justify endless delay instead of de-risking the top few and moving."
   },
   {
     "id": "cheapest-decisive-test",
@@ -1086,104 +1648,168 @@
       "Name the single biggest unknown",
       "Design the smallest test that would change your decision",
       "Run it this week; pre-commit to what each result means"
-    ]
+    ],
+    "failure_modes": "Designing a test so small or vague it cannot actually change the decision; running it someday instead of this week; ignoring the result because it was inconvenient."
   },
   {
     "id": "kill-continue",
     "family": "Crisis",
-    "title": "Pre-set kill / continue line",
+    "title": "Decide the stop rule first",
     "stages": [
-      0,
       1,
       2,
       3,
       4,
-      5,
-      6
+      5
     ],
-    "reversibility": "n-a",
-    "evidence": "medium",
+    "reversibility": "two-way",
+    "evidence": "high",
+    "warn": false,
     "keywords": [
-      "kill",
-      "quit",
-      "persevere",
-      "pivot",
-      "sunk cost",
-      "when to stop",
-      "give up"
+      "when do we give up",
+      "set a threshold before testing",
+      "what counts as success",
+      "stop or keep going",
+      "precommit to a decision",
+      "avoid moving the goalposts",
+      "kill criteria",
+      "how long do we try this",
+      "define failure upfront",
+      "don't fool ourselves",
+      "honor the result",
+      "decide before we know the outcome"
     ],
-    "summary": "Before a test or bet, write down what result means keep-going and what means stop — then honor it when emotions arrive. Money already spent is gone either way.",
-    "failure_modes": "Sunk-cost thinking ('we've come too far'); moving the goalposts after the result."
+    "summary": "Before a test or bet, write what result means keep-going vs stop, then honor it.",
+    "when_to_use": "Before running any meaningful experiment, launch, or time-boxed bet, especially one you'll be emotionally invested in, so the decision rule is set while you can think clearly.",
+    "how_to_run": [
+      "Before starting, write the specific result that means 'keep going' and the one that means 'stop,' with a number and a deadline where possible.",
+      "Decide in advance what you'll do in each case, so the test has real consequences.",
+      "Run the test without changing the threshold midway; note the result against the line you drew.",
+      "If the result says stop, honor it, or explicitly and openly revise the rule with a stated reason, never silently."
+    ],
+    "preconditions": "The bet must have an observable outcome within a defined window; open-ended efforts with no measurable signal can't be pre-committed this way.",
+    "failure_modes": "Moving the goalposts after seeing the result because you're attached ('it almost worked, one more month'). Setting a threshold so vague any outcome reads as success. A deadline with no teeth, so 'stop' never triggers. Writing kill criteria but burying them. Honoring the rule so rigidly you ignore a genuinely changed situation rather than openly revising it.",
+    "evidence_note": "Pre-committing to decision criteria is a well-established debiasing practice against sunk-cost and confirmation bias, and time-boxed kill/continue gates are standard in disciplined experimentation. High: the mechanism is robust, even though the hard part (actually honoring it) is behavioral.",
+    "regional_notes": "",
+    "examples": "A founder runs a paid-ads test and writes beforehand: 'If cost to get one signup is under X within three weeks, I keep building; if above 2X, I stop and rethink.' At week three it lands well above 2X. Tempted to blame the ad copy and extend, he honors the rule, pauses building, and goes back to talking to users — saving months he'd have spent forcing a weak idea."
   },
   {
     "id": "pivot-to-profit",
     "family": "Crisis",
-    "title": "Pivot to profit when cash gets tight",
+    "title": "Cut fast, pay your own way",
     "stages": [
       4,
-      5,
-      6
+      5
     ],
     "reversibility": "two-way",
     "evidence": "high",
+    "warn": false,
     "keywords": [
-      "crisis",
-      "cash",
-      "cut",
-      "layoff",
-      "survive",
-      "profitability",
-      "runway low"
+      "running low on cash",
+      "money is getting tight",
+      "cut burn quickly",
+      "extend our runway",
+      "stop chasing growth",
+      "get to break even",
+      "can't raise right now",
+      "survive the downturn",
+      "reach profitability fast",
+      "trim costs now",
+      "make payroll",
+      "stop the bleeding"
     ],
-    "summary": "When money gets tight, stop chasing growth — cut fast (leaders/biggest costs first), and aim to pay your own way. Speed of cutting matters more than precision.",
+    "summary": "When money gets tight, stop chasing growth; cut fast, aim to pay your own way.",
+    "when_to_use": "When runway is shrinking and fresh funding is uncertain, or when growth is being bought with money you no longer have, and survival now matters more than expansion.",
     "how_to_run": [
-      "Get to a clear picture of cash and burn",
-      "Cut decisively to reach default-alive",
-      "Refocus on what already makes money"
-    ]
+      "Calculate exactly how many months of cash you have left at current burn, and treat that as the clock governing every decision.",
+      "Cut deep and once rather than shallow and repeatedly: remove spending that buys growth you can't afford, aiming to reach revenue-covers-costs.",
+      "Refocus the team on the customers and product that already pay, dropping far-future bets.",
+      "Set a clear break-even target and date; reaching it converts the company from dependent on outside money to able to choose its next move."
+    ],
+    "preconditions": "There must be some paying revenue or a near-term path to it; if the business has no way to charge, cutting alone reaches break-even only by reaching zero.",
+    "failure_modes": "Cutting in slow, shallow rounds that demoralize the team and never reach break-even. Cutting the very things that generate revenue (sales, core product) along with the waste. Waiting too long out of optimism, so cuts happen from weakness with no runway to execute. Treating the pivot as permanent retreat and killing all growth ambition.",
+    "evidence_note": "Cutting burn to reach default-alive / break-even when capital tightens is standard, widely-endorsed crisis guidance (reinforced every funding downturn) and follows directly from the runway arithmetic. High.",
+    "regional_notes": "In regions with shallow capital markets, reaching break-even is often the only safety net, so the instinct to fund growth from revenue should kick in earlier. Local labor laws can make cuts slower and costlier, arguing for acting sooner.",
+    "examples": "A startup burning heavily on ads has eight months of cash and no committed next round. The founders cut the paid-growth spend and a speculative second product, refocus on the segment already paying, and reset everyone around a break-even target six months out. Growth flattens but the company stops needing investors to survive, and later raises on its own terms."
   },
   {
     "id": "honest-exit",
     "family": "Crisis",
-    "title": "Honest exit",
+    "title": "Sell to someone who can win",
     "stages": [
       5,
       6
     ],
     "reversibility": "one-way",
-    "evidence": "high",
+    "evidence": "medium",
+    "warn": false,
     "keywords": [
-      "exit",
-      "sell",
-      "acquisition",
-      "quit",
-      "wind down",
-      "merge"
+      "should we sell the company",
+      "take the acquisition offer",
+      "soft landing for the team",
+      "can't win this alone",
+      "losing the war slowly",
+      "wind down gracefully",
+      "get bought instead of dying",
+      "sell while we still can",
+      "is it time to exit",
+      "acqui-hire",
+      "merge with a bigger player",
+      "quit while ahead"
     ],
-    "summary": "Selling to a bigger player who can win the war can beat losing it slowly and alone. An honest exit is a legitimate, sometimes optimal, outcome.",
-    "preconditions": "You've assessed honestly that going it alone is unlikely to win."
+    "summary": "Selling to a bigger player who can win the war can beat losing it slowly alone.",
+    "when_to_use": "When you're in a fight you're likely to lose on your own (out-resourced, out-distributed) and a credible buyer could carry the mission, team, or product further than you can — especially while you still have leverage to negotiate.",
+    "how_to_run": [
+      "Assess honestly whether you can realistically win independently, separating 'hard but winnable' from 'slowly losing.'",
+      "Identify buyers for whom your team, product, or position is genuinely valuable, and engage while your metrics still give leverage.",
+      "Weigh the concrete outcome for your team and yourself (roles, payout, mission continuing) against the realistic outcome of fighting on alone.",
+      "Decide deliberately and, once you commit, treat it as one-way: selling closes the independent path."
+    ],
+    "preconditions": "There must be a buyer who actually wants what you have; an exit is only an option if someone credible values the team, product, or position.",
+    "failure_modes": "Waiting until nearly out of cash, so you negotiate from desperation and it becomes a fire-sale. Refusing a fair soft landing out of pride and running into an uncontrolled shutdown. Overvaluing the company on past hopes and rejecting reasonable offers that won't return. Selling too early out of fear when the fight was winnable. Ignoring the human terms (roles, earn-outs) and accepting a deal the team resents.",
+    "evidence_note": "Acqui-hires and strategic sales are documented as common, often-responsible 'soft landings' that beat uncontrolled shutdowns for teams, though founders/investors often recoup less than hoped and the press-release 'acquisition' overstates the economics. Medium: clearly better than a hard failure in many cases, but outcomes vary widely and it's irreversible.",
+    "regional_notes": "Acquirer appetite varies by region and cycle; in talent-scarce or AI-driven markets acqui-hire terms can be stronger, while in thin M&A markets a credible buyer may simply not exist.",
+    "examples": "A founder building a niche developer tool sees two well-funded competitors out-distributing her despite a better product; on the current path she's slowly losing. A larger platform offers to acquire the product and team while her numbers still look healthy. Rather than grind to a shutdown, she negotiates from that position: the team gets good roles, the product lives on, and she avoids two more years losing the war alone."
   },
   {
     "id": "over-expansion",
     "family": "Crisis",
-    "title": "Over-expansion trap",
+    "title": "Spreading thin isn't winning",
     "stages": [
-      5,
-      6
+      3,
+      4,
+      5
     ],
     "reversibility": "two-way",
     "evidence": "high",
     "warn": true,
     "keywords": [
-      "expansion",
-      "scale",
-      "spread thin",
-      "too fast",
-      "markets",
-      "growth trap"
+      "we're in too many markets",
+      "growth looks good but no profit",
+      "spread too thin",
+      "everything at once",
+      "nothing is paying",
+      "chasing land grab",
+      "planting flags everywhere",
+      "busy but losing money",
+      "scaling before it works",
+      "expanding to look big",
+      "none of it pays",
+      "prove one market first"
     ],
-    "summary": "Spreading everywhere looks like winning until none of it pays. Prove one market profitable before adding the next.",
-    "warn_reason": "Expansion masks weak unit economics; the bill arrives when growth slows."
+    "summary": "Spreading everywhere looks like winning until none of it pays; prove one market first.",
+    "when_to_use": "When operating across many markets, segments, or product lines at once and growth metrics look impressive but profitability and proof of a working model in any single one are missing.",
+    "how_to_run": [
+      "List every market, segment, or line you're spread across and mark which actually pay for themselves.",
+      "Pick the single one with the best chance of a working, profitable model and concentrate resources there until it genuinely works.",
+      "Pause or cut the fronts that only consume cash and attention without proof, treating broad presence as a cost, not an achievement.",
+      "Only re-expand from the proven base, one front at a time, using what you learned."
+    ],
+    "preconditions": "At least one of your current fronts must be capable of becoming profitable; if none can, the problem is the model itself, not the spread.",
+    "failure_modes": "Mistaking activity and top-line growth across many fronts for progress while every front loses money. Refusing to cut weak markets because retreating 'looks like losing,' and bleeding out across all. Concentrating on the wrong front (the biggest, not the most provable). Cutting so indiscriminately you kill the one front about to work.",
+    "evidence_note": "Strongly supported: scaling across too many markets or lines before proving a model is a core premature-scaling failure pattern repeatedly tied to startup death (Startup Genome). High and flagged because the trap disguises itself as success.",
+    "regional_notes": "Multi-region spread compounds the danger: each market adds fixed overhead (legal, payments, support, localization) that makes 'a little everywhere' especially cash-hungry and hard to unwind.",
+    "examples": "A founder expands into five cities and three segments within a year; the dashboard shows rising users and it feels like winning. But no single city or segment is profitable and cash is draining. Forced to mark what actually pays, only one segment in one city breaks even. They pull back to it, get it genuinely profitable, then re-expand deliberately, one front at a time."
   },
   {
     "id": "first-principles",
@@ -3223,5 +3849,824 @@
       "Invest in strengthening that loop alongside (or instead of) more ad spend"
     ],
     "failure_modes": "A funnel with no loop — growth halts the moment the ad budget does."
+  },
+  {
+    "id": "value-based-pricing",
+    "family": "Pricing",
+    "title": "Price off the value, not your costs",
+    "stages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "how much to charge",
+      "what should i price it at",
+      "value based pricing",
+      "price off cost or value",
+      "competitor pricing",
+      "price too low",
+      "how do i set my price",
+      "what is it worth to them",
+      "cost plus pricing",
+      "pricing strategy"
+    ],
+    "summary": "Set price based on what the outcome is worth to the customer, not what it cost you to build or what a competitor charges. Cost is your floor and competitors a reference point, but the value to the buyer is what actually anchors a price.",
+    "when_to_use": "When setting a price for the first time, or when your current price was picked by copying a competitor or marking up costs and you suspect it leaves money on the table.",
+    "how_to_run": [
+      "Write the concrete outcome the customer gets: time saved, money made or saved, risk avoided, a job done they couldn't before. Put a rough number on it per month or use.",
+      "Anchor your price as a fraction of that value, leaving the customer clearly ahead, rather than as a markup on your cost.",
+      "Sanity-check against the floor (cost to serve must be comfortably below price) and against the buyer's alternatives, including doing nothing.",
+      "Talk to a handful of real customers about the value, in their words, before locking the number, and use their language to frame the price."
+    ],
+    "preconditions": "You need at least a rough idea of who the customer is and what outcome they're buying, or there's no 'value' to anchor to.",
+    "failure_modes": "Inventing a value number with no customer input and believing it. Pricing off value the customer doesn't perceive or can't measure. Ignoring the cost floor and pricing below what it costs to serve. Assuming all customers value the outcome equally when segments differ. Confusing the value you imagine with what they'll actually pay.",
+    "evidence_note": "Value-based pricing is a long-standing, broadly accepted principle in pricing literature and B2B practice; the directional claim (value beats cost-plus for margin) is well supported. The weak spot is execution: quantifying value is fuzzy and often self-serving, with scarce rigorous studies on small startups. Medium.",
+    "regional_notes": "Perceived value and ability to pay vary sharply by market and currency; the same outcome may justify a far lower price in a lower-income market. Value framing also lands differently in B2B vs consumer.",
+    "examples": "A solo founder priced a scheduling tool at $9/month because it 'felt cheap enough.' The tool saves a small clinic ~6 hours of admin a month; even valued modestly that's worth far more than $9, showing the price was anchored to the founder's comfort, not the buyer's benefit."
+  },
+  {
+    "id": "willingness-to-pay-research",
+    "family": "Pricing",
+    "title": "Find out what people will actually pay",
+    "stages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": true,
+    "keywords": [
+      "what will people pay",
+      "willingness to pay",
+      "how to research pricing",
+      "ask customers about price",
+      "price survey",
+      "van westendorp",
+      "how much would you pay",
+      "will they actually pay",
+      "price testing",
+      "validate pricing"
+    ],
+    "summary": "You can learn willingness to pay by asking structured price questions, but what people say and what they actually pay differ. The most reliable signal is getting someone to commit money or real intent, not answer a survey.",
+    "when_to_use": "Before setting or changing a price when you don't know the range, or to narrow a wide guess before testing for real.",
+    "how_to_run": [
+      "For a quick read, run four price-sensitivity questions on a sample: at what price is this too cheap (you'd doubt quality), a bargain, getting expensive, and too expensive. The overlap suggests an acceptable range.",
+      "Treat that range as a hypothesis, not an answer, because stated prices skew low.",
+      "Get a revealed signal: put up a real price page and ask people to pre-order, deposit, or sign up to pay, and watch what they do.",
+      "Where you can, just charge. Quote a price in a sales conversation or checkout and measure conversion and objections.",
+      "Trust revealed behaviour over stated answers wherever they disagree."
+    ],
+    "preconditions": "You need enough real prospects (not friends) to ask, and ideally a way to put a real price in front of them.",
+    "failure_modes": "Treating survey answers as truth: stated willingness to pay is systematically lower and noisier than real behaviour, and the four-question method specifically invites lowballing. Asking 'would you pay X' (people say yes to be nice, then never buy). Tiny or biased samples. Asking friends. Confusing 'interest' with 'commitment.' Anchoring respondents with your own number first.",
+    "evidence_note": "The Van Westendorp Price Sensitivity Meter (Peter van Westendorp, 1976) is widely used and well-documented; its four questions and curve-intersection reading are standard. Consensus is it measures stated, not revealed, willingness to pay and biases prices downward. Revealed-preference signals (real purchases, pre-orders) are more reliable. Medium.",
+    "regional_notes": "Price anchors and acceptable ranges differ a lot by country, income, and currency; run the questions per market. Translation of the price questions can also shift answers.",
+    "examples": "A founder surveyed 40 prospects with the four questions and got a range around $15-25/month. When they put up a real checkout at $20, only a couple actually paid while many who'd answered didn't return — a textbook gap between what people said and did."
+  },
+  {
+    "id": "pricing-tiers-packaging",
+    "family": "Pricing",
+    "title": "Good-better-best and what goes in each tier",
+    "stages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "how many pricing tiers",
+      "good better best",
+      "what to put in each plan",
+      "pricing page",
+      "three plans",
+      "anchoring price",
+      "decoy option",
+      "package my features",
+      "which features in which tier",
+      "middle plan"
+    ],
+    "summary": "Offering a few tiers (commonly three) lets different customers self-select and uses the higher tier to anchor the price of the one you most want to sell. Put your core value in the middle tier and reserve scale or premium needs for the top.",
+    "when_to_use": "Once you have a product with more than one type of customer or level of need, and you're designing or revising a pricing page.",
+    "how_to_run": [
+      "List features and sort by who needs them: starters/individuals, your main target customer, and power users or larger teams.",
+      "Build three tiers so the middle contains the core value your main customer buys, and make it the one most people choose.",
+      "Use the top tier partly as an anchor: a visibly more expensive plan makes the middle look reasonable.",
+      "Differentiate tiers by a value metric (usage, seats, outcomes) rather than by withholding basic functionality people need.",
+      "Keep it to a few clear tiers; review which tier customers actually pick and adjust."
+    ],
+    "preconditions": "You need enough distinct features or usage levels to justify more than one tier; a single simple product may be better as one price.",
+    "failure_modes": "Too many tiers causing choice paralysis. Crippling the cheap tier so badly it poisons trust. Splitting features so the middle feels incomplete. Building tiers around features nobody segments on. A decoy so obviously useless it looks manipulative. Letting the lineup go stale as the product changes.",
+    "evidence_note": "Good-better-best, anchoring with a high-end option, and decoy/compromise effects are well documented in behavioural pricing and consumer-choice research, and widely used in SaaS. Direction is solid; exact tier counts and splits are context-dependent. Medium.",
+    "regional_notes": "The three-tier structure works across markets, but price points per tier should reflect local ability to pay and currency. Some markets are more price-sensitive at the entry tier.",
+    "examples": "A solo founder selling a writing tool had one plan at $12. They split it into a limited starter, a $12 core plan with the features most writers use, and a $39 team plan. Most chose $12, but the visible $39 option made it feel like the sensible choice rather than expensive."
+  },
+  {
+    "id": "freemium-vs-free-trial",
+    "family": "Pricing",
+    "title": "Free plan, free trial, or paid-only",
+    "stages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": true,
+    "keywords": [
+      "free plan or free trial",
+      "should i offer freemium",
+      "free trial length",
+      "free users dont convert",
+      "freemium vs trial",
+      "give it away free",
+      "paywall",
+      "how long free trial",
+      "free tier",
+      "convert free to paid"
+    ],
+    "summary": "A free plan (freemium) grows reach but most free users never pay; a time-limited trial creates urgency to decide; paid-only filters for serious buyers. Pick based on how fast users reach value and whether free users actually cost you to serve.",
+    "when_to_use": "When deciding how new users first experience the product and how you move them to paying, especially before launch or when free-to-paid conversion is disappointing.",
+    "how_to_run": [
+      "Estimate how quickly a new user reaches a clear 'aha': if fast, a short free trial can work; if it takes weeks of habit-building, a free plan may make more sense.",
+      "Estimate what a free user costs to serve and support; if cheap and referral-driving, freemium is more viable.",
+      "Choose: freemium for low-cost, viral, habit products; a time-limited trial (often 7-14 days) to force a decision; paid-only when buyers are serious and support is costly.",
+      "Define the conversion path: what triggers the upgrade prompt, and what limit (usage, seats, time) pushes a free user to pay.",
+      "Track free-to-paid conversion and the cost of the free base; if conversion is far below a few percent and free is expensive, tighten or remove it."
+    ],
+    "preconditions": "You need a way to measure activation and conversion; without analytics you can't tell whether free users are a funnel or a sink.",
+    "failure_modes": "A free plan so generous nobody needs to pay. Carrying a large costly free base that never converts and drains support. Trials too short to reach value, or so long they kill urgency. Assuming freemium 'works for everyone' (it suits viral, low-cost products far more than high-touch ones). Confusing sign-ups with a real funnel. Giving away the one feature that's your reason to upgrade.",
+    "evidence_note": "Freemium free-to-paid conversion benchmarks typically land in low single digits (often ~2-5%, varying by category) — the core cautionary fact. The freemium/trial/paid-only trade-offs are widely discussed in SaaS practice. Specific numbers vary, so medium; warn flagged because the 'free users who never convert' trap is common and costly.",
+    "regional_notes": "Free is more expected in some consumer markets and regions; in others a clear price signals seriousness. Payment friction (cards, local methods) strongly affects trial-to-paid by country.",
+    "examples": "A founder launched with a generous free plan and celebrated thousands of sign-ups. A year in, fewer than 2% had ever paid, free-user support ate most of the week, and the free tier already did everything a hobbyist needed. Moving the heaviest features behind a paid plan and adding a 14-day trial lifted paying users without hurting growth much."
+  },
+  {
+    "id": "raising-prices",
+    "family": "Pricing",
+    "title": "Raising prices without losing customers",
+    "stages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": true,
+    "keywords": [
+      "raise my prices",
+      "how to increase prices",
+      "price increase",
+      "am i charging too little",
+      "grandfather existing customers",
+      "test a price increase",
+      "when to raise prices",
+      "customers will leave if i raise prices",
+      "new price for new customers",
+      "price hike"
+    ],
+    "summary": "Most founders can raise prices more than they fear, especially on new customers. Test increases on new sign-ups first, often grandfather existing customers for a while, and communicate clearly when you change their price.",
+    "when_to_use": "When margins are thin, when you've added real value since setting the price, when you keep hearing 'that's cheap,' or when you suspect you underpriced at launch.",
+    "how_to_run": [
+      "Start with new customers: raise the listed price for new sign-ups and watch whether conversion holds, before touching anyone existing.",
+      "If conversion barely moves, you had room; consider a further step. If it drops sharply, you found a ceiling for that segment.",
+      "For existing customers, decide whether to grandfather them at the old price for a period or migrate them with clear notice and a value reason.",
+      "Communicate increases honestly and in advance, anchored to value delivered, with a window before the change.",
+      "Measure revenue and churn after the change; a small loss of customers at a higher price often still increases total revenue."
+    ],
+    "preconditions": "You need enough new sign-up volume to read a conversion signal, and a clear record of who is on which price so grandfathering is possible.",
+    "failure_modes": "Never raising out of fear and quietly starving the business. Raising on everyone overnight with no warning, triggering churn and trust damage. Grandfathering forever so old customers anchor the base too low. Judging an increase only by churn and missing that revenue went up. Raising without adding or articulating value. Testing on too small a sample and over-reacting to noise.",
+    "evidence_note": "The pattern that early founders underprice, and that increases on new customers usually move conversion less than feared, is widely reported by pricing practitioners; experience-based, not controlled trials, so medium. Grandfathering and staged testing are standard, low-risk. Warn flagged because mishandled increases (no notice, all at once) genuinely cause churn.",
+    "regional_notes": "",
+    "examples": "A founder hears 'that's cheap' from nearly every customer. They raise the price 60% for new sign-ups only; conversion barely changes and revenue per new customer jumps. Existing customers stay grandfathered for six months, then move to the new price with a month's notice and a note on what's improved."
+  },
+  {
+    "id": "value-metric",
+    "family": "Pricing",
+    "title": "Choose what you charge per",
+    "stages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "per seat or per usage",
+      "what do i charge per",
+      "value metric",
+      "pricing unit",
+      "per user pricing",
+      "usage based pricing",
+      "charge per outcome",
+      "how should pricing scale",
+      "per seat vs per usage",
+      "what to meter on"
+    ],
+    "summary": "Your value metric is the unit you charge by (per seat, per usage, per outcome) and it should rise as the customer gets more value. A well-chosen metric means customers who get more pay more, almost automatically.",
+    "when_to_use": "When designing pricing structure, especially before tiers, or when revenue doesn't grow even as heavy customers clearly get more out of the product.",
+    "how_to_run": [
+      "Identify what grows as a customer succeeds with you: more users, more usage, more transactions, more results.",
+      "Pick the metric that most closely tracks the value received, is easy to understand and predict, and is hard to game.",
+      "Check it scales gently with their growth so the bill feels fair as they expand, not a spike.",
+      "Decide between per seat (simple, value is per-person), per usage (aligns with value but can feel unpredictable), or per outcome (strongest alignment, hardest to measure).",
+      "Pair the metric with tiers and watch whether small and large customers both feel the price is fair."
+    ],
+    "preconditions": "You need to understand how value accrues to the customer over time; without that you can't pick a metric that scales with it.",
+    "failure_modes": "A flat fee so big customers pay the same as tiny ones, leaving money on the table. A metric customers can't predict, so bills shock them and they churn. A metric that's easy to game or that punishes the behaviour you want. Metering on something the customer doesn't connect to value. Changing the metric repeatedly and confusing everyone.",
+    "evidence_note": "The concept and the seat/usage/outcome trade-offs are well established in SaaS pricing practice and widely written about; directional guidance is sound. No single proven-best metric across products; context-dependent. Medium.",
+    "regional_notes": "Usage- and outcome-based billing can be harder where payment infrastructure or budgeting norms favour predictable flat fees; some markets and buyers strongly prefer a fixed, predictable price.",
+    "examples": "A founder charged a flat $30/month for an analytics tool. A one-person blog and a busy media site paid the same despite the site getting 100x the value. Switching to a metric tied to tracked events meant the heavy user's bill grew with usage while the small user paid little and stayed."
+  },
+  {
+    "id": "charge-more-underpricing",
+    "family": "Pricing",
+    "title": "You're probably charging too little",
+    "stages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": true,
+    "keywords": [
+      "am i too cheap",
+      "charge more",
+      "underpricing",
+      "is my price too low",
+      "nobody pushes back on price",
+      "should i raise my price",
+      "price too low",
+      "find the price ceiling",
+      "afraid to charge more",
+      "i feel my price is too low"
+    ],
+    "summary": "First-time founders almost always underprice, anchoring to their own discomfort rather than the buyer's value. If nobody ever flinches at your price and customers say it's cheap, that's a signal you have room to charge more.",
+    "when_to_use": "When setting an initial price, or whenever you feel nervous about charging and suspect you're leaving money on the table.",
+    "how_to_run": [
+      "Watch for under-pricing signals: almost no one objects, customers say 'that's cheap,' you win deals too easily, or low price makes buyers doubt quality.",
+      "Separate your own fear of charging from the customer's actual reaction; the discomfort is usually yours.",
+      "Find the ceiling by raising the price for new customers in steps until conversion or objections meaningfully increase, then settle just below.",
+      "Use value framing (what the outcome is worth) to justify the higher number to yourself and buyers.",
+      "Re-check periodically; as you add value the ceiling moves up."
+    ],
+    "preconditions": "You need some sales conversations or sign-ups to observe reactions; with zero customers you have no signal yet.",
+    "failure_modes": "Anchoring price to what you'd personally pay rather than what the buyer values. Reading absence of complaints as 'price is right' when it means 'too low.' Over-correcting into a price the market clearly rejects, then panicking down. Competing only on cheapest, attracting price-sensitive high-churn customers and signalling low quality. Never testing upward.",
+    "evidence_note": "That early founders systematically underprice is one of the most consistent themes among pricing advisors and operators; experience-based pattern, not a controlled study, so medium. The signals (no objections, 'too cheap,' easy wins) are common heuristics. Warn flagged because chronic underpricing quietly kills businesses and reckless over-correction can stall sales.",
+    "regional_notes": "What counts as 'too cheap' or 'too expensive' is strongly tied to local income and currency; test per market rather than porting one price globally.",
+    "examples": "A technical solo founder priced their tool at $5/month because that felt comfortable. Every prospect said yes instantly and several called it 'a steal' — the tell. Raising it to $19 for new sign-ups barely changed conversion and more than tripled revenue, revealing how much room the original price left."
+  },
+  {
+    "id": "first-ten-customers",
+    "family": "Sales",
+    "title": "Landing your first ~10 customers by hand",
+    "stages": [
+      2,
+      3,
+      4
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "how do i get customers",
+      "first customers",
+      "my first ten customers",
+      "get paying users",
+      "no customers yet",
+      "sell before product is ready",
+      "get traction",
+      "close my first deal",
+      "do things that don't scale",
+      "get the word out"
+    ],
+    "summary": "Your first handful of paying customers come from one-to-one effort: you personally find people with the problem, talk to them, and close them by hand rather than expecting a channel to deliver them. The goal is signal and learning, not scale.",
+    "when_to_use": "You have something people can pay for (even rough), zero or near-zero customers, and you're tempted to 'do marketing' before you've sold anything manually.",
+    "how_to_run": [
+      "Write exactly who has the problem badly enough to pay, specific enough to name 30 real people or companies who fit.",
+      "Reach those people one at a time through whatever gets a real conversation: a warm intro, a community, a direct message, a call.",
+      "Offer to set them up yourself, do onboarding manually, and stay in the conversation so you see every point of friction.",
+      "Charge money from the start, even a small amount, so you learn who actually values it versus who's being nice.",
+      "After each yes or no, write down why, and adjust who you target and what you say before the next batch."
+    ],
+    "preconditions": "Something usable enough that a willing customer can get value, even if you fill gaps manually behind the scenes.",
+    "failure_modes": "Building broad marketing (ads, landing pages, automation) before manually closing anyone, so you never learn why people say no. Giving it away free and mistaking polite signups for demand. Chasing anyone with a pulse instead of a narrow group, producing noisy feedback. Quitting outreach after a few no's when the first ten usually require dozens of conversations.",
+    "evidence_note": "Strong consensus in startup operating literature and accelerator practice that founders should manually recruit early customers before scaling; widely repeated and consistent with how most successful early companies describe first traction. High as practice, though pattern-based rather than controlled study.",
+    "regional_notes": "How you reach the first ten differs by region and segment: in some markets a call or in-person meeting lands far better than email, and messaging apps (WhatsApp, LINE, WeChat) often beat email for direct outreach.",
+    "examples": "A solo technical founder building a scheduling tool for small clinics lists 25 clinics they could reach, messages each personally offering to set it up free that week, gets on three calls, and converts two into paying users they onboard by hand."
+  },
+  {
+    "id": "cold-outreach-that-works",
+    "family": "Sales",
+    "title": "Cold outreach that actually gets replies",
+    "stages": [
+      2,
+      3,
+      4
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "cold email",
+      "cold outreach",
+      "cold dm",
+      "how to email strangers",
+      "get replies",
+      "outreach not working",
+      "sales emails",
+      "linkedin dm",
+      "email people i don't know",
+      "reach out to prospects"
+    ],
+    "summary": "Cold outreach works when each message is researched, relevant to that specific person, and asks for one small thing; it fails as high-volume identical blasts. Smaller, sharper lists beat bigger generic ones.",
+    "when_to_use": "You have no warm network for a segment you need to reach, and you're deciding between a few dozen tailored messages versus blasting hundreds of identical ones.",
+    "how_to_run": [
+      "Define a tight target (specific role, company type, or situation) so everyone shares the same problem.",
+      "For each person, find one real, specific reason you're contacting them and reference it in the first line.",
+      "Keep the message short, make the relevance obvious, and end with one easy ask (a reply, a 15-minute call, a yes/no question).",
+      "Send in small batches, read every reply, and tighten targeting and wording before the next batch.",
+      "Follow up once or twice politely; most replies come on a follow-up."
+    ],
+    "preconditions": "A clear enough idea of who has the problem that you can research individuals rather than scrape a giant list.",
+    "failure_modes": "Spray-and-pray: identical messages to huge lists, near-zero replies, and a burned sending reputation. Fake personalization (just merge-tags). Asking for too much too soon (a long demo, a contract). Confusing open rates with interest. Ignoring local spam and consent rules.",
+    "evidence_note": "Vendor benchmark data (millions of emails) consistently shows tightly targeted, genuinely personalized campaigns reply at multiples of broad blasts (e.g. small targeted lists ~5-6% vs ~2% for large sends). Source is self-interested so absolute numbers vary, but the direction is robust and matches first-hand accounts; high on direction, medium on exact figures.",
+    "regional_notes": "Channel and etiquette vary: email dominates in some markets while LinkedIn or local messaging apps work better in others, and several regions have strict anti-spam/consent laws (you may need a lawful basis to contact people). Tone formality also differs by culture.",
+    "examples": "A founder selling a developer tool picks 40 engineering leads who recently posted about the exact pain it solves, sends each a three-sentence note referencing their post and a one-line ask to try it, and gets a handful of replies and two trials — versus an earlier 500-person identical blast that got nothing."
+  },
+  {
+    "id": "warm-network-first",
+    "family": "Sales",
+    "title": "Mine your warm network before going cold",
+    "stages": [
+      2,
+      3,
+      4
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "warm intros",
+      "who do i know",
+      "use my network",
+      "ask for introductions",
+      "first customers from network",
+      "referrals",
+      "friends and contacts",
+      "get intros",
+      "tap my contacts",
+      "leverage connections"
+    ],
+    "summary": "Before cold outreach, work your own and adjacent networks: former colleagues, classmates, past customers, and the people they can introduce you to. Warm intros convert far better and faster than cold for your first customers.",
+    "when_to_use": "You're early and need first conversations fast, and you have any professional or personal network even loosely connected to the problem.",
+    "how_to_run": [
+      "List everyone you know who has the problem or knows people who do, including weak ties you haven't spoken to in years.",
+      "Reach out directly and specifically: tell them what you're building and ask either to try it or to introduce you to one or two relevant people.",
+      "Make intros effortless by writing a short forwardable blurb they can pass along verbatim.",
+      "Treat every warm conversation as both a sales and a research call; ask who else they'd point you to.",
+      "Track who you've asked and circle back with progress so the network stays engaged."
+    ],
+    "preconditions": "Some existing network, even small or indirect; if you have literally none in the space, lead with communities and cold instead.",
+    "failure_modes": "Never asking because it feels awkward, skipping the highest-converting channel you have. Burning goodwill by hard-selling friends on a bad fit. Asking vaguely ('let me know if you know anyone') instead of naming exactly who you want introduced. Treating the network as the whole plan when it's only enough for the first several customers.",
+    "evidence_note": "Consistent first-hand consensus among early founders and investors that warm intros convert dramatically better than cold; the weak-ties and trust-transfer research supports the mechanism. High, though magnitude is situational and not precisely measured.",
+    "regional_notes": "In many markets and cultures, relationship and referral selling is the dominant norm and cold outreach is mildly taboo, making warm-first even more important; intro etiquette varies widely by region.",
+    "examples": "A first-time founder building an invoicing tool messages a dozen former coworkers now running small businesses; three try it, and two introduce her to other owners in their local business group, producing her first five paying customers without a single cold email."
+  },
+  {
+    "id": "communities-watering-holes",
+    "family": "Growth",
+    "title": "Show up where your customers already gather",
+    "stages": [
+      2,
+      3,
+      4
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": true,
+    "keywords": [
+      "where to find users",
+      "online communities",
+      "forums and groups",
+      "reddit and discord",
+      "where my customers hang out",
+      "be helpful in communities",
+      "find where users gather",
+      "slack groups",
+      "niche communities",
+      "get noticed without spamming"
+    ],
+    "summary": "Your customers already congregate somewhere — forums, subreddits, Discords, Slack groups, local meetups. Find those watering holes and become a genuinely useful member; surface your product only when it actually answers a question.",
+    "when_to_use": "You can name where your target users already spend time discussing the problem, and you have patience to contribute before promoting.",
+    "how_to_run": [
+      "List the specific online and offline places your target customers gather around the problem.",
+      "Join the few highest-signal ones and read before posting, learning the norms and the real questions.",
+      "Contribute real help consistently, building recognition before any mention of your product.",
+      "Mention what you built only where it directly answers someone's question, and disclose it's yours.",
+      "Concentrate on the communities that produce real conversations and customers."
+    ],
+    "preconditions": "Customers who actually congregate somewhere identifiable; very fragmented or offline-only audiences make this weaker.",
+    "failure_modes": "Drive-by self-promotion that gets you muted, banned, or branded a spammer, often poisoning the community for good. Treating it as a place to dump links. Spreading thin across many communities instead of becoming known in a couple. Expecting immediate volume. Mistaking upvotes or thanks for paying demand.",
+    "evidence_note": "Well-established founder practice with many credible first-hand accounts of communities driving early customers; effectiveness is highly community-dependent with little hard benchmark data, plus a real downside risk (bans, reputation), so medium and flagged.",
+    "regional_notes": "Dominant platforms differ sharply by region and segment (Reddit/Discord/Slack in some places; WhatsApp, Telegram, WeChat, LINE, or local forums elsewhere), and offline communities matter more in some markets; each has its own self-promotion norms.",
+    "examples": "A founder building a tool for indie game developers becomes a regular helpful presence in a couple of game-dev Discords for a month, answering technical questions, and when someone asks about exactly the problem the tool solves, mentions it transparently and lands the first several users."
+  },
+  {
+    "id": "content-and-seo-early",
+    "family": "Growth",
+    "title": "When content and SEO are worth it early (and when they're too slow)",
+    "stages": [
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "warn": true,
+    "keywords": [
+      "content marketing",
+      "seo for startups",
+      "should i blog",
+      "write content",
+      "seo too slow",
+      "marketing with no budget",
+      "organic traffic",
+      "rank on google",
+      "content strategy early stage",
+      "slow growth channel"
+    ],
+    "summary": "Content and SEO can become a durable, low-cost channel, but on a new site they typically take many months to produce meaningful traffic — too slow to be your path to the first customers. Use them as a compounding bet alongside hands-on selling, not instead of it.",
+    "when_to_use": "You've already validated demand through direct selling, you can sustain output for months, and you want a channel that compounds rather than an immediate-customer source.",
+    "how_to_run": [
+      "Confirm you already have some customers via direct methods before relying on content.",
+      "Target specific, low-competition queries your buyers actually search, not broad high-volume terms a new site can't rank for.",
+      "Publish genuinely useful content on a cadence you can sustain for at least several months.",
+      "Measure leading signals (impressions, rankings on target terms) early and business impact (signups, customers) later.",
+      "Decide upfront how long you'll give it, since results lag the work by months."
+    ],
+    "preconditions": "Validated demand and capacity to keep producing content for months without immediate return; otherwise it starves attention from faster channels.",
+    "failure_modes": "Treating content/SEO as the way to get the first customers and going quiet when nothing happens for months. Chasing competitive head terms a new domain can't rank for. Publishing thin content nobody searches for. Abandoning it right before results compound. Letting it consume time hand-selling needs more.",
+    "evidence_note": "Multiple SEO-industry sources converge that new sites see early signals ~3-6 months and meaningful business impact ~6-12 months; partly self-interested but consistent, and the slow-to-compound nature is well established. High on the timeline direction; flagged because founders routinely misjudge it as a fast channel.",
+    "regional_notes": "Search behavior and the dominant engine vary by region and language (other engines lead in some markets), and content in less-served languages can face less competition; channel mix shifts where social or video search dominates discovery.",
+    "examples": "A founder with ten paying customers from outreach starts writing a few deeply useful how-to articles a month aimed at niche phrases their buyers search, sees little for a quarter, then gets a steady trickle of qualified signups by months five and six."
+  },
+  {
+    "id": "partnerships-and-channels",
+    "family": "Growth",
+    "title": "Borrowing someone else's distribution",
+    "stages": [
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": true,
+    "keywords": [
+      "partnerships",
+      "reach customers i can't",
+      "another company's audience",
+      "channel partners",
+      "integrations",
+      "resellers",
+      "co-marketing",
+      "distribution partner",
+      "get in front of users",
+      "piggyback on someone else"
+    ],
+    "summary": "A partner who already has your customers' trust and attention can put you in front of an audience you couldn't reach alone — via integrations, co-marketing, referrals, or reselling. Powerful but slow to set up and rarely worth it before you've proven you can sell directly.",
+    "when_to_use": "You've shown the product converts when you sell it yourself, and there's a non-competing company whose audience is exactly your target and who gains from working with you.",
+    "how_to_run": [
+      "Identify partners who already reach your exact customer and aren't competitors.",
+      "Figure out what's genuinely in it for them (revenue, a better product for their users, retention) before pitching.",
+      "Start with the lightest possible collaboration (a co-written piece, a referral arrangement, a small integration) to test whether their audience converts.",
+      "Make it easy for the partner: do the work, supply the materials, minimize their effort.",
+      "Measure customers actually delivered, not vague 'reach,' and only deepen partnerships that produce."
+    ],
+    "preconditions": "Proof you can convert customers yourself; partners amplify a working motion but won't fix one that doesn't convert.",
+    "failure_modes": "Spending months negotiating a big partnership before validating the partner's audience converts. Picking partners by logo prestige rather than audience fit. One-sided deals the partner has no reason to push. Depending on a single partner who can change terms or drop you. Mistaking signed agreements for delivered customers.",
+    "evidence_note": "Channel and partnership distribution is a well-documented growth lever, but outcomes vary enormously and many early partnerships underdeliver; little reliable early-stage benchmark data and a real risk of wasted time, so medium and flagged. Operating-practice consensus, not controlled study.",
+    "regional_notes": "Which partners control distribution differs by region (local platforms, telcos, distributors, or marketplaces may be gatekeepers), and partnership/reseller norms and contract expectations vary widely.",
+    "examples": "A founder with a small but converting analytics tool arranges a simple referral and a joint webinar with a non-competing company serving the same shop owners; the first webinar brings a modest but real batch of qualified trials, so they invest in a deeper integration."
+  },
+  {
+    "id": "launch-tactics",
+    "family": "Growth",
+    "title": "One-off launches: useful spikes, not a channel",
+    "stages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": true,
+    "keywords": [
+      "product launch",
+      "launch on a marketplace",
+      "get press",
+      "launch day",
+      "big launch",
+      "go viral",
+      "launch spike",
+      "press coverage",
+      "marketplace launch",
+      "one big push"
+    ],
+    "summary": "Launching on a community, marketplace, or via press can produce a real spike of attention and early users, which is genuinely useful for feedback and a few customers. The mistake is treating a one-time spike as a repeatable, sustainable channel.",
+    "when_to_use": "Your product is ready enough to make a strong first impression and you want a concentrated burst of feedback, early users, and signal — while keeping expectations realistic.",
+    "how_to_run": [
+      "Pick one launch surface where your target users actually pay attention, and prepare it properly (clear pitch, assets, a way to capture interested people).",
+      "Line up your warm network to engage early so the launch gets initial momentum.",
+      "Be present throughout to answer every question and convert attention into conversations.",
+      "Capture contact info and feedback from everyone who shows up, since the traffic won't return on its own.",
+      "After the spike, evaluate what you learned and which users stuck, and return to your steady channels."
+    ],
+    "preconditions": "A product polished enough to withstand a wave of scrutiny and a way to capture the interest the launch generates.",
+    "failure_modes": "Treating a launch spike as proof of a durable channel, then panicking when traffic flatlines. Over-investing in launch theater at the expense of steady distribution. Launching before the product can survive scrutiny, wasting a one-shot moment. Failing to capture visitors. Chasing 'going viral' as a plan rather than a lucky outcome.",
+    "evidence_note": "Many credible first-hand accounts of launches driving a useful one-time burst of users and feedback, and equally many cautioning the spike rarely sustains. Outcomes are highly variable and luck-dependent with no reliable benchmarks, so medium and flagged. Founder-practice consensus.",
+    "regional_notes": "The launch surfaces that matter differ by region and segment (global tech communities and marketplaces in some cases; local press, platforms, or marketplaces in others); press receptivity and which outlets reach your buyers also vary.",
+    "examples": "A founder launches their note-taking tool on a popular community, gets a one-day surge of a few thousand visitors and a few dozen signups plus useful feedback, captures emails from everyone interested, and then goes back to outreach and communities rather than expecting the surge to repeat."
+  },
+  {
+    "id": "should-i-raise",
+    "family": "Capital",
+    "title": "Should I raise money at all?",
+    "stages": [
+      2,
+      3,
+      4
+    ],
+    "reversibility": "one-way",
+    "evidence": "high",
+    "warn": true,
+    "keywords": [
+      "should i raise money",
+      "do i need investors",
+      "raise or bootstrap",
+      "is my business venture backable",
+      "everyone is raising",
+      "take vc money",
+      "do i need funding",
+      "is raising the next step",
+      "do i need outside money"
+    ],
+    "summary": "Most businesses neither need nor suit venture money, and taking it commits you to selling the company or going public. Raise only if you are in a real race where money buys decisive speed, and you genuinely want a high-growth, investor-backed outcome.",
+    "when_to_use": "When you are tempted to raise because it feels like the default next step, or because peers are raising, before you talk to any investor.",
+    "how_to_run": [
+      "Write down what the money is actually for, in one sentence: what does capital let you do that you cannot do with revenue or time?",
+      "Ask whether your market rewards speed and scale (winner-takes-most, network effects, land-grab) or whether a steady profitable business is the better outcome.",
+      "Sketch both paths honestly: a bootstrapped version and a venture-backed version, and decide which life and which exit you actually want.",
+      "If you still lean toward raising, confirm you are prepared for the obligation: outside owners who expect a large exit, not a comfortable steady business.",
+      "Default to NOT raising unless the speed-in-a-real-race case is concrete; revisit later if it gets stronger."
+    ],
+    "preconditions": "",
+    "failure_modes": "Raising because it is the cultural default, not because the business needs it; treating a raise as validation or income rather than fuel for a specific plan; underestimating that venture money is a one-way commitment to a big exit, which can kill an otherwise healthy business; confusing a great business with a venture-suitable business (many excellent companies are simply not built for outsized returns).",
+    "evidence_note": "Well-established that only a tiny share of companies raise venture capital (commonly cited well under 1%) and most never take a venture dollar; the broad pattern is solid. The belief that raising is a normal milestone is heavily distorted by survivorship bias, since funded famous companies dominate media while the silent majority are invisible. High for the core claim, lower for any specific percentage.",
+    "regional_notes": "In ecosystems with thin venture markets, raising local institutional money may be impractical, making bootstrapping or revenue the realistic default; in dense hubs, social pressure to raise is stronger and worth resisting deliberately.",
+    "examples": "A solo technical founder builds a niche tool that 300 businesses happily pay for monthly. Raising would force a hunt for a market 100x larger that may not exist; staying bootstrapped lets them keep a profitable business they fully own."
+  },
+  {
+    "id": "how-much-to-raise",
+    "family": "Capital",
+    "title": "How much should I raise?",
+    "stages": [
+      2,
+      3,
+      4
+    ],
+    "reversibility": "one-way",
+    "evidence": "medium",
+    "warn": true,
+    "keywords": [
+      "how much should i raise",
+      "raise amount",
+      "how big a round",
+      "raise more or less",
+      "take the bigger check",
+      "how much money do i need",
+      "size my round",
+      "raise as much as possible"
+    ],
+    "summary": "Raise enough to hit a clear, fundable milestone plus a buffer, not the biggest number you can get. More money means more dilution now and a higher bar to clear at the next round, so a vanity raise can quietly raise your risk.",
+    "when_to_use": "Once you have decided to raise and need to set a target amount before talking to investors.",
+    "how_to_run": [
+      "Define the one milestone this money must buy (e.g. a working product with early paying users, or proof a channel works) that makes the next round fundable.",
+      "Build a bottom-up budget: cost the team and spending to hit that milestone over a sensible runway, plus a few months of cushion.",
+      "Add a buffer for slippage rather than padding the headline number for ego or optics.",
+      "Sense-check the implied dilution: how much of the company you give up, and whether the post-money valuation sets a bar you can realistically beat next time.",
+      "Pick the smallest amount that confidently reaches the milestone; you can raise more later from a stronger position."
+    ],
+    "preconditions": "You have already decided raising is right and can name the next proof point investors will want.",
+    "failure_modes": "Chasing the largest possible round, maximizing dilution and inflating a valuation you must then outgrow; raising too little and running out before any fundable milestone (a top cause of a painful down round or shutdown); setting the amount by what is offered rather than what the plan needs; ignoring how a high valuation now can trap you if you cannot beat it later.",
+    "evidence_note": "The milestone-plus-buffer logic and ~18-25% dilution per early round are well-supported by current funding data and standard investor practice. Exact numbers vary widely by stage, sector, and region and shift with conditions, so treat any benchmark as a rough anchor. Medium because the principle is robust but the figures are noisy and time-bound.",
+    "regional_notes": "Round sizes, valuations, and what counts as a fundable milestone differ sharply across ecosystems; a number normal in a major hub can be unraisable elsewhere. Calibrate to local comparables.",
+    "examples": "A founder is offered far more than planned. Modeling shows the larger round gives up nearly twice the equity and sets a valuation they'd struggle to double next year, so they take the smaller amount that cleanly funds their next proof point."
+  },
+  {
+    "id": "dilution-and-captable-basics",
+    "family": "Capital",
+    "title": "What dilution and the cap table really mean",
+    "stages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "one-way",
+    "evidence": "high",
+    "warn": true,
+    "keywords": [
+      "dilution",
+      "cap table",
+      "giving up equity",
+      "how much equity to give",
+      "safe note",
+      "option pool",
+      "ownership after raising",
+      "convertible note",
+      "how much of my company will i own"
+    ],
+    "summary": "Every share you issue to investors or employees shrinks your percentage of the company, and that compounds across rounds and option pools. Model your ownership across plausible future rounds and get professional help, because these terms are legally binding and hard to undo.",
+    "when_to_use": "Before signing any investment, option pool, or convertible instrument, and whenever you want to understand where your ownership is heading.",
+    "how_to_run": [
+      "Get a simple cap table listing who owns what, including convertibles or SAFEs that will convert into shares later.",
+      "Model forward: estimate your ownership after the next one or two rounds and after any option-pool top-ups, not just today.",
+      "Understand option pools are often carved out of founders' share before new money comes in, diluting you more than the headline round suggests.",
+      "Have a startup lawyer review the actual terms (not just the price), because details like liquidation preferences and pro-rata rights change who gets what in an exit.",
+      "Track the cap table as a living document and update it after every issuance."
+    ],
+    "preconditions": "",
+    "failure_modes": "Focusing only on valuation while ignoring terms that decide outcomes (preferences, anti-dilution, option-pool timing); forgetting SAFEs and notes are real future dilution that lands all at once when they convert; stacking multiple instruments without modeling the combined effect; signing without legal review because the documents looked standard — equity terms are effectively irreversible once executed.",
+    "evidence_note": "Cap-table mechanics, compounding dilution, and the option-pool-before-money convention are standard, well-documented startup finance and broadly agreed — mechanical, not opinion, so high. Survivorship note: founder lore celebrates big raises and glosses over how little equity some celebrated founders kept; don't infer your outcome from theirs.",
+    "regional_notes": "Standard instruments and default terms vary by jurisdiction (the common post-money convertible in some markets vs priced rounds or notes elsewhere), and tax treatment of equity and options differs significantly. Local legal advice is essential.",
+    "examples": "A first-time founder agrees to a seed round and a new option pool without modeling both together. After an earlier SAFE converts and the pool carve-out, they own meaningfully less than assumed — a surprise a one-hour modeling session and a lawyer's review would have prevented."
+  },
+  {
+    "id": "investor-selection",
+    "family": "Capital",
+    "title": "Choosing the right investors",
+    "stages": [
+      2,
+      3,
+      4
+    ],
+    "reversibility": "one-way",
+    "evidence": "medium",
+    "warn": true,
+    "keywords": [
+      "which investor should i pick",
+      "choosing investors",
+      "investor fit",
+      "best investor for us",
+      "reference check investor",
+      "take the highest valuation",
+      "good vs bad investor",
+      "who should i raise from"
+    ],
+    "summary": "You will live with your investors for years, so choose for fit, helpfulness, and fair terms, not just the size or speed of the check. Reference-check investors the way they check you, by talking to founders they have backed, including ones whose companies struggled.",
+    "when_to_use": "When you have more than one possible investor, or before accepting any term sheet.",
+    "how_to_run": [
+      "Decide what you actually need beyond money: relevant introductions, domain understanding, patience, or simply staying out of the way.",
+      "Ask each investor how they behave when a company hits trouble, then verify it independently.",
+      "Take references from founders they have backed, deliberately including companies that did not go well, not just the success stories they offer.",
+      "Compare terms and control rights, not only valuation; a friendlier investor with a slightly worse price can be the better deal.",
+      "Trust your read on the working relationship; an investor you dread updating is a bad fit even at a great price."
+    ],
+    "preconditions": "You have or expect multiple options; with only one offer, weigh taking it against waiting.",
+    "failure_modes": "Optimizing for the highest valuation or fastest close and ignoring fit and behavior under stress; skipping reference checks, or only calling the references the investor selects; mistaking a famous name for useful help; accepting harsh control terms to land a marquee investor.",
+    "evidence_note": "The advice to reference-check investors and weigh fit over headline terms is consensus among experienced founders and operators, but it is judgment and pattern-based rather than statistically proven, and especially prone to survivorship bias (the loudest praise comes from founders whose bets paid off). Medium.",
+    "regional_notes": "In smaller ecosystems the investor pool is limited and reputations travel fast, raising both the value of references and the cost of a bad-fit relationship; in large hubs there are more options but also more hype to see past.",
+    "examples": "A founder has two offers: a higher number from an investor several founders quietly warn is difficult in hard times, and a slightly lower number from one whose backed founders praise their steadiness. They take the lower offer and avoid years of friction."
+  },
+  {
+    "id": "the-raise-process",
+    "family": "Capital",
+    "title": "Running the raise as a time-boxed process",
+    "stages": [
+      2,
+      3,
+      4
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "how to run a raise",
+      "fundraising process",
+      "raising is taking forever",
+      "investor meetings",
+      "close the round",
+      "fundraising momentum",
+      "raise dragging on",
+      "fundraising sprint"
+    ],
+    "summary": "Treat fundraising as a focused, time-boxed sprint with many meetings in parallel, so momentum builds and the raise does not quietly consume the company for months. Running it loosely drains energy from the business and signals weakness to investors.",
+    "when_to_use": "Once you have decided to raise, set a target amount, and are ready to start investor conversations.",
+    "how_to_run": [
+      "Prepare materials and your story first, so you are not iterating the pitch live during the process.",
+      "Line up introductions and start conversations in parallel, in a concentrated window, rather than one at a time over months.",
+      "Set a target close date and treat the raise as a temporary project with a defined end.",
+      "Use parallel timing to create genuine momentum (real interest from several parties) without misrepresenting where you stand.",
+      "Protect time for the business; if the raise drags well past the window, pause and reassess whether the timing or story is wrong."
+    ],
+    "preconditions": "You have decided to raise and have your target amount and milestone clear.",
+    "failure_modes": "Sequential meetings spread over many months, which kills momentum and stalls the company; manufacturing fake urgency or competing offers, which experienced investors detect and which poisons trust; letting the raise become the founder's full-time job indefinitely while product and customers stall; starting before the story and materials are ready, burning early meetings on a rough pitch.",
+    "evidence_note": "The time-box and parallel-process tactics are widely taught by accelerators and experienced founders and are sensible, but they are heuristics, not proven formulas, and outcomes depend heavily on market conditions and the underlying business. Medium. These tactics are reversible: you can adjust pacing mid-process.",
+    "regional_notes": "Investor decision speed and process norms vary by ecosystem; in slower or relationship-driven markets a strict time-box may be unrealistic and a longer warm-up is normal. Adapt the cadence to local reality.",
+    "examples": "A founder schedules most first meetings within a three-week window instead of trailing them out. Several investors moving at once creates real momentum, the round closes in about six weeks, and the founder returns to building rather than spending half a year pitching."
+  },
+  {
+    "id": "alternatives-to-vc",
+    "family": "Capital",
+    "title": "Cheaper and non-dilutive alternatives first",
+    "stages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "alternatives to vc",
+      "non dilutive funding",
+      "grants",
+      "revenue based financing",
+      "fund without investors",
+      "customer prepayment",
+      "bootstrap alternatives",
+      "debt for startup",
+      "angel investor",
+      "how to fund without giving up equity"
+    ],
+    "summary": "Before selling equity, exhaust funding that keeps you in control: revenue, customer prepayment or deposits, grants, angels, revenue-based financing, and debt. These are usually cheaper than venture money because you do not give up a permanent share of the company.",
+    "when_to_use": "Whenever you need capital, before defaulting to an equity raise, and especially if your business can fund growth from customers.",
+    "how_to_run": [
+      "Start with revenue: can customers fund the next step through upfront payment, deposits, or annual prepayment in exchange for a discount?",
+      "Look for non-dilutive money that fits your context: grants, competitions, or programs you qualify for, which cost time but not equity.",
+      "Consider angels or revenue-based financing for smaller, faster capital; RBF typically takes a small share of monthly revenue until a capped multiple is repaid, with no equity given up.",
+      "Treat debt carefully: it can be cheaper than equity but must be repaid regardless of how the business does, so size it to what cash flow can cover.",
+      "Only move to an equity raise once these cheaper or non-dilutive routes genuinely cannot fund the milestone you need."
+    ],
+    "preconditions": "",
+    "failure_modes": "Defaulting to an equity raise without checking whether customers or non-dilutive sources could fund the same step; taking on debt the business cannot reliably repay (dangerous precisely because it does not flex with bad months); misjudging revenue-based-financing cost (a small revenue share can still be expensive if growth is slow); spending excessive time chasing low-odds grants when revenue would be faster.",
+    "evidence_note": "That revenue, prepayment, grants, angels, RBF, and debt are real and often cheaper alternatives is well-established, and RBF terms (a low single-digit share of revenue, repayment capped around a modest multiple) are documented in current market sources. High for existence and general shape; specific costs and availability vary. Most options here are reversible or self-extinguishing, unlike equity.",
+    "regional_notes": "Availability differs enormously: grants and government-backed programs are generous in some regions and nearly absent in others; revenue-based financing and startup debt are mature in some markets and unavailable in many. Check what genuinely exists where you operate.",
+    "examples": "A founder needs capital to build the next version of a tool. Instead of raising, they offer existing customers a discounted annual prepayment; enough say yes to fund the build, and the founder keeps full ownership and learns which customers are most committed."
+  },
+  {
+    "id": "runway-to-milestone",
+    "family": "Capital",
+    "title": "Tie the raise to the next milestone",
+    "stages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": true,
+    "keywords": [
+      "what milestone to raise for",
+      "tie raise to milestone",
+      "what should the money prove",
+      "runway to next round",
+      "what investors want next",
+      "fundable milestone",
+      "raising blind",
+      "what does the money buy"
+    ],
+    "summary": "Each raise should buy a specific piece of proof that the next investor will want to see, with enough runway to actually reach it. If you cannot name the milestone the money buys, you are raising blind and risk running out just short of the proof you needed.",
+    "when_to_use": "When sizing a raise, planning spend, or checking whether your current runway will reach a fundable point.",
+    "how_to_run": [
+      "Write down the single most important proof the next investor will demand (e.g. customers will pay and stay, or a growth channel works).",
+      "Translate that proof into a dated milestone and the spending plan to reach it.",
+      "Calculate runway honestly from real burn, and confirm it comfortably covers reaching the milestone plus a margin, not the bare minimum.",
+      "If runway falls short of any fundable milestone, cut burn or raise more before you are desperate.",
+      "Re-check monthly: if you are drifting off the path to the milestone, adjust spend early rather than hoping."
+    ],
+    "preconditions": "You know roughly what the next funding stage will require as evidence.",
+    "failure_modes": "Raising with no clear milestone, then spending it without reaching anything that unlocks the next round; running out a few months short of the proof point (the classic cause of a forced down round or shutdown); confusing activity (shipping features, hiring) with the specific proof investors want; leaving no margin, so normal slippage tips you into a crisis raise.",
+    "evidence_note": "Linking runway to the next fundable milestone is standard, widely-endorsed startup-finance guidance and logically sound, but what counts as a milestone is judgment-based and market-dependent, and the cautionary stories are shaped by survivorship bias. Medium. The spending and pacing choices are reversible; the raise itself is not.",
+    "regional_notes": "What the next investor expects as proof varies by ecosystem and sector; in markets with less capital, the milestone bar to unlock the next round is often higher and runway needs to stretch further. Calibrate to who your next likely funder actually is.",
+    "examples": "A founder raises a small round but never defines what it must prove. They spend it broadly, and when they go to raise again they have growth but no clean evidence of customer retention — the exact thing investors ask about — so the next raise stalls and cash runs low."
   }
 ]
