@@ -61,6 +61,21 @@ function rateLimited(req) {
   return arr.length > RATE_MAX;
 }
 
+// ---- global per-day circuit breaker (denial-of-wallet guard) ----
+// Caps total model-calling requests per UTC day across all users, so a burst (or abuse)
+// can't run up the Anthropic bill. Counter is per-instance and resets on restart; that's
+// fine — it's a coarse safety net, not exact accounting. Set DAILY_MAX=0 to disable.
+const DAILY_MAX = parseInt(process.env.DAILY_MAX || "1500", 10);
+let dayKey = new Date().toISOString().slice(0, 10);
+let dayCount = 0;
+function dailyLimited() {
+  if (DAILY_MAX <= 0) return false;
+  const today = new Date().toISOString().slice(0, 10);
+  if (today !== dayKey) { dayKey = today; dayCount = 0; } // new UTC day → reset
+  dayCount++;
+  return dayCount > DAILY_MAX;
+}
+
 if (!API_KEY) {
   console.warn("\n[warning] ANTHROPIC_API_KEY is not set. Copy .env.example to .env and add your key.\n");
 }
@@ -106,6 +121,7 @@ function stripControl(text) {
 async function handleChat(req, res) {
   if (!API_KEY) { res.writeHead(500, { "Content-Type": "application/json" }); return res.end(JSON.stringify({ error: "Server is missing ANTHROPIC_API_KEY." })); }
   if (rateLimited(req)) { res.writeHead(429, { "Content-Type": "application/json" }); return res.end(JSON.stringify({ error: "You're going a bit fast — give it a minute and try again." })); }
+  if (dailyLimited()) { res.writeHead(429, { "Content-Type": "application/json" }); return res.end(JSON.stringify({ error: "The Co-Founder has hit today's usage limit. Please come back tomorrow." })); }
   let payload;
   try { payload = JSON.parse(await readBody(req)); } catch { res.writeHead(400); return res.end("bad json"); }
 
