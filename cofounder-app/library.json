@@ -1,0 +1,3227 @@
+[
+  {
+    "id": "mom-test",
+    "family": "Opportunity",
+    "title": "The Mom Test — validate without being lied to",
+    "stages": [
+      0,
+      1,
+      2
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "validate",
+      "validation",
+      "talk to customers",
+      "customer interview",
+      "feedback",
+      "do they want it",
+      "idea",
+      "demand",
+      "ask people",
+      "survey"
+    ],
+    "summary": "People lie to be nice. Don't ask if they like the idea — ask about their actual past behavior and whether they already pay to solve it. 'I'd definitely buy that' is a red flag, not a green light.",
+    "when_to_use": "Any time you're judging demand from conversations — before building, when an idea 'tests well' verbally, or when everyone says they love it but nobody buys.",
+    "how_to_run": [
+      "Talk about THEIR life, not your idea",
+      "Ask: when did this last happen? what did you do about it? what did it cost you in time or money?",
+      "Ask what they've already tried or paid for",
+      "Never pitch; if you mention the idea, you've contaminated the answer",
+      "Look for behavior and money already spent, not compliments"
+    ],
+    "preconditions": "You can reach 5-10 people who actually have the problem.",
+    "failure_modes": "Pitching instead of listening; counting compliments as validation; asking hypothetical 'would you' questions; talking to friends who won't be honest.",
+    "evidence_note": "High — the single most repeated, battle-tested lesson in early-stage building across regions; cheap to run and consistently predictive.",
+    "regional_notes": "In high-politeness cultures (much of East/Southeast Asia, parts of the Middle East), verbal enthusiasm is even less reliable — weight observed behavior and prepayment more heavily.",
+    "examples": "Green flag: 'I built a messy spreadsheet to do this and pay an assistant 2 hours a week.' Red flag: 'That sounds amazing, I'd totally use it.'"
+  },
+  {
+    "id": "lived-problem",
+    "family": "Opportunity",
+    "title": "Build for a problem you've lived",
+    "stages": [
+      0,
+      1
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "keywords": [
+      "idea",
+      "where to start",
+      "problem",
+      "passion",
+      "what to build",
+      "headache"
+    ],
+    "summary": "Build for a headache you've personally had — you'll know the customer and the real pain. But still prove a few other people want it before building.",
+    "when_to_use": "At idea stage, choosing what to work on.",
+    "failure_modes": "Assuming your pain is everyone's; skipping outside validation because you 'know' the problem.",
+    "evidence_note": "High for founder-problem fit; medium that it predicts market size — your pain may be niche."
+  },
+  {
+    "id": "counter-positioning",
+    "family": "Opportunity",
+    "title": "Counter-positioning — win the corner the giant can't defend",
+    "stages": [
+      0,
+      1,
+      2
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "keywords": [
+      "competition",
+      "incumbent",
+      "competitor",
+      "differentiation",
+      "big player",
+      "compete",
+      "niche"
+    ],
+    "summary": "Don't fight a strong incumbent head-on. Win a neglected corner where their existing business model makes them unwilling to follow you, then climb.",
+    "when_to_use": "When entering a market with a dominant player.",
+    "preconditions": "There's a position the incumbent would have to damage their core business to copy.",
+    "evidence_note": "High — repeatedly how challengers beat entrenched leaders; the key is the incumbent's *inability* (not unwillingness) to respond."
+  },
+  {
+    "id": "leapfrog-infrastructure",
+    "family": "Opportunity",
+    "title": "Leapfrog missing infrastructure",
+    "stages": [
+      0,
+      1,
+      2
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "keywords": [
+      "emerging market",
+      "infrastructure",
+      "mobile",
+      "developing",
+      "region",
+      "leapfrog"
+    ],
+    "summary": "Where old infrastructure never reached people, skip it — build on what they already have (e.g. mobile-first, cash-alternative rails).",
+    "regional_notes": "Especially powerful in markets that skipped desktop/credit-card eras; build for mobile money and intermittent connectivity, not Western defaults.",
+    "evidence_note": "High in emerging markets; the bet is on behavior that already exists, not behavior you must create."
+  },
+  {
+    "id": "recurring-revenue",
+    "family": "Opportunity",
+    "title": "Prefer recurring revenue",
+    "stages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "keywords": [
+      "business model",
+      "subscription",
+      "recurring",
+      "monetize",
+      "revenue model",
+      "pricing model"
+    ],
+    "summary": "A boring thing people pay for monthly usually beats a flashy one-time purchase — predictable cash, compounding value.",
+    "failure_modes": "Forcing a subscription onto something used once or rarely; churn quietly eats you if the value isn't ongoing.",
+    "evidence_note": "Medium-high — strong for businesses with genuine ongoing value; not a fit for inherently one-off purchases."
+  },
+  {
+    "id": "jobs-to-be-done",
+    "family": "Product",
+    "title": "What job is the customer hiring this for?",
+    "stages": [
+      1,
+      2,
+      5
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "why would anyone use this",
+      "who is this for",
+      "what problem does it solve",
+      "people don't get it",
+      "what's the point",
+      "do people need this",
+      "use case",
+      "real reason",
+      "what they actually want",
+      "positioning",
+      "competing with"
+    ],
+    "summary": "People don't buy products, they 'hire' them to get a specific job done in their life. Understand the job and you understand why someone would switch to you and what you're really competing against.",
+    "when_to_use": "When you can't explain why anyone would pick you over what they do today, when messaging falls flat, or when you're guessing at features instead of knowing the underlying need.",
+    "how_to_run": [
+      "Find people who recently took action on the problem (bought a competitor, built a workaround, quit trying) and have them walk through the day it happened",
+      "Pin down the job: what progress were they trying to make, and what triggered them to act then?",
+      "Map what they 'fired' to hire your solution, and what held them back from switching",
+      "Write your reason-to-exist as the job, not the features"
+    ],
+    "preconditions": "You need access to real people who recently faced the problem; speculation about jobs is opinion in disguise.",
+    "failure_modes": "Founders invent a flattering 'job' that justifies the product they already built. The framing is qualitative and easy to twist into confident stories with no evidence. It tells you the need, not whether enough people will pay.",
+    "evidence_note": "Popularized by Clayton Christensen; earlier framed by Tony Ulwick and Bob Moesta. A useful, widely-used lens, but a structured-interview/theory approach, not a tested predictive law. Treat insights as hypotheses to validate. Medium.",
+    "regional_notes": "",
+    "examples": "Building a tool to summarize legal contracts, you interview five people who recently paid to handle a contract and learn they weren't hiring 'a summary' — they were hiring 'confidence to sign without a lawyer.' Decision: reframe the product around a clear risk verdict and test whether people pay for that, before more code."
+  },
+  {
+    "id": "why-now",
+    "family": "Opportunity",
+    "title": "Why now? — timing test",
+    "stages": [
+      0,
+      1
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "keywords": [
+      "timing",
+      "why now",
+      "trend",
+      "market timing",
+      "too early",
+      "ready"
+    ],
+    "summary": "What changed recently (tech, law, cost, behavior) that makes this possible or necessary now? No clear 'why now' usually means too early or too late.",
+    "evidence_note": "Medium — a strong 'why now' correlates with breakout timing, but it's clearer in hindsight than in advance."
+  },
+  {
+    "id": "founder-market-fit",
+    "family": "Opportunity",
+    "title": "Founder-market fit / unfair advantage",
+    "stages": [
+      0,
+      1
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "keywords": [
+      "unfair advantage",
+      "why you",
+      "founder fit",
+      "moat",
+      "edge",
+      "advantage"
+    ],
+    "summary": "What do you uniquely know, have, or can reach that others can't easily copy? Be brutally honest — 'I'm passionate' is not an advantage.",
+    "failure_modes": "Mistaking enthusiasm or a generic skill for a real edge."
+  },
+  {
+    "id": "beachhead",
+    "family": "Opportunity",
+    "title": "Beachhead — dominate the smallest market first",
+    "stages": [
+      0,
+      1,
+      2
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "keywords": [
+      "niche",
+      "target market",
+      "beachhead",
+      "focus",
+      "segment",
+      "who is the customer",
+      "narrow"
+    ],
+    "summary": "Pick the smallest market you can dominate, not the biggest you can enter. Win it completely, then expand from strength.",
+    "preconditions": "The small segment is reachable and shares a sharp, common pain.",
+    "evidence_note": "High — repeatedly the path from zero to traction; broad launches usually dilute the message and the product."
+  },
+  {
+    "id": "pr-faq",
+    "family": "Product",
+    "title": "Write the launch blurb first (PR-FAQ)",
+    "stages": [
+      1,
+      2
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "keywords": [
+      "product",
+      "spec",
+      "plan",
+      "prioritize",
+      "build",
+      "feature",
+      "what to build"
+    ],
+    "summary": "Before building, write the one-paragraph launch announcement plus the hard customer FAQ. If it's boring or unconvincing on paper, don't build it.",
+    "how_to_run": [
+      "Write the press-release paragraph as if launched",
+      "Write the FAQ a skeptical customer would ask",
+      "If you can't make it compelling in words, the product won't fix that"
+    ]
+  },
+  {
+    "id": "concierge-mvp",
+    "family": "Product",
+    "title": "Concierge MVP — deliver the outcome by hand first",
+    "stages": [
+      0,
+      1,
+      2
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "keywords": [
+      "mvp",
+      "prototype",
+      "build",
+      "manual",
+      "start small",
+      "first version",
+      "automate",
+      "no code"
+    ],
+    "summary": "Deliver the result manually for your first users — a spreadsheet, DMs, your own labor — and charge real money. You learn what's truly needed and skip building the wrong software.",
+    "when_to_use": "Before writing significant code, when you're unsure exactly what to build.",
+    "how_to_run": [
+      "Find 1-3 people with the problem now",
+      "Deliver the outcome by hand, charging real money",
+      "Note every step that's painful and repeated",
+      "Automate ONLY those parts, in that order"
+    ],
+    "preconditions": "The outcome can be delivered manually at small scale.",
+    "failure_modes": "Automating before you understand the job; treating it as a demo instead of charging.",
+    "evidence_note": "High — repeatedly how durable products were discovered; manual delivery surfaces the real requirements cheaply."
+  },
+  {
+    "id": "wizard-of-oz",
+    "family": "Product",
+    "title": "Wizard-of-Oz — fake the automation to test demand",
+    "stages": [
+      0,
+      1,
+      2
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "keywords": [
+      "mvp",
+      "test",
+      "fake",
+      "automation",
+      "demand",
+      "prototype",
+      "validate"
+    ],
+    "summary": "Put a polished front-end on a manual back-end. Users think it's automated; you do it by hand to test demand before building the real engine.",
+    "failure_modes": "Scaling the illusion too long and burning yourself out; not measuring whether demand is real."
+  },
+  {
+    "id": "minimum-lovable",
+    "family": "Product",
+    "title": "Minimum lovable, not maximum feature list",
+    "stages": [
+      1,
+      2,
+      3
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "keywords": [
+      "mvp",
+      "features",
+      "scope",
+      "feature creep",
+      "ship",
+      "perfectionism",
+      "launch"
+    ],
+    "summary": "Ship the smallest thing a few people genuinely love, not the longest feature list nobody asked for. Depth of love for a narrow group beats broad indifference.",
+    "failure_modes": "Feature creep; delaying launch for 'just one more thing'; confusing more features with more value."
+  },
+  {
+    "id": "go-and-see",
+    "family": "Product",
+    "title": "Go and see for yourself",
+    "stages": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "keywords": [
+      "research",
+      "observe",
+      "customer",
+      "watch",
+      "field",
+      "reality"
+    ],
+    "summary": "Don't trust reports and dashboards alone — watch the real thing happen where it happens. The gap between what people say and what they do is where the insight is.",
+    "regional_notes": "Critical when building for a context you don't live in; assumptions from afar are usually wrong."
+  },
+  {
+    "id": "hyperlocal",
+    "family": "Product",
+    "title": "Build for how your people actually live",
+    "stages": [
+      1,
+      2,
+      3
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "keywords": [
+      "local",
+      "region",
+      "market",
+      "adapt",
+      "culture",
+      "payments",
+      "logistics"
+    ],
+    "summary": "Don't copy rich-country playbooks. Build for how your customers actually pay, move, and behave — payment methods, connectivity, trust norms, logistics.",
+    "regional_notes": "The default assumptions baked into Western SaaS/marketplace playbooks often break outside their home market."
+  },
+  {
+    "id": "trust-layer",
+    "family": "Product",
+    "title": "Own the trust layer",
+    "stages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": true,
+    "keywords": [
+      "trust",
+      "escrow",
+      "marketplace",
+      "scams",
+      "guarantee",
+      "safety"
+    ],
+    "summary": "If fear of scams or bad quality is what blocks buying, the missing trust IS the product — escrow, guarantees, verification. But it's capital- and operations-heavy.",
+    "preconditions": "Trust is genuinely the binding constraint, and you can fund the guarantee/operations.",
+    "warn_reason": "Building trust infrastructure (escrow, refunds, vetting) ties up cash and ops — only take it on if trust is the real blocker."
+  },
+  {
+    "id": "charge-day-one",
+    "family": "Sales",
+    "title": "Charge from day one — money is the only real validation",
+    "stages": [
+      2,
+      3,
+      4
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "keywords": [
+      "pricing",
+      "charge",
+      "money",
+      "free",
+      "validation",
+      "sales",
+      "ask for the sale",
+      "revenue",
+      "first sale"
+    ],
+    "summary": "A free user is not a customer. Money is the only validation that survives contact with reality. Ask for the sale early — willingness to pay tells you what 'likes' never will.",
+    "when_to_use": "As soon as you have something that delivers value, even manually; whenever you're tempted to 'just get users first'.",
+    "how_to_run": [
+      "Name a real price out loud",
+      "Ask for payment or a deposit now, not 'later'",
+      "Treat a 'yes, but not yet' as a no and dig into why",
+      "Use the no's: 'what would have to be true for this to be a yes?'"
+    ],
+    "failure_modes": "Giving it away to avoid the scary ask; chasing signups/likes (vanity) instead of revenue; assuming you'll 'monetize later'.",
+    "evidence_note": "High — prepayment/early revenue is the most reliable early signal across regions and sectors."
+  },
+  {
+    "id": "founder-led-sales",
+    "family": "Sales",
+    "title": "Founder-led sales — sell the first 10-50 yourself",
+    "stages": [
+      2,
+      3,
+      4
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "keywords": [
+      "sales",
+      "first customers",
+      "selling",
+      "outreach",
+      "close",
+      "pitch",
+      "hire salesperson"
+    ],
+    "summary": "Sell the first ~10-50 customers personally, by hand. Don't hire salespeople before you've cracked the pitch yourself — you can't delegate a sale you haven't figured out.",
+    "how_to_run": [
+      "List 20 specific people who have the problem",
+      "Reach out one-to-one, not a broadcast",
+      "Do the calls/demos yourself; note every objection",
+      "Refine the pitch until it converts before hiring anyone"
+    ],
+    "failure_modes": "Hiring a salesperson to escape the discomfort of selling; broadcasting instead of one-to-one; not logging objections.",
+    "evidence_note": "High — near-universal in B2B and most early B2C; the founder's job at this stage IS sales."
+  },
+  {
+    "id": "narrow-icp",
+    "family": "Sales",
+    "title": "Narrow ICP first",
+    "stages": [
+      2,
+      3,
+      4
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "keywords": [
+      "target customer",
+      "icp",
+      "segment",
+      "positioning",
+      "who",
+      "messaging",
+      "everyone"
+    ],
+    "summary": "Sell to one specific kind of person before 'everyone'. A sharp message to a narrow buyer beats a vague one to all.",
+    "failure_modes": "Targeting 'everyone'; a generic message that resonates with no one."
+  },
+  {
+    "id": "positioning",
+    "family": "Sales",
+    "title": "Positioning is a decision, not a tagline",
+    "stages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "keywords": [
+      "positioning",
+      "messaging",
+      "brand",
+      "framing",
+      "category",
+      "cheap",
+      "premium"
+    ],
+    "summary": "How you frame the product changes who buys. Calling a cheap product 'the cheapest' can repel the very buyers you built it for. Choose the frame deliberately.",
+    "examples": "The same product positioned as 'budget' vs 'simple and reliable' attracts very different customers."
+  },
+  {
+    "id": "trust-substitution",
+    "family": "Sales",
+    "title": "Trust-substitution — remove their risk",
+    "stages": [
+      2,
+      3,
+      4
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "keywords": [
+      "risk",
+      "guarantee",
+      "trust",
+      "pay after",
+      "money back",
+      "objection"
+    ],
+    "summary": "If people fear buying, take the risk off them — pay-after-delivery, money-back, free trial with a real outcome. Lower the cost of saying yes.",
+    "preconditions": "You can absorb the downside of some non-payers/returns."
+  },
+  {
+    "id": "waitlist-referral",
+    "family": "Sales",
+    "title": "Waitlist + referral",
+    "stages": [
+      2,
+      3,
+      4
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "keywords": [
+      "waitlist",
+      "referral",
+      "launch",
+      "demand",
+      "viral",
+      "invite"
+    ],
+    "summary": "Make people line up and invite friends — but only if real demand already exists. A waitlist amplifies demand; it doesn't create it.",
+    "failure_modes": "Faking scarcity with no underlying demand; a big list that doesn't convert to payment."
+  },
+  {
+    "id": "flat-fee-repricing",
+    "family": "Sales",
+    "title": "Flat-fee repricing vs a % incumbent",
+    "stages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "keywords": [
+      "pricing",
+      "fee",
+      "commission",
+      "undercut",
+      "percentage",
+      "flat fee"
+    ],
+    "summary": "If the market leader's % fee punishes big customers, charge a low flat fee and win on volume — only if your costs are genuinely low enough to sustain it.",
+    "preconditions": "Your unit costs are low enough that flat pricing is profitable at volume."
+  },
+  {
+    "id": "loss-leader",
+    "family": "Sales",
+    "title": "Loss-leader land grab",
+    "stages": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "one-way",
+    "evidence": "medium",
+    "warn": true,
+    "keywords": [
+      "free",
+      "subsidize",
+      "growth",
+      "land grab",
+      "burn",
+      "market share"
+    ],
+    "summary": "Free or subsidized to grab the market only works with deep capital AND a proven way to monetize later. Otherwise it's just how you bleed out.",
+    "warn_reason": "Without deep funding and a proven monetization path, subsidizing demand burns cash with no route to profit."
+  },
+  {
+    "id": "stay-lean",
+    "family": "Hiring",
+    "title": "Stay lean / hire builders, not managers",
+    "stages": [
+      3,
+      4,
+      5
+    ],
+    "reversibility": "one-way",
+    "evidence": "medium",
+    "keywords": [
+      "hire",
+      "hiring",
+      "team",
+      "manager",
+      "builder",
+      "headcount",
+      "when to hire"
+    ],
+    "summary": "Don't hire a fancy manager before there's a machine to manage. Hire builders to clear real bottlenecks, and watch your burn.",
+    "failure_modes": "Hiring senior managers to escape chaos; adding headcount before retention/economics are proven."
+  },
+  {
+    "id": "hire-the-bottleneck",
+    "family": "Hiring",
+    "title": "Hire the bottleneck, not the chore",
+    "stages": [
+      3,
+      4,
+      5
+    ],
+    "reversibility": "one-way",
+    "evidence": "medium",
+    "keywords": [
+      "hire",
+      "bottleneck",
+      "constraint",
+      "first hire",
+      "who to hire",
+      "delegate"
+    ],
+    "summary": "Hire to remove the constraint actually capping growth — not just the tasks you personally dislike doing.",
+    "how_to_run": [
+      "Name the one thing that, fixed, unlocks the most growth",
+      "Hire against that, not your to-do list"
+    ]
+  },
+  {
+    "id": "trial-before-hire",
+    "family": "Hiring",
+    "title": "Trial before one-way hires",
+    "stages": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "one-way",
+    "evidence": "medium",
+    "keywords": [
+      "hire",
+      "senior hire",
+      "trial",
+      "contract",
+      "cofounder",
+      "leadership"
+    ],
+    "summary": "Senior and leadership hires are one-way doors. Do a paid contract or trial project before committing — you learn far more than from interviews.",
+    "preconditions": "There's real work to trial them on."
+  },
+  {
+    "id": "early-ownership-talent",
+    "family": "Hiring",
+    "title": "Hire people who owned hard problems young",
+    "stages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "one-way",
+    "evidence": "medium",
+    "keywords": [
+      "hire",
+      "talent",
+      "junior",
+      "ownership",
+      "potential"
+    ],
+    "summary": "Hire people who took real ownership of hard problems early; give juniors genuine responsibility. Drive and ownership beat polished résumés at this stage."
+  },
+  {
+    "id": "default-alive",
+    "family": "Capital",
+    "title": "Default alive or default dead?",
+    "stages": [
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "keywords": [
+      "runway",
+      "cash",
+      "profit",
+      "burn",
+      "survive",
+      "money",
+      "default alive",
+      "fundraising"
+    ],
+    "summary": "At your current spend and growth rate, do you reach profitability before the cash runs out? If the honest answer is no, act now — cut costs or raise — while you still have options.",
+    "when_to_use": "Whenever cash is a concern, before raising, and at every budget decision.",
+    "how_to_run": [
+      "Project cash out month by month at current burn and growth",
+      "See if the line crosses profitable before it crosses zero",
+      "If default dead, change spend or growth now — not after another quarter"
+    ],
+    "evidence_note": "High — a clarifying, widely-used lens; the danger is founders who avoid doing the math until it's too late."
+  },
+  {
+    "id": "know-your-number",
+    "family": "Capital",
+    "title": "Know your number (runway + milestone)",
+    "stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "keywords": [
+      "runway",
+      "cash",
+      "burn",
+      "milestone",
+      "budget",
+      "months left",
+      "fundraising"
+    ],
+    "summary": "Always know two numbers: months of runway left, and the exact milestone the next chunk of money is supposed to buy. Spend against milestones, not vibes.",
+    "failure_modes": "Not being able to state runway from memory; raising/spending without a milestone the money must hit."
+  },
+  {
+    "id": "bootstrapping",
+    "family": "Capital",
+    "title": "Bootstrapping — keep control, force profitability",
+    "stages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "keywords": [
+      "bootstrap",
+      "fundraising",
+      "raise",
+      "investors",
+      "control",
+      "self-funded",
+      "dilution"
+    ],
+    "summary": "Refusing outside money keeps control and forces you to find profit early — great, unless you're in a winner-take-all race a funded rival can win by spending.",
+    "preconditions": "Your market doesn't reward whoever scales fastest with capital.",
+    "evidence_note": "Medium — excellent for many durable businesses; risky in genuine land-grab markets with strong network effects."
+  },
+  {
+    "id": "raise-to-pour-fuel",
+    "family": "Capital",
+    "title": "Raise to pour fuel, not to survive",
+    "stages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "one-way",
+    "evidence": "medium",
+    "keywords": [
+      "fundraising",
+      "raise",
+      "investors",
+      "vc",
+      "when to raise",
+      "money fixes"
+    ],
+    "summary": "Money amplifies a working machine; it doesn't fix a broken one. Raising before something works just lets you burn faster and buys a harder next round.",
+    "failure_modes": "Raising to escape the hard work of finding product-market fit; treating a round as validation."
+  },
+  {
+    "id": "pspd-buffer",
+    "family": "Capital",
+    "title": "Predictable, sustainable, profitable + a cash buffer",
+    "stages": [
+      4,
+      5,
+      6
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "keywords": [
+      "profit",
+      "sustainable",
+      "cash buffer",
+      "growth",
+      "discipline",
+      "reserve"
+    ],
+    "summary": "Grow in a predictable, sustainable, profitable, de-risked way and keep roughly a year of cash. Boring resilience beats fragile speed for most businesses.",
+    "regional_notes": "The default outside hot funding hubs; capital is scarcer, so durability is the edge."
+  },
+  {
+    "id": "conviction-capital",
+    "family": "Capital",
+    "title": "Gut-conviction big bet",
+    "stages": [
+      1,
+      2
+    ],
+    "reversibility": "one-way",
+    "evidence": "low",
+    "warn": true,
+    "keywords": [
+      "gut",
+      "conviction",
+      "big bet",
+      "instinct",
+      "all in"
+    ],
+    "summary": "'Trust your gut and bet the company' is mostly luck retold as wisdom. Don't bet everything on conviction alone.",
+    "warn_reason": "Survivorship bias — we only hear the gut bets that worked. Prefer cheap tests over one irreversible swing."
+  },
+  {
+    "id": "do-things-that-dont-scale",
+    "family": "Growth",
+    "title": "Do things that don't scale (early)",
+    "stages": [
+      1,
+      2,
+      3
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "keywords": [
+      "growth",
+      "early",
+      "manual",
+      "recruit users",
+      "onboard",
+      "unscalable",
+      "first users"
+    ],
+    "summary": "Hand-recruit and over-serve your first users — personally onboard them, do the unscalable things. Scalable channels come AFTER something people love exists.",
+    "failure_modes": "Reaching for ads/automation before you have love and retention; treating early users as a funnel instead of relationships."
+  },
+  {
+    "id": "one-channel-first",
+    "family": "Growth",
+    "title": "Get one acquisition channel working first",
+    "stages": [
+      4,
+      5,
+      6
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "keywords": [
+      "growth",
+      "channel",
+      "acquisition",
+      "marketing",
+      "ads",
+      "scale",
+      "distribution"
+    ],
+    "summary": "Get a single acquisition channel working to a real, repeatable number before adding a second. Most startups die with zero channels mastered, not too few tried.",
+    "how_to_run": [
+      "Pick one channel that fits where your buyers already are",
+      "Push it until it reliably produces customers at sane cost",
+      "Only then add a second channel"
+    ]
+  },
+  {
+    "id": "ignoring-distribution",
+    "family": "Growth",
+    "title": "Distribution is half the product",
+    "stages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "keywords": [
+      "distribution",
+      "growth",
+      "reach",
+      "marketing",
+      "build it they will come",
+      "channel"
+    ],
+    "summary": "A great product with no concrete plan to reach buyers loses to a worse product that's easy to find. Decide distribution as deliberately as you decide the product.",
+    "failure_modes": "'Build it and they will come'; no named channel or reach plan."
+  },
+  {
+    "id": "organic-first",
+    "family": "Growth",
+    "title": "Organic-first / focus",
+    "stages": [
+      4,
+      5,
+      6
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "keywords": [
+      "organic",
+      "focus",
+      "profit",
+      "growth",
+      "say no",
+      "custom requests"
+    ],
+    "summary": "Build one clean product, grow from profits, and say no to one-off custom requests that fragment your focus.",
+    "failure_modes": "Saying yes to every custom ask until you're a consultancy with no product."
+  },
+  {
+    "id": "sequenced-entry",
+    "family": "Growth",
+    "title": "Sequenced market entry",
+    "stages": [
+      5,
+      6
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "keywords": [
+      "expansion",
+      "new market",
+      "scale",
+      "geography",
+      "rollout",
+      "international"
+    ],
+    "summary": "Don't launch everywhere at once. Win one market, learn, then expand — and save the hardest market for last.",
+    "failure_modes": "Spreading thin across markets before one is proven (see over-expansion)."
+  },
+  {
+    "id": "super-app-bundling",
+    "family": "Growth",
+    "title": "Bundle once you own a daily habit",
+    "stages": [
+      5,
+      6
+    ],
+    "reversibility": "one-way",
+    "evidence": "medium",
+    "warn": true,
+    "keywords": [
+      "bundle",
+      "super app",
+      "expand",
+      "platform",
+      "add services"
+    ],
+    "summary": "Once you own a daily habit you can stack services on it — but only after the first one truly works and pays. Bundling weak products doesn't create strength.",
+    "warn_reason": "Bundling before the core habit is durable spreads focus and capital across things that don't yet work."
+  },
+  {
+    "id": "reversibility",
+    "family": "Crisis",
+    "title": "Reversibility — one-way vs two-way door",
+    "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "high",
+    "keywords": [
+      "decision",
+      "stuck",
+      "reversible",
+      "risk",
+      "commit",
+      "choice",
+      "should i",
+      "one way door"
+    ],
+    "summary": "Can you undo it cheaply? Two-way door (reversible): decide fast, the cost of finding out is tiny. One-way door (irreversible): slow down and think hard. The classic trap is agonizing over a reversible thing while rushing an irreversible one.",
+    "when_to_use": "On almost any decision the founder is stuck on — it sets the tempo.",
+    "how_to_run": [
+      "Ask: if this is wrong, how cheaply can I reverse it?",
+      "Reversible → move now, treat it as a test",
+      "Irreversible → run a quick premortem first",
+      "Name the trap if they're over-thinking a cheap test or rushing a permanent choice"
+    ],
+    "evidence_note": "High — a robust, widely-used decision lens; the value is in correctly classifying the door."
+  },
+  {
+    "id": "premortem",
+    "family": "Crisis",
+    "title": "Premortem — imagine it already failed",
+    "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "high",
+    "keywords": [
+      "risk",
+      "decision",
+      "premortem",
+      "what could go wrong",
+      "big decision",
+      "commit"
+    ],
+    "summary": "Before an irreversible commitment, imagine it's a year later and it failed. Write the top 3 reasons. De-risk those cheaply before you commit.",
+    "when_to_use": "Before any one-way door: a co-founder, a big hire, a raise, a public pivot."
+  },
+  {
+    "id": "cheapest-decisive-test",
+    "family": "Crisis",
+    "title": "The cheapest decisive test",
+    "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "high",
+    "keywords": [
+      "test",
+      "stuck",
+      "experiment",
+      "decide",
+      "uncertainty",
+      "validate",
+      "how to know"
+    ],
+    "summary": "When stuck, find the smallest experiment that actually resolves the uncertainty — and run it this week, not someday. The goal is to learn the one thing you don't know, cheaply.",
+    "how_to_run": [
+      "Name the single biggest unknown",
+      "Design the smallest test that would change your decision",
+      "Run it this week; pre-commit to what each result means"
+    ]
+  },
+  {
+    "id": "kill-continue",
+    "family": "Crisis",
+    "title": "Pre-set kill / continue line",
+    "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "keywords": [
+      "kill",
+      "quit",
+      "persevere",
+      "pivot",
+      "sunk cost",
+      "when to stop",
+      "give up"
+    ],
+    "summary": "Before a test or bet, write down what result means keep-going and what means stop — then honor it when emotions arrive. Money already spent is gone either way.",
+    "failure_modes": "Sunk-cost thinking ('we've come too far'); moving the goalposts after the result."
+  },
+  {
+    "id": "pivot-to-profit",
+    "family": "Crisis",
+    "title": "Pivot to profit when cash gets tight",
+    "stages": [
+      4,
+      5,
+      6
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "keywords": [
+      "crisis",
+      "cash",
+      "cut",
+      "layoff",
+      "survive",
+      "profitability",
+      "runway low"
+    ],
+    "summary": "When money gets tight, stop chasing growth — cut fast (leaders/biggest costs first), and aim to pay your own way. Speed of cutting matters more than precision.",
+    "how_to_run": [
+      "Get to a clear picture of cash and burn",
+      "Cut decisively to reach default-alive",
+      "Refocus on what already makes money"
+    ]
+  },
+  {
+    "id": "honest-exit",
+    "family": "Crisis",
+    "title": "Honest exit",
+    "stages": [
+      5,
+      6
+    ],
+    "reversibility": "one-way",
+    "evidence": "high",
+    "keywords": [
+      "exit",
+      "sell",
+      "acquisition",
+      "quit",
+      "wind down",
+      "merge"
+    ],
+    "summary": "Selling to a bigger player who can win the war can beat losing it slowly and alone. An honest exit is a legitimate, sometimes optimal, outcome.",
+    "preconditions": "You've assessed honestly that going it alone is unlikely to win."
+  },
+  {
+    "id": "over-expansion",
+    "family": "Crisis",
+    "title": "Over-expansion trap",
+    "stages": [
+      5,
+      6
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "warn": true,
+    "keywords": [
+      "expansion",
+      "scale",
+      "spread thin",
+      "too fast",
+      "markets",
+      "growth trap"
+    ],
+    "summary": "Spreading everywhere looks like winning until none of it pays. Prove one market profitable before adding the next.",
+    "warn_reason": "Expansion masks weak unit economics; the bill arrives when growth slows."
+  },
+  {
+    "id": "first-principles",
+    "family": "Thinking",
+    "title": "First principles — reason up from what's actually true",
+    "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "why do we do it this way",
+      "everyone says",
+      "is that even true",
+      "rethink from scratch",
+      "question assumptions",
+      "industry standard",
+      "best practice",
+      "break it down",
+      "what's actually required",
+      "expensive",
+      "copying competitors",
+      "stuck following the crowd"
+    ],
+    "summary": "Strip a problem down to the things you know are actually true, then build your answer back up from those, instead of copying what everyone else does. It helps when 'the way it's done' makes something seem impossible or expensive when it might not be.",
+    "when_to_use": "When you're about to copy a competitor or follow 'industry standard' without knowing why; when something looks too expensive or impossible and you suspect the assumption, not the physics, is the blocker.",
+    "how_to_run": [
+      "Write the decision as a goal, not the usual solution",
+      "List every assumption and mark each: proven, probably true, or just inherited",
+      "Throw out the inherited ones; keep what you can defend with facts or a real constraint",
+      "Rebuild the cheapest path that satisfies what survived",
+      "Check: does the rebuilt plan actually beat the default?"
+    ],
+    "preconditions": "You have enough domain knowledge to tell a real constraint from a convention; if you can't tell, gather facts first.",
+    "failure_modes": "Slow and overkill for routine calls. Beginners mislabel a real constraint (regulation, physics, hard cost) as a 'mere assumption' and build a plan that can't work. Breeds arrogance ('everyone else is dumb') — conventions often encode hard-won lessons you can't see yet.",
+    "evidence_note": "Traces to Aristotle; standard in physics/engineering. As a named business tool it's popularized aphorism, not a tested method — no studies show it produces better startup decisions. A useful discipline for questioning assumptions, not proof your conclusion is right.",
+    "regional_notes": "",
+    "examples": "A founder assumes she needs a $30k custom app to test a tutoring marketplace because 'all marketplaces have apps.' From first principles the real requirement is: connect a student to a tutor and take a cut — doable first with a web form, a shared calendar, and manual matching for the first 20 bookings, proving demand for a few hundred dollars."
+  },
+  {
+    "id": "inversion",
+    "family": "Thinking",
+    "title": "Inversion — work backwards from what would make this fail",
+    "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "what could go wrong",
+      "avoid failure",
+      "biggest risks",
+      "how do i not screw this up",
+      "what would kill this",
+      "mistakes to avoid",
+      "worst case",
+      "what am i missing",
+      "scared this fails",
+      "don't want to blow it",
+      "how do startups die"
+    ],
+    "summary": "Instead of only asking 'how do I succeed?', ask 'what would guarantee this fails?' and make sure you don't do those things. It's easier to spot and dodge obvious ways to lose than to engineer a win.",
+    "when_to_use": "When you're excited and want a reality check; before committing real money, time, or reputation; when you keep listing reasons it'll work but haven't asked how it dies.",
+    "how_to_run": [
+      "Flip it: 'It's a year from now and this failed badly. What happened?'",
+      "Brainstorm every plausible cause of that failure",
+      "Sort by likely and fatal",
+      "For the top few, decide the cheap step that removes the risk now",
+      "Build those guardrails in before proceeding"
+    ],
+    "preconditions": "",
+    "failure_modes": "Overused it becomes paralysis — cap it to risks both likely and fatal. Biases toward inaction, itself a risk for a startup that must learn fast. Listing risks is not managing them — founders feel safer just naming dangers without changing anything.",
+    "evidence_note": "Ancient (Stoic premeditation); popularized via Jacobi's 'invert, always invert' and Munger. Strongest empirical cousin is the pre-mortem (Gary Klein): prospective hindsight improves identifying failure reasons. Mechanism has support; the broad life-advice version is folklore.",
+    "regional_notes": "",
+    "examples": "A founder is about to spend three months building before launch. Inversion asks 'why did this flop?' — top honest answer: 'I built for months and nobody wanted it.' That reorders the plan: week one is 15 user conversations and a fake sign-up page, so he learns whether anyone wants it before the three months are spent."
+  },
+  {
+    "id": "second-order-thinking",
+    "family": "Thinking",
+    "title": "Second-order thinking — ask 'and then what?'",
+    "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "and then what",
+      "knock-on effects",
+      "consequences",
+      "what happens next",
+      "downstream",
+      "side effects",
+      "long term vs short term",
+      "quick fix",
+      "will this backfire",
+      "unintended consequences",
+      "ripple effect"
+    ],
+    "summary": "Don't stop at the first, obvious result of a choice — keep asking 'and then what happens?' for two or three more steps. It catches cases where an action that looks great now sets off later effects that undo it.",
+    "when_to_use": "When an option looks obviously good and easy — exactly when second-order effects get missed; for pricing, discounts, hiring, fundraising, growth hacks; when a quick fix is tempting.",
+    "how_to_run": [
+      "Write the immediate effect everyone sees",
+      "Ask 'and then what?' — how customers, competitors, and your team react",
+      "Ask again one or two more times",
+      "Check whether a later effect cancels the benefit you wanted",
+      "Decide with the whole chain in view"
+    ],
+    "preconditions": "",
+    "failure_modes": "You can't forecast far-out effects reliably — past two or three steps it's confident guessing. Can become an excuse for inaction. Tempts over-cleverness: assuming the 'obvious' move is a trap when sometimes it's just correct.",
+    "evidence_note": "Popularized as 'second-level thinking' by investor Howard Marks (2011); overlaps with systems thinking and unintended consequences, which are well established. No controlled evidence it improves decisions on demand — a sound habit with a strong conceptual basis, not a validated technique.",
+    "regional_notes": "",
+    "examples": "A founder considers a steep launch discount. First order: sign-ups jump. And then what? Those users churn when it ends, paid conversion looks terrible, and word spreads that the 'real' price is the discount. She instead offers a small founding-member perk that doesn't anchor the price low."
+  },
+  {
+    "id": "opportunity-cost",
+    "family": "Thinking",
+    "title": "Opportunity cost — what you give up by choosing this",
+    "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "is this worth my time",
+      "what else could i do",
+      "spread too thin",
+      "should i be doing this instead",
+      "trade-off",
+      "where to focus",
+      "saying yes means saying no",
+      "best use of my time",
+      "wasting time",
+      "too many things",
+      "what to drop",
+      "prioritize"
+    ],
+    "summary": "The real cost of any choice isn't its price — it's the best other thing you could have done with that time or money. Founders have almost no spare time or cash, so every 'yes' is silently a 'no' to something that might matter more.",
+    "when_to_use": "Deciding what to work on this week, which feature to build, whether to take a meeting or side project, tool vs hire; whenever you feel busy but unsure it's the right busy.",
+    "how_to_run": [
+      "Name what this choice consumes — hours, cash, focus",
+      "Ask: with that same time/money, what's the single best alternative?",
+      "Compare against that alternative, not against doing nothing",
+      "If the alternative clearly moves your top goal more, do that",
+      "Make the trade explicit so you choose it on purpose"
+    ],
+    "preconditions": "",
+    "failure_modes": "Can spiral into paralysis if you weigh every option against every other — reserve for choices consuming meaningful time/money. Grass-is-greener: you'll overrate what you didn't pick. Misused to frame rest or necessary slow work as 'wasted,' which burns founders out.",
+    "evidence_note": "Foundational, non-controversial in economics. 'Opportunity-cost neglect' is documented (Frederick et al. 2009; a 2023 meta-analysis of 39 studies, N≈14,005, confirms the effect is robust though smaller than first claimed). Both concept and the tendency to ignore it are well-supported.",
+    "regional_notes": "",
+    "examples": "A technical founder spends two weeks building a slick admin dashboard because coding is satisfying. The opportunity cost is two weeks not spent talking to customers — the thing that decides whether the product is worth building. The dashboard waits; he uses a spreadsheet and spends the two weeks on conversations."
+  },
+  {
+    "id": "regret-minimization",
+    "family": "Thinking",
+    "title": "Regret minimization — decide from your older self's view",
+    "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "will i regret this",
+      "afraid to take the leap",
+      "quit my job",
+      "safe choice or risky one",
+      "looking back",
+      "what if i don't try",
+      "fear of failure",
+      "big life decision",
+      "should i go for it",
+      "playing it safe",
+      "miss the chance"
+    ],
+    "summary": "Picture yourself much older looking back, and choose the option you'd be least likely to regret. Useful for big, scary forks where fear of failing right now drowns out what you'll actually care about over a whole life.",
+    "when_to_use": "Rare, high-stakes life forks — quitting a stable job, moving countries, taking or passing a big bet — where short-term fear is loud and fear of looking foolish is the main blocker.",
+    "how_to_run": [
+      "Frame the two paths: do it vs don't",
+      "Imagine yourself at 80 — which path would you more likely regret, including never having tried?",
+      "Separate regret of trying-and-failing (often brief) from never-knowing (often lasting)",
+      "Reality-check: can you actually afford the downside?",
+      "Choose the lower lasting regret you can also survive"
+    ],
+    "preconditions": "Best for genuinely big, infrequent, hard-to-reverse choices; for everyday reversible decisions it's overkill.",
+    "failure_modes": "Quietly biases toward bold action — ruinous if you can't afford the downside (betting money you can't lose). Ignores probabilities and costs, so pair it with the real odds and what failure costs. Classic survivorship trap: the 'I went for it' stories survive; the people who went broke don't get retold.",
+    "evidence_note": "The 'imagine yourself at 80' version is an aphorism tied to Bezos's 1994 Amazon decision — inspiring, but one anecdote. Real academic work exists: regret theory (Loomes & Sugden, Bell, Fishburn, 1982) models how anticipated regret shapes choices. 'People factor in regret' is supported; 'minimizing regret yields the best decision' is folklore.",
+    "regional_notes": "The 'follow your gut, no regrets, just leap' framing is loud in US startup lore and can read as reckless where families pool finances or a failed venture carries lasting stigma. The honest weighing of survivable-downside matters more where the safety net is thinner.",
+    "examples": "A founder with six months of savings is paralyzed about leaving a stable job. The lens: at 80, would she more regret a six-month funded attempt that might fail, or never trying? Never-trying is heavier — but the lens also forces the reality check: she caps the experiment at six months with a hard 'go back to a job' line, so the leap is bold and survivable."
+  },
+  {
+    "id": "probabilistic-thinking",
+    "family": "Thinking",
+    "title": "Think in odds, not certainties",
+    "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "will it work",
+      "what are the chances",
+      "not sure",
+      "might fail",
+      "gut feeling",
+      "too risky",
+      "guessing",
+      "could go wrong",
+      "how likely",
+      "predicting",
+      "uncertain",
+      "what if i'm wrong"
+    ],
+    "summary": "Instead of 'will this work or not?', ask 'how likely is this to work?' and put a rough number on it. The world runs on odds, not guarantees, so thinking in percentages keeps you honest about what you actually know.",
+    "when_to_use": "When you catch yourself in absolutes ('this will definitely work' / 'this is hopeless'); when a decision hinges on an uncertain event; when fear or excitement pushes a yes/no story.",
+    "how_to_run": [
+      "Write the claim you're treating as certain",
+      "Replace it with a percentage and say why that number",
+      "List 2-3 other ways it could go with rough odds (sum to ~100%)",
+      "Ask what info would move your number, and whether you can cheaply get it first"
+    ],
+    "preconditions": "The outcome is genuinely uncertain and depends on factors you can't fully control. For simple look-up facts, just find the answer.",
+    "failure_modes": "The number can feel like knowledge when it's a guess dressed up. Founders overrate their own plan's odds. Tempts treating a 20%-chance catastrophe as 'unlikely, ignore it' when the downside is fatal. Use rough bands, state reasoning, never let a tidy number replace asking how bad the bad case is.",
+    "evidence_note": "Foundational to statistics and decision theory. That assigning probabilities improves real-world judgment is supported by forecasting research, notably Tetlock's superforecasters who think in fine-grained odds and beat experts speaking in certainties. Strong for the practice; the hard part is human estimates are often miscalibrated.",
+    "regional_notes": "",
+    "examples": "Deciding whether to quit your job next month: instead of 'I think it'll work,' you write '~60% I'll have one paying customer by then, ~25% enough revenue to cover rent within six months.' Seeing 25% on paper, you line up three months of savings and keep the job until a clear revenue signal."
+  },
+  {
+    "id": "expected-value",
+    "family": "Thinking",
+    "title": "Weigh the payoff by the odds",
+    "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "is it worth it",
+      "risk vs reward",
+      "should i bet",
+      "odds",
+      "payoff",
+      "big decision",
+      "worth the risk",
+      "gamble",
+      "upside",
+      "downside",
+      "take the chance"
+    ],
+    "summary": "A choice isn't just how big the prize is or how likely you are to win — it's both multiplied together. A small chance at a huge payoff can beat a sure thing, and a likely small win can beat a tempting long shot.",
+    "when_to_use": "Weighing a risky move against a safer one, choosing between bets you can't all make, or tempted by a long shot. Best when you can roughly estimate both size and likelihood of outcomes.",
+    "how_to_run": [
+      "List possible outcomes (best, likely, worst)",
+      "Estimate a rough payoff for each, including negatives",
+      "Put rough probabilities on each (sum ~100%)",
+      "Multiply payoff by probability, add up, compare to other options",
+      "If a 'bad case' could end the company, treat it as a veto, not a number in the average"
+    ],
+    "preconditions": "You can estimate rough payoffs and odds and will face many decisions over time so averages matter. For a single bet-the-company choice, EV informs but shouldn't decide alone.",
+    "failure_modes": "The math hides ruin: great-EV bets can still wipe you out if the bad case is bankruptcy, because you play once and can't average across tries. Garbage inputs give confident garbage. Founders overweight the jackpot and underweight the boring likely case. Always look at the worst case on its own first.",
+    "evidence_note": "Core proven result of probability theory (Pascal, Huygens, 17th c.); backbone of decision theory, insurance, finance. The honest caveat, since Bernoulli's 1738 St. Petersburg paradox, is that raw EV ignores risk of ruin and how much a gain/loss actually matters to you — a tool for thinking, not an autopilot.",
+    "regional_notes": "",
+    "examples": "A client offers $5,000 now or a revenue-share you estimate at 30% chance of $40k, 40% of $6k, 30% of $0 — averaging ~$14,400, far above $5,000. But you're three months from running out of cash, so the 30% of $0 could sink you. You take the $5,000; with six months' runway the revenue-share would be smarter."
+  },
+  {
+    "id": "bayesian-updating",
+    "family": "Thinking",
+    "title": "Update your beliefs as evidence arrives",
+    "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "changed my mind",
+      "new information",
+      "should i pivot",
+      "was i wrong",
+      "early signs",
+      "first results",
+      "reading the signals",
+      "jumping to conclusions",
+      "one data point",
+      "is this a trend",
+      "proof"
+    ],
+    "summary": "Start with your best current guess, then nudge it up or down each time real evidence shows up — don't throw out everything you knew, but don't cling to your first belief either. How much you move depends on how strong and surprising the evidence is.",
+    "when_to_use": "When early signals come in (first users, sales calls, a beta) and you're deciding whether they mean anything; when tempted to ignore inconvenient data or overreact to one result; when deciding whether to change course.",
+    "how_to_run": [
+      "Write your starting belief and confidence ('70% sure people will pay')",
+      "When evidence arrives, ask: how likely was this if my belief were true vs false?",
+      "Nudge confidence toward what the evidence favors — a lot if strong/surprising, a little if weak/noisy",
+      "Re-decide on the updated number; keep the loop open"
+    ],
+    "preconditions": "You have a prior you can state and evidence arriving over time. Best when you log starting confidence before the data, so you can't fool yourself about what you 'always knew.'",
+    "failure_modes": "People update too little (anchoring, ignoring contradicting data) or too much (one loud customer = the whole truth). A single data point is weak — small samples lie. Confirmation bias counts hits, forgets misses. Only as good as your prior. Write the prior down; weigh evidence by how much it could happen by chance.",
+    "evidence_note": "Bayes' theorem (Thomas Bayes, 1763) is proven math underpinning modern statistics, spam filters, diagnosis. As literal in-head arithmetic it's impractical; as a discipline (state prior, move proportionally to evidence) it's strongly supported by forecasting research. Proven math; the folklore is pretending you can do exact arithmetic in your head.",
+    "regional_notes": "",
+    "examples": "You're 70% sure small shops will pay for your inventory tool. The first 10 cold calls all say 'too expensive' — evidence, but 10 calls is a small, maybe unlucky sample, so you drop to ~50% rather than quitting. After 40 more with the same objection, you move to 25% and decide the issue is price — so you test a cheaper tier before concluding it's dead."
+  },
+  {
+    "id": "margin-of-safety",
+    "family": "Thinking",
+    "title": "Build in buffer for being wrong",
+    "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "what if i'm wrong",
+      "running out of money",
+      "cutting it close",
+      "no buffer",
+      "worst case",
+      "plan b",
+      "too tight",
+      "margin for error",
+      "safety net",
+      "over budget",
+      "behind schedule",
+      "betting everything"
+    ],
+    "summary": "Assume your estimates are too optimistic, because they usually are, and leave yourself a cushion so a normal miss doesn't kill you. The bigger the consequence of being wrong, the bigger the buffer.",
+    "when_to_use": "Committing real resources on an estimate that could be off — budgets, runway, timelines, hiring, capacity. Especially when being wrong is expensive or irreversible: spending your last savings, signing a long lease, promising a launch date.",
+    "how_to_run": [
+      "Make your honest best estimate of what you need",
+      "Assume it's optimistic — how has this estimate been wrong before?",
+      "Add a buffer sized to how bad the miss would be",
+      "Decide using the buffered number, not the rosy one — if it doesn't work with the buffer, the plan is too fragile"
+    ],
+    "preconditions": "Your decision depends on estimates that could be wrong and a miss has real cost. If a mistake is cheap and reversible, run leaner and skip the heavy buffer.",
+    "failure_modes": "Too little: planning to exactly your best-case runway, so any normal slip becomes a crisis. Too much: hoarding cushion so you never ship, or padding so heavily the plan is uncompetitive. A buffer breeds false comfort — it protects against ordinary misses, not a broken plan or a black swan.",
+    "evidence_note": "Popularized in investing by Benjamin Graham ('The Intelligent Investor', 1949); the underlying idea — engineers building bridges to hold several times rated load — is centuries old and physically proven. As a planning principle for uncertain estimates it's sound and widely endorsed; the caveat is no buffer protects against being wrong about the whole thesis.",
+    "regional_notes": "",
+    "examples": "Your spreadsheet says break-even in 8 months, fitting your 9 months of savings. Knowing first-time timelines slip, you assume 12-14 months. That doesn't fit, so instead of quitting now you keep part-time income for six months and cut spending — buying enough buffer that a normal delay is a tight quarter, not shutting down."
+  },
+  {
+    "id": "circle-of-competence",
+    "family": "Thinking",
+    "title": "Know the edge of what you understand",
+    "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "out of my depth",
+      "don't know enough",
+      "should i learn this",
+      "hire or do it myself",
+      "not my area",
+      "faking it",
+      "over my head",
+      "do i understand this",
+      "getting advice",
+      "new territory",
+      "is this my strength",
+      "who should i ask"
+    ],
+    "summary": "It's fine to know a lot about a few things and little about the rest — what matters is being honest about where the line is. Make confident calls inside what you truly understand; slow down, learn, or get help outside it.",
+    "when_to_use": "When a decision pulls you into unfamiliar territory (a technical founder facing pricing/sales, or a business founder facing architecture); when tempted to wing a high-stakes call; deciding whether to do it yourself, learn it, or bring in help.",
+    "how_to_run": [
+      "Ask honestly: is this inside what I understand, near the edge, or outside?",
+      "Inside → decide and move. Near the edge → quick check with someone who knows.",
+      "Outside → don't fake it; invest time to learn it or get a trusted expert and pressure-test their advice",
+      "Notice 'how hard can it be?' — that feeling is usually the edge, not the center"
+    ],
+    "preconditions": "The decision needs specific knowledge and getting it wrong has real cost. Mostly irrelevant for low-stakes reversible choices where trying is cheaper than studying.",
+    "failure_modes": "Overconfidence: smart people, especially technical founders, assume competence transfers ('I can code, so marketing is easy'). Opposite failure: using the circle as an excuse never to stretch — founders must operate outside comfort constantly. The boundary is self-assessed, easy to draw where it flatters you.",
+    "evidence_note": "Articulated by Buffett and Munger as an investing discipline — influential folk wisdom, not a formally tested theory (hence medium). Rests on a real foundation: research on overconfidence and Dunning-Kruger shows low-skill people overestimate their skill. The bias is proven; the 'circle' framing is a useful heuristic, not a measured law.",
+    "regional_notes": "",
+    "examples": "A strong engineer who built the product alone must set pricing. The instinct is to pick a number and move on, but that's the 'how hard can it be?' feeling — pricing is outside the circle. Instead of guessing on something that determines revenue, he spends two days reading how comparable tools price, runs his tiers past two founders who've sold to his market, and adjusts before launch."
+  },
+  {
+    "id": "ooda-loop",
+    "family": "Thinking",
+    "title": "Decide fast, then update",
+    "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "moving too slow",
+      "stuck overthinking",
+      "react to changes",
+      "iterate faster",
+      "what should i do next",
+      "keep adjusting",
+      "pivot quickly",
+      "decision paralysis",
+      "out of date plan",
+      "competitor moved",
+      "what changed",
+      "act on new info"
+    ],
+    "summary": "Look at what's actually happening, make sense of it, pick a move, do it, then look again. The point is to go around this loop faster than the world changes on you.",
+    "when_to_use": "When frozen by analysis, when the situation keeps shifting (a competitor moved, a channel died, demand spiked), or when you've been planning longer than doing. Best when feedback is cheap and fast.",
+    "how_to_run": [
+      "Observe: write what you actually see now (real numbers, real customer words)",
+      "Orient: what does it mean, what changed, what's your biggest wrong assumption?",
+      "Decide: pick the smallest next move that gets new information",
+      "Act: do it this week, on a deadline",
+      "Loop: schedule the next observe before you start"
+    ],
+    "preconditions": "You can get feedback quickly and cheaply. If a decision is slow and expensive to reverse, slow down instead.",
+    "failure_modes": "Confusing motion with progress: looping fast on tiny changes while ignoring a fundamental flaw. Skipping 'Orient' and just reacting. Using 'move fast' to dodge hard thinking. Vague enough to retrofit onto any decision, so it can feel insightful without changing what you do.",
+    "evidence_note": "From USAF Colonel John Boyd (1970s-90s). Influential military/business folklore, not controlled-tested; historians note the core evidence was thin and the model loosely defined. A useful habit for fast iteration, not proof that speed always wins.",
+    "regional_notes": "",
+    "examples": "You ran a paid-ad landing page: 200 clicks, zero signups. Instead of a two-week redesign, you observe (headline gets clicks, people leave at the price line), orient (price objection, not interest), decide (test a free-trial version), and act this week with one changed page — learning more in five days than a month of planning."
+  },
+  {
+    "id": "porters-five-forces",
+    "family": "Strategy",
+    "title": "Is this a good market to be in",
+    "stages": [
+      1,
+      2,
+      5
+    ],
+    "reversibility": "n-a",
+    "evidence": "high",
+    "warn": true,
+    "keywords": [
+      "is this market good",
+      "competition",
+      "margins",
+      "hard to make money",
+      "suppliers",
+      "price war",
+      "industry",
+      "race to the bottom",
+      "everyone undercuts",
+      "powerful customers",
+      "low barriers"
+    ],
+    "summary": "Some industries are structurally hard to make money in, no matter how good you are. This checks five pressures (rivals, new entrants, substitutes, supplier power, buyer power) to see if profit is even possible here.",
+    "when_to_use": "When choosing which market to enter, understanding why margins are thin, or noticing everyone competes on price. Useful once you have a real market in mind, not at the blank-idea stage.",
+    "how_to_run": [
+      "Rivalry: how many real competitors, and do they fight on price?",
+      "New entrants: how easily can someone copy you next month?",
+      "Substitutes: what else solves the problem (including doing nothing or a spreadsheet)?",
+      "Buyer power: can a few big customers dictate your price?",
+      "Supplier power: can key suppliers or the one platform you depend on squeeze you?"
+    ],
+    "preconditions": "You have a specific market defined. It describes industry structure, not your individual edge — pair it with a view of your advantage.",
+    "failure_modes": "Doing this at the idea stage instead of talking to customers — a beautiful five-page analysis of a market nobody wants. Assumes stable industries; underweights fast-moving tech and the chance a startup changes the structure. Treating a 'bad' industry as a stop sign when your specific wedge might still work.",
+    "evidence_note": "Michael Porter (Harvard, 1979-80). One of the most studied, durable strategy frameworks, strong as a descriptive tool. Caveat: explains industry profit differences well but is weaker at predicting individual startup outcomes and was built for established industries, not pre-product founders.",
+    "regional_notes": "",
+    "examples": "Choosing between a generic dropshipping store and a niche B2B compliance tool: Five Forces shows dropshipping has near-zero entry barriers, powerful suppliers, and price-shopping buyers (brutal margins forever), while the compliance tool has high switching costs and few substitutes once embedded. Same effort, structurally different odds — pick the harder-to-copy market."
+  },
+  {
+    "id": "seven-powers",
+    "family": "Strategy",
+    "title": "What makes you hard to copy",
+    "stages": [
+      2,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "hard to copy",
+      "moat",
+      "defensible",
+      "what stops competitors",
+      "lasting advantage",
+      "why us",
+      "they'll just clone it",
+      "switching costs",
+      "network effects",
+      "brand",
+      "what protects us",
+      "durable edge"
+    ],
+    "summary": "A real advantage isn't just being good today; it's having something competitors can't easily copy even when they want to: cost from scale, network effects, lock-in, brand, owning something scarce, a smarter process, or a move the incumbent won't dare match.",
+    "when_to_use": "Working out why a customer would stay instead of switching, or planning how today's lead becomes durable. Most useful once you have real customers, not at first idea.",
+    "how_to_run": [
+      "List who could copy you (a clone, an incumbent, the platform you sit on)",
+      "For each power type, ask honestly: do you have it, or just hope to?",
+      "Pick the one or two realistic for your business and stage",
+      "Name the specific barrier: what would a competitor have to spend or sacrifice to match you?",
+      "Choose actions that deepen that barrier"
+    ],
+    "preconditions": "You have a working product and some traction; 'power' is about persistence, meaningless before you have anything to defend.",
+    "failure_modes": "Imagining a moat that doesn't exist yet ('we'll have network effects') as a reason to skip getting customers. Claiming brand/scale with ten users. Using it to feel strategic instead of doing sales.",
+    "evidence_note": "Hamilton Helmer, 'The Foundations of Business Strategy' (2016) — a respected, well-structured synthesis, not peer-reviewed research, and most examples are after-the-fact stories of winners (survivorship bias). Use the categories as a defensibility checklist, not proof your moat holds.",
+    "regional_notes": "",
+    "examples": "You run a scheduling tool for dance studios. More features are easy to copy. But once a studio imports its whole client roster and payment history, leaving is painful — so you invest in deeper data import and integrations rather than flashy features, because switching cost is the one barrier you can actually build at your size."
+  },
+  {
+    "id": "flywheel",
+    "family": "Strategy",
+    "title": "Build a loop that feeds itself",
+    "stages": [
+      3,
+      4,
+      5
+    ],
+    "reversibility": "n-a",
+    "evidence": "low",
+    "warn": false,
+    "keywords": [
+      "compounding",
+      "self reinforcing",
+      "growth loop",
+      "snowball",
+      "what feeds what",
+      "momentum",
+      "each step helps the next",
+      "virtuous cycle",
+      "where to push",
+      "repeatable engine",
+      "referrals bring more"
+    ],
+    "summary": "Instead of chasing one-off wins, find a loop where each step makes the next easier, so effort compounds. Push the loop consistently and it eventually spins on its own momentum.",
+    "when_to_use": "When you have an offer and early sales and want the engine that makes growth repeatable rather than starting from zero each month.",
+    "how_to_run": [
+      "Map your loop: the 3-5 steps where one output becomes the next input (happy customer → referral → new customer → more reviews)",
+      "Find the step that, improved, speeds the whole loop",
+      "Push that one step hard and consistently",
+      "Measure whether the loop turns faster (is each cycle cheaper or bigger?)",
+      "Remove anything that breaks the loop, even if it looks productive alone"
+    ],
+    "preconditions": "You have a real offer and at least early customers, so there's an actual loop to observe rather than an imagined one.",
+    "failure_modes": "Drawing a pretty circular diagram that isn't a real loop: if step C doesn't cause more of step A, it's just a list. Believing it'll 'eventually' spin while you lose customers faster than you add them. A leaky bucket has no flywheel.",
+    "evidence_note": "Popularized by Jim Collins ('Good to Great', 2001); the method is criticized for survivorship bias (picking winners then narrating traits), and several 'great' companies later stumbled. Treat the flywheel as a way to look for compounding loops, not proof a loop guarantees greatness.",
+    "regional_notes": "",
+    "examples": "You sell a paid newsletter and notice the loop: a good issue gets shared → new subscribers → more replies/questions → better material → more shares. The shareable issue drives the loop, so you spend your limited time making each issue worth forwarding rather than buying ads that feed nothing."
+  },
+  {
+    "id": "high-output-management",
+    "family": "Hiring",
+    "title": "Multiply your output through others",
+    "stages": [
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "doing everything myself",
+      "no time",
+      "delegate",
+      "first hire",
+      "leverage",
+      "stretched too thin",
+      "bottleneck is me",
+      "when to hire",
+      "what to outsource",
+      "team output",
+      "scale myself"
+    ],
+    "summary": "Your real output isn't what you personally do; it's what you plus everyone you affect produces. So the highest-value work multiplies many other things: a good hire, a clear process, a decision that unblocks ten tasks.",
+    "when_to_use": "When you're the bottleneck, drowning in tasks, or deciding whether and what to hire or delegate. Most relevant once you have repeatable work worth handing off.",
+    "how_to_run": [
+      "Count your output as the whole operation's, not your to-do list",
+      "Find highest-leverage actions: things that affect many tasks (a key hire, a template, a decision others wait on, fixing a recurring fire)",
+      "Spend disproportionate time there; drop or automate low-leverage busywork",
+      "Before hiring, make the work repeatable and documented",
+      "Use short regular check-ins to keep people aligned without doing the work for them"
+    ],
+    "preconditions": "You have recurring work worth systematizing or handing off. Premature hiring or process before product-market fit usually adds cost and drag.",
+    "failure_modes": "Hiring to feel like a 'real company' before there's repeatable work, burning cash and your time managing them. Elaborate processes for things that should stay scrappy. Confusing busy with high-leverage. Optimizing your task list while the real bottleneck is an unmade decision only you can make.",
+    "evidence_note": "Andy Grove, 'High Output Management' (1983) — widely respected practitioner wisdom; the leverage concept generalizes well, but it was written for managers of established teams, not solo pre-revenue founders, and is experience-based, not experimentally proven. Take the leverage lens; ignore the heavy management machinery until you have a team.",
+    "regional_notes": "",
+    "examples": "A solo founder spends 15 hours a week on manual onboarding and has steady weekly signups. Onboarding is repeatable, so instead of hiring a generalist he spends a week writing a checklist and recording short videos, then hands it to one part-time contractor — freeing the 15 hours for sales, which only he can do well right now."
+  },
+  {
+    "id": "product-market-fit",
+    "family": "Product",
+    "title": "Do people actually want this?",
+    "stages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "do they want it",
+      "is this working",
+      "people not coming back",
+      "no traction",
+      "retention",
+      "are we there yet",
+      "ready to scale",
+      "should i raise money",
+      "people sign up then leave",
+      "is this a real business",
+      "growth stalled"
+    ],
+    "summary": "Product-market fit is when you've built something a specific group genuinely wants, shown by them coming back and being upset if it disappeared. Before that, growth efforts mostly leak out the bottom.",
+    "when_to_use": "Deciding whether to keep iterating or start pushing growth/marketing spend, when sign-ups look fine but usage fades, or when tempted to scale and want a gut-check the core is real.",
+    "how_to_run": [
+      "Look at retention first: of people who tried it, what fraction are still active weeks later, and does the curve flatten instead of dropping to zero?",
+      "Ask active users 'how would you feel if you could no longer use this?' and count the share saying 'very disappointed'",
+      "Notice pull vs push: are people asking for it and referring others, or are you dragging every user across the line?",
+      "Segment ruthlessly: judge fit for the narrow group where it's strongest",
+      "If retention is weak, fix the product or narrow the audience; don't spend on growth yet"
+    ],
+    "preconditions": "You need real users using it over time; you can't measure fit from interviews or sign-up numbers alone.",
+    "failure_modes": "The famous '40% very disappointed' line is a rough benchmark from one practitioner's observations, not a proven threshold — 39% vs 41% is false precision. Founders fake fit with vanity metrics (downloads, waitlist) while retention bleeds, or declare fit from a tiny biased sample. Fit isn't permanent; it can decay.",
+    "evidence_note": "Concept from Marc Andreessen's framing and Steve Blank's work; the 40% survey test is Sean Ellis (~2009-10). The strongest signal — retention/cohort behavior — is well-grounded. The 40% number is folklore-grade: a useful heuristic, not a validated constant. Medium, with the measurement part part-folklore.",
+    "regional_notes": "",
+    "examples": "Your habit-tracking app has 8,000 sign-ups and you're about to spend savings on ads. The data: of people who joined a month ago, 4% still open it. Decision: don't run the ads — that money buys users who also leave. Talk to the 4% who stayed, find what makes them stick, rebuild around that before spending on growth."
+  },
+  {
+    "id": "customer-development",
+    "family": "Product",
+    "title": "Get out of the building and test your guesses",
+    "stages": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "validate my idea",
+      "is my idea good",
+      "should i build this",
+      "talk to customers",
+      "test the idea",
+      "before i build",
+      "guessing",
+      "assumptions",
+      "will anyone pay",
+      "how do i know",
+      "stop guessing"
+    ],
+    "summary": "Your business plan is a stack of guesses, not facts. Customer development means going out and testing the riskiest guesses with real people before you waste months building the wrong thing.",
+    "when_to_use": "At idea and early-validation stage, when tempted to build first and ask later, or when you have strong assumptions about who the customer is and what they want but no evidence.",
+    "how_to_run": [
+      "Write your key assumptions: who has the problem, how badly, what they'd pay or do about it",
+      "Pick the one assumption that, if wrong, kills the idea, and design a quick test of just that",
+      "Talk to real potential customers about their problem (not your solution); ask what they do today, not whether they'd 'like' your idea",
+      "Look for evidence of action (paid, searched, hacked a workaround, asked), not politeness",
+      "Update or pivot, then test the next risky assumption"
+    ],
+    "preconditions": "You must be willing to hear 'no' and change course; it only works if you let evidence override your plan.",
+    "failure_modes": "Fake interviews that fish for compliments ('Would you use this? Cool!'), mistaking politeness for demand. People are bad at predicting their own behavior, so stated interest evaporates at the payment step. Can be used to stall forever, talking instead of shipping or asking for money.",
+    "evidence_note": "Formalized by Steve Blank, extended by Eric Ries (Lean Startup) and Rob Fitzpatrick (The Mom Test) for interview technique. Widely taught and battle-tested; not a controlled result but strongly grounded in repeated experience. Medium, with the caveat that interview quality decides whether it helps or misleads.",
+    "regional_notes": "",
+    "examples": "About to spend three months coding a tutor marketplace, you instead spend a week messaging 15 parents and 15 tutors about how they find each other today. You learn tutors already have all the students they want via word of mouth — the real pain is parents not trusting strangers. Decision: don't build the marketplace; test whether a trust/vetting service is what people pay for."
+  },
+  {
+    "id": "spin-selling",
+    "family": "Sales",
+    "title": "Sell by asking the right questions, in order",
+    "stages": [
+      2,
+      3,
+      4
+    ],
+    "reversibility": "n-a",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "how to sell",
+      "sales call",
+      "discovery",
+      "close",
+      "objections",
+      "pitch",
+      "talk to a buyer",
+      "they went quiet",
+      "demo",
+      "first customers",
+      "how do i not be pushy",
+      "convince them"
+    ],
+    "summary": "For considered purchases you sell better by asking questions than by pitching. Walk the buyer through their situation, the problem, what it's costing them, and the value of fixing it — so they talk themselves into needing it.",
+    "when_to_use": "Talking to potential buyers for a considered purchase, running discovery calls or demos, or trying to land first paying customers when your pitch keeps falling flat.",
+    "how_to_run": [
+      "Situation: a few quick facts about how they work today (keep short — too many bore buyers)",
+      "Problem: what's frustrating, hard, or unreliable about the current way",
+      "Implication: what that problem costs them, knock-on effects, what continuing means",
+      "Need-payoff: what it'd be worth solved, so they state the value in their own words",
+      "Only then present your solution mapped to the needs they described, and listen"
+    ],
+    "preconditions": "Best for considered/B2B-style or higher-stakes purchases; for tiny impulse buys it overcomplicates.",
+    "failure_modes": "Done mechanically it feels like an interrogation; too many 'situation' questions bore buyers (the research itself flags this). It can't save a product nobody needs — good questions on a worthless offer just expose the lack of value faster. Misused to manufacture urgency about a non-problem, which erodes trust.",
+    "evidence_note": "Neil Rackham/Huthwaite, from observing ~35,000 sales calls across 23 countries over ~12 years, coding behaviors against outcomes — the largest empirical study of selling ever; Implication questions correlated strongly with larger closes. High, genuinely evidence-backed, though the data is decades old and skews large B2B.",
+    "regional_notes": "",
+    "examples": "A technical founder terrified of 'selling' stops pitching and asks: how do you handle this today? where does it break down? what does it cost when it breaks? what would it mean if it were gone? The buyer says 'this wastes about a day a week' — now you know your price anchor and value message, and they ask to buy rather than being pushed."
+  },
+  {
+    "id": "challenger-sale",
+    "family": "Sales",
+    "title": "Teach the buyer something, then guide the deal",
+    "stages": [
+      3,
+      4,
+      5
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "how to close more",
+      "stand out",
+      "differentiate",
+      "they don't see the value",
+      "competing on price",
+      "stuck deals",
+      "win the deal",
+      "sales not converting",
+      "buyer won't decide",
+      "teach the customer",
+      "reframe"
+    ],
+    "summary": "Instead of just being friendly and asking what the buyer wants, teach them a fresh insight about their own business, tailor it to them, and confidently guide the conversation, including price. Buyers value a seller who shows them something they didn't know.",
+    "when_to_use": "When stuck competing on price, when buyers don't grasp why you're different, or when deals stall because the customer doesn't see the problem clearly enough to act.",
+    "how_to_run": [
+      "Find an insight: something true and surprising about their situation or cost-of-inaction they haven't fully seen",
+      "Lead with that teaching point, framing the problem before mentioning your solution",
+      "Tailor it to this buyer's world and the people in the decision",
+      "Take gentle control: push back where fair, talk price directly, steer toward a decision"
+    ],
+    "preconditions": "Works best in complex/considered sales where you genuinely have a non-obvious insight; if you have nothing real to teach, it backfires.",
+    "failure_modes": "Without a genuine insight, 'teaching' becomes condescending lecturing. 'Taking control' easily tips into pushy or arrogant, especially damaging for a first-time founder still building trust. The model's headline claim has been contested.",
+    "evidence_note": "Dixon & Adamson (CEB, 2011), from a survey of thousands of reps finding 'Challenger' types over-represented among top performers in complex sales — real but correlational and self-reported, and later analyses questioned how strong and general the effect is. A useful, popular framework, but not as proven as often sold. Medium.",
+    "regional_notes": "",
+    "examples": "You keep losing an analytics tool to 'we'll just use spreadsheets.' Instead of listing features, you open with a number: 'Teams your size lose ~6 hours a week reconciling spreadsheet versions, and one bad number in a board deck can cost a funding round.' That reframes 'free spreadsheets' as expensive — then you introduce the tool as the fix."
+  },
+  {
+    "id": "structured-hiring-scorecard",
+    "family": "Hiring",
+    "title": "Hire against a written scorecard with structured interviews",
+    "stages": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "one-way",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "first hire",
+      "who to hire",
+      "interview",
+      "bad hire",
+      "recruiting",
+      "how to hire",
+      "hiring my first employee",
+      "scorecard",
+      "reference check",
+      "interview questions",
+      "did i hire the wrong person"
+    ],
+    "summary": "Before you interview anyone, write exactly what the job must achieve and how you'll score it; then ask every candidate the same job-related questions and rate their real past results. This beats gut-feel hiring because you compare people against the job, not your mood.",
+    "when_to_use": "About to make your first few hires (or first contractor) where a wrong choice is expensive and slow to undo. Best once the role's real work is concrete enough to describe.",
+    "how_to_run": [
+      "Write a one-page scorecard: why the role exists, 3-6 outcomes for the first 6-12 months, competencies needed",
+      "Define the same 4-6 job-related questions and a 1-3 scale for every candidate",
+      "Interview for past behavior ('walk me through how you actually did X'), pushing for specifics and numbers",
+      "Score each candidate against the scorecard right after, before discussing with anyone",
+      "Reference-check against the same outcomes; hire only when evidence clears the bar"
+    ],
+    "preconditions": "You can articulate the role's concrete outcomes. If you can't describe what success looks like, you're not ready to hire for it.",
+    "failure_modes": "Applying it before the role is defined produces a scorecard for a job that doesn't exist yet. Fake-structure: same questions but scoring on vibes, or rewriting the bar to fit someone you already like. The famous '90% success' claim is the authors' self-reported number, not audited. No process removes bias entirely.",
+    "evidence_note": "Scorecard + structured interviews popularized by Smart & Street ('Who'), building on Topgrading. The branded success claims are self-reported (folklore-grade), but the load-bearing idea — structured, job-related interviews with consistent scoring — has strong independent meta-analytic support (e.g., Sackett et al. 2022, ~0.42 validity). Structure = high; branding = medium.",
+    "regional_notes": "Reference-checking norms and legal limits vary by country (age, family, salary-history questions are restricted in some places). Keep questions strictly job-related and check local employment law.",
+    "examples": "A founder needs a first salesperson. Instead of hiring the most charismatic person, they write a scorecard ('close 8 of our $2k/mo plans in 90 days, build a repeatable demo script') and ask all three finalists 'walk me through the last deal you closed start to finish.' The smooth talker has never run a full cycle; the quieter candidate has. They hire on the evidence."
+  },
+  {
+    "id": "talent-density",
+    "family": "Hiring",
+    "title": "A small team of strong performers beats a big team of average ones",
+    "stages": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "one-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "should i hire more people",
+      "small team",
+      "first hire",
+      "underperformer",
+      "let someone go",
+      "team too big",
+      "a players",
+      "scaling the team",
+      "hire fast",
+      "is my team good enough",
+      "do we need more headcount"
+    ],
+    "summary": "A few excellent people who raise each other's game usually beat a larger group where some are weak, because weak performers quietly drag down strong ones. Hire slowly, pay well for real talent, and don't keep someone just to fill a seat.",
+    "when_to_use": "Deciding whether to add headcount, keep a mediocre hire, or 'throw bodies' at a problem. Especially once you have a working offer and need to grow deliberately.",
+    "how_to_run": [
+      "Default to the smallest team that can do the work; add a person only when work clearly exceeds capacity",
+      "Set a high bar per hire; resist hiring fast to feel productive",
+      "Address a clear underperformer quickly and honestly rather than working around them for months",
+      "Reinvest money saved on headcount into paying strong people well",
+      "Re-check: would I enthusiastically re-hire each person for their current role?"
+    ],
+    "preconditions": "You can attract strong candidates and the work rewards skill over raw volume of hands.",
+    "failure_modes": "Misused as license to overwork a skeleton crew, churn through 'low performers' you never managed, or create a fearful culture where people hide problems. Survivorship-flavored: the famous example is one already-successful, cash-rich company in a winner-take-most market. Firing is one-way, human, and often legally regulated.",
+    "evidence_note": "Popularized by Reed Hastings/Netflix ('No Rules Rules') — coherent philosophy resting largely on one company's self-told story, partly folklore and survivorship-prone. The narrower claim (a weak member lowers strong ones; small senior teams can outperform larger junior ones) has some team-research support; the 'fire generously, pay top-of-market' prescription isn't proven to generalize. Medium.",
+    "regional_notes": "'Pay top-of-market and part quickly' assumes at-will employment and big salary budgets; in many countries termination is legally slow/costly, so a 'swap freely' approach is impractical and harmful. Adjust to local norms.",
+    "examples": "A founder on a small budget is tempted to hire two cheap junior devs to ship faster. Reframing around talent density, they hire one experienced engineer they'd be thrilled to keep, accept slightly slower early output, and find fewer coordination headaches and bugs make the team faster within a couple of months."
+  },
+  {
+    "id": "care-and-challenge-feedback",
+    "family": "Hiring",
+    "title": "Feedback that both cares about the person and says the hard thing",
+    "stages": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "one-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "how to give feedback",
+      "difficult conversation",
+      "underperformer",
+      "telling someone they messed up",
+      "managing people",
+      "co-founder conflict",
+      "performance talk",
+      "how to criticize",
+      "avoid awkward conversation",
+      "team not working out",
+      "manage my first hire"
+    ],
+    "summary": "Good feedback does two things at once: shows you genuinely care about the person, and says the difficult thing clearly instead of dancing around it. Only nice is useless; only blunt is cruel — you need both.",
+    "when_to_use": "Once you manage anyone — first hire, contractor, or co-founder — and need praise or criticism that actually changes behavior. Most useful for the recurring small conversations, not just formal reviews.",
+    "how_to_run": [
+      "Get clear on what you want to change and that you're saying it because you want them to succeed",
+      "Say the specific thing directly and soon, with a concrete example, not a vague label",
+      "Make it about a behavior and its impact, not their character",
+      "Ask for their view and listen — you may be missing context",
+      "Agree what changes next; give praise just as specifically when it goes right"
+    ],
+    "preconditions": "There's an ongoing relationship where feedback can lead to change. For one-off vendors it matters less.",
+    "failure_modes": "Most common abuse: treating it as permission to be harsh ('I'm just being direct') while skipping the 'care' half — obnoxious aggression dressed as candor. Opposite: staying so 'nice' the message never lands. Not a script for insults, and not a substitute for a fair process when a job is actually at risk.",
+    "evidence_note": "Framework popularized by Kim Scott ('Radical Candor': care personally + challenge directly), from management experience, not controlled studies — the 2x2 is practitioner folklore. The components are better supported: feedback research finds specific, behavior-focused, timely feedback beats vague/delayed, while ego-threatening feedback backfires. Medium.",
+    "regional_notes": "Directness norms vary a lot: what reads as honest-and-caring in the US or Netherlands can feel rude in Japan or much of East Asia, and too indirect elsewhere. Calibrate how direct to the person and culture.",
+    "examples": "A founder's only contractor keeps missing deadlines, and the founder has silently re-done the work to avoid the awkward chat. Care-and-challenge: 'I rely on you and want this to keep working — the last two builds were three days late with no heads-up and blocked the launch. What's going on, and what do we change?' Turns out a tooling problem nobody flagged; they fix it and deadlines hold."
+  },
+  {
+    "id": "unit-economics",
+    "family": "Capital",
+    "title": "Does one customer make or lose you money?",
+    "stages": [
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "am i making money",
+      "cac",
+      "ltv",
+      "margins",
+      "is this profitable",
+      "cost to acquire",
+      "do i make money per customer",
+      "per-customer profit",
+      "how much to charge",
+      "is my pricing wrong",
+      "payback",
+      "burning cash"
+    ],
+    "summary": "Strip the business down to one customer: what you earn from them minus the cost to serve them, versus what it cost to win them, and how long until that money comes back. If a single customer loses money, getting more just loses money faster.",
+    "when_to_use": "Once you're charging real money and want to know if the model works before pouring time or cash into growth. To sanity-check pricing, channels, and whether 'we just need more users' is actually true.",
+    "how_to_run": [
+      "Compute contribution margin: price minus variable costs to deliver (not whole overhead)",
+      "CAC: everything spent to acquire customers in a period divided by customers won (include ads, your time, tools, fees)",
+      "Estimate LTV from gross margin and real observed retention — not hoped-for — then compare LTV to CAC",
+      "Payback: how many months of margin to earn CAC back; shorter is safer",
+      "If a customer loses money, fix margin, price, or acquisition cost before scaling"
+    ],
+    "preconditions": "You have at least some real transactions and cost data. With zero sales these are guesses; label them as guesses.",
+    "failure_modes": "LTV fantasy math: assuming 5-year retention off 3 months of data, using revenue instead of gross margin, leaving your own labor and fees out of CAC. A 'great' 4:1 ratio on invented retention is worse than a modest 2.5:1 on real cohorts. Obsessing over a blended average that hides one profitable and one bleeding channel.",
+    "evidence_note": "Standard accounting/finance constructs (contribution margin, CAC, LTV, payback) — the math is high-evidence and uncontroversial; the danger is entirely in the inputs. Benchmarks like '3:1 LTV:CAC' or 'under 12-month payback' are useful rules of thumb but folklore, not laws.",
+    "regional_notes": "Payment fees, refund/chargeback rates, taxes (VAT/GST) and typical payback expectations differ by market and currency; compute margin on what you actually net locally.",
+    "examples": "A founder selling a $30/month app feels great as signups climb. Unit economics: each customer costs $90 in ads, churns after 4 months (~$120 revenue, ~$96 margin at 80% gross) — roughly break-even with a fragile 3-4 month payback. Decision: pause paid ads, fix early churn first, rather than raising money to 'scale' a model that barely works."
+  },
+  {
+    "id": "capital-allocation",
+    "family": "Capital",
+    "title": "Where should the next dollar and next hour go?",
+    "stages": [
+      4,
+      5,
+      6
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "where to spend",
+      "what to work on next",
+      "prioritize",
+      "budget",
+      "where to focus",
+      "too many things",
+      "should i spend on ads or product",
+      "where to put my time",
+      "opportunity cost",
+      "is this worth it",
+      "best return"
+    ],
+    "summary": "You have limited money and limited hours, so the weekly question is: of all the things I could put the next dollar or hour into, which gives the best return for the risk? Treat your own time as your scarcest capital, not just cash.",
+    "when_to_use": "Once real options compete for the same money or time — ads vs product, hiring vs building, this feature vs that channel. Most useful once you have some revenue signal to compare against.",
+    "how_to_run": [
+      "List the live options competing for the next chunk of money/time and what each could return",
+      "Estimate return-per-dollar and return-per-hour, and how reversible each bet is",
+      "Fund the few highest-expected-return, hardest-to-undo-later options first; treat cheap reversible bets as experiments",
+      "Set a small budget/time cap and a checkpoint date for each bet, then actually review",
+      "Cut or shrink what's underperforming and move that capital to what's working — don't let sunk cost hold it"
+    ],
+    "preconditions": "There are genuinely competing uses of resource and at least rough signal on returns. Pre-revenue the comparison is cruder but the discipline still helps.",
+    "failure_modes": "Over-modeling: spreadsheets implying false precision about returns you can't predict. Opposite: 'spray and pray' across ten things so nothing gets enough to work. Sunk-cost thinking ('we've already put 3 months in') keeps dead bets alive. Forgetting your hours are the scarcest capital and burning yourself out. Copying a big company's playbook ignores buffers a first-time founder doesn't have.",
+    "evidence_note": "A long-standing, well-grounded finance concept (opportunity cost, expected return, marginal allocation) — the principle is solid. Applying it to an early startup with uncertain returns is judgment, not science: inputs are guesses, so it's a thinking discipline, not a precise optimizer. The 'allocate like a great CEO' version leans on survivorship stories. Medium.",
+    "regional_notes": "",
+    "examples": "A founder has $5,000 and ~20 free hours a week and wants to do everything. Treating it as capital allocation: ads have a measurable short payback (reversible, stop anytime), the new feature is a big irreversible time sink with unclear demand, content is slow. They put $4,000 into ads with a 3-week kill-switch, spend hours validating the feature with customers before building, and shelve content — reallocating based on what the ad test shows."
+  },
+  {
+    "id": "attack-the-low-end-or-an-ignored-segment",
+    "family": "Strategy",
+    "title": "Attack where the big players won't fight back",
+    "stages": [
+      0,
+      1
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": true,
+    "keywords": [
+      "too small to compete",
+      "big competitors",
+      "incumbent",
+      "cheaper good-enough version",
+      "underserved customers",
+      "segment nobody serves",
+      "good enough product",
+      "compete with the giant",
+      "overserved customers",
+      "low end of the market",
+      "beachhead",
+      "they won't bother to respond"
+    ],
+    "summary": "Win a foothold by serving customers the established players ignore or overserve, with a simpler or cheaper offer they have little incentive to defend, then improve from there. Compete where the response won't come, not head-on.",
+    "when_to_use": "You're small or solo facing entrenched, well-resourced players and can't win feature-for-feature; you've spotted a segment the big players underserve or find unprofitable.",
+    "how_to_run": [
+      "Map who the dominant players actively serve and which customers they over- or under-serve",
+      "Pick a beachhead unattractive for an incumbent to defend",
+      "Build a simpler/cheaper offer that's good enough for that segment, not a clone",
+      "Win that segment first, then improve up-market",
+      "Watch whether the leaders respond; if they ignore you, the wedge is working"
+    ],
+    "preconditions": "There is a real segment established players neglect, and you can reach it affordably.",
+    "failure_modes": "Treating any cheap product as 'disruptive' — most low-end products just lose. Weak at prediction: easy to label a winner in hindsight. A 'good enough' product that never improves stays stuck; a beachhead with no path up-market is just a small low-margin business. Sometimes the incumbent does fight back.",
+    "evidence_note": "From Clayton Christensen ('The Innovator's Dilemma', 1997). Influential but graded medium honestly: the descriptive pattern is well-observed, predictive power contested (Jill Lepore's 2014 critique; later reviews found the founding hard-drive cases were selectively read). A lens for finding an unguarded entry point, not a law that low-end entrants win.",
+    "regional_notes": "Travels well to emerging/price-sensitive markets where a simpler, cheaper, mobile-first offer reaches customers global leaders price out.",
+    "examples": "A solo founder can't out-feature the dominant project tool used by big teams, so they build a stripped-down cheap tool for freelancers who find the leader bloated — a group the leader won't chase — and grow from there."
+  },
+  {
+    "id": "build-measure-learn-loop",
+    "family": "Product",
+    "title": "Ship the smallest test, measure, learn, repeat",
+    "stages": [
+      1,
+      2,
+      3
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": true,
+    "keywords": [
+      "mvp",
+      "build something small",
+      "test my idea fast",
+      "am i building the right thing",
+      "validate demand",
+      "iterate quickly",
+      "launch a tiny version",
+      "is anyone going to use this",
+      "stop guessing",
+      "cheapest way to test",
+      "pivot or persevere"
+    ],
+    "summary": "Instead of building the full product on a hunch, ship the smallest thing that tests your riskiest assumption, measure how real users react, and use that to decide whether to keep going or change course. Shorten the loop from idea to evidence.",
+    "when_to_use": "Pre-product or early, unsure anyone wants it, tempted to build for months in the dark; you have risky assumptions you could test cheaply.",
+    "how_to_run": [
+      "Name the single riskiest assumption (usually 'someone wants this enough to act')",
+      "Design the smallest test/MVP that produces real evidence on it",
+      "Decide in advance what result means continue vs change",
+      "Put it in front of real users; measure behavior, not opinions",
+      "Decide: persevere, adjust, or pivot — then run the next loop"
+    ],
+    "preconditions": "You can reach real potential users and define a concrete success signal before building.",
+    "failure_modes": "'MVPs' that are just unfinished products with no learning goal. Vanity metrics (signups, likes) instead of real demand behavior. Endless iterating with no kill criteria. Over-applying where the answer is known or where a shoddy first version destroys trust. 'Pivot' used to justify chasing every shiny idea.",
+    "evidence_note": "Eric Ries ('The Lean Startup', 2011), building on customer development. Medium: the logic (test cheaply, prefer evidence) is sound and broadly endorsed, but little rigorous causal proof it raises success rates; much supporting material is anecdote. Disciplined hypothesis-testing, not a guaranteed path.",
+    "regional_notes": "Fast where ads/landing-page tests are cheap; where users are offline, the 'measure' step needs in-person or messaging-app tests.",
+    "examples": "A technical solo founder wanting to build an AI invoicing tool first puts up a one-page site with a 'request access' button, sends it to 40 small-business owners, and watches who signs up — learning what to lead with before writing real code."
+  },
+  {
+    "id": "change-what-the-industry-competes-on",
+    "family": "Strategy",
+    "title": "Stop competing on the usual things; change the game",
+    "stages": [
+      0,
+      1,
+      3
+    ],
+    "reversibility": "n-a",
+    "evidence": "low",
+    "warn": true,
+    "keywords": [
+      "crowded market",
+      "everyone offers the same thing",
+      "how do i stand out",
+      "differentiate",
+      "price war",
+      "compete on price",
+      "tired old industry",
+      "what can i drop",
+      "add something nobody offers",
+      "make competition irrelevant",
+      "new kind of offering"
+    ],
+    "summary": "Rather than beating rivals at what everyone competes on, redraw the offer: drop or reduce things the industry takes for granted, add new value customers actually want, ideally lowering cost too. Make the usual competition beside the point.",
+    "when_to_use": "Entering a crowded, look-alike market where everyone competes on the same dimensions and head-on competition looks like a losing race.",
+    "how_to_run": [
+      "List every factor the industry competes on and assumes is mandatory",
+      "For each ask: eliminate, reduce, raise, or create something new?",
+      "Design an offer dropping costly things customers don't value and adding new value they do",
+      "Check the new mix is deliverable at a cost that works",
+      "Aim at people the industry currently ignores, not just existing buyers"
+    ],
+    "preconditions": "You understand what customers truly value vs what the industry assumes, and can deliver a different mix.",
+    "failure_modes": "Far easier to describe a 'new space' after the fact than create one on purpose. Cutting features customers actually need just makes a worse product. A new mix can be copied fast if not protected. Founders rationalize a no-demand niche by calling it 'uncontested' — empty space is often empty because nobody wants what's there.",
+    "evidence_note": "Kim & Mauborgne ('Blue Ocean Strategy', 2005). Popular as a framing tool; graded low on hard evidence — supporting cases are retrospective and selected, heavy survivorship bias, no proof the method reliably produces winners. Use to challenge assumptions and generate options, not as proof a reinvented offer will work.",
+    "regional_notes": "Useful where a global incumbent's model carries costly assumptions that don't fit local needs.",
+    "examples": "A founder eyeing the crowded online-course market notices everyone competes on huge video libraries, so they drop the giant catalog and long lectures and add live weekly accountability and a tight 30-day path — aimed at busy people who never finish courses."
+  },
+  {
+    "id": "create-and-own-a-new-category",
+    "family": "Strategy",
+    "title": "Name and own a new category, don't just sell a product",
+    "stages": [
+      0,
+      3,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "low",
+    "warn": true,
+    "keywords": [
+      "how do i position this",
+      "nobody understands what i do",
+      "explain my product in one line",
+      "crowded space",
+      "stand out",
+      "new kind of product",
+      "frame the market",
+      "be the leader not a me-too",
+      "what box do i fit in",
+      "educate the market",
+      "own the narrative"
+    ],
+    "summary": "Instead of positioning as a better option inside an existing category, define a new problem and category, name it, and become the reference point for it. The bet: whoever frames the category captures most of its value.",
+    "when_to_use": "You genuinely solve a problem with no clean label yet, and being compared inside an existing category makes you look like a weaker copy of an established leader.",
+    "how_to_run": [
+      "Articulate a problem the market doesn't name clearly and why old solutions fall short",
+      "Name the new category in plain language; define what's in and out",
+      "Frame messaging around the problem and category, not features",
+      "Educate the market consistently so the category and your role stick",
+      "Build the product to credibly deliver on the category you claim"
+    ],
+    "preconditions": "A real underserved problem existing categories describe poorly, and stamina to educate a market.",
+    "failure_modes": "Highly survivorship-prone: 'category king' stories are told backward from winners, ignoring the many that named a category and went nowhere. Naming doesn't create demand; if the problem is weak, a clever label adds confusion and a longer sales cycle. Founders invent jargon for a product nobody asked for. Market education is expensive and slow — brutal for an under-funded solo founder.",
+    "evidence_note": "Associated with 'Play Bigger' (2016). Influential in marketing circles; graded low — retrospective case studies of winners, heavy survivorship bias, no controlled comparison. A positioning lens, not proof that inventing a category causes success.",
+    "regional_notes": "Market-education cost is far higher where you must educate across multiple languages or low-trust markets; easier in a tight niche community.",
+    "examples": "A founder whose software sits between recruiting and onboarding finds buyers keep mis-filing them as 'just another HR tool' and comparing on price. They coin a plain-language name for the in-between problem and lead with it — accepting more time spent explaining before anyone buys."
+  },
+  {
+    "id": "qualify-the-deal-before-you-chase-it",
+    "family": "Sales",
+    "title": "Check a deal is real before pouring time into it",
+    "stages": [
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "deal stalled",
+      "is this deal real",
+      "wasting time on prospects",
+      "who actually decides",
+      "they went quiet",
+      "champion",
+      "budget approval",
+      "what's their buying process",
+      "stuck in pipeline",
+      "forecasting deals",
+      "who signs off",
+      "real pain or nice-to-have"
+    ],
+    "summary": "Before investing heavily in an opportunity, confirm what makes a deal closeable: a measurable payoff, who controls the money, how they decide and buy, a real pain worth solving, and an internal advocate. Missing pieces are things to go find, not ignore.",
+    "when_to_use": "Selling a considered/higher-priced product (often B2B) with multiple people involved; deals stall and you can't tell which are real.",
+    "how_to_run": [
+      "For each deal, write the measurable result the buyer gets and the pain driving it",
+      "Identify who controls the budget and who else must say yes",
+      "Map how this org decides and approves, and on what timeline",
+      "Find and develop a champion who wants you to win and can sell internally",
+      "Treat any blank as the next thing to uncover; if too many stay blank, deprioritize"
+    ],
+    "preconditions": "You have real conversations with the buying side, not outside guesswork.",
+    "failure_modes": "Turning it into an interrogation that annoys buyers. Filling boxes with assumptions, producing false confidence. Over-applying to small self-serve purchases. Mistaking a friendly contact for a real champion, or a 'nice-to-have' for a funded pain.",
+    "evidence_note": "MEDDIC originated in 1990s enterprise software sales (PTC; Dunkel & Napoli), widely used in B2B. Medium: practitioner-proven and broadly adopted with strong face validity, but support is professional consensus and internal results, not independent controlled studies.",
+    "regional_notes": "Decision processes and number of approvers vary by region and company size; relationship and hierarchy weigh heavily in some markets, so re-learn 'how they decide' per market.",
+    "examples": "A solo founder has five demos that 'went great' but none closed. Going deal by deal, they realize in four they never reached the budget holder or confirmed a funded problem — so they refocus on the one deal with a champion, a clear payoff, and a known approval path."
+  },
+  {
+    "id": "find-and-fix-the-weakest-funnel-stage",
+    "family": "Growth",
+    "title": "Find the one leaky step and fix it first",
+    "stages": [
+      5,
+      6
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "leaky funnel",
+      "users drop off",
+      "where am i losing people",
+      "activation",
+      "onboarding problem",
+      "people sign up but don't come back",
+      "retention",
+      "churn",
+      "not enough signups",
+      "no word of mouth",
+      "conversion rate",
+      "which metric to fix first",
+      "growth is stuck"
+    ],
+    "summary": "Break the journey into stages — get them in, to first value, back again, referring, and paying — measure each, and concentrate on the single weakest stage rather than everything at once. Fixing the biggest leak gives the biggest return.",
+    "when_to_use": "You have some users/traffic and growth feels stuck, but you're not sure where it's breaking and you're spreading effort thin.",
+    "how_to_run": [
+      "Define each funnel stage and what counts as passing it",
+      "Measure conversion from each stage to the next so drop-offs show",
+      "Identify the single worst or most damaging leak (early stages gate everything after)",
+      "Run focused experiments on just that stage until it improves",
+      "Re-measure, then move to the next-weakest stage"
+    ],
+    "preconditions": "You can track real behavior across stages — even rough analytics or a spreadsheet of cohort counts.",
+    "failure_modes": "Optimizing a late stage while an earlier one is the real leak. Pouring money into acquisition to mask poor retention — filling a bucket with holes. Chasing vanity totals instead of stage-to-stage conversion. Treating the five stages as rigid when your journey differs. Reading noise as signal with tiny numbers.",
+    "evidence_note": "AARRR ('pirate metrics'), Dave McClure ~2007 — a practical framework, not a research result. Medium: widely adopted, intuitive, operationally sound for prioritizing, but a heuristic with no formal validation; the five labels are convention.",
+    "regional_notes": "Acquisition and referral behavior differ sharply by region/platform (messaging-app sharing vs link referral), so measure those stages locally.",
+    "examples": "A founder pays for ads and signups climb but revenue stays flat. Mapping the funnel, acquisition and signup are fine but most users never reach their first real result — so they stop buying ads and rebuild first-run onboarding, lifting every downstream stage."
+  },
+  {
+    "id": "psychological-safety",
+    "family": "Hiring",
+    "title": "Make it safe to speak up and admit mistakes",
+    "stages": [
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "high",
+    "warn": true,
+    "keywords": [
+      "team afraid to disagree",
+      "nobody speaks up",
+      "people hiding mistakes",
+      "scared to give bad news",
+      "yes men",
+      "fear of looking dumb",
+      "no one challenges me",
+      "blame culture",
+      "people won't admit errors",
+      "afraid to ask questions"
+    ],
+    "summary": "When people believe they won't be punished or humiliated for speaking up, admitting errors, or asking questions, the team learns faster and catches problems sooner. Your job is to make that belief true.",
+    "when_to_use": "As you bring on first hires/contractors and need them to flag bad news, risks, and mistakes early instead of hiding them until too late.",
+    "how_to_run": [
+      "React to the first bad-news report or mistake with curiosity, not punishment",
+      "Ask for dissent explicitly and go last so your view doesn't anchor everyone",
+      "Frame the work as uncertain so admitting 'I don't know' becomes normal",
+      "Thank people by name for raising risks, questions, or errors"
+    ],
+    "preconditions": "You have at least one other person whose candor affects outcomes.",
+    "failure_modes": "Treating it as 'being nice' and avoiding hard feedback, lowering standards instead of raising candor; punishing the messenger once under stress, which silences everyone; confusing safety with consensus and never deciding.",
+    "evidence_note": "Amy Edmondson's peer-reviewed 1999 study (Administrative Science Quarterly, 51 teams) found psychological safety predicts team learning — genuine peer-reviewed support, unusual for management concepts. The famous corporate 'top factor' finding that popularized it was observational (no proven causal direction). Background only; never name the source to the founder.",
+    "regional_notes": "In higher power-distance cultures juniors may stay silent regardless, so actively invite input rather than just leaving the door open.",
+    "examples": "A founder's first part-time engineer spots a broken data sync before a demo but stays quiet fearing they'll look incompetent; the demo fails live. Afterward the founder opens each check-in with 'what's the scariest thing you saw this week?' and thanks the engineer the next time they flag a problem early."
+  },
+  {
+    "id": "single-accountable-owner",
+    "family": "Hiring",
+    "title": "Give every task and decision exactly one owner",
+    "stages": [
+      5,
+      6
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "who owns this",
+      "things fall through cracks",
+      "unclear responsibility",
+      "co-founder roles",
+      "nobody did it",
+      "we both thought the other would",
+      "who decides",
+      "everyone and no one",
+      "overlapping roles",
+      "dropped the ball",
+      "too many cooks",
+      "who is responsible"
+    ],
+    "summary": "Every task and decision should have exactly one person accountable for it getting done. If two people are accountable, in practice no one is.",
+    "when_to_use": "Work slips through the cracks, you and a co-founder/early hires have fuzzy or overlapping roles, or decisions stall because it's unclear who calls it.",
+    "how_to_run": [
+      "For each important task/decision, write the single name accountable for the outcome",
+      "Separate 'accountable' (one person) from 'consulted' and 'informed' (can be several)",
+      "When two people both feel responsible, force a choice so one name remains",
+      "Revisit ownership when roles change so nothing is orphaned or doubly owned"
+    ],
+    "preconditions": "",
+    "failure_modes": "Confusing accountable with 'does all the work' so the owner feels dumped on; assigning an owner who lacks authority or information to deliver; using it to diffuse blame rather than clarify who drives; over-documenting roles for a two-person team where a conversation would do.",
+    "evidence_note": "Practitioner wisdom, not peer-reviewed: the 'directly responsible individual' practice is associated with well-known tech operating cultures, and the responsibility-matrix idea (taught as RACI) comes from project-management bodies of knowledge. Widely adopted but case-based, not experimental.",
+    "regional_notes": "",
+    "examples": "Two co-founders each assume the other is handling the company's first tax registration; neither follows up and they miss a deadline and pay a penalty. They fix it with a one-line list: each recurring obligation gets exactly one founder's name, even if the other helps."
+  },
+  {
+    "id": "asymmetric-bets-optionality",
+    "family": "Thinking",
+    "title": "Prefer bets that lose little but could win big",
+    "stages": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": true,
+    "keywords": [
+      "is this worth the risk",
+      "how much could i lose",
+      "betting the company",
+      "all in on one idea",
+      "small experiment first",
+      "cap my downside",
+      "what if it works",
+      "limited budget big idea",
+      "should i go all in",
+      "test cheaply",
+      "huge upside small cost",
+      "risky decision"
+    ],
+    "summary": "Favor bets where the worst case costs a little but the best case pays off a lot, and avoid bets where a bad outcome could wipe you out even if the upside is tempting. Cap the downside, keep the upside open.",
+    "when_to_use": "Deciding how much time/money to put behind an uncertain idea, choosing between experiments, or tempted to go all-in on a single unproven bet.",
+    "how_to_run": [
+      "For each option, write the realistic worst case and best case in plain terms",
+      "Rule out anything whose worst case could end the company, however good the upside",
+      "Prefer cheap, time-boxed tests that preserve the chance of a big payoff",
+      "Run several small asymmetric bets rather than one large symmetric one"
+    ],
+    "preconditions": "",
+    "failure_modes": "Calling something a 'small bet' while ignoring hidden downside (reputation, legal, opportunity cost); taking so many tiny bets none gets enough to pay off; using 'optionality' to never commit; underestimating the real odds of the catastrophic case.",
+    "evidence_note": "Practitioner/trader wisdom (the 'barbell' approach), rooted in real option math but the startup application is heuristic, not validated. Warn flag because founders routinely mislabel genuinely ruinous bets as 'small.'",
+    "regional_notes": "Where capital is hard to raise and the safety net thin, the downside of a ruinous bet is harsher, so capping downside matters even more.",
+    "examples": "A founder can spend six months and their savings building a full product for an unproven idea, or two weekends and a small ad budget on a fake landing page to test demand. The landing page risks little but could reveal real demand, so they run that first."
+  },
+  {
+    "id": "process-over-outcome",
+    "family": "Thinking",
+    "title": "Judge the decision, not just how it turned out",
+    "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": true,
+    "keywords": [
+      "was that a bad decision",
+      "it worked out but",
+      "got lucky",
+      "it failed was i wrong",
+      "second guessing myself",
+      "how to decide better",
+      "blaming myself for bad luck",
+      "good call bad result",
+      "learn from this decision",
+      "did i make the right choice",
+      "evaluating past decisions"
+    ],
+    "summary": "A good decision can still have a bad outcome, and a bad decision can get lucky. Judge the quality of how you decided given what you knew at the time, not just the result.",
+    "when_to_use": "Reviewing a decision that went badly or surprisingly well, tempted to overhaul your whole approach after one bad break, or deciding what to actually learn from a win or loss.",
+    "how_to_run": [
+      "Separate the decision (what you chose and why) from the outcome (what happened)",
+      "Ask whether the information and reasoning were sound given what you knew then, not now",
+      "Keep a quick written record of why you decided, to review honestly later",
+      "Update your process only for genuine reasoning errors, not for outcomes that were mostly luck"
+    ],
+    "preconditions": "",
+    "failure_modes": "Using 'I just got unlucky' to dodge real reasoning errors; overcorrecting after one bad outcome that was actually a fine decision; hindsight bias rewriting what you 'must have known'; over-analyzing process until you're slow and indecisive.",
+    "evidence_note": "Practitioner wisdom from decision-science and professional-poker writing ('resulting'), drawing on well-studied hindsight bias. The biases are well-studied; the founder application is heuristic. Warn flag because it's easily abused to excuse poor decisions.",
+    "regional_notes": "",
+    "examples": "A founder picks the cheaper payment provider after a quick comparison; weeks later it has an outage during a sale. Before concluding 'I chose wrong,' they ask whether that was foreseeable then. It wasn't, so they keep their selection process and just add a backup provider rather than distrusting every past choice."
+  },
+  {
+    "id": "strategy-as-tradeoffs-and-fit",
+    "family": "Strategy",
+    "title": "Strategy is choosing what not to do",
+    "stages": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "trying to do everything",
+      "can't say no",
+      "what to focus on",
+      "spread too thin",
+      "who is this for",
+      "narrow my focus",
+      "everyone is our customer",
+      "what makes us different",
+      "should we add this feature",
+      "lost focus",
+      "too many directions",
+      "what not to build"
+    ],
+    "summary": "Strategy is deciding what you will deliberately NOT do, and building a tight set of choices that reinforce each other for one kind of customer. If you're not giving anything up, you're not really choosing.",
+    "when_to_use": "Tempted to serve everyone, chasing every feature request or market, or struggling to explain why a customer should pick you over a generic competitor.",
+    "how_to_run": [
+      "Pick the specific customer and need you'll serve best, and name who you are NOT for",
+      "List what you will deliberately not do or offer, and accept the customers you'll lose",
+      "Check your key choices reinforce each other rather than pulling apart",
+      "Reject requests and opportunities that don't fit, even attractive ones"
+    ],
+    "preconditions": "Enough contact with real customers to know which segment and need you can serve distinctively.",
+    "failure_modes": "Mistaking operational improvements (faster, cheaper, better) for strategy when they offer no real trade-off; writing a 'focus' statement but still saying yes to everything; copying a competitor's positioning so no genuine choice is made; cutting so much there's no viable market left.",
+    "evidence_note": "The trade-offs-and-fit view comes from a widely cited 1996 strategy article plus decades of teaching — the most academically grounded of the practitioner concepts here, but conceptual/case-based rather than experimentally tested. Medium. Never name the author to the founder.",
+    "regional_notes": "",
+    "examples": "A founder building a scheduling tool keeps adding features for freelancers, agencies, and clinics at once, and it feels generic to all three. They choose to serve only solo therapists, drop agency features, and tune onboarding, pricing, and language for that group; conversion improves because every choice points the same way."
+  },
+  {
+    "id": "diag-scaled-before-pmf",
+    "family": "Diagnosis",
+    "title": "Spending on growth before retention is proven",
+    "stages": [
+      4,
+      5
+    ],
+    "reversibility": "n-a",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "scaling",
+      "spending on ads",
+      "growth not working",
+      "users leave",
+      "burning cash on growth",
+      "should i scale",
+      "more users not helping",
+      "leaky bucket",
+      "pour money into marketing"
+    ],
+    "summary": "Confirm people actually stick before spending to grow — scaling a leaky bucket just loses money faster.",
+    "when_to_use": "You're tempted to spend on acquisition but aren't sure users retain.",
+    "how_to_run": [
+      "Pull your cohort retention curve and check it flattens instead of falling to zero",
+      "Run the 'how disappointed would you be if this disappeared?' check with active users this week",
+      "Only spend on growth once retention holds"
+    ],
+    "failure_modes": "Buying users who don't come back; mistaking signups for fit."
+  },
+  {
+    "id": "diag-reasoned-by-analogy",
+    "family": "Diagnosis",
+    "title": "Accepting an 'industry standard' cost or assumption",
+    "stages": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "industry standard",
+      "everyone does it this way",
+      "too expensive",
+      "quoted price",
+      "thats just how its done",
+      "vendor quote",
+      "assumed cost"
+    ],
+    "summary": "Rebuild the number from what's actually, physically true rather than copying convention.",
+    "when_to_use": "Something looks expensive or fixed because 'that's how the industry does it.'",
+    "how_to_run": [
+      "Write the 3 irreducible cost (or requirement) drivers of your product",
+      "Delete every assumption that's just convention, not a real constraint",
+      "Rebuild the cheapest path that still meets the real constraints"
+    ],
+    "failure_modes": "Mislabeling a real constraint as a convention and building something that can't work."
+  },
+  {
+    "id": "diag-trained-discount-buyers",
+    "family": "Diagnosis",
+    "title": "Discounting to hit a number, training customers to wait",
+    "stages": [
+      3,
+      4,
+      5
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "discount",
+      "lower price to close",
+      "everyone asks for a deal",
+      "race to the bottom",
+      "cut price",
+      "promo",
+      "they only buy on sale"
+    ],
+    "summary": "Protect price and sell value; repeated discounts teach customers the real price is the discount.",
+    "when_to_use": "You keep discounting to close deals or hit a target.",
+    "how_to_run": [
+      "Replace your next discount with a quantified ROI statement in the customer's own numbers",
+      "Hold the price and ask what outcome would make it clearly worth it"
+    ],
+    "failure_modes": "Permanent margin erosion; attracting price-shoppers who churn."
+  },
+  {
+    "id": "diag-kept-b-player",
+    "family": "Diagnosis",
+    "title": "Keeping a 'fine' performer who drives the best people away",
+    "stages": [
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "underperformer",
+      "mediocre hire",
+      "should i let someone go",
+      "keeping a fine employee",
+      "team morale",
+      "one weak person",
+      "tolerating"
+    ],
+    "summary": "Defend talent density and act early; tolerating a weak performer quietly costs you your strong ones.",
+    "when_to_use": "You're working around someone who's 'okay' but not great.",
+    "how_to_run": [
+      "Apply the keeper test: would you fight to keep this person if they tried to leave?",
+      "Start the honest conversation you've been avoiding this week"
+    ],
+    "failure_modes": "Letting it drag for months while your best people disengage; acting harshly without managing first."
+  },
+  {
+    "id": "diag-launched-too-broad",
+    "family": "Diagnosis",
+    "title": "Launching broad and becoming nobody's first choice",
+    "stages": [
+      1,
+      2,
+      3
+    ],
+    "reversibility": "n-a",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "everyone is our customer",
+      "broad market",
+      "no traction",
+      "generic",
+      "who is this for",
+      "trying to reach everyone",
+      "message falls flat"
+    ],
+    "summary": "Win one narrow niche completely before expanding; a sharp message to a specific buyer beats a vague one to all.",
+    "when_to_use": "Your product feels generic and isn't anyone's obvious first pick.",
+    "how_to_run": [
+      "Name the smallest segment you could be #1 in within 6 months",
+      "Refocus product, message, and outreach on only that group"
+    ],
+    "failure_modes": "Diluting the message across segments so it resonates with no one."
+  },
+  {
+    "id": "diag-no-champion",
+    "family": "Diagnosis",
+    "title": "Forecasting deals with no champion or budget owner",
+    "stages": [
+      4,
+      5
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "deal stalled",
+      "pipeline",
+      "they went quiet",
+      "who decides",
+      "forecast",
+      "is this deal real",
+      "no response from prospect"
+    ],
+    "summary": "Qualify on who controls the money and who's championing you before committing time to a deal.",
+    "when_to_use": "Deals look promising but stall or go silent.",
+    "how_to_run": [
+      "Score your top 3 deals on: do you have a champion AND an economic buyer?",
+      "Demote the ones missing both and reinvest the time in real ones"
+    ],
+    "failure_modes": "Mistaking a friendly contact for a real champion; a polite 'maybe' treated as pipeline."
+  },
+  {
+    "id": "diag-built-in-stealth",
+    "family": "Diagnosis",
+    "title": "Building for a long time before anyone wanted it",
+    "stages": [
+      0,
+      1,
+      2
+    ],
+    "reversibility": "n-a",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "building for months",
+      "stealth",
+      "not launched yet",
+      "perfecting the product",
+      "no users yet",
+      "afraid to launch",
+      "still building"
+    ],
+    "summary": "Test the riskiest assumption with the smallest possible artifact before committing months of build.",
+    "when_to_use": "You've been heads-down building with little real user contact.",
+    "how_to_run": [
+      "Ship the smallest thing that proves someone wants this (a landing page, a manual delivery)",
+      "Define the exact metric that would confirm demand, and watch real behavior"
+    ],
+    "failure_modes": "Spending the runway to build the wrong thing; counting compliments as demand."
+  },
+  {
+    "id": "diag-door-mismatch",
+    "family": "Diagnosis",
+    "title": "Agonizing over a reversible call, rushing an irreversible one",
+    "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "stuck deciding",
+      "cant decide",
+      "big decision",
+      "overthinking",
+      "should i commit",
+      "hard choice",
+      "taking too long to decide"
+    ],
+    "summary": "Tag the door type first: reversible decisions should be fast; irreversible ones deserve a slow, careful look.",
+    "when_to_use": "You're stuck on a decision and unsure how much deliberation it deserves.",
+    "how_to_run": [
+      "Label each pending decision one-way (hard to undo) or two-way (easy to undo)",
+      "Fast-track every two-way door now; reserve real deliberation for one-way doors"
+    ],
+    "failure_modes": "Spending weeks on a cheap reversible test while rushing a permanent commitment."
+  },
+  {
+    "id": "diag-hired-on-charisma",
+    "family": "Diagnosis",
+    "title": "Hiring on charisma and résumé, misfit on outcomes",
+    "stages": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "first hire",
+      "interview",
+      "who to hire",
+      "impressive candidate",
+      "bad hire",
+      "hiring decision",
+      "liked them in the interview"
+    ],
+    "summary": "Score candidates against the role's concrete outcomes, not how impressive they seem.",
+    "when_to_use": "You're about to hire and leaning on gut impression.",
+    "how_to_run": [
+      "Write 3-5 outcomes the role must hit in 6-12 months before your next interview",
+      "Ask every candidate to walk through how they actually did similar things; grade against the outcomes"
+    ],
+    "failure_modes": "A charismatic hire who can't deliver the actual job; rewriting the bar to fit someone you like."
+  },
+  {
+    "id": "diag-acquisition-over-activation",
+    "family": "Diagnosis",
+    "title": "Optimizing acquisition while activation/retention are broken",
+    "stages": [
+      4,
+      5
+    ],
+    "reversibility": "n-a",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "more signups",
+      "traffic but no revenue",
+      "activation",
+      "onboarding",
+      "people dont stick",
+      "funnel",
+      "getting users but"
+    ],
+    "summary": "Fix the weakest funnel stage first — early leaks (activation, retention) make everything downstream pointless.",
+    "when_to_use": "You're pushing for more top-of-funnel but conversion or retention is weak.",
+    "how_to_run": [
+      "Put a number on each funnel stage (acquisition → activation → retention → referral → revenue)",
+      "Attack the worst stage first before spending more on acquisition"
+    ],
+    "failure_modes": "Pouring money into the top of a leaky funnel."
+  },
+  {
+    "id": "diag-brutal-industry",
+    "family": "Diagnosis",
+    "title": "Entering a structurally brutal industry, blaming yourself for thin margins",
+    "stages": [
+      0,
+      1
+    ],
+    "reversibility": "n-a",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "thin margins",
+      "hard to make money",
+      "everyone competes on price",
+      "tough industry",
+      "low margins",
+      "why is this so hard",
+      "commoditized"
+    ],
+    "summary": "Check the industry structure before committing more — some markets cap profit no matter how well you execute.",
+    "when_to_use": "Margins are thin and you're wondering if it's you or the market.",
+    "how_to_run": [
+      "Rate the five forces (rivalry, new entrants, substitutes, buyer power, supplier power) high/low for your market",
+      "Decide whether your specific wedge can still win, or whether to pick a better-structured market"
+    ],
+    "failure_modes": "Blaming execution for a structural margin problem; treating a 'bad' industry as a stop sign when a real wedge exists."
+  },
+  {
+    "id": "diag-runway-too-thin",
+    "family": "Diagnosis",
+    "title": "Running on too little runway, one miss from fatal",
+    "stages": [
+      3,
+      4,
+      5
+    ],
+    "reversibility": "n-a",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "low on cash",
+      "runway",
+      "two months left",
+      "might not make payroll",
+      "cash tight",
+      "running out of money",
+      "burn rate"
+    ],
+    "summary": "Keep a real margin of safety; plan to the case where things go ~30% worse than your best estimate.",
+    "when_to_use": "Your cash plan only works if everything goes right.",
+    "how_to_run": [
+      "Re-forecast a '30% worse' case (slower revenue, later close)",
+      "Rebuild a cash buffer or cut costs so a normal miss isn't fatal"
+    ],
+    "failure_modes": "Planning to exactly your best-case runway; no buffer for ordinary slippage."
+  },
+  {
+    "id": "diag-sugarcoated-feedback",
+    "family": "Diagnosis",
+    "title": "Sugarcoating feedback until it becomes a termination",
+    "stages": [
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "avoiding hard conversation",
+      "feedback",
+      "performance issue",
+      "being too nice",
+      "didnt say anything",
+      "let it slide",
+      "should have said something"
+    ],
+    "summary": "Give candor early and specifically; withholding the hard thing to be 'nice' is actually unkind.",
+    "when_to_use": "You've been postponing direct feedback to keep the peace.",
+    "how_to_run": [
+      "Deliver the one piece of direct, specific feedback you've been putting off — today",
+      "Name the behavior and its impact, then agree what changes"
+    ],
+    "failure_modes": "Silence that builds until the only option left is firing."
+  },
+  {
+    "id": "diag-biggest-market-no-edge",
+    "family": "Diagnosis",
+    "title": "Chasing the biggest market where you have no right to win",
+    "stages": [
+      0,
+      1,
+      2
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "huge market",
+      "big opportunity",
+      "tam",
+      "which market",
+      "no advantage",
+      "why us",
+      "everyone wants this market"
+    ],
+    "summary": "Weigh market attractiveness against your actual edge; pick where both are high, not just where the market is big.",
+    "when_to_use": "You're drawn to a large market but unsure you can win it.",
+    "how_to_run": [
+      "Score candidate markets on two axes: attractiveness AND your unfair advantage",
+      "Pick the high-high one, even if smaller"
+    ],
+    "failure_modes": "Entering a giant market with no edge and losing to focused competitors."
+  },
+  {
+    "id": "diag-diffuse-ownership",
+    "family": "Diagnosis",
+    "title": "Diffuse ownership; work falls through the cracks",
+    "stages": [
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "who owns this",
+      "fell through the cracks",
+      "nobody did it",
+      "unclear who",
+      "co-founder roles",
+      "overlap",
+      "dropped the ball"
+    ],
+    "summary": "Assign exactly one accountable owner per thing — if two people are accountable, no one is.",
+    "when_to_use": "Tasks slip because it's unclear who owns them.",
+    "how_to_run": [
+      "For your current project, list each workstream with exactly one accountable name",
+      "Make sure that person has the authority and info to actually deliver"
+    ],
+    "failure_modes": "'We both thought the other had it'; diffusing blame instead of clarifying who drives."
+  },
+  {
+    "id": "diag-pitched-before-pain",
+    "family": "Diagnosis",
+    "title": "Pitching the product before establishing a painful, quantified gap",
+    "stages": [
+      2,
+      3,
+      4
+    ],
+    "reversibility": "n-a",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "they dont see the value",
+      "pitch falls flat",
+      "not convinced",
+      "why should they buy",
+      "selling",
+      "demo not landing",
+      "cant close"
+    ],
+    "summary": "Diagnose before prescribing — make the buyer feel the cost of their current situation before you present the solution.",
+    "when_to_use": "Your pitch isn't landing and buyers don't see why they need you.",
+    "how_to_run": [
+      "For your top deal, write the buyer's current state, desired state, and the cost of the gap between them",
+      "Lead the next conversation with that gap, not your features"
+    ],
+    "failure_modes": "Presenting features at someone who hasn't admitted a problem worth paying to solve."
+  },
+  {
+    "id": "diag-low-return-core-ops",
+    "family": "Diagnosis",
+    "title": "Reinvesting in low-return work out of habit",
+    "stages": [
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "where to spend",
+      "what to work on",
+      "reinvest",
+      "best use of money",
+      "habit",
+      "default spending",
+      "return on effort"
+    ],
+    "summary": "Allocate the next dollar and hour to its best available use, not to whatever you did last time.",
+    "when_to_use": "You keep funding the same activities without checking the return.",
+    "how_to_run": [
+      "List every option for the next dollar/hour and rank by expected return",
+      "Shift resources to the top one; cut or shrink the laggards"
+    ],
+    "failure_modes": "Sunk-cost and habit keeping money in low-return work."
+  },
+  {
+    "id": "diag-spread-too-even",
+    "family": "Diagnosis",
+    "title": "Spreading investment evenly so nothing becomes a strength",
+    "stages": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "too many things",
+      "spread thin",
+      "a bit of everything",
+      "no real strength",
+      "focus",
+      "cant decide what to double down on",
+      "diversified"
+    ],
+    "summary": "Concentrate on the one or two capabilities that are both valuable and hard to copy; over-invest there.",
+    "when_to_use": "You're doing a little of everything and nothing stands out.",
+    "how_to_run": [
+      "Identify the 1-2 capabilities that are valuable AND hard for others to copy",
+      "Over-invest in those; deliberately under-invest elsewhere"
+    ],
+    "failure_modes": "Even spreading that produces no durable advantage anywhere."
+  },
+  {
+    "id": "diag-blame-culture",
+    "family": "Diagnosis",
+    "title": "Hiding problems in a blame culture until they explode",
+    "stages": [
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "team afraid",
+      "blame",
+      "people hide problems",
+      "no one speaks up",
+      "mistakes hidden",
+      "scared to admit",
+      "culture"
+    ],
+    "summary": "Build psychological safety so problems surface early; punishing the messenger guarantees you hear bad news too late.",
+    "when_to_use": "People around you don't flag problems until they're crises.",
+    "how_to_run": [
+      "Open your next meeting by naming one of your own mistakes, to model it",
+      "Thank the next person who raises a risk or error early, by name"
+    ],
+    "failure_modes": "Reacting to bad news with blame, which silences everyone permanently."
+  },
+  {
+    "id": "diag-paid-funnel-no-loop",
+    "family": "Diagnosis",
+    "title": "Treating growth as a funnel you keep refilling with paid spend",
+    "stages": [
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "paid ads",
+      "keep spending to grow",
+      "no organic growth",
+      "cac rising",
+      "growth stops when ads stop",
+      "funnel",
+      "buy users"
+    ],
+    "summary": "Build a compounding loop where each user generates the next, instead of renting growth that stops when spend stops.",
+    "when_to_use": "Growth depends entirely on paid spend and dies when you pause it.",
+    "how_to_run": [
+      "Sketch one loop where a user action (invite, content, data, referral) brings the next user",
+      "Invest in strengthening that loop alongside (or instead of) more ad spend"
+    ],
+    "failure_modes": "A funnel with no loop — growth halts the moment the ad budget does."
+  }
+]
