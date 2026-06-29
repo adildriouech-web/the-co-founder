@@ -99,9 +99,14 @@ function serveStatic(req, res) {
 function readBody(req) {
   return new Promise((resolve, reject) => {
     let body = "";
-    req.on("data", (c) => { body += c; if (body.length > 2000000) req.destroy(); });
-    req.on("end", () => resolve(body));
-    req.on("error", reject);
+    let aborted = false;
+    req.on("data", (c) => {
+      if (aborted) return;
+      body += c;
+      if (body.length > 2000000) { aborted = true; reject(new Error("payload too large")); req.destroy(); } // reject (don't hang) on oversize
+    });
+    req.on("end", () => { if (!aborted) resolve(body); });
+    req.on("error", (e) => { if (!aborted) { aborted = true; reject(e); } });
   });
 }
 
