@@ -184,12 +184,21 @@ async function statsFromJsonl() {
 async function getConversations({ limit = 50, sinceDays = null } = {}) {
   limit = Math.max(1, Math.min(parseInt(limit, 10) || 50, 500));
   if (backend === "neon") {
+    // Dedupe to ONE row per conversation (the latest turn holds the full transcript). Rows with no
+    // conversation_id stay distinct (keyed on their own id). Then order newest-first and limit.
     const rows = sinceDays
-      ? await sql`SELECT ts, conversation_id AS "conversationId", client_id AS "clientId", messages
-                  FROM conversations WHERE ts > now() - make_interval(days => ${parseInt(sinceDays, 10)})
-                  ORDER BY ts DESC LIMIT ${limit}`
-      : await sql`SELECT ts, conversation_id AS "conversationId", client_id AS "clientId", messages
-                  FROM conversations ORDER BY ts DESC LIMIT ${limit}`;
+      ? await sql`SELECT * FROM (
+            SELECT DISTINCT ON (COALESCE(conversation_id, id::text)) ts, conversation_id AS "conversationId",
+                   client_id AS "clientId", messages
+            FROM conversations WHERE ts > now() - make_interval(days => ${parseInt(sinceDays, 10)})
+            ORDER BY COALESCE(conversation_id, id::text), ts DESC
+          ) t ORDER BY t.ts DESC LIMIT ${limit}`
+      : await sql`SELECT * FROM (
+            SELECT DISTINCT ON (COALESCE(conversation_id, id::text)) ts, conversation_id AS "conversationId",
+                   client_id AS "clientId", messages
+            FROM conversations
+            ORDER BY COALESCE(conversation_id, id::text), ts DESC
+          ) t ORDER BY t.ts DESC LIMIT ${limit}`;
     return rows.map((r) => ({ ts: r.ts, conversationId: r.conversationId, clientId: r.clientId,
       messages: typeof r.messages === "string" ? safeParse(r.messages) : (r.messages || []) }));
   }
@@ -201,7 +210,14 @@ async function getConversations({ limit = 50, sinceDays = null } = {}) {
   } catch { rows = []; }
   if (sinceDays) { const cut = Date.now() - parseInt(sinceDays, 10) * 864e5; rows = rows.filter((r) => r.ts && Date.parse(r.ts) >= cut); }
   rows.sort((a, b) => (a.ts < b.ts ? 1 : -1));
-  return rows.slice(0, limit).map((r) => ({ ts: r.ts, conversationId: r.conversationId || null, clientId: r.clientId || null, messages: r.messages || [] }));
+  // Dedupe to the latest row per conversationId (the full transcript); keep rows with no id distinct.
+  const seen = new Set(); const deduped = [];
+  for (const r of rows) {
+    const key = r.conversationId || ("__" + (r.ts || Math.random()));
+    if (seen.has(key)) continue;
+    seen.add(key); deduped.push(r);
+  }
+  return deduped.slice(0, limit).map((r) => ({ ts: r.ts, conversationId: r.conversationId || null, clientId: r.clientId || null, messages: r.messages || [] }));
 }
 function safeParse(s) { try { return JSON.parse(s); } catch { return []; } }
 
