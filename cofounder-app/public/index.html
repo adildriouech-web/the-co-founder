@@ -329,7 +329,14 @@ el.appendChild(d);
 }
 
 function esc(s){ return s.replace(/[&<>]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[m])); }
-function fmt(s){ return esc(s).replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>"); }
+// Render the light markdown the model occasionally emits, on already-escaped text (so no HTML injection).
+function fmt(s){
+  let t=esc(s);
+  t=t.replace(/^\s*#{1,6}\s+(.+)$/gm,"<strong>$1</strong>");  // # headers -> bold line
+  t=t.replace(/^\s*[-*]\s+/gm,"• ");                          // - / * bullets -> •
+  t=t.replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>");        // **bold**
+  return t;
+}
 
 // split a reply into clean text + tappable options (OPTIONS: a | b | c) + hidden MEMORY profile.
 // Hardened: tolerates **MEMORY**, odd spacing, case; and never lets a half-streamed control
