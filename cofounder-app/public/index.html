@@ -372,8 +372,9 @@ thread.innerHTML="";
 const c=chats[currentId];
 if(!c||!c.messages.length){ renderEmpty(); return; }
 c.messages.forEach((m,i)=>{
-const {row}=bubble(m.role,m.content);
+const {row,col}=bubble(m.role,m.content);
 thread.appendChild(row);
+if(m.role==="assistant" && m.options && m.options.length) renderChips(col, m.options);  // restore tappable chips on reload/switch
 });
 scrollDown();
 }
@@ -475,7 +476,7 @@ acc="Hmm, I couldn't reach my thinking just now ("+err.message+"). Give it anoth
 const parsed=parseReply(acc);
 b.innerHTML=fmt(parsed.clean);
 if(parsed.memory){ c.profile=parsed.memory; localStorage.setItem("cf_profile_last", parsed.memory); }   // per-conversation memory; latest kept for opt-in carry-over
-c.messages.push({role:"assistant",content:parsed.clean}); c.updated=Date.now(); save(); renderList();
+c.messages.push({role:"assistant",content:parsed.clean,options:parsed.options}); c.updated=Date.now(); save(); renderList();
 renderChips(col, parsed.options);
 speak(parsed.clean);
 streaming=false; $("sendBtn").disabled=false; scrollDown();
