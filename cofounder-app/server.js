@@ -90,6 +90,18 @@ function readBody(req) {
   });
 }
 
+// Remove the control lines the model appends for the UI (OPTIONS: chips, MEMORY: profile)
+// so they never end up in stored transcripts. Tolerates leading markdown/space and case.
+function stripControl(text) {
+  if (typeof text !== "string") return text;
+  let t = text;
+  const mi = t.search(/(?:^|\n)\s*\**\s*MEMORY\s*\**\s*:/i);
+  if (mi >= 0) t = t.slice(0, mi);
+  const oi = t.search(/(?:^|\n)\s*\**\s*OPTIONS\s*\**\s*:/i);
+  if (oi >= 0) t = t.slice(0, oi);
+  return t.trim();
+}
+
 // ---- the chat relay ----
 async function handleChat(req, res) {
   if (!API_KEY) { res.writeHead(500, { "Content-Type": "application/json" }); return res.end(JSON.stringify({ error: "Server is missing ANTHROPIC_API_KEY." })); }
@@ -113,7 +125,7 @@ async function handleChat(req, res) {
   // cross-session memory: the client keeps a compact founder profile and sends it back each turn
   const profile = (typeof payload.profile === "string" ? payload.profile : "").trim().slice(0, 1200);
   const systemPrompt = profile
-    ? SYSTEM_PROMPT + "\n\n# What you already know about this founder (from earlier — use it, build on it, don't re-ask what you already know):\n" + profile
+    ? SYSTEM_PROMPT + "\n\n# What you already know about this founder (carried over from an earlier chat the founder chose to continue — lean on it to avoid re-asking, but surface any specific fact transparently rather than stating it as if they just told you, and never volunteer their location or identity unprompted):\n" + profile
     : SYSTEM_PROMPT;
 
   let upstream;
@@ -172,7 +184,7 @@ async function handleChat(req, res) {
       conversationId: typeof payload.conversationId === "string" ? payload.conversationId : null,
       clientId: typeof payload.clientId === "string" ? payload.clientId.slice(0, 64) : null,
       model: MODEL,
-      messages: messages.concat(assistantText ? [{ role: "assistant", content: assistantText }] : []),
+      messages: messages.concat(assistantText ? [{ role: "assistant", content: stripControl(assistantText) }] : []),
     });
   }
 }
