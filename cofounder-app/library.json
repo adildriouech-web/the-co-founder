@@ -4668,5 +4668,1423 @@
     "evidence_note": "Linking runway to the next fundable milestone is standard, widely-endorsed startup-finance guidance and logically sound, but what counts as a milestone is judgment-based and market-dependent, and the cautionary stories are shaped by survivorship bias. Medium. The spending and pacing choices are reversible; the raise itself is not.",
     "regional_notes": "What the next investor expects as proof varies by ecosystem and sector; in markets with less capital, the milestone bar to unlock the next round is often higher and runway needs to stretch further. Calibrate to who your next likely funder actually is.",
     "examples": "A founder raises a small round but never defines what it must prove. They spend it broadly, and when they go to raise again they have growth but no clean evidence of customer retention — the exact thing investors ask about — so the next raise stalls and cash runs low."
+  },
+  {
+    "id": "scenario-planning",
+    "family": "Strategy",
+    "title": "Scenario Planning",
+    "stages": [
+      0,
+      1,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "what if the market changes",
+      "planning for uncertainty",
+      "best case worst case",
+      "what if funding dries up",
+      "how do i plan when nothing is certain",
+      "prepare for different outcomes",
+      "what if growth is slower than expected",
+      "stress test my plan",
+      "what if a competitor shows up",
+      "budgeting under uncertainty",
+      "runway under different scenarios",
+      "hedge my bets"
+    ],
+    "summary": "Instead of betting everything on one forecast, you sketch a few plausible futures (a strong one, a middle one, a weak one) and decide what you'd do in each. It turns a fragile single plan into a set of pre-made responses so surprises don't paralyze you.",
+    "when_to_use": "When the future genuinely hinges on factors you can't predict (funding, adoption speed, a key partner, regulation) and you're tempted to build one optimistic plan. Most useful at the idea/validation stage for setting expectations, and again at scale when committing real money.",
+    "how_to_run": [
+      "Name the 2-3 uncertainties that would most change your outcome (e.g. how fast customers sign up, whether you raise money).",
+      "Sketch three coherent futures: a strong case, a likely middle case, and a weak case, each told as a short story not just a number.",
+      "For each, write down what you would actually do, what cash you'd need, and what early signal would tell you you're in that world.",
+      "Pick the moves that are smart in all three (no-regret moves) and do those now.",
+      "Set tripwires: specific numbers or events that tell you which scenario is unfolding so you switch plans early instead of late."
+    ],
+    "preconditions": "You need at least a rough sense of your cost structure and the handful of variables that swing your outcome; with zero data the scenarios become pure fiction.",
+    "failure_modes": "Treating the middle case as 'the plan' and ignoring the other two. Writing scenarios so vague they trigger no decisions. Confusing scenarios with forecasts and arguing over which is 'right' instead of preparing for each. Building so many scenarios you analyze forever and act on none. Never setting tripwires, so you don't notice which future you're actually in.",
+    "evidence_note": "Originated in mid-20th-century military and corporate strategy (Herman Kahn at RAND; later large-firm planning teams in the 1970s). Widely taught and credited with faster reaction to shocks, but the famous success stories are retrospective and hard to attribute cleanly. Medium: a sound discipline for thinking under uncertainty, not a predictive tool, with little controlled evidence for tiny startups.",
+    "regional_notes": "Especially valuable for founders in markets with volatile currency, unpredictable regulation, or thin local funding, where the gap between strong and weak cases is wide.",
+    "examples": "A solo founder assumes 100 signups a month and plans to quit her job in six months. Instead she writes three futures: strong (150/mo, quit in 4), middle (60/mo, keep the job and grow part-time), weak (20/mo, the channel fails). Her no-regret move in all three is to test paid ads cheaply this month; her tripwire is under 40 signups in month one means she stays employed."
+  },
+  {
+    "id": "crossing-the-chasm",
+    "family": "Sales",
+    "title": "Crossing the Chasm",
+    "stages": [
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": true,
+    "keywords": [
+      "early users love it but sales stalled",
+      "how to reach mainstream customers",
+      "stuck after early adopters",
+      "who should i target first",
+      "pick a market to focus on",
+      "growth flattened after launch",
+      "my buyers are too spread out",
+      "how to get past the tech enthusiasts",
+      "find a niche to dominate",
+      "why won't normal customers buy",
+      "focus on one customer type",
+      "beachhead market"
+    ],
+    "summary": "The enthusiasts who buy anything new are a different crowd from the practical buyers who only buy proven things, and the jump between them is where many products stall. The fix is to pick one narrow group of practical buyers and become the obvious choice for them before expanding.",
+    "when_to_use": "When early/tech-friendly users adopted happily but mainstream buyers aren't following and growth has flattened, and you're choosing where to concentrate scarce sales effort.",
+    "how_to_run": [
+      "List the distinct groups who could buy, and notice which are pragmatic buyers (they want references and a complete solution, not novelty).",
+      "Pick ONE narrow segment small enough to dominate but big enough to matter, where the pain is urgent and buyers talk to each other.",
+      "Build the 'whole product' that segment needs to fully solve their problem, not just your core feature.",
+      "Win a few visible reference customers there and use their word of mouth as your main engine.",
+      "Only after you own that beachhead, expand to adjacent segments that respect those references."
+    ],
+    "preconditions": "You already have working early adopters and a product that delivers real value; this is about distribution and focus, not validating whether the product works.",
+    "failure_modes": "Picking a 'niche' that's still everyone. Choosing a segment with no internal word of mouth. Expanding before truly owning the first segment. Mistaking enthusiastic early adopters for mainstream demand. Underinvesting in the surrounding 'whole product' so pragmatic buyers see an incomplete solution.",
+    "evidence_note": "From Geoffrey Moore (1991), building on diffusion-of-innovations research (Rogers). The adoption curve has solid academic roots; the 'chasm/beachhead' prescription is a practitioner framework supported by case studies, not controlled evidence. Medium.",
+    "regional_notes": "The 'whole product' bar varies by region: local-language support, payment methods, and onboarding may be the missing pieces pragmatic buyers demand before switching.",
+    "examples": "A founder's scheduling tool is loved by indie tinkerers but won't grow. They stop selling to 'any small business' and pick independent dental clinics in their city, who share booking headaches and refer each other. They add what those clinics need (local payment, no-show reminders, staff logins), land three references, and let referrals drive the next ten."
+  },
+  {
+    "id": "rice-prioritization",
+    "family": "Product",
+    "title": "RICE Prioritization",
+    "stages": [
+      2,
+      3,
+      5,
+      6
+    ],
+    "reversibility": "two-way",
+    "evidence": "low",
+    "warn": true,
+    "keywords": [
+      "what to build first",
+      "prioritize backlog",
+      "too many ideas",
+      "which feature next",
+      "cant decide what to work on",
+      "everything feels important",
+      "stop building random stuff",
+      "rank my roadmap",
+      "is this feature worth it",
+      "focus my limited time",
+      "what gives the most bang for the buck",
+      "decide between features"
+    ],
+    "summary": "A scoring method to rank competing ideas by how many people they reach, how much they help, how sure you are, and how much effort they cost, so the highest value-for-effort rises to the top. It replaces 'loudest voice wins' with a rough comparable number.",
+    "when_to_use": "When you have more ideas than time and keep flip-flopping. Best once you have some users to estimate reach and impact; less useful before you know your customer.",
+    "how_to_run": [
+      "List the ideas you're choosing between.",
+      "Estimate Reach (users/events in a period), Impact (how much it moves what you care about), and Confidence (as a %).",
+      "Estimate Effort honestly in person-time (resist lowballing your own).",
+      "Compute Reach × Impact × Confidence ÷ Effort and sort high to low.",
+      "Use the ranking to start the discussion, then sanity-check the top items against strategy before committing."
+    ],
+    "preconditions": "You know your users well enough to make non-random estimates; with no users the numbers are guesses dressed up as math.",
+    "failure_modes": "False precision: a score built on guessed inputs launders a hunch into a 'data-driven' decision. Gaming the effort number for a pet project. Ignoring strategic bets that score low but unlock everything. Over-weighting easy high-reach tweaks while starving differentiating work. Scoring more than building.",
+    "evidence_note": "Created at a product-feedback company (Intercom, ~2016) as an internal practice. A practitioner heuristic with no academic validation; useful as a conversation tool. Low — it organizes judgment, doesn't produce truth, and is only as good as the inputs.",
+    "regional_notes": "",
+    "examples": "A founder weighs five things for next week: a referral feature, faster signup, dark mode, enterprise login, a bug fix. Faster signup reaches every new user, likely lifts activation, takes two days — it tops the list; dark mode reaches everyone but moves no goal, so it sinks despite being fun. They ship the signup fix first."
+  },
+  {
+    "id": "kano-model",
+    "family": "Product",
+    "title": "Kano Model",
+    "stages": [
+      2,
+      3,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": true,
+    "keywords": [
+      "which features actually matter",
+      "what to build first",
+      "stop adding features no one wants",
+      "what will customers notice",
+      "table stakes vs nice to have",
+      "how to wow customers",
+      "prioritize features by what delights",
+      "what's expected vs what's extra",
+      "feature bloat",
+      "which features drive satisfaction",
+      "what can i cut",
+      "should i build this feature"
+    ],
+    "summary": "Sorts features into three buckets: basics customers assume and only notice when missing, performance features where more is better, and delighters that surprise and please but aren't expected. It stops you polishing delighters while the basics are broken.",
+    "when_to_use": "When deciding which features to build or cut and you suspect you're either missing must-haves or over-investing in extras.",
+    "how_to_run": [
+      "List candidate features.",
+      "For each, ask customers two paired questions: how they'd feel if it were present, and if it were absent.",
+      "Sort each into basic (absence angers, presence expected), performance (more is better), or delighter (presence pleases, absence fine).",
+      "Cover every basic before spending on delighters, then add one or two delighters to stand out.",
+      "Re-check over time: today's delighter becomes tomorrow's basic."
+    ],
+    "preconditions": "You need access to real prospective customers for the paired questions; doing it from your gut just relabels your opinions.",
+    "failure_modes": "Self-classifying instead of surveying. Chasing delighters while a basic is broken. Treating categories as permanent. Over-engineering performance past what customers care about. Surveying enthusiasts instead of real buyers.",
+    "evidence_note": "Developed by Noriaki Kano (Japan, late 1970s/early 80s) with a published questionnaire method and a real body of follow-up research, though results vary with survey quality. Medium — genuinely useful and reasonably validated, but easy to run sloppily and over-trust.",
+    "regional_notes": "What's a 'basic' vs a 'delighter' differs by market; classify with customers from the region you're selling into.",
+    "examples": "A budgeting-app founder surveys users: bank syncing is a basic (annoying when absent, unimpressive when present), category accuracy is a performance feature (more accurate = happier), a year-end spending recap is a delighter. They fix syncing first, keep improving categorization, and add the recap last as a differentiator."
+  },
+  {
+    "id": "gap-selling",
+    "family": "Sales",
+    "title": "Selling the cost of the current-state gap",
+    "stages": [
+      1,
+      2
+    ],
+    "reversibility": "two-way",
+    "evidence": "low",
+    "warn": true,
+    "keywords": [
+      "my demos don't convert",
+      "prospect says it's too expensive",
+      "they go quiet after the call",
+      "not sure why people don't buy",
+      "selling features but no one bites",
+      "how do i get them to say yes",
+      "customer doesn't see the value",
+      "leads stall after first call",
+      "why is my pitch not landing",
+      "they like it but won't pay"
+    ],
+    "summary": "Instead of pitching features, you diagnose what the buyer's current situation is costing them and make that gap, and its price, concrete. The sale becomes about closing a costly gap rather than buying a tool.",
+    "when_to_use": "When prospects seem interested but stall, ghost, or push back on price, and you suspect they don't feel enough pain to act. Best for considered purchases where the buyer has a real problem they've normalized.",
+    "how_to_run": [
+      "Map the buyer's current state honestly: what they do today, what it costs in money, time, or risk, and what they don't realize is broken.",
+      "Quantify the gap, current versus desired future, in their numbers not yours.",
+      "Run the conversation as diagnosis first: surface the cost of staying put before mentioning your product.",
+      "Connect your product only to closing that specific gap, tying each capability to a cost they already agreed is real.",
+      "If the gap is small or imaginary, disqualify the deal rather than manufacturing urgency."
+    ],
+    "preconditions": "You need enough access to ask diagnostic questions and a real, quantifiable problem. It doesn't work for trivial or impulse purchases.",
+    "failure_modes": "Weaponized as a high-pressure script, inventing pain the buyer doesn't feel, which erodes trust. Technical founders skip the diagnosis and revert to feature-listing. Over-quantifying a vague problem produces fake-precise numbers the buyer doesn't believe.",
+    "evidence_note": "Codified in a practitioner sales book (Keenan, 2018). The underlying idea — buyers act on perceived pain, and consultative diagnosis beats feature-pitching — has decades of softer support, but the specific method has no controlled studies. Low: popular practitioner consensus, not validated.",
+    "regional_notes": "Direct cost-of-inaction framing can read as aggressive in relationship-first or high-context markets; diagnosis works everywhere but the confrontation about cost may need softening.",
+    "examples": "A solo founder selling a scheduling tool keeps losing deals after good demos. Instead of demoing features, they ask how the prospect handles bookings now, and learn they lose ~6 hours a week and turn away ~2 clients a month to double-bookings. Framed as a recurring monthly loss the prospect named, price stops being the objection."
+  },
+  {
+    "id": "win-loss-analysis",
+    "family": "Sales",
+    "title": "Asking buyers directly why you won or lost",
+    "stages": [
+      2,
+      3
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "don't know why we lost the deal",
+      "why do customers choose us",
+      "guessing why deals fall through",
+      "losing to a competitor",
+      "what makes people buy",
+      "sales keeps stalling",
+      "why did they pick someone else",
+      "want real feedback from buyers",
+      "not sure what's working in sales",
+      "why we win some and lose some"
+    ],
+    "summary": "You contact buyers after a deal closes, won or lost, and ask what actually drove the decision. The pattern across many conversations tells you what's really working and what's quietly killing deals.",
+    "when_to_use": "Once you have enough closed deals (won and lost) to see patterns, and you're guessing about why deals go your way or don't.",
+    "how_to_run": [
+      "Pick a set of recently decided deals, won and lost, interviewed within a few weeks while memory is fresh.",
+      "Ask open questions about the whole decision: what triggered the search, who else they considered, what nearly stopped them, why they chose as they did.",
+      "Have someone other than the closing salesperson run it so buyers speak candidly.",
+      "Look for patterns across many interviews rather than reacting to any single one.",
+      "Feed recurring themes back into pitch, pricing, product, and which prospects you pursue."
+    ],
+    "preconditions": "You need a steady flow of decided deals and willing buyers. With only a handful, the signal is too noisy to trust.",
+    "failure_modes": "Buyers give polite or self-justifying reasons (lost deals citing 'price' when the real cause was trust or fit). Founders interviewing their own lost deals hear softened answers. Acting on a single dramatic interview instead of the pattern causes whiplash.",
+    "evidence_note": "Long-standing B2B practice with consistent practitioner consensus and some industry studies reporting higher win rates among regular practitioners, though these are vendor-linked, not peer-reviewed. The core mechanism — post-decision interviews reduce founder guesswork — is sound. Medium.",
+    "regional_notes": "In face-saving cultures, lost-deal buyers may decline to criticize directly; a neutral third-party interviewer and indirect questions help. Some buyers expect reciprocity for their time.",
+    "examples": "A first-time founder assumes they keep losing on price and considers a discount. They have a friend call ten recent lost prospects, and seven say they were nervous a one-person company would disappear, not that it cost too much. The fix is a support guarantee and references, not a lower price."
+  },
+  {
+    "id": "bar-raiser",
+    "family": "Hiring",
+    "title": "An independent interviewer with veto on every hire",
+    "stages": [
+      3,
+      4
+    ],
+    "reversibility": "one-way",
+    "evidence": "low",
+    "warn": true,
+    "keywords": [
+      "worried about hiring the wrong person",
+      "first few hires feel too important",
+      "don't want to lower my standards",
+      "everyone likes them but i'm unsure",
+      "how do i keep hiring quality high",
+      "scared of a bad hire",
+      "team is desperate to fill the role",
+      "gut says no but we need someone",
+      "how to avoid settling on a candidate",
+      "keep the hiring bar high as we grow"
+    ],
+    "summary": "You add one trained interviewer to every hiring decision who has no stake in filling the role and holds a veto, to stop the bar dropping when a team is desperate to hire. Their only job is to protect long-term quality.",
+    "when_to_use": "Once you're hiring beyond the founding circle and feel pressure to fill roles fast, when the people who need the hire are the same ones deciding.",
+    "how_to_run": [
+      "Designate an interviewer who is not the hiring manager and gains nothing from the seat being filled.",
+      "Give that person explicit authority to veto, not just advise.",
+      "Have them assess whether the candidate raises the average bar, not merely clears it.",
+      "Keep their assessment independent: separate write-ups before any group discussion.",
+      "Review over time whether their vetoes correlated with better outcomes, and recalibrate."
+    ],
+    "preconditions": "Requires at least a few people qualified to interview and a founder willing to let a hire be blocked. Impossible for a true solo founder until there's a trusted second interviewer.",
+    "failure_modes": "With a tiny team there's no truly independent person, so it becomes theater. The veto-holder can become an arbitrary bottleneck or impose idiosyncratic taste as 'the bar.' It can slow hiring badly when speed matters, and well-intentioned bars often encode bias toward people who resemble the existing team.",
+    "evidence_note": "A named internal program at one large tech company, widely copied. Solid general research shows structured, independent evaluation reduces bias and noise in hiring, supporting the mechanism; but the specific single-veto design has no independent validation and its benefits are asserted, not measured. Low.",
+    "regional_notes": "A junior person vetoing a senior manager's pick clashes with steep-hierarchy cultures; the independent role may need to sit with someone senior. Local labor laws also constrain how rejection reasons are documented.",
+    "examples": "A founder making their fifth hire is under pressure because the team is stretched and everyone likes a friendly, available candidate. They ask a respected outside contact to interview independently with a veto. That person flags that the candidate clears the job but wouldn't lift the team's level, prompting the founder to keep looking rather than hire out of exhaustion."
+  },
+  {
+    "id": "situational-leadership",
+    "family": "Hiring",
+    "title": "Flexing between direction and autonomy per person",
+    "stages": [
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "low",
+    "warn": true,
+    "keywords": [
+      "my first employee needs too much hand-holding",
+      "should i micromanage or back off",
+      "new hire isn't ramping",
+      "good engineer but i keep stepping in",
+      "how much should i delegate",
+      "they keep asking me what to do",
+      "experienced hire feels stifled",
+      "when do i let people run with it",
+      "managing someone for the first time",
+      "not sure how hands-on to be"
+    ],
+    "summary": "You adjust how much direction versus freedom you give based on how skilled and motivated a person is at a specific task — more hands-on when they're new to it, more hands-off as they prove capable. The same person may need different management on different tasks.",
+    "when_to_use": "When you start managing people for the first time and are unsure whether to give detailed direction or step back, especially with a mix of new and experienced hires.",
+    "how_to_run": [
+      "For a given task, gauge the person's actual competence and their current confidence/motivation, separately.",
+      "Give heavy direction when competence is low; shift toward coaching as competence rises but confidence wobbles.",
+      "Hand over autonomy once they're both capable and committed, and resist stepping back in.",
+      "Re-assess per task, not per person: someone senior overall may still need direction on something new.",
+      "Talk openly about which mode you're in so it doesn't read as random micromanagement or neglect."
+    ],
+    "preconditions": "You need enough observation of real work to judge competence honestly, and self-awareness about your own default.",
+    "failure_modes": "Misjudging competence (mistaking confidence for skill) and handing over too early, or never letting go. Flexing styles can feel inconsistent or manipulative if unexplained. The tidy quadrants imply more precision than reality offers, and it says nothing about whether the person is right for the role at all.",
+    "evidence_note": "A widely taught model (Hersey-Blanchard, late 1960s on). Academic tests of the specific model have been mixed-to-unsupportive, even as the general principle — match support to readiness — is intuitive and partially backed by broader contingency research. Low: popular and useful as a lens, weak as a validated theory.",
+    "regional_notes": "In higher power-distance cultures employees may expect and prefer more explicit direction, so a fast move to hands-off autonomy can read as the boss abdicating.",
+    "examples": "A founder's first hire is a strong engineer who freezes on customer-facing tasks. The founder gives close direction and templates for the customer work while staying fully hands-off on coding the hire already does well, dialing back direction as they get comfortable talking to users."
+  },
+  {
+    "id": "extreme-ownership",
+    "family": "Thinking",
+    "title": "Owning the outcome before blaming circumstances",
+    "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "low",
+    "warn": true,
+    "keywords": [
+      "it's not my fault but",
+      "blaming the market for slow sales",
+      "my cofounder keeps dropping the ball",
+      "customers just don't get it",
+      "the contractor messed it up",
+      "feel like everything's against me",
+      "things keep going wrong",
+      "want to stop making excuses",
+      "why does this keep happening to me",
+      "taking responsibility as a founder"
+    ],
+    "summary": "Before reaching for external causes, you assume the outcome was yours to control and ask what you could have done differently — because that's the only lever you can pull. It's a default stance for diagnosing problems, not a claim that everything truly is your fault.",
+    "when_to_use": "As a thinking default whenever something goes wrong and the instinct is to blame the market, a cofounder, a contractor, or bad luck — especially when you feel stuck and powerless.",
+    "how_to_run": [
+      "When something fails, first ask what you controlled or influenced, before listing what you didn't.",
+      "Translate that into a concrete change you can make next time; the test of real ownership is a different action, not a feeling.",
+      "Apply it to your own decisions, hiring, communication, and follow-through.",
+      "Use it privately as a diagnostic, not public self-flagellation or a stick to beat your team with.",
+      "Stop at the point of usefulness: own what you can change, and still act realistically on genuine external constraints."
+    ],
+    "preconditions": "",
+    "failure_modes": "Taken literally it tips into toxic self-blame, ignoring real structural constraints, which can worsen burnout and bad decisions. It can become a cudgel — demanding 'ownership' from a team while modeling none — or a way to excuse abusive bosses. It can also blind you to the rational decision to quit a doomed effort.",
+    "evidence_note": "From a practitioner leadership book (Willink & Babin, 2015); no empirical study. It overlaps with well-supported psychology — internal locus of control correlates with resilience — but that research also shows extreme internal attribution harms wellbeing, so the literature both supports and qualifies it. Low as a specific doctrine.",
+    "regional_notes": "The all-or-nothing 'own everything' framing is culturally individualist; in collectivist or fatalist contexts it can read as arrogant or naive about outside forces, and may need reframing as 'own your part.'",
+    "examples": "A founder's launch flops; their first instinct is the market isn't ready and a freelancer delivered late. Asking what they controlled, they realize they never tested the message with users, briefed the freelancer vaguely, and set the date arbitrarily — each something they can do differently, unlike 'the market.'"
+  },
+  {
+    "id": "cash-conversion-cycle",
+    "family": "Capital",
+    "title": "Shortening the gap between paying out and getting paid",
+    "stages": [
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "cash tight but profitable",
+      "customers pay late",
+      "get paid faster",
+      "supplier terms",
+      "money's stuck in inventory",
+      "profitable on paper but no cash",
+      "always waiting on invoices",
+      "running out of cash to grow",
+      "paying suppliers before customers pay me",
+      "why am i short on cash when sales are good"
+    ],
+    "summary": "You measure and shrink the time between when cash leaves your business (paying suppliers, holding inventory) and when it comes back (customers paying you). The shorter that gap, the more your own customers, rather than outside funding, finance your growth.",
+    "when_to_use": "When you're profitable on paper but constantly short on cash, when growth is eating your bank balance, or before raising money you might not need — especially with inventory or invoice-on-terms sales.",
+    "how_to_run": [
+      "Map your real timeline: how long cash sits in inventory, how long customers take to pay, how long you take to pay suppliers.",
+      "Pull collections forward: deposits, upfront or milestone billing, faster invoicing, early-payment incentives, or charging before delivery.",
+      "Push payables back where fair: negotiate longer supplier terms without damaging the relationship.",
+      "Reduce cash trapped in inventory or work-in-progress: order tighter, ship faster.",
+      "Recompute as you grow; a negative cycle means customers fund your growth and you may not need to raise."
+    ],
+    "preconditions": "Most leverage exists where there's inventory or B2B payment terms; a purely upfront-paid digital business already collects before it spends and has little to optimize here.",
+    "failure_modes": "Squeezing suppliers too hard damages relationships or quality. Demanding faster payment can cost deals in competitive markets. Founders chase the cycle while ignoring that the business is simply unprofitable — fast cash flow can't save bad unit economics. Stretching payables into late payment harms reputation and credit.",
+    "evidence_note": "A standard, well-defined corporate-finance metric (days inventory + days receivable − days payable), supported by extensive empirical research linking shorter cycles to better liquidity and often profitability. The mechanics are not in dispute. High.",
+    "regional_notes": "Customary terms vary enormously — 30 days in some markets, 60–90+ common in parts of Europe and Latin America and for large buyers — and some countries legally cap late payments. Cross-border sales add currency and collection-time risk.",
+    "examples": "A founder selling a physical product pays suppliers in 15 days but waits 60 days for customers to pay, so every new order drains cash even though each sale is profitable. They switch new customers to a 50% deposit upfront and offer a small discount for paying in 10 days, while negotiating 45-day terms with their main supplier. The gap shrinks from 45 days to near zero, and growth stops eating the bank balance."
+  },
+  {
+    "id": "kaizen-small-improvements",
+    "family": "Cross-cultural",
+    "title": "Small improvements that compound",
+    "stages": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "everything feels slow",
+      "want to improve but no time",
+      "overwhelmed by big changes",
+      "ship faster",
+      "fix small annoyances",
+      "build better habits",
+      "incremental progress",
+      "what should i optimize",
+      "stop procrastinating on improvements",
+      "my process is messy",
+      "tiny wins"
+    ],
+    "summary": "Instead of waiting for a big overhaul, make small, frequent improvements to your process or product that add up over time. The point is steady momentum, not heroic leaps.",
+    "when_to_use": "When you feel stuck behind a backlog of inefficiencies, when a full rebuild feels impossible, or when you want a sustainable rhythm of improvement rather than rare big bets.",
+    "how_to_run": [
+      "Each week, name one small, repeatable friction (a slow deploy, a confusing onboarding step, a manual task).",
+      "Make the smallest change that could plausibly help, and ship it now.",
+      "Check whether it actually improved things with a quick before/after.",
+      "Keep what works, revert what doesn't, and write down the lesson.",
+      "Move to the next small friction next week."
+    ],
+    "preconditions": "You need something you do repeatedly so improvements have somewhere to compound; one-off decisions don't benefit.",
+    "failure_modes": "Mistaking busywork for improvement; polishing things customers don't care about while ignoring big strategic risks; using 'small steps' as an excuse to avoid a necessary hard pivot; no measurement, so you can't tell if changes helped.",
+    "evidence_note": "Originates as a manufacturing and quality-management practice and is one of the few items here with real operational evidence — process-improvement programs show measurable gains in defects, cycle time, and cost in industrial and lean-operations studies. The compounding logic is sound, but most published results come from factories, not solo software startups, so treat the startup application as a reasonable extrapolation.",
+    "regional_notes": "",
+    "examples": "A solo technical founder dreads deploying because it takes 40 manual minutes and breaks often. Rather than building a full CI/CD platform, they spend one afternoon scripting the three riskiest steps. Next week they add a smoke test. A month later deploys take five minutes and rarely break — no grand project, just stacked small fixes."
+  },
+  {
+    "id": "nemawashi-build-buy-in-first",
+    "family": "Cross-cultural",
+    "title": "Line up support before the meeting",
+    "stages": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "low",
+    "warn": false,
+    "keywords": [
+      "get buy-in",
+      "cofounder keeps blocking me",
+      "align the team",
+      "before the big meeting",
+      "sell my idea internally",
+      "convince my partner",
+      "avoid surprises in meetings",
+      "people shoot down my ideas",
+      "build consensus",
+      "get the board on board",
+      "stop getting blindsided"
+    ],
+    "summary": "Before you bring a decision to a group, quietly talk to each key person one-on-one to hear concerns and earn support. By the time you meet formally, the decision is mostly already agreed.",
+    "when_to_use": "When a decision needs buy-in from a cofounder, early team, advisors, or investors, and you want to avoid public ambushes, surprise objections, or a meeting that turns into a fight.",
+    "how_to_run": [
+      "List the few people who can block, veto, or must champion the decision.",
+      "Meet each privately before the group conversation and genuinely ask for their view.",
+      "Take their objections seriously and revise your proposal where it's reasonable.",
+      "Tell them roughly what you'll propose so nothing in the meeting surprises them.",
+      "Use the formal meeting to confirm alignment, not to debate from scratch."
+    ],
+    "preconditions": "There has to be more than one stakeholder whose support matters; a true solo founder with no cofounder, board, or team has no one to align.",
+    "failure_modes": "Slipping into manipulation or backroom politics instead of genuine listening; moving so slowly that the decision rots; only talking to allies and avoiding the real skeptic; using it to engineer a rubber-stamp rather than to improve the decision.",
+    "evidence_note": "A consensus-building practice from organizational and management culture, popularized through lean and Japanese management literature. No controlled studies show it produces better decisions; support comes from practitioner accounts and general findings that pre-aligned stakeholders reduce meeting conflict. Credible folklore and good political hygiene, not proven method.",
+    "regional_notes": "Pre-meeting alignment reads as respectful and normal in many cultures, but in some fast, low-context startup environments it can be misread as scheming if done secretively — be transparent that you're gathering input.",
+    "examples": "A first-time founder wants to drop a feature their cofounder championed. Instead of announcing it in the weekly sync, they grab coffee with the cofounder first, hear why it mattered, and propose keeping a lightweight version. By the actual meeting the cofounder is already on board, and the team spends five minutes confirming instead of an hour arguing."
+  },
+  {
+    "id": "hoshin-kanri-few-vital-goals",
+    "family": "Cross-cultural",
+    "title": "A few vital goals, aligned top to bottom",
+    "stages": [
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "low",
+    "warn": false,
+    "keywords": [
+      "too many priorities",
+      "everything feels urgent",
+      "team pulling in different directions",
+      "what should we focus on",
+      "can't say no to things",
+      "spread too thin",
+      "align on goals",
+      "unclear strategy",
+      "keep changing direction",
+      "focus the roadmap",
+      "prioritize ruthlessly"
+    ],
+    "summary": "Choose only a handful of goals that genuinely matter, then make sure every level of work clearly connects to them. The discipline is in saying no to everything else.",
+    "when_to_use": "When you have too many priorities, the team is pulling in different directions, or you keep starting things that don't connect to a clear strategy.",
+    "how_to_run": [
+      "Force yourself to name no more than three goals for this quarter or stage.",
+      "For each goal, write what it concretely means for product, sales, and your own week.",
+      "Map current work against the goals and kill or shelve what doesn't ladder up.",
+      "Make the few goals visible so anyone can check their work against them.",
+      "Revisit on a fixed cadence and change the goals deliberately, not by drift."
+    ],
+    "preconditions": "You need enough scope (a team, multiple workstreams, or competing priorities) for alignment to be a real problem; a one-person, one-task focus needs less ceremony.",
+    "failure_modes": "Picking too many 'top' priorities so nothing is actually prioritized; setting goals once and never revisiting as reality shifts; cascading goals into rigid bureaucracy that slows a small team; confusing activity metrics with the outcomes that matter.",
+    "evidence_note": "A strategy-deployment method from large-scale management and quality practice. Evidence is largely case-based and from big organizations; no controlled trials prove it beats other goal-setting approaches, and its alignment claims overlap with well-studied ideas like focus and limiting work-in-progress. For a startup, a sensible focusing discipline rather than a validated system.",
+    "regional_notes": "",
+    "examples": "A first-time founder's roadmap has eleven 'critical' initiatives and the small team is exhausted and scattered. They cut to two goals for the quarter: reach a usable activation rate for new users, and land the first handful of paying customers. Every task now has to map to one of those two; three half-built side features get shelved, and within weeks the team can actually answer 'is this worth doing?'"
+  },
+  {
+    "id": "andon-cord-stop-the-line",
+    "family": "Cross-cultural",
+    "title": "Let anyone stop the line and flag problems",
+    "stages": [
+      5,
+      6
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "people hide problems",
+      "found a bug but afraid to say",
+      "blame culture",
+      "stop shipping when broken",
+      "surface issues early",
+      "nobody speaks up",
+      "catch problems sooner",
+      "afraid to flag risks",
+      "quality keeps slipping",
+      "psychological safety",
+      "raise the alarm"
+    ],
+    "summary": "Give everyone — including yourself — explicit permission to halt work and surface a problem the moment it appears, instead of letting it slide downstream. Speed of surfacing beats face-saving.",
+    "when_to_use": "When problems are being discovered too late, when people are afraid to flag bad news, or when small defects keep compounding into expensive failures.",
+    "how_to_run": [
+      "Agree on what's serious enough to 'stop the line' (a data-loss bug, a broken core flow, an ethical red flag).",
+      "Tell the team explicitly that flagging such things is expected and welcomed.",
+      "When someone pulls the cord, drop what you're doing and respond immediately.",
+      "Fix the immediate problem, then ask why it happened and address the cause.",
+      "Visibly thank people who raise issues so the next person isn't afraid to."
+    ],
+    "preconditions": "There must be a flow of work where problems can be caught and stopped; the bigger lever is psychological safety, since a cord nobody dares pull is useless.",
+    "failure_modes": "Punishing or sighing at the person who pulls it, which kills the behavior fast; setting the bar so low that everything stops the line and nothing ships; founders exempting themselves; stopping the line but never fixing root causes, so the same problem recurs.",
+    "evidence_note": "Originates in automotive manufacturing and is well documented in lean/operations literature, with real evidence that empowering frontline workers to halt and fix defects lowers downstream failure costs. Strong organizational-behavior research also shows psychological safety improves error reporting and team performance, supporting the mechanism. Factory evidence is strong; applying it to a software startup is a reasonable but less-tested extension.",
+    "regional_notes": "",
+    "examples": "A junior engineer at a small startup notices a recent change quietly corrupts some user records, but the launch is tomorrow and they don't want to be the one who delays it. Because the founder has made 'stop the line' explicit, they flag it that night. The launch slips a day, the data bug is fixed, a far worse public failure is avoided — and the engineer is thanked, not blamed, so they'll speak up again."
+  },
+  {
+    "id": "hansei-honest-reflection",
+    "family": "Cross-cultural",
+    "title": "Honest reflection even after a win",
+    "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "n-a",
+    "evidence": "low",
+    "warn": false,
+    "keywords": [
+      "learn from mistakes",
+      "got lucky and worried",
+      "postmortem",
+      "reflect on what happened",
+      "avoid repeating mistakes",
+      "too busy to look back",
+      "celebrate then move on",
+      "what could i have done better",
+      "honest with myself",
+      "retro",
+      "stay humble after success"
+    ],
+    "summary": "After any meaningful effort — even a successful one — pause to honestly examine what fell short and what you'd do differently, owning your own part. The goal is learning, not self-punishment.",
+    "when_to_use": "After a launch, a win, a loss, or a milestone — especially when things went well and the temptation is to skip reflection and just bask or move on.",
+    "how_to_run": [
+      "Block time right after a project ends, before momentum carries you off.",
+      "Ask 'what actually went wrong or could be better?' even if the result was good.",
+      "Name your own contribution to problems honestly, without blaming circumstances.",
+      "Distill one or two specific, actionable lessons rather than vague vows.",
+      "Decide concretely how the next cycle changes because of them."
+    ],
+    "preconditions": "",
+    "failure_modes": "Tipping from honest reflection into corrosive self-blame or anxiety; founders skipping it after wins because success feels like proof they were right; turning it into vague guilt with no concrete change; only the founder reflecting while the team's perspective is ignored.",
+    "evidence_note": "A reflective self-improvement practice rooted in cultural and management tradition. No controlled evidence that this specific ritual improves startup outcomes; the closest support is research on reflection and deliberate learning improving performance, and on hindsight/overconfidence bias after success. Well-grounded folklore that aligns with what we know about learning, not a proven technique — and for anxious founders the framing matters, it should aid learning, not feed rumination.",
+    "regional_notes": "In some startup cultures relentless self-criticism after a win feels alien or demotivating; frame it as curiosity ('what can this teach me?') rather than punishment.",
+    "examples": "A first-time founder's launch beats every target and the instinct is to celebrate and charge ahead. Instead they spend an hour asking what nearly went wrong: the win leaned heavily on one lucky press mention, and their onboarding would have buckled under more load. The lesson — don't mistake a lucky spike for a repeatable channel — reshapes how they plan the next launch."
+  },
+  {
+    "id": "omotenashi-anticipatory-service",
+    "family": "Cross-cultural",
+    "title": "Anticipate what the customer needs before they ask",
+    "stages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "low",
+    "warn": false,
+    "keywords": [
+      "delight customers",
+      "reduce support tickets",
+      "customers get confused",
+      "stand out from competitors",
+      "improve onboarding",
+      "anticipate user needs",
+      "go the extra mile",
+      "proactive support",
+      "reduce churn",
+      "wow my users",
+      "care about the experience"
+    ],
+    "summary": "Pay close attention to your customers and meet needs they haven't even voiced yet, doing it wholeheartedly rather than transactionally. It's service driven by anticipation and genuine care, not by tickets.",
+    "when_to_use": "When you want to differentiate on experience, reduce confusion and support load, or build the kind of early loyalty that comes from customers feeling genuinely understood.",
+    "how_to_run": [
+      "Watch real customers use your product and note where they hesitate or get surprised.",
+      "For each rough spot, ask what they'll need next and provide it before they ask.",
+      "Make one proactive gesture (a clarifying message, a pre-filled setup, a heads-up about a known snag).",
+      "Do it sincerely and specifically, not as a generic automated touch.",
+      "Watch how they respond and sharpen your sense of what to anticipate next."
+    ],
+    "preconditions": "You need real customers or users to observe; without them you're guessing, and anticipating the wrong needs wastes scarce early effort.",
+    "failure_modes": "Over-engineering 'delight' before you've nailed the basic product or value; spending lavish anticipatory effort that doesn't scale and starves core work; guessing needs wrong and adding clutter; performing care as theater rather than meaning it, which customers detect.",
+    "evidence_note": "A hospitality and service philosophy centered on wholehearted, anticipatory care. No controlled evidence ties this specific concept to startup success; adjacent research links proactive service and customer experience to loyalty and retention, which supports the spirit of it. Inspirational practice with plausible backing, weighed against the startup reality that anticipatory service is expensive and hard to scale early.",
+    "regional_notes": "The wholehearted, almost invisible style of anticipatory service is a cultural norm in some places and can feel excessive or even intrusive in others; calibrate to what your customers read as caring versus overbearing.",
+    "examples": "A first-time founder notices new users repeatedly hit the same configuration snag around day two and quietly churn. Rather than waiting for support tickets, they send a short, personal message on day one that pre-empts exactly that snag with a one-click fix. Activation climbs, support volume drops, and early users describe feeling unusually well taken care of."
+  },
+  {
+    "id": "shape-the-ground-before-you-fight",
+    "family": "Cross-cultural",
+    "title": "Win before you compete by picking favorable ground",
+    "stages": [
+      0,
+      1,
+      2
+    ],
+    "reversibility": "two-way",
+    "evidence": "low",
+    "warn": false,
+    "keywords": [
+      "choosing where to compete",
+      "uphill battle",
+      "stacking the deck",
+      "picking my market",
+      "favorable terms",
+      "competitive advantage",
+      "where can i win",
+      "easier wins",
+      "play to my strengths",
+      "avoid the giants",
+      "unfair fight",
+      "set myself up"
+    ],
+    "summary": "Arrange your situation so most of the outcome is decided before the visible contest starts: choose markets, timing, and positioning where you already hold an edge. The real work is upstream of the fight, not in it.",
+    "when_to_use": "Early, when choosing which market, segment, or problem to attack and you have limited resources for direct competition.",
+    "how_to_run": [
+      "List the places you could compete (segments, channels, geographies, problem niches).",
+      "For each, score where you already have a structural edge: speed, domain knowledge, a network, lower costs, or an underserved niche incumbents ignore.",
+      "Pick the ground where you start ahead rather than the largest or most obvious market.",
+      "Strengthen that position before you announce or scale, so launch is closer to a confirmation than a gamble.",
+      "Re-check periodically: if the ground stops favoring you, move rather than dig in."
+    ],
+    "preconditions": "You have at least one genuine structural advantage to build on; if you have none yet, your first job is to create one, not to position.",
+    "failure_modes": "Mistaking a comfortable niche for a winnable one (no real demand); endless 'positioning' as procrastination instead of building or selling; convincing yourself you have an edge you don't; choosing ground so small it can't grow.",
+    "evidence_note": "Originates in an ancient Chinese strategy text (the concept often rendered 'shi', shaping advantageous position). A 2,000-year-old military aphorism, not a controlled study. Low — a useful framing heuristic, not proven cause-and-effect. Beware survivorship bias: we remember founders who 'chose great ground' and won, not equally well-positioned ones who failed.",
+    "regional_notes": "",
+    "examples": "A solo technical founder wants to build developer tools. Instead of competing head-on with a well-funded general product, they pick one narrow workflow they understand deeply and that big players treat as an afterthought, and ship the sharpest solution to that single workflow before launch."
+  },
+  {
+    "id": "go-around-not-through",
+    "family": "Cross-cultural",
+    "title": "Prefer indirect, low-confrontation moves over head-on fights",
+    "stages": [
+      1,
+      2,
+      3
+    ],
+    "reversibility": "two-way",
+    "evidence": "low",
+    "warn": true,
+    "keywords": [
+      "going head to head",
+      "fighting the incumbent",
+      "direct competition",
+      "outmaneuver",
+      "side door",
+      "back door",
+      "avoid the fight",
+      "work around",
+      "flank the competition",
+      "pick my battles",
+      "don't fight fair",
+      "sneak in"
+    ],
+    "summary": "When a direct confrontation favors a stronger opponent, look for an indirect path: a different segment, channel, partnership, or angle that avoids their strength. Win by maneuver, not collision.",
+    "when_to_use": "When a larger or better-resourced competitor dominates the obvious path and a frontal attack would just burn your money and attention.",
+    "how_to_run": [
+      "Name exactly where the strong competitor is strongest (core customer, pricing, distribution).",
+      "Deliberately avoid attacking that strength directly.",
+      "Find an adjacent opening they cannot or will not defend: an ignored customer, a neglected channel, a use case beneath their attention.",
+      "Enter there, build strength quietly, and only broaden once you're hard to dislodge.",
+      "Keep your moves cheap and reversible until one clearly works."
+    ],
+    "preconditions": "There's an opponent strong enough that a direct fight is genuinely unwise; if the field is open, just move directly.",
+    "failure_modes": "Cleverness for its own sake (over-engineered 'maneuvers' that confuse customers); mistaking avoidance for strategy and never actually winning; indirection sliding into deception that damages trust; so many flanking moves you never build a defensible core. Flagged because 'be sneaky/clever' is the most common misreading.",
+    "evidence_note": "Draws on a Chinese folk tradition of strategic maxims (the '36 stratagems'), proverbs assembled over centuries, not a tested method. Low — folklore and rhetoric, useful as a prompt to consider indirect options, not proof any specific move works. Survivorship bias is acute: clever escapes are remembered, clever failures forgotten.",
+    "regional_notes": "",
+    "examples": "A founder's productivity app would have to outspend an entrenched leader to win mainstream users. Instead of advertising against them, they target a profession the leader serves poorly, integrate with the niche tools that profession already uses, and grow by word of mouth inside that community before the incumbent notices."
+  },
+  {
+    "id": "work-with-momentum-not-against-it",
+    "family": "Cross-cultural",
+    "title": "Work with the current instead of forcing against it",
+    "stages": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "reversibility": "two-way",
+    "evidence": "low",
+    "warn": true,
+    "keywords": [
+      "forcing it",
+      "pushing too hard",
+      "swimming upstream",
+      "fighting the market",
+      "no traction",
+      "grinding with no results",
+      "going with the flow",
+      "path of least resistance",
+      "let it happen",
+      "stop forcing",
+      "follow the demand",
+      "where it's already working"
+    ],
+    "summary": "Notice where energy, demand, and momentum already exist and align your effort with it, rather than exhausting yourself pushing a direction the market resists. Effortless progress usually means you found the current.",
+    "when_to_use": "When you're grinding hard with little to show, or deciding whether to keep forcing a feature, channel, or segment that isn't responding.",
+    "how_to_run": [
+      "Look at where pull is already happening: which users return, which use case spreads on its own, which channel converts without being forced.",
+      "Distinguish 'hard because it's early' from 'hard because you're fighting the current'.",
+      "Shift effort toward what's already working and reduce effort dragging the unresponsive parts.",
+      "Make the easy thing easier rather than the hard thing slightly less hard.",
+      "Reassess on a fixed cadence so 'going with the flow' doesn't become an excuse to drift."
+    ],
+    "preconditions": "You have real signal to read (some users, some data); with zero feedback you can't tell current from noise and must first get something in front of people.",
+    "failure_modes": "Using 'don't force it' to justify quitting too early (everything is hard at first); passivity dressed up as wisdom; chasing every momentary spike and never committing; ignoring that some currents (a fad) lead off a cliff. Flagged because it's routinely misread as 'do less' or 'wait for the universe'.",
+    "evidence_note": "From a classical Chinese philosophical tradition (the idea often rendered 'wu wei', acting with the natural flow). A philosophical stance, not an empirical finding. Low — valuable as a lens for spotting wasted effort, not proof that 'going with the flow' produces success.",
+    "regional_notes": "",
+    "examples": "A solo founder built a broad app but notices one small group uses a single feature daily and tells friends, while the rest gets ignored despite heavy promotion. Rather than pushing the full vision harder, they double down on the feature people already pull toward and let the rest fade."
+  },
+  {
+    "id": "build-trust-before-you-need-it",
+    "family": "Cross-cultural",
+    "title": "Treat relationships as real business infrastructure",
+    "stages": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": true,
+    "keywords": [
+      "relationships matter",
+      "who you know",
+      "build trust first",
+      "networking",
+      "warm intros",
+      "reputation",
+      "long game with people",
+      "give before you ask",
+      "stay in touch",
+      "favors",
+      "people remember you",
+      "your network"
+    ],
+    "summary": "Trust and relationship capital are assets you build before you need them, not things you can summon during a crisis or a fundraise. Invest steadily in people so the help, intros, and goodwill are already there when it counts.",
+    "when_to_use": "Continuously, but especially before predictable high-stakes moments: hiring, fundraising, key sales, or asking for help, when a warm relationship beats a cold ask.",
+    "how_to_run": [
+      "Map the relationships that will matter later: future investors, early customers, potential hires, peers who give honest advice.",
+      "Give first — helpful intros, useful information, genuine attention — without immediately keeping score.",
+      "Stay in light, consistent contact rather than only reaching out when you need something.",
+      "When you finally need help, ask specific, easy-to-grant things of people who already know you.",
+      "Be reliable in small things; reputation compounds quietly and breaks fast."
+    ],
+    "preconditions": "You can show up consistently over time; relationship capital cannot be crammed.",
+    "failure_modes": "Transactional 'networking' everyone sees through; collecting contacts instead of building real trust; obligation networks that trap you in bad reciprocity; relying on relationships to paper over a product no one wants; mistaking a big contact list for genuine support. Flagged because it's easily degraded into shallow, extractive networking.",
+    "evidence_note": "Draws on the Chinese concept of relationship-based trust networks ('guanxi'), documented in business ethnography. Medium — substantial qualitative and survey evidence that relationship capital affects deal flow and access, but causation is hard to isolate and effects vary by context. Beware stories crediting a single lucky intro for an outcome.",
+    "regional_notes": "How explicitly relationships are cultivated, and the line between healthy trust-building and improper favor-trading, varies sharply by region. What reads as normal relationship investment in one market can read as conflict-of-interest in another. Calibrate to local norms.",
+    "examples": "A first-time founder knows they'll raise money in a year. Instead of cold-emailing investors at the last minute, they spend the year sharing honest monthly updates with a handful of experienced people, asking small bits of advice and reporting back. When they raise, several offer warm intros because they already trust the founder's follow-through."
+  },
+  {
+    "id": "small-units-owning-their-own-customer",
+    "family": "Cross-cultural",
+    "title": "Break the work into tiny units, each owning a real customer",
+    "stages": [
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "low",
+    "warn": true,
+    "keywords": [
+      "org structure",
+      "small teams",
+      "ownership",
+      "accountability",
+      "who owns this",
+      "customer facing",
+      "p&l ownership",
+      "autonomous teams",
+      "decentralize",
+      "too many layers",
+      "everyone owns the customer",
+      "tiny teams"
+    ],
+    "summary": "Instead of stacking functional layers, organize into small units that each face a specific customer and are accountable for that customer's outcome, so ownership is unambiguous and decisions stay close to the people who feel the consequences.",
+    "when_to_use": "When growing past a handful of people and noticing diffused accountability, internal hand-offs, or teams that have lost contact with the actual customer.",
+    "how_to_run": [
+      "Identify the distinct customers or customer outcomes your organization serves.",
+      "Form the smallest viable unit that can own one of those outcomes end to end.",
+      "Give each unit clear accountability for its own customer's results, not just an internal function.",
+      "Reduce layers between those units and the customer; push decisions down to the unit.",
+      "Watch for coordination costs and shared infrastructure that small units can't each rebuild."
+    ],
+    "preconditions": "You're large enough that more than one small team is meaningful; below roughly a single team this is premature and adds overhead.",
+    "failure_modes": "Premature fragmentation that creates coordination chaos and duplicated work; tiny units that can't achieve economies of scale; internal markets that breed politics and turf wars; cargo-culting a famous company's org chart without its context; accountability that becomes blame. Flagged because it's frequently copied by companies far too small for it.",
+    "evidence_note": "Based on a management model ('rendanheyi') developed at a single large Chinese appliance manufacturer. One company's evolving, heavily-promoted practice, not a controlled or replicated study. Low — a single-case story with severe survivorship bias; we can't separate the model from countless other factors. Useful as inspiration for clear customer ownership, not proof the full model transfers.",
+    "regional_notes": "Developed in a specific national and corporate context; labor norms, management culture, and scale differ elsewhere, so wholesale transplantation is risky.",
+    "examples": "A founder's startup has grown to ~15 people serving two very different customer types, and complaints fall through the cracks because 'everyone' owns them. The founder splits into two small pods, each fully responsible for one customer type's results end to end, so each can see whether its own customers are succeeding."
+  },
+  {
+    "id": "durable-alliances-that-back-each-other",
+    "family": "Cross-cultural",
+    "title": "Build durable alliances of partners who back each other",
+    "stages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "one-way",
+    "evidence": "low",
+    "warn": true,
+    "keywords": [
+      "partnerships",
+      "strategic alliance",
+      "long-term partners",
+      "mutual support",
+      "preferred supplier",
+      "lock in a partner",
+      "ecosystem",
+      "who's in your corner",
+      "co-dependence",
+      "vendor relationship",
+      "tight integration",
+      "exclusive deal"
+    ],
+    "summary": "Form a small set of long-term, mutually committed partners — suppliers, channels, allied firms — who reliably back each other rather than treating every deal as a one-off. Stability and trust can outweigh squeezing the best price each time.",
+    "when_to_use": "When you depend on a few critical partners (a key supplier, a distribution channel, a platform) and continuity and trust matter more than spot-market optimization.",
+    "how_to_run": [
+      "Identify the handful of partners your business genuinely depends on.",
+      "Decide where a deep, committed relationship beats keeping everyone at arm's length.",
+      "Invest in the relationship: predictable volume, fair terms, shared planning, mutual support in hard times.",
+      "Make commitments explicit, but keep an exit path for relationships that turn toxic.",
+      "Periodically check that loyalty isn't blinding you to better or cheaper options or hiding deteriorating quality."
+    ],
+    "preconditions": "You have enough scale or value to be a partner worth committing to; very early on you may have little to offer in exchange.",
+    "failure_modes": "Lock-in that becomes dependence, leaving you trapped when a partner underperforms or turns predatory; cozy alliances that dull competitiveness; collusion or anti-competitive entanglement; reciprocal obligations you can't exit; concentration risk if a backing partner fails. These deals are often hard to unwind, hence one-way. Flagged because the same structures that create strength can become cages.",
+    "evidence_note": "Modeled on East Asian inter-firm alliance networks (Japanese 'keiretsu' and Korean 'chaebol'-style groups). Real, well-documented structures, but evidence that they cause superior outcomes is mixed and contested — some credit stability and coordination, others link them to inefficiency, weak governance, and crisis fragility. Low as a prescription: heavy survivorship bias and confounding with national industrial policy. These carry real downside risk, not just benefits.",
+    "regional_notes": "These networks grew from specific national histories, banking systems, and government policy; the conditions that made them work elsewhere may not exist for you, and some features have drawn antitrust and governance criticism.",
+    "examples": "A first-time founder relies on one external supplier for a core component. Rather than re-bidding every quarter to shave costs, they commit to steady orders and shared forecasts so the supplier prioritizes them and helps during shortages — while keeping one backup qualified so a single failure can't sink the company."
+  },
+  {
+    "id": "do-more-with-less",
+    "family": "Cross-cultural",
+    "title": "Frugal, improvised problem-solving under hard constraints",
+    "stages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "no budget",
+      "do more with less",
+      "scrappy",
+      "cheap workaround",
+      "bootstrap a solution",
+      "cant afford it",
+      "limited resources",
+      "make it work",
+      "duct tape",
+      "cut corners safely",
+      "resourceful",
+      "tight on cash"
+    ],
+    "summary": "When money, time, and headcount are scarce, solve the problem with whatever is already at hand instead of waiting for ideal resources. Treat constraints as a design brief, not a blocker.",
+    "when_to_use": "When you have a real problem to solve but lack the budget, tools, or team a 'proper' solution would require, and the cost of waiting is high.",
+    "how_to_run": [
+      "Write down the actual outcome you need this week, not the polished product you eventually want.",
+      "List every resource you already have (free tools, existing skills, spare time, favors, manual steps) and ignore what you wish you had.",
+      "Build the cheapest, ugliest version that delivers the outcome, even if it's manual.",
+      "Ship it to one real user or use case and watch what breaks.",
+      "Only invest in a 'real' solution for the parts that actually broke under real use."
+    ],
+    "preconditions": "You have a clearly defined near-term outcome and at least one real user or use case to test against.",
+    "failure_modes": "Improvised fixes quietly become permanent and accumulate into fragile systems that fail at scale. In regulated areas (payments, health, safety, data privacy) a clever shortcut can create legal or security exposure costing far more than it saved. Frugality can become an identity that blocks necessary investment once the workaround is proven.",
+    "evidence_note": "Rooted in a widely documented Indian practice of improvised innovation under scarcity. Studied descriptively (case studies, ethnography), not via controlled trials; observed practice, not a proven causal method. Medium because the underlying logic (constrain scope, test cheaply, invest only where it breaks) overlaps with well-supported lean/MVP evidence.",
+    "regional_notes": "Originates in resource-constrained markets where formal infrastructure is unreliable; the mindset travels well to any underfunded founder, but the acceptable level of 'workaround' varies by industry and regulatory regime.",
+    "examples": "A solo founder needs to test whether people will pay for a service but can't afford to build software. Instead of hiring developers, they run the entire service manually behind a simple form and a spreadsheet, handling each request by hand. In two weeks they learn which steps customers value and automate only those, having spent almost nothing to validate demand."
+  },
+  {
+    "id": "map-incentives-before-deciding",
+    "family": "Cross-cultural",
+    "title": "Decide by mapping incentives, economics, and people together",
+    "stages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "low",
+    "warn": false,
+    "keywords": [
+      "whats in it for them",
+      "follow the money",
+      "who benefits",
+      "hidden agenda",
+      "align incentives",
+      "politics of the decision",
+      "power dynamics",
+      "who decides",
+      "whats the real motive",
+      "game it out",
+      "stakeholders",
+      "leverage"
+    ],
+    "summary": "Before a significant decision, map who gains or loses, what each party is really incentivized to do, and how the economics work, so you're not surprised by people acting in their own interest. Treat money, motives, and relationships as one system.",
+    "when_to_use": "For high-stakes decisions involving other parties whose interests differ from yours: a partnership, a key hire, an investor term sheet, or a vendor lock-in.",
+    "how_to_run": [
+      "List every party affected by the decision, including ones not in the room.",
+      "For each, write what they actually want and what they're rewarded or punished for — not what they say.",
+      "Trace the money and power: who pays, who profits, who controls the outcome if things go well or badly.",
+      "Identify where your interests and theirs diverge, and design the deal so the other side's self-interest still points your way.",
+      "Add a safeguard for the divergence you can't design away."
+    ],
+    "preconditions": "",
+    "failure_modes": "Over-applied, this becomes cynicism and transactional relationships that erode trust and goodwill (themselves assets). It can produce analysis paralysis or manipulative tactics that backfire reputationally. Assuming everyone is purely self-interested misreads genuinely mission-driven people and can poison good partnerships.",
+    "evidence_note": "Drawn from an ancient Indian treatise on statecraft and economics — a body of strategic precepts and folklore, not empirical research. Low as evidence; however, the specific move of explicit incentive and stakeholder mapping overlaps with better-supported tools in negotiation, mechanism design, and game theory.",
+    "regional_notes": "Originates in classical Indian political-economic thought; the integration of economics with human motive is the transferable core, stripped of its historical context.",
+    "examples": "A first-time founder is offered a generous-looking partnership with a larger company that will distribute their product. Mapping the partner's incentives, they realize the partner profits most if the founder stays small and dependent. They renegotiate so the contract rewards the partner for growing total volume, aligning both sides toward the same outcome."
+  },
+  {
+    "id": "read-the-room",
+    "family": "Cross-cultural",
+    "title": "Sense unspoken reactions and needs before you act",
+    "stages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "low",
+    "warn": false,
+    "keywords": [
+      "read the room",
+      "what are they really thinking",
+      "sense the mood",
+      "unspoken",
+      "they went quiet",
+      "awkward silence",
+      "gauge reactions",
+      "tone shifted",
+      "reading between the lines",
+      "whats not being said",
+      "pick up on cues",
+      "feel out the situation"
+    ],
+    "summary": "Pay deliberate attention to tone, body language, hesitation, and what's left unsaid so you understand how people are really reacting before you push your agenda. Adjust your move based on what you sense, not just what's stated.",
+    "when_to_use": "In conversations where the real signal is unspoken: investor or customer meetings, negotiating with a cofounder, sensing a team member's discontent, or judging whether now is the moment to ask for something.",
+    "how_to_run": [
+      "Before speaking, pause and observe: tone, pacing, eye contact, who defers to whom, what topics make people tense or quiet.",
+      "Ask yourself what the other person needs or fears right now that they're not saying.",
+      "Test your read with a gentle, low-stakes probe (a question or small statement) and watch the reaction.",
+      "Adjust your ask, timing, or framing based on what you sensed rather than your prepared script.",
+      "If the room isn't ready, hold your request and follow up later instead of forcing it."
+    ],
+    "preconditions": "Requires direct interaction (in person, video, or live conversation) where you can actually observe reactions.",
+    "failure_modes": "Reading cues can slide into people-pleasing, over-interpreting noise as signal, or paranoia about what others 'really' think. Quiet founders may use it to avoid necessary hard conversations. Cues are culturally specific, so confident misreads are common across cultures and over video. It complements asking directly — it doesn't replace it.",
+    "evidence_note": "Based on a Korean concept of social-emotional attunement. Cultural practice and folk wisdom, not a measured method. Low as evidence; the adjacent constructs of emotional and social intelligence have a mixed but real research base, so treat the skill as plausible and trainable rather than proven by this tradition.",
+    "regional_notes": "Originates in a high-context culture where much is communicated indirectly; founders from low-context cultures often under-use it, while in some settings explicit questions are more reliable than reading cues.",
+    "examples": "A founder pitching a potential first enterprise customer notices the buyer nodding politely but going quiet and checking the time whenever pricing comes up. Instead of pressing for a signature, they sense the real blocker is budget approval, shift to a smaller paid pilot the buyer can authorize alone, and win a foothold they'd have lost by pushing the full contract."
+  },
+  {
+    "id": "lead-through-the-collective",
+    "family": "Cross-cultural",
+    "title": "Treat people and relationships as the core of the venture",
+    "stages": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "two-way",
+    "evidence": "low",
+    "warn": false,
+    "keywords": [
+      "take care of my team",
+      "people first",
+      "build trust",
+      "were in this together",
+      "look after each other",
+      "community",
+      "my reputation with people",
+      "treat people well",
+      "belonging",
+      "whos got my back",
+      "relationships matter",
+      "dont burn people"
+    ],
+    "summary": "Build the venture by investing in the people and relationships around it, on the premise that your strength comes from the collective rather than from you alone. Treat how you treat people as a long-term strategic asset, not a soft extra.",
+    "when_to_use": "When decisions affect your team, early community, or close partners, and you're tempted to optimize a short-term outcome at the cost of trust or goodwill.",
+    "how_to_run": [
+      "Before a people-affecting decision, ask how it lands for the group, not just for you or the metric.",
+      "Invest visibly in the people closest to the venture: give credit, share upside, protect them when things go wrong.",
+      "Make decisions in a way people can see and understand, so trust compounds.",
+      "When you must make a hard call, do it in a way that preserves dignity and relationships even with those who leave.",
+      "Treat your reputation among the people you've worked with as a real asset you're building."
+    ],
+    "preconditions": "Most relevant once at least a few other people (team, community, partners) are involved; less applicable to a pure pre-launch solo effort.",
+    "failure_modes": "Can be used to justify avoiding necessary firings, tolerating underperformance, or consensus-seeking that stalls decisions. Putting the collective first can suppress dissent or pressure individuals to conform. It is not a substitute for clear accountability, and over-indexing on harmony lets real problems fester.",
+    "evidence_note": "Based on a Southern African relational philosophy — a cultural and ethical worldview, not an empirical management method. Low as evidence; the adjacent idea that trust, fairness, and psychological safety improve team performance has a real but context-dependent research base. Treat the philosophy as a values frame, not proof.",
+    "regional_notes": "Originates in communal Southern African traditions; the relational emphasis transfers, but avoid flattening a rich philosophy into a slogan or assuming it overrides individual accountability.",
+    "examples": "A solo founder making their first two hires is tempted to write tight, self-protective contracts and keep all equity. Instead they give meaningful early ownership, share the reasoning behind major decisions, and back the new hires publicly when an early launch flops. The team stays through the rough patch, and one later brings in the intro that lands the first real customer."
+  },
+  {
+    "id": "rally-people-for-a-push",
+    "family": "Cross-cultural",
+    "title": "Rally people and resources for a shared, time-boxed push",
+    "stages": [
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "low",
+    "warn": false,
+    "keywords": [
+      "all hands on deck",
+      "rally support",
+      "get everyone to chip in",
+      "crowd-source help",
+      "shared push",
+      "mobilize my network",
+      "ask for help",
+      "community effort",
+      "pool resources",
+      "big launch effort",
+      "call in favors",
+      "get people behind it"
+    ],
+    "summary": "For a concrete shared goal, openly ask your network and community to contribute time, money, skills, or reach toward one visible push, rather than carrying it alone. Make the goal specific and the contribution easy.",
+    "when_to_use": "For a discrete, motivating goal that benefits from many hands at once: a launch, a fundraising sprint, a beta recruitment drive, or a deadline crunch where your network could move the needle.",
+    "how_to_run": [
+      "Define one specific, time-boxed goal and the visible outcome that signals success.",
+      "Name exactly what you need and make each ask small and concrete (an intro, an hour, a share, a small contribution).",
+      "Ask openly and personally, and explain why this goal matters and why now.",
+      "Show momentum publicly so contributing feels like joining something already moving.",
+      "Close the loop: report the result back and thank contributors specifically, building credit for the next push."
+    ],
+    "preconditions": "You need an existing network or community to draw on, however small, and a goal compelling enough that people want to be associated with it.",
+    "failure_modes": "Repeated asks without visible payoff exhaust goodwill and train your network to ignore you. A push can create a burst of activity that collapses with no durable system behind it. It works poorly for vague or purely self-serving goals, and over-reliance on volunteer effort can mask the absence of a sustainable model.",
+    "evidence_note": "Based on a Kenyan tradition of collective self-help and pooled effort. Documented community practice, not a controlled study. Low as evidence; the mechanics it relies on (social proof, reciprocity, specific asks, momentum) overlap with better-supported findings in fundraising and behavioral science.",
+    "regional_notes": "Originates in East African mutual-aid practice; the rally-the-collective mechanic transfers to networks and online communities, but the cultural obligation to contribute does not, so asks must stand on genuine appeal.",
+    "examples": "A first-time founder needs fifty real beta testers in two weeks before an investor check-in but has no ad budget. They post a specific, honest ask to their personal network and two online communities they've contributed to, requesting one thing: try the product for ten minutes and reply with one piece of feedback. They share progress publicly as numbers climb, hit the target through referrals, and thank each contributor by name."
+  },
+  {
+    "id": "group-cohesion-makes-or-breaks-it",
+    "family": "Cross-cultural",
+    "title": "Group cohesion and solidarity decide whether the venture holds",
+    "stages": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "reversibility": "one-way",
+    "evidence": "low",
+    "warn": true,
+    "keywords": [
+      "are we still aligned",
+      "team is fracturing",
+      "losing cohesion",
+      "everyone pulling different ways",
+      "shared mission",
+      "founder conflict",
+      "keeping the team together",
+      "us vs them",
+      "drifting apart",
+      "do we still believe in this",
+      "team morale",
+      "cracks forming"
+    ],
+    "summary": "The internal solidarity of your founding group and early team is a primary driver of whether the venture rises or falls; cohesion is what lets a small group outwork bigger, better-resourced rivals. Watch it as carefully as you watch money or product.",
+    "when_to_use": "When assessing the health of a founding or early team, especially before scaling, taking on cofounders, or pushing through a prolonged hard stretch where shared belief is the main fuel.",
+    "how_to_run": [
+      "Regularly and explicitly check whether the core group still shares the same mission, values, and definition of success.",
+      "Name and address fractures early (resentment, divergent goals, unequal effort) instead of hoping they resolve themselves.",
+      "Protect what binds the group: a clear shared purpose, fair treatment, and a sense of being in it together.",
+      "Be deliberate about who you add, because each new person changes the cohesion of the whole.",
+      "If cohesion is gone and can't be rebuilt, treat that as a fundamental risk to act on, not a mood to ignore."
+    ],
+    "preconditions": "Most relevant once you have a founding group or early team whose shared effort the venture depends on.",
+    "failure_modes": "Strong in-group cohesion can curdle into groupthink, an us-versus-them stance toward customers or critics, or loyalty that suppresses honest dissent and bad news. It can be used to demand sacrifice or paper over real structural problems (pay, equity, direction) with appeals to unity. Founder splits from lost cohesion are often hard to reverse, hence high-stakes and effectively one-way once a core relationship breaks.",
+    "evidence_note": "Drawn from a 14th-century North African historian's theory of why groups and dynasties rise and fall — a historical-philosophical theory, not tested social science. Low as evidence; the narrower modern claim that team cohesion and shared commitment affect startup outcomes has supportive but mixed empirical backing. Treat the broad theory as a lens, not proof.",
+    "regional_notes": "Originates in a North African analysis of tribal and political solidarity; the application here is narrowed to founding-team cohesion and deliberately avoids any in-group-versus-out-group framing.",
+    "examples": "Two cofounders launch with strong shared belief, but over a year one quietly shifts toward wanting a quick acquisition while the other wants to build for the long term. Neither names the divergence. Effort becomes uneven, resentments build, and a recoverable product setback turns into a founder split because the underlying solidarity had already eroded. A founder watching cohesion as a core metric would have surfaced the mismatch while it was still fixable."
+  },
+  {
+    "id": "trust-the-plan-take-precautions",
+    "family": "Cross-cultural",
+    "title": "Commit to the plan and still take concrete precautions",
+    "stages": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "hope for the best plan for the worst",
+      "have a backup",
+      "what if it goes wrong",
+      "safety net",
+      "dont bet everything",
+      "cover my downside",
+      "contingency",
+      "just in case",
+      "de-risk it",
+      "trust but verify",
+      "insurance against failure",
+      "fallback plan"
+    ],
+    "summary": "Believe in your plan and act boldly, but pair that confidence with concrete, cheap safeguards against the ways it could fail. Conviction and diligence are not opposites; you do both at once.",
+    "when_to_use": "When committing to a bet you believe in but whose failure would be costly: launching, signing a contract, relying on a single supplier or platform, or going all-in on one channel.",
+    "how_to_run": [
+      "State the plan you genuinely believe will work and commit to executing it well.",
+      "Ask what would have to be true for it to fail, and list the few failure modes that would actually hurt.",
+      "For each serious failure mode, add a cheap, concrete precaution now (a backup, a reserve, a contract clause, a second option).",
+      "Set a tripwire: a specific signal that tells you to switch to the backup instead of hoping.",
+      "Then proceed with full effort, knowing the downside is covered."
+    ],
+    "preconditions": "",
+    "failure_modes": "Taken too far, endless precautions become an excuse never to commit, or a way to hedge so much that no bet is real. Precautions cost time and money, so over-insuring small risks wastes scarce resources. Conversely, the proverb can be misused to rationalize recklessness ('I have faith') while skipping the diligence half, the opposite of the intent.",
+    "evidence_note": "Based on an Arab proverb often summarized as trust the plan but secure your camel. As a proverb it's folk wisdom, not research. Medium overall because the actionable core (identify failure modes, add cheap hedges, set tripwires) closely mirrors well-established practices in risk management, real-options thinking, and pre-mortems.",
+    "regional_notes": "Originates as a widely cited Arab and broader MENA proverb about pairing faith with responsibility; the secular, transferable lesson is the conviction-plus-diligence pairing, presented without its religious framing.",
+    "examples": "A founder is about to run their entire early business on a single third-party platform because it's fast and cheap. They proceed, but first export their customer data weekly to their own storage, keep a documented one-day plan to switch providers, and set a tripwire: any pricing or policy change triggers an immediate review. Months later the platform abruptly changes terms, and because the safeguards already existed they migrate in days instead of being held hostage."
+  },
+  {
+    "id": "diag-protected-legacy",
+    "family": "Diagnosis",
+    "title": "Protecting an old product until a newcomer takes the market",
+    "stages": [
+      5,
+      6
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "afraid to cannibalize",
+      "new thing competes with my old thing",
+      "protect existing revenue",
+      "disrupt myself",
+      "scared to launch the better version",
+      "defending the cash cow",
+      "competitor has a cheaper model"
+    ],
+    "summary": "Be willing to cannibalize your own product before someone else does; defending an old margin is how incumbents lose the next wave.",
+    "when_to_use": "You're holding back a better/cheaper offering because it threatens your current revenue.",
+    "how_to_run": [
+      "Name the move that would most disrupt your own business, then decide whether to do it before a competitor does",
+      "Run the threatening version as a small, ring-fenced experiment instead of blocking it"
+    ],
+    "failure_modes": "Cannibalizing a healthy business with no evidence the new bet works — disrupt yourself deliberately, not recklessly."
+  },
+  {
+    "id": "diag-avoided-hard-conversation",
+    "family": "Diagnosis",
+    "title": "Letting a dreaded cofounder or partner conversation fester",
+    "stages": [
+      3,
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "avoiding a hard talk",
+      "cofounder tension",
+      "equity conversation i keep postponing",
+      "resentment building",
+      "need to confront my partner",
+      "dreading a conversation",
+      "unspoken conflict"
+    ],
+    "summary": "Surface conflict early with candor; the conversation you're avoiding compounds into a split if you wait.",
+    "when_to_use": "There's a hard conversation (equity, roles, direction, performance) you keep postponing.",
+    "how_to_run": [
+      "Schedule the conversation you're dreading this week, with a clear, specific ask written down beforehand",
+      "Lead with the shared goal, then state the issue plainly rather than hinting"
+    ],
+    "failure_modes": "Ambushing the other person without warning or a constructive ask, which turns a needed talk into a fight."
+  },
+  {
+    "id": "diag-yes-hijacked-roadmap",
+    "family": "Diagnosis",
+    "title": "Saying yes to a big custom deal that hijacks the roadmap",
+    "stages": [
+      4,
+      5
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "should i take this custom deal",
+      "big enterprise wants special features",
+      "one customer pulling my roadmap",
+      "lucrative but distracting deal",
+      "build it just for them",
+      "say yes to everything",
+      "custom work for one client"
+    ],
+    "summary": "Price the opportunity cost of every yes; a big bespoke deal can quietly redirect your whole roadmap away from your real market.",
+    "when_to_use": "A large customer wants custom work that would consume your build capacity.",
+    "how_to_run": [
+      "For the deal you're weighing, write down exactly what it forces you to say no to, then decide with that in front of you",
+      "Take it only if the custom work generalizes to your core market, or charge enough to fund a separate effort"
+    ],
+    "failure_modes": "Reflexively refusing real money — sometimes a single deal is worth the detour; weigh it, don't dismiss it."
+  },
+  {
+    "id": "diag-churn-hidden-by-logos",
+    "family": "Diagnosis",
+    "title": "Ignoring churn because new signups hide it",
+    "stages": [
+      5,
+      6
+    ],
+    "reversibility": "two-way",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "growth looks fine but",
+      "leaky bucket",
+      "customers keep leaving",
+      "new signups hide churn",
+      "retention problem",
+      "why does revenue stall despite signups",
+      "churn",
+      "people cancel after a month"
+    ],
+    "summary": "Watch net revenue retention, not just new logos; growth on top of a leaky bucket stalls the moment acquisition slows.",
+    "when_to_use": "Top-line looks okay but you suspect existing customers are leaving as fast as new ones arrive.",
+    "how_to_run": [
+      "Calculate net revenue retention (revenue kept + expansion − churn) for your existing base",
+      "If it's under 100%, make retention the priority before spending more on acquisition"
+    ],
+    "failure_modes": "Over-rotating to retention while real acquisition problems go unaddressed — diagnose which bucket actually leaks."
+  },
+  {
+    "id": "diag-hired-clones",
+    "family": "Diagnosis",
+    "title": "Hiring people just like you until the team shares one blind spot",
+    "stages": [
+      4,
+      5,
+      6
+    ],
+    "reversibility": "one-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "everyone on my team thinks alike",
+      "hiring people like me",
+      "team has the same blind spot",
+      "culture fit vs culture add",
+      "homogeneous team",
+      "need different perspectives",
+      "we all agree too easily"
+    ],
+    "summary": "Hire for what someone adds, not just whether they fit; a team of clones shares the same gaps and won't catch each other's mistakes.",
+    "when_to_use": "Your team agrees too easily and keeps missing the same kind of problem.",
+    "how_to_run": [
+      "For your finalist, name the new perspective or skill they bring, not just the values match",
+      "Protect 'culture add' from sliding into 'hire anyone different' — still screen hard for shared values and bar"
+    ],
+    "failure_modes": "Using 'culture add' to justify a poor-values or low-bar hire; difference is not the only criterion."
+  },
+  {
+    "id": "diag-debt-funded-peak",
+    "family": "Diagnosis",
+    "title": "Staking survival on one debt-funded bet at the top of a boom",
+    "stages": [
+      5,
+      6
+    ],
+    "reversibility": "one-way",
+    "evidence": "medium",
+    "warn": true,
+    "keywords": [
+      "should i take on debt to expand",
+      "big loan for growth",
+      "bet the company",
+      "borrow to scale fast",
+      "expansion at the peak",
+      "leverage to grow",
+      "aggressive capex"
+    ],
+    "summary": "Don't stake the company's survival on a single debt-funded expansion at a cycle peak; stage big commitments with explicit off-ramps so a downturn can't sink you.",
+    "when_to_use": "You're considering a large debt-funded expansion or capex commitment, especially when times feel good.",
+    "how_to_run": [
+      "Stress-test the commitment against a downturn 30% worse than today before signing",
+      "Stage the investment with milestones and exit points instead of one irreversible all-in bet"
+    ],
+    "failure_modes": "Becoming so debt-averse you never invest to grow; the lesson is staging and stress-testing, not avoiding all leverage."
+  },
+  {
+    "id": "diag-faked-traction",
+    "family": "Diagnosis",
+    "title": "Dressing up traction to fit the growth story",
+    "stages": [
+      4,
+      5,
+      6
+    ],
+    "reversibility": "one-way",
+    "evidence": "high",
+    "warn": false,
+    "keywords": [
+      "our numbers look better than reality",
+      "vanity metrics",
+      "pressure to show growth",
+      "tempted to inflate numbers",
+      "report only the good metrics",
+      "make the deck look good",
+      "gross merchandise vs real revenue"
+    ],
+    "summary": "Never fake or inflate traction; track only verifiable metrics, because a growth story built on numbers that aren't real collapses the moment anyone checks.",
+    "when_to_use": "You feel pressure (from investors, a deck, or yourself) to make the numbers look better than they are.",
+    "how_to_run": [
+      "Report only metrics you could defend in a data room; delete vanity numbers from your reporting",
+      "Make it safe for yourself and your team to show a miss — reward truth over hitting the number"
+    ],
+    "failure_modes": "Swinging to false modesty that hides real progress; report honestly, not pessimistically."
+  },
+  {
+    "id": "diag-single-leader-risk",
+    "family": "Diagnosis",
+    "title": "Single-threading the whole company on one person",
+    "stages": [
+      5,
+      6
+    ],
+    "reversibility": "two-way",
+    "evidence": "medium",
+    "warn": false,
+    "keywords": [
+      "everything depends on me",
+      "bus factor",
+      "what if i get sick",
+      "no one else can make decisions",
+      "key person risk",
+      "succession",
+      "i'm the bottleneck for every decision",
+      "all knowledge in my head"
+    ],
+    "summary": "Don't make the company depend entirely on one person's presence or knowledge; document decision rights and succession so a single absence can't stall everything.",
+    "when_to_use": "You (or one key person) are the only one who can make key decisions or hold critical knowledge.",
+    "how_to_run": [
+      "Write down decision rights and a basic succession/backup plan for the few roles only one person can do",
+      "Start transferring one critical piece of knowledge or authority to someone else this month"
+    ],
+    "failure_modes": "Over-documenting and over-delegating before there's anyone qualified to delegate to; match it to actual team depth."
   }
 ]
