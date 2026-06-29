@@ -16,6 +16,7 @@ const fs = require("fs");
 const path = require("path");
 const { SYSTEM_PROMPT } = require("./knowledge");
 const db = require("./db");
+const library = require("./library");
 
 // ---- tiny .env loader (so you don't need any packages) ----
 (function loadEnv() {
@@ -145,9 +146,23 @@ async function handleChat(req, res) {
 
   // cross-session memory: the client keeps a compact founder profile and sends it back each turn
   const profile = (typeof payload.profile === "string" ? payload.profile : "").trim().slice(0, 1200);
-  const systemPrompt = profile
+  let systemPrompt = profile
     ? SYSTEM_PROMPT + "\n\n# What you already know about this founder (carried over from an earlier chat the founder chose to continue — lean on it to avoid re-asking, but surface any specific fact transparently rather than stating it as if they just told you, and never volunteer their location or identity unprompted):\n" + profile
+      + "\n\n(LANGUAGE: this profile may be in a different language than the founder's CURRENT message. Reply in the language of their current message only — do NOT switch to match this profile's language.)"
     : SYSTEM_PROMPT;
+
+  // deep knowledge retrieval: pull only the entries relevant to THIS question (keeps cost/latency sane).
+  // Query from the founder's last couple of messages so it tracks the live topic, not the whole history.
+  try {
+    const queryText = messages.filter((m) => m.role === "user").slice(-2).map((m) => m.content).join(" ");
+    const refs = library.render(library.retrieve(queryText, 6), 6000);
+    if (refs) {
+      systemPrompt += "\n\n============================================================\n"
+        + "# DEEP REFERENCES most relevant to THIS question — apply SILENTLY, never name them or cite famous people.\n"
+        + "Use the substance (when-to-use, how-to-run, failure modes, evidence honesty) to give a sharper, more specific answer. If a reference says evidence is weak or warns, reflect that honesty.\n\n"
+        + refs;
+    }
+  } catch (e) { /* retrieval is best-effort; never block a reply */ }
 
   let upstream;
   try {
