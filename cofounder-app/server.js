@@ -44,6 +44,7 @@ const ACCESS_CODE = process.env.ACCESS_CODE || ""; // optional shared passcode; 
 const RATE_MAX = parseInt(process.env.RATE_MAX || "40", 10); // max chat requests per IP per window
 const RATE_WINDOW_MS = parseInt(process.env.RATE_WINDOW_MS || "600000", 10); // window length (default 10 min)
 const STATS_TOKEN = process.env.STATS_TOKEN || ""; // protects GET /api/stats; if unset, stats endpoint is disabled
+const RETENTION_DAYS = parseInt(process.env.RETENTION_DAYS || "90", 10); // auto-delete stored data older than this (0 disables)
 const PUBLIC_DIR = path.join(__dirname, "public");
 
 // ---- simple in-memory per-IP rate limiter (resets on restart; per instance) ----
@@ -243,6 +244,22 @@ async function handleFeedback(req, res) {
   res.end(JSON.stringify({ ok: true }));
 }
 
+// ---- "forget me": delete all of a founder's data by their anonymous client id ----
+async function handleForget(req, res) {
+  let payload;
+  try { payload = JSON.parse(await readBody(req)); } catch { res.writeHead(400); return res.end("bad json"); }
+  const clientId = typeof payload.clientId === "string" ? payload.clientId.slice(0, 64) : "";
+  if (!clientId) { res.writeHead(400, { "Content-Type": "application/json" }); return res.end(JSON.stringify({ error: "clientId required" })); }
+  try {
+    const deleted = await db.deleteByClient(clientId);
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify({ ok: true, deleted }));
+  } catch (e) {
+    res.writeHead(500, { "Content-Type": "application/json" });
+    res.end(JSON.stringify({ error: "Could not delete your data. Please email us." }));
+  }
+}
+
 // ---- first-party analytics (token-protected) ----
 // token may come from the x-stats-token header (browser) or ?token= query (scheduled digest via simple GET)
 function statsAuth(req, res) {
@@ -283,6 +300,7 @@ async function handleConversations(req, res) {
 const server = http.createServer((req, res) => {
   if (req.method === "POST" && req.url === "/api/chat") return handleChat(req, res);
   if (req.method === "POST" && req.url === "/api/feedback") return handleFeedback(req, res);
+  if (req.method === "POST" && req.url === "/api/forget") return handleForget(req, res);
   if (req.method === "GET" && req.url.split("?")[0] === "/api/stats") return handleStats(req, res);
   if (req.method === "GET" && req.url.split("?")[0] === "/api/conversations") return handleConversations(req, res);
   if (req.method === "GET" && req.url === "/healthz") { res.writeHead(200); return res.end("ok"); }
@@ -291,6 +309,7 @@ const server = http.createServer((req, res) => {
 });
 
 db.init().finally(() => {
+  db.purgeOld(RETENTION_DAYS).catch(() => {}); // enforce retention on boot (fire-and-forget)
   server.listen(PORT, () => {
     console.log("\n  The Co-Founder is running.");
     console.log("  Open  http://localhost:" + PORT);

@@ -221,4 +221,53 @@ async function getConversations({ limit = 50, sinceDays = null } = {}) {
 }
 function safeParse(s) { try { return JSON.parse(s); } catch { return []; } }
 
-module.exports = { init, logConversation, logFeedback, getStats, getConversations, get backend() { return backend; }, get ready() { return ready; } };
+// ---- data governance: retention purge + per-user deletion ------------------
+// Auto-delete anything older than `days` (0/unset disables). Called on boot.
+async function purgeOld(days) {
+  days = parseInt(days, 10);
+  if (!days || days <= 0) return;
+  try {
+    if (backend === "neon") {
+      await sql`DELETE FROM conversations WHERE ts < now() - make_interval(days => ${days})`;
+      await sql`DELETE FROM feedback WHERE ts < now() - make_interval(days => ${days})`;
+    } else {
+      const cut = Date.now() - days * 864e5;
+      for (const f of ["conversations.jsonl", "feedback.jsonl"]) {
+        const p = path.join(DATA_DIR, f);
+        try {
+          if (!fs.existsSync(p)) continue;
+          const kept = fs.readFileSync(p, "utf8").split("\n").filter(Boolean)
+            .filter((l) => { try { const r = JSON.parse(l); return !r.ts || Date.parse(r.ts) >= cut; } catch { return false; } });
+          fs.writeFileSync(p, kept.length ? kept.join("\n") + "\n" : "");
+        } catch (e) { /* ignore one file */ }
+      }
+    }
+  } catch (e) { console.error("[db] purgeOld failed:", e.message); }
+}
+
+// Delete ALL rows for one anonymous client id (their "forget me" request). Returns rows removed.
+async function deleteByClient(clientId) {
+  if (!clientId || typeof clientId !== "string") return 0;
+  clientId = clientId.slice(0, 64);
+  try {
+    if (backend === "neon") {
+      const removed = await sql`DELETE FROM conversations WHERE client_id = ${clientId} RETURNING id`;
+      await sql`DELETE FROM feedback WHERE client_id = ${clientId}`;
+      return Array.isArray(removed) ? removed.length : 0;
+    }
+    let removed = 0;
+    for (const f of ["conversations.jsonl", "feedback.jsonl"]) {
+      const p = path.join(DATA_DIR, f);
+      try {
+        if (!fs.existsSync(p)) continue;
+        const rows = fs.readFileSync(p, "utf8").split("\n").filter(Boolean)
+          .map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
+        const kept = rows.filter((r) => { const hit = r.clientId === clientId; if (hit) removed++; return !hit; });
+        fs.writeFileSync(p, kept.length ? kept.map((r) => JSON.stringify(r)).join("\n") + "\n" : "");
+      } catch (e) { /* ignore one file */ }
+    }
+    return removed;
+  } catch (e) { console.error("[db] deleteByClient failed:", e.message); return 0; }
+}
+
+module.exports = { init, logConversation, logFeedback, getStats, getConversations, purgeOld, deleteByClient, get backend() { return backend; }, get ready() { return ready; } };
