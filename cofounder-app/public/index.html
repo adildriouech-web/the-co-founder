@@ -204,8 +204,8 @@ emptyP:"Tell me the decision you're stuck on. I'll help you figure out what you'
 emptyHint:"Type it, or tap the mic and talk.",
 prompts:[
 "I want to start a business but have no idea where to begin.",
-"How do I know if people actually want my idea?",
 "Everyone says they like it, but nobody's buying. Why?",
+"How do I get my first customers?",
 "What should I charge — and am I underpricing?",
 "Should I raise money or bootstrap?",
 "I've got too much to do — what actually matters this week?",
@@ -237,8 +237,8 @@ emptyP:"迷っている決断を教えてください。本当に決めるべき
 emptyHint:"入力するか、マイクで話してください。",
 prompts:[
 "起業したいけれど、何から始めればいいか分かりません。",
-"自分のアイデアを本当に欲しい人がいるか、どう確かめればいい？",
 "みんな良いと言うのに、誰も買ってくれません。なぜ？",
+"最初の顧客をどうやって獲得する？",
 "いくらで売るべき？安すぎませんか？",
 "資金調達すべき？それとも自己資金でやるべき？",
 "やることが多すぎます。今週、本当に大事なことは何？",
@@ -270,8 +270,8 @@ emptyP:"Ceritakan keputusan yang membuatmu buntu. Aku bantu pahami apa yang sebe
 emptyHint:"Ketik, atau ketuk mik dan bicara.",
 prompts:[
 "Aku ingin memulai bisnis tapi tidak tahu harus mulai dari mana.",
-"Bagaimana aku tahu orang benar-benar menginginkan ideku?",
 "Semua bilang suka, tapi tidak ada yang membeli. Kenapa?",
+"Bagaimana cara mendapatkan pelanggan pertama?",
 "Berapa harga yang tepat — dan apakah aku terlalu murah?",
 "Sebaiknya cari pendanaan atau bootstrap?",
 "Terlalu banyak yang harus dikerjakan — apa yang benar-benar penting minggu ini?",
@@ -311,6 +311,9 @@ function save(){ localStorage.setItem(LS_CHATS,JSON.stringify(chats)); if(curren
 function uid(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,7); }
 // stable anonymous founder id (analytics: counts returning founders without identifying them)
 function clientId(){ let c=localStorage.getItem("cf_client"); if(!c){ c=uid()+uid(); localStorage.setItem("cf_client",c); } return c; }
+// stable, language-independent ids for the starter chips (parallel to the prompts[] arrays), for tap analytics
+const STARTER_SLUGS=["no-idea-where-to-begin","like-it-but-not-buying","first-customers","pricing-underpricing","raise-or-bootstrap","too-much-this-week","pivot-push-walk-away"];
+function trackStarter(i){ try{ var slug=STARTER_SLUGS[i]||("starter_"+i); var label=(I18N&&I18N.en&&I18N.en.prompts&&I18N.en.prompts[i])||""; fetch("/api/event",{method:"POST",headers:{"content-type":"application/json"},keepalive:true,body:JSON.stringify({type:"starter_tap",key:slug,label:label,lang:lang,clientId:clientId()})}); }catch(_){} }
 // "Delete my data": erase server-side rows for this device's anonymous id, then clear all local storage.
 (function(){ var el=document.getElementById("forgetLink"); if(!el) return; el.addEventListener("click", async function(e){
   e.preventDefault();
@@ -417,7 +420,7 @@ html+='<div class="prompts">';
 d.prompts.forEach(p=>{ html+='<button>'+esc(p)+'</button>'; });
 html+='</div></div>';
 thread.innerHTML=html;
-thread.querySelectorAll(".prompts button").forEach(b=>b.onclick=()=>{ input.value=b.textContent; send(); });
+thread.querySelectorAll(".prompts button").forEach((b,i)=>b.onclick=()=>{ trackStarter(i); input.value=b.textContent; send(); });
 if(showCarry){
 const y=$("carryYes"), n=$("carryNo");
 if(y) y.onclick=()=>{ cur.profile=lastMem; save(); renderEmpty(); };
