@@ -163,6 +163,7 @@ textarea::placeholder{color:var(--faint)}
 <button class="iconbtn send" id="sendBtn" aria-label="send">↑</button>
 </div>
 <div class="note" id="noteText">The Co-Founder can be wrong. For big legal, money or health calls, check with a real professional.</div>
+<div class="note" style="margin-top:3px;font-size:.82em;opacity:.7"><a href="/privacy.html" target="_blank" rel="noopener" style="color:inherit">Privacy &amp; terms</a> · <a href="#" id="forgetLink" style="color:inherit">Delete my data</a></div>
 </div>
 </main>
 </div>
@@ -178,6 +179,7 @@ textarea::placeholder{color:var(--faint)}
 <li id="consentLi3">Please don't paste passwords or anything you wouldn't want stored.</li>
 </ul>
 <p id="consentP2">This is an early prototype, not a substitute for a lawyer, accountant, or doctor.</p>
+<p style="font-size:.85em;opacity:.7"><a href="/privacy.html" target="_blank" rel="noopener" style="color:inherit">Read the full Privacy &amp; Terms</a> — conversations auto-delete after 90 days, and you can delete yours anytime.</p>
 <button class="agree" id="agreeBtn">I understand — let's start</button>
 <button class="decline" id="declineBtn">No thanks, take me back</button>
 </div>
@@ -309,6 +311,14 @@ function save(){ localStorage.setItem(LS_CHATS,JSON.stringify(chats)); if(curren
 function uid(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,7); }
 // stable anonymous founder id (analytics: counts returning founders without identifying them)
 function clientId(){ let c=localStorage.getItem("cf_client"); if(!c){ c=uid()+uid(); localStorage.setItem("cf_client",c); } return c; }
+// "Delete my data": erase server-side rows for this device's anonymous id, then clear all local storage.
+(function(){ var el=document.getElementById("forgetLink"); if(!el) return; el.addEventListener("click", async function(e){
+  e.preventDefault();
+  if(!confirm("Delete all your conversations from the server and clear this device? This can't be undone.")) return;
+  try{ await fetch("/api/forget",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({clientId:clientId()})}); }catch(_){}
+  try{ Object.keys(localStorage).filter(function(k){return k.indexOf("cf_")===0;}).forEach(function(k){localStorage.removeItem(k);}); }catch(_){}
+  location.reload();
+}); })();
 
 function newChat(){ const id=uid(); chats[id]={id,title:L().newChatTitle,messages:[],updated:Date.now()}; currentId=id; save(); renderList(); renderThread(); closeDrawer(); input.focus(); }
 function selectChat(id){ currentId=id; save(); renderList(); renderThread(); closeDrawer(); }
