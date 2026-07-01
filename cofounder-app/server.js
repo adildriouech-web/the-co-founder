@@ -244,6 +244,24 @@ async function handleFeedback(req, res) {
   res.end(JSON.stringify({ ok: true }));
 }
 
+// ---- lightweight product events (e.g. which starter chip was tapped) ----
+async function handleEvent(req, res) {
+  let payload;
+  try { payload = JSON.parse(await readBody(req)); } catch { res.writeHead(400); return res.end("bad json"); }
+  const type = typeof payload.type === "string" ? payload.type.slice(0, 40) : "";
+  if (type !== "starter_tap") { res.writeHead(400, { "Content-Type": "application/json" }); return res.end(JSON.stringify({ error: "unknown event" })); }
+  db.logEvent({
+    ts: new Date().toISOString(),
+    type,
+    key: typeof payload.key === "string" ? payload.key.slice(0, 120) : null,
+    label: typeof payload.label === "string" ? payload.label.slice(0, 200) : null,
+    clientId: typeof payload.clientId === "string" ? payload.clientId.slice(0, 64) : null,
+    lang: typeof payload.lang === "string" ? payload.lang.slice(0, 8) : null,
+  });
+  res.writeHead(200, { "Content-Type": "application/json" });
+  res.end(JSON.stringify({ ok: true }));
+}
+
 // ---- "forget me": delete all of a founder's data by their anonymous client id ----
 async function handleForget(req, res) {
   let payload;
@@ -301,6 +319,7 @@ const server = http.createServer((req, res) => {
   if (req.method === "POST" && req.url === "/api/chat") return handleChat(req, res);
   if (req.method === "POST" && req.url === "/api/feedback") return handleFeedback(req, res);
   if (req.method === "POST" && req.url === "/api/forget") return handleForget(req, res);
+  if (req.method === "POST" && req.url === "/api/event") return handleEvent(req, res);
   if (req.method === "GET" && req.url.split("?")[0] === "/api/stats") return handleStats(req, res);
   if (req.method === "GET" && req.url.split("?")[0] === "/api/conversations") return handleConversations(req, res);
   if (req.method === "GET" && req.url === "/healthz") { res.writeHead(200); return res.end("ok"); }

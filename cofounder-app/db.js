@@ -45,8 +45,18 @@ async function init() {
         reply TEXT,
         question TEXT
       )`;
+      await sql`CREATE TABLE IF NOT EXISTS events (
+        id BIGSERIAL PRIMARY KEY,
+        ts TIMESTAMPTZ NOT NULL DEFAULT now(),
+        type TEXT,
+        key TEXT,
+        label TEXT,
+        client_id TEXT,
+        lang TEXT
+      )`;
       await sql`CREATE INDEX IF NOT EXISTS conversations_ts_idx ON conversations(ts)`;
       await sql`CREATE INDEX IF NOT EXISTS conversations_client_idx ON conversations(client_id)`;
+      await sql`CREATE INDEX IF NOT EXISTS events_ts_idx ON events(ts)`;
       backend = "neon";
       ready = true;
       console.log("  Storage: Neon Postgres (durable).");
@@ -94,6 +104,21 @@ async function logFeedback(record) {
   }
 }
 
+// ---- lightweight product events (e.g. which starter chip was tapped) ----
+async function logEvent(record) {
+  try {
+    if (backend === "neon") {
+      await sql`INSERT INTO events (ts, type, key, label, client_id, lang)
+        VALUES (${record.ts || new Date().toISOString()}, ${record.type || null}, ${record.key || null},
+                ${record.label || null}, ${record.clientId || null}, ${record.lang || null})`;
+    } else {
+      fs.appendFileSync(path.join(DATA_DIR, "events.jsonl"), JSON.stringify(record) + "\n");
+    }
+  } catch (e) {
+    console.error("[db] logEvent failed:", e.message);
+  }
+}
+
 // ---- first-party analytics ------------------------------------------------
 async function getStats() {
   if (backend === "neon") return statsFromNeon();
@@ -120,9 +145,12 @@ async function statsFromNeon() {
   const fb = await sql`SELECT rating, count(*)::int AS n FROM feedback GROUP BY rating`;
   const feedback = { up: 0, down: 0 };
   for (const r of fb) { if (r.rating === "up") feedback.up = r.n; if (r.rating === "down") feedback.down = r.n; }
+  const starters = await sql`SELECT key, max(label) AS label, count(*)::int AS n
+    FROM events WHERE type = 'starter_tap' GROUP BY key ORDER BY n DESC`;
   const founders = tot.founders || 0, ret_n = ret.returning || 0;
   return {
     backend,
+    starters,
     totals: {
       conversations: tot.conversations || 0,
       turns: tot.turns || 0,
@@ -167,9 +195,14 @@ async function statsFromJsonl() {
     .map(([day, e]) => ({ day, turns: e.turns, conversations: e.convSet.size, founders: e.clientSet.size }));
   const feedback = { up: 0, down: 0 };
   for (const r of fbs) { if (r.rating === "up") feedback.up++; if (r.rating === "down") feedback.down++; }
+  const evs = readLines("events.jsonl");
+  const stMap = new Map();
+  for (const r of evs) { if (r.type !== "starter_tap" || !r.key) continue; const e = stMap.get(r.key) || { key: r.key, label: r.label || "", n: 0 }; e.n++; if (r.label) e.label = r.label; stMap.set(r.key, e); }
+  const starters = [...stMap.values()].sort((a, b) => b.n - a.n);
   const founders = clientIds.size;
   return {
     backend,
+    starters,
     totals: {
       conversations: convIds.size, turns: convs.length, founders,
       returningFounders: returning, returnRate: founders ? +(returning / founders).toFixed(3) : 0,
@@ -230,9 +263,10 @@ async function purgeOld(days) {
     if (backend === "neon") {
       await sql`DELETE FROM conversations WHERE ts < now() - make_interval(days => ${days})`;
       await sql`DELETE FROM feedback WHERE ts < now() - make_interval(days => ${days})`;
+      await sql`DELETE FROM events WHERE ts < now() - make_interval(days => ${days})`;
     } else {
       const cut = Date.now() - days * 864e5;
-      for (const f of ["conversations.jsonl", "feedback.jsonl"]) {
+      for (const f of ["conversations.jsonl", "feedback.jsonl", "events.jsonl"]) {
         const p = path.join(DATA_DIR, f);
         try {
           if (!fs.existsSync(p)) continue;
@@ -253,10 +287,11 @@ async function deleteByClient(clientId) {
     if (backend === "neon") {
       const removed = await sql`DELETE FROM conversations WHERE client_id = ${clientId} RETURNING id`;
       await sql`DELETE FROM feedback WHERE client_id = ${clientId}`;
+      await sql`DELETE FROM events WHERE client_id = ${clientId}`;
       return Array.isArray(removed) ? removed.length : 0;
     }
     let removed = 0;
-    for (const f of ["conversations.jsonl", "feedback.jsonl"]) {
+    for (const f of ["conversations.jsonl", "feedback.jsonl", "events.jsonl"]) {
       const p = path.join(DATA_DIR, f);
       try {
         if (!fs.existsSync(p)) continue;
@@ -270,4 +305,4 @@ async function deleteByClient(clientId) {
   } catch (e) { console.error("[db] deleteByClient failed:", e.message); return 0; }
 }
 
-module.exports = { init, logConversation, logFeedback, getStats, getConversations, purgeOld, deleteByClient, get backend() { return backend; }, get ready() { return ready; } };
+module.exports = { init, logConversation, logFeedback, logEvent, getStats, getConversations, purgeOld, deleteByClient, get backend() { return backend; }, get ready() { return ready; } };
